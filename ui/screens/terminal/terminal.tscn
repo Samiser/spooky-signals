@@ -60,7 +60,7 @@ expand_margin_bottom = 5.0
 shadow_size = 30
 
 [sub_resource type="Theme" id="Theme_xukm4"]
-default_font_size = 40
+default_font_size = 50
 Button/colors/font_color = Color(1, 0.690196, 0.854902, 1)
 Button/colors/font_focus_color = Color(1, 0.690196, 0.854902, 1)
 Button/colors/font_hover_color = Color(1, 0.690196, 0.854902, 1)
