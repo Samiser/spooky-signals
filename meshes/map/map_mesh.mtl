@@ -60,6 +60,12 @@ bump Metal_17-256x256 1.png
 Kd 1 1 1
 d 1
 
+newmtl vent
+map_Kd vent.png
+bump vent_normal.png
+Kd 1 1 1
+d 1
+
 newmtl Metal_11-256x256
 map_Kd Metal_11-256x256.png
 bump Metal_17-256x256 1.png

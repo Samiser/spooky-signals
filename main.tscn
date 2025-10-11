@@ -1,10 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://chxlkaq0opjy7"]
+[gd_scene load_steps=10 format=3 uid="uid://chxlkaq0opjy7"]
 
 [ext_resource type="PackedScene" uid="uid://vfatuya14sn3" path="res://entities/player/player.tscn" id="1_68bq3"]
 [ext_resource type="ArrayMesh" uid="uid://bnj1bulcj4wq6" path="res://meshes/map/map_mesh.obj" id="2_0xm2m"]
 
+[sub_resource type="Gradient" id="Gradient_0xm2m"]
+colors = PackedColorArray(0, 0, 0, 1, 0.007195848, 0.22476539, 0.31965184, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_h2yge"]
+noise_type = 2
+frequency = 0.0092
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_1bvp3"]
+noise = SubResource("FastNoiseLite_h2yge")
+color_ramp = SubResource("Gradient_0xm2m")
+seamless = true
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_lquwl"]
+panorama = SubResource("NoiseTexture2D_1bvp3")
+
+[sub_resource type="Sky" id="Sky_7mycd"]
+sky_material = SubResource("PanoramaSkyMaterial_lquwl")
+
 [sub_resource type="Environment" id="Environment_0xm2m"]
-background_mode = 4
+background_mode = 2
+sky = SubResource("Sky_7mycd")
 tonemap_mode = 3
 glow_enabled = true
 glow_intensity = 1.0
@@ -17,27 +36,30 @@ data = PackedVector3Array(8.2027, 1.4570999, -1.3345, 8.2027, 2.2071, -1.3345, 8
 [node name="Main" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_68bq3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7882614, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_0xm2m")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7112641, 1.8787622, 3.056395)
-omni_range = 7.0
+[node name="MapParent" type="StaticBody3D" parent="."]
 
-[node name="OmniLight3D3" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.198978, 1.8787622, 0.25791252)
-omni_range = 7.0
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7112641, 1.8787622, -2.7240062)
-omni_range = 7.0
-
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-
-[node name="MapMesh" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="MapMesh" type="MeshInstance3D" parent="MapParent"]
 mesh = ExtResource("2_0xm2m")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MapParent"]
 shape = SubResource("ConcavePolygonShape3D_0xm2m")
+
+[node name="Lighting" type="Node3D" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7112641, 1.8787622, 3.056395)
+omni_range = 7.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.198978, 1.8787622, 0.25791252)
+omni_range = 7.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7112641, 1.8787622, -2.7240062)
+omni_range = 7.0
