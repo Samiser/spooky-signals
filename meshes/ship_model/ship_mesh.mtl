@@ -1,0 +1,152 @@
+# Blender 4.5.0 MTL File: 'ship.blend'
+# www.blender.org
+
+newmtl Black
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+
+newmtl Metal_05-256x256
+Ns 0.000000
+Ka 0.222222 0.222222 0.222222
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Users/legob/Downloads/ship_model/Metal_05-256x256.png
+map_Bump -bm 0.500000 C:/Users/legob/Downloads/ship_model/Metal_05-256x256 1.png
+
+newmtl Metal_06-256x256
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Users/legob/Downloads/ship_model/Metal_06-256x256.png
+map_Bump C:/Users/legob/Downloads/ship_model/Metal_06-256x256 1.png
+
+newmtl Metal_08-256x256
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Users/legob/Downloads/ship_model/Metal_15-256x256.png
+map_Bump C:/Users/legob/Downloads/ship_model/Metal_08-256x256 1.png
+
+newmtl Metal_11-256x256
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Users/legob/Downloads/ship_model/Metal_11-256x256.png
+map_Bump C:/Users/legob/Downloads/ship_model/Metal_17-256x256 1.png
+
+newmtl Metal_13-256x256
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Users/legob/Downloads/ship_model/Metal_13-256x256.png
+map_Bump C:/Users/legob/Downloads/ship_model/Metal_17-256x256 1.png
+
+newmtl Metal_17-256x256
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Users/legob/Downloads/ship_model/Metal_17-256x256.png
+map_Bump C:/Users/legob/Downloads/ship_model/Metal_17-256x256 1.png
+
+newmtl Metal_18-256x256
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Users/legob/Downloads/ship_model/Metal_18-256x256.png
+map_Bump C:/Users/legob/Downloads/ship_model/Metal_17-256x256 1.png
+
+newmtl Plaster_15-256x256
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Users/legob/Downloads/ship_model/Plaster_15-256x256.png
+map_Bump C:/Users/legob/Downloads/ship_model/Metal_05-256x256 1.png
+
+newmtl ProBuilderDefault
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Users/legob/Downloads/ship_model/GridBox_Default.png
+
+newmtl Rail
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl glass_1
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ni 1.500000
+d 0.384314
+illum 1
+map_Kd C:/Users/legob/Downloads/ship_model/glass.png
+map_Ke C:/Users/legob/Downloads/ship_model/beam_distortion.png
+map_Bump C:/Users/legob/Downloads/ship_model/Metal_17-256x256 1.png
+
+newmtl light
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+
+newmtl panel_0
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Users/legob/Downloads/ship_model/wall_decals.png
+map_Bump C:/Users/legob/Downloads/ship_model/wall_decals 1.png
