@@ -1,5 +1,6 @@
-newmtl ProBuilderDefault
-map_Kd GridBox_Default.png
+newmtl Metal_02-256x256_1
+map_Kd Metal_09-256x256.png
+bump Metal_09-256x256 1.png
 Kd 1 1 1
 d 1
 
