@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnk6muhxi6jnc"]
+[gd_scene load_steps=7 format=3 uid="uid://dnk6muhxi6jnc"]
 
 [ext_resource type="PackedScene" uid="uid://vfatuya14sn3" path="res://entities/player/player.tscn" id="1_3ewf1"]
 [ext_resource type="PackedScene" uid="uid://ct5ty1nydcveo" path="res://entities/screen/screen.tscn" id="2_g35bj"]
 [ext_resource type="PackedScene" uid="uid://dp54nqbw0enmy" path="res://ui/screens/terminal/terminal.tscn" id="3_7y0ld"]
+[ext_resource type="PackedScene" uid="uid://6j77mwnbq2hp" path="res://entities/dial/dial.tscn" id="4_mw8hc"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_g35bj"]
 size = Vector3(10, 1, 10)
@@ -29,3 +30,11 @@ current_screen_scene = ExtResource("3_7y0ld")
 
 [node name="Screen2" parent="." instance=ExtResource("2_g35bj")]
 transform = Transform3D(0.5353152, 0, 0.27099377, 0, 0.59999996, 0, -0.27099377, 0, 0.5353152, -2.4402127, 1.6587055, -4.5553346)
+
+[node name="Dial" parent="." instance=ExtResource("4_mw8hc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5133401, 0.99832726, -4.633592)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7588897, 0)
+omni_range = 27.828
+omni_attenuation = -0.165

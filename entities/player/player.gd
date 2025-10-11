@@ -9,6 +9,7 @@ var mouse_sensitivity: float = 0.002
 var interact_distance: float = 4.0
 
 var interacting: bool = false
+var current_interactable: Node3D 
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -40,6 +41,14 @@ func _unhandled_input(event: InputEvent) -> void:
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		else:
 			_try_interact()
+	
+	if event.is_action_released("click"):
+		if interacting and current_interactable.has_method("on_release"):
+			current_interactable.on_release()
+
+func stop_interacting() -> void:
+	interacting = false
+	current_interactable = null
 
 func _try_interact():
 	var cam: Camera3D = $Camera3D
@@ -58,5 +67,6 @@ func _try_interact():
 
 	if collider and collider.has_method("interact"):
 		collider.interact(self)
+		current_interactable = collider
 	else:
 		print("not interactable!")

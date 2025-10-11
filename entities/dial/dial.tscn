@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://6j77mwnbq2hp"]
+
+[ext_resource type="Script" uid="uid://bbrlewidrv7br" path="res://entities/dial/dial.gd" id="1_ic1c3"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_rwhtm"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.05
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_rwhtm"]
+height = 0.05
+radius = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwhtm"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rwhtm"]
+material = SubResource("StandardMaterial3D_rwhtm")
+size = Vector3(0.01, 0.05, 0.01)
+
+[node name="Dial" type="AnimatableBody3D"]
+script = ExtResource("1_ic1c3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_rwhtm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+shape = SubResource("CylinderShape3D_rwhtm")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.075028375, 0.02354572)
+mesh = SubResource("BoxMesh_rwhtm")
