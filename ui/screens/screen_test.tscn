@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://7ies041daofw"]
+
+[ext_resource type="Texture2D" uid="uid://c5w7axry8fi81" path="res://icon.svg" id="1_2fh6r"]
+
+[node name="ScreenTest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_2fh6r")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[b]Some text[/b]
+
+here's some text... wow..."
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1

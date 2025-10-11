@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnk6muhxi6jnc"]
+[gd_scene load_steps=5 format=3 uid="uid://dnk6muhxi6jnc"]
 
 [ext_resource type="PackedScene" uid="uid://vfatuya14sn3" path="res://entities/player/player.tscn" id="1_3ewf1"]
+[ext_resource type="PackedScene" uid="uid://ct5ty1nydcveo" path="res://entities/screen/screen.tscn" id="2_g35bj"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_g35bj"]
 size = Vector3(10, 1, 10)
@@ -20,3 +21,6 @@ mesh = SubResource("BoxMesh_g35bj")
 shape = SubResource("BoxShape3D_7y0ld")
 
 [node name="Player" parent="." instance=ExtResource("1_3ewf1")]
+
+[node name="Screen" parent="." instance=ExtResource("2_g35bj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37202978, 2.030398, -4.5553346)
