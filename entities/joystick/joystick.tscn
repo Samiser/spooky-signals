@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://but8hh6p6o5w4"]
+
+[ext_resource type="Script" uid="uid://bu325wklcw3pu" path="res://entities/joystick/joystick.gd" id="1_xrylo"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_knfnp"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_xrylo"]
+top_radius = 0.02
+bottom_radius = 0.02
+height = 0.3
+
+[sub_resource type="SphereMesh" id="SphereMesh_usjbv"]
+radius = 0.04
+height = 0.08
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_knfnp"]
+radius = 0.080566406
+height = 0.47320557
+
+[node name="Joystick" type="AnimatableBody3D"]
+sync_to_physics = false
+script = ExtResource("1_xrylo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_knfnp")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19797832, 0)
+mesh = SubResource("CylinderMesh_xrylo")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.34531924, 0)
+mesh = SubResource("SphereMesh_usjbv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14822388, 0)
+shape = SubResource("CapsuleShape3D_knfnp")

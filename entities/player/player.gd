@@ -11,21 +11,26 @@ var interact_distance: float = 4.0
 var interacting: bool = false
 var current_interactable: Node3D 
 
+@onready var camera: Camera3D = $Camera3D
+
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _physics_process(delta):
+	velocity.y += -gravity * delta
 	if !interacting:
-		velocity.y += -gravity * delta
 		var input = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 		var movement_dir = transform.basis * Vector3(input.x, 0, input.y)
 		velocity.x = movement_dir.x * speed
 		velocity.z = movement_dir.z * speed
-
-		move_and_slide()
 		
 		if is_on_floor() and Input.is_action_just_pressed("jump"):
 			velocity.y = jump_speed
+	else:
+		velocity.x = 0
+		velocity.z = 0
+		
+	move_and_slide()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:

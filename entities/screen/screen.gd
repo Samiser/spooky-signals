@@ -1,11 +1,17 @@
 @tool
 extends StaticBody3D
+class_name Screen
 
 @export var current_screen_scene: PackedScene:
 	set(value):
 		current_screen_scene = value
 		if Engine.is_editor_hint():
 			_replace_screen()
+
+@export var viewport_override: SubViewport:
+	set(value):
+		viewport_override = value
+		call_deferred("_replace_screen")
 
 @onready var _viewport: SubViewport = $SubViewport
 @onready var _filter: ColorRect = $SubViewport/ColorRect
@@ -15,14 +21,13 @@ var _active: bool = false
 var _player: Player
 
 func _ready() -> void:
-	if current_screen_scene:
-		_replace_screen()
+	_replace_screen()
 
-func _replace_screen() -> void:
-	if !current_screen_scene:
+func _replace_screen() -> void:	
+	if !_viewport:
 		return
 	
-	if !_viewport:
+	if !viewport_override and !current_screen_scene:
 		return
 	
 	for c in _viewport.get_children():
@@ -31,9 +36,15 @@ func _replace_screen() -> void:
 		else:
 			c.queue_free()
 
-	var screen := current_screen_scene.instantiate()
-	current_screen = screen
-	_viewport.add_child(screen)
+	if viewport_override:
+		var screen := TextureRect.new()
+		screen.set_anchors_preset(Control.PRESET_FULL_RECT)
+		screen.texture = viewport_override.get_texture()
+		_viewport.add_child(screen)
+	elif current_screen_scene:
+		var screen := current_screen_scene.instantiate()
+		current_screen = screen
+		_viewport.add_child(screen)
 
 func interact(player: Player) -> void:
 	if current_screen is Terminal:

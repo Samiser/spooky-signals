@@ -42,6 +42,7 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 texture = SubResource("ViewportTexture_pik1a")
 
 [node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
 size = Vector2i(1024, 1024)
 
 [node name="ScreenTest" parent="SubViewport" instance=ExtResource("1_nvrnx")]
