@@ -1,7 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://chxlkaq0opjy7"]
+[gd_scene load_steps=13 format=3 uid="uid://chxlkaq0opjy7"]
 
 [ext_resource type="PackedScene" uid="uid://vfatuya14sn3" path="res://entities/player/player.tscn" id="1_68bq3"]
 [ext_resource type="ArrayMesh" uid="uid://bnj1bulcj4wq6" path="res://meshes/map/map_mesh.obj" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://ct5ty1nydcveo" path="res://entities/screen/screen.tscn" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://dp54nqbw0enmy" path="res://ui/screens/terminal/terminal.tscn" id="4_lquwl"]
+[ext_resource type="PackedScene" uid="uid://bwp2sp8rqpv5n" path="res://entities/radar/radar.tscn" id="5_lquwl"]
 
 [sub_resource type="Gradient" id="Gradient_0xm2m"]
 colors = PackedColorArray(0, 0, 0, 1, 0.007195848, 0.22476539, 0.31965184, 1)
@@ -63,3 +66,10 @@ omni_range = 7.0
 [node name="OmniLight3D2" type="OmniLight3D" parent="Lighting"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7112641, 1.8787622, -2.7240062)
 omni_range = 7.0
+
+[node name="Screen" parent="." instance=ExtResource("3_1bvp3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.9843307, 0.9204745, 0.4509889)
+current_screen_scene = ExtResource("4_lquwl")
+
+[node name="Radar" parent="." instance=ExtResource("5_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.389588, -0.9791371, -2.935564)
