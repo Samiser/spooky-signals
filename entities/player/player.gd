@@ -1,4 +1,5 @@
 extends CharacterBody3D
+class_name Player
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 var speed: int = 5
@@ -7,20 +8,23 @@ var mouse_sensitivity: float = 0.002
 
 var interact_distance: float = 4.0
 
+var interacting: bool = false
+
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _physics_process(delta):
-	velocity.y += -gravity * delta
-	var input = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
-	var movement_dir = transform.basis * Vector3(input.x, 0, input.y)
-	velocity.x = movement_dir.x * speed
-	velocity.z = movement_dir.z * speed
+	if !interacting:
+		velocity.y += -gravity * delta
+		var input = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
+		var movement_dir = transform.basis * Vector3(input.x, 0, input.y)
+		velocity.x = movement_dir.x * speed
+		velocity.z = movement_dir.z * speed
 
-	move_and_slide()
-	
-	if is_on_floor() and Input.is_action_just_pressed("jump"):
-		velocity.y = jump_speed
+		move_and_slide()
+		
+		if is_on_floor() and Input.is_action_just_pressed("jump"):
+			velocity.y = jump_speed
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:

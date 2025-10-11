@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ct5ty1nydcveo"]
+[gd_scene load_steps=7 format=3 uid="uid://ct5ty1nydcveo"]
 
 [ext_resource type="PackedScene" uid="uid://7ies041daofw" path="res://ui/screens/screen_test.tscn" id="1_nvrnx"]
+[ext_resource type="Script" uid="uid://duxdbltehgvww" path="res://entities/screen/screen.gd" id="1_pik1a"]
 [ext_resource type="Shader" uid="uid://c5lt755eg0llh" path="res://entities/screen/crt.gdshader" id="2_pik1a"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_wo1mh"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_pik1a"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tyr5k"]
@@ -22,19 +23,23 @@ shader_parameter/distort_intensity = 0.05
 shader_parameter/noise_opacity = 0.4
 shader_parameter/noise_speed = 5.0
 shader_parameter/static_noise_intensity = 0.06
-shader_parameter/aberration = 0.015000048212499895
+shader_parameter/aberration = 0.01500004821249989
 shader_parameter/brightness = 1.4
 shader_parameter/discolor = true
-shader_parameter/warp_amount = 1.0
+shader_parameter/warp_amount = 0.30000001425
 shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
 
-[node name="Screen" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_pik1a"]
+size = Vector3(2, 2, 0.047424316)
+
+[node name="Screen" type="StaticBody3D"]
+script = ExtResource("1_pik1a")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
-texture = SubResource("ViewportTexture_wo1mh")
+texture = SubResource("ViewportTexture_pik1a")
 
 [node name="SubViewport" type="SubViewport" parent="."]
 size = Vector2i(1024, 1024)
@@ -42,9 +47,14 @@ size = Vector2i(1024, 1024)
 [node name="ScreenTest" parent="SubViewport" instance=ExtResource("1_nvrnx")]
 
 [node name="ColorRect" type="ColorRect" parent="SubViewport"]
+z_index = 5
 material = SubResource("ShaderMaterial_tyr5k")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0030822754)
+shape = SubResource("BoxShape3D_pik1a")
