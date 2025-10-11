@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4gohahyk8j2j"
-path.s3tc="res://.godot/imported/ship_wall_decals.png-e49e91d3c27e5f7d83e2f53e0f586cb2.s3tc.ctex"
+uid="uid://6r4rx5avssy7"
+path.s3tc="res://.godot/imported/Metal_18-256x256.png-2df5af34d218ea6feead7f81321f1d12.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "2968449138a1130ee5f2d62257cd6a1c"
-}
 
 [deps]
 
-source_file="res://meshes/ship_model/ship_wall_decals.png"
-dest_files=["res://.godot/imported/ship_wall_decals.png-e49e91d3c27e5f7d83e2f53e0f586cb2.s3tc.ctex"]
+source_file="res://meshes/map/Metal_18-256x256.png"
+dest_files=["res://.godot/imported/Metal_18-256x256.png-2df5af34d218ea6feead7f81321f1d12.s3tc.ctex"]
 
 [params]
 

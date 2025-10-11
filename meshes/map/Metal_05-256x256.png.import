@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfuwqjixmnteo"
-path.s3tc="res://.godot/imported/ship_Metal_13-256x256.png-71349629cc2037f0e22d8d853b6c1b49.s3tc.ctex"
+uid="uid://ciev35ctong2n"
+path.s3tc="res://.godot/imported/Metal_05-256x256.png-9953aebd58efbea62480279d82424625.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "1df5b21c2e43df31257c8e0c3bcca84c"
-}
 
 [deps]
 
-source_file="res://meshes/ship_model/ship_Metal_13-256x256.png"
-dest_files=["res://.godot/imported/ship_Metal_13-256x256.png-71349629cc2037f0e22d8d853b6c1b49.s3tc.ctex"]
+source_file="res://meshes/map/Metal_05-256x256.png"
+dest_files=["res://.godot/imported/Metal_05-256x256.png-9953aebd58efbea62480279d82424625.s3tc.ctex"]
 
 [params]
 

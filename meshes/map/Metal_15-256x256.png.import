@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de7mkv5a3d75j"
-path.s3tc="res://.godot/imported/ship_Metal_08-256x256 1.png-eb349b37ceb007bacdf856f52f935491.s3tc.ctex"
+uid="uid://d2uiy4gmy701h"
+path.s3tc="res://.godot/imported/Metal_15-256x256.png-cc4c67bff4dea04c63f5ed3186e73180.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "96b8b35f1966b8d59fcba61ff061cf85"
-}
 
 [deps]
 
-source_file="res://meshes/ship_model/ship_Metal_08-256x256 1.png"
-dest_files=["res://.godot/imported/ship_Metal_08-256x256 1.png-eb349b37ceb007bacdf856f52f935491.s3tc.ctex"]
+source_file="res://meshes/map/Metal_15-256x256.png"
+dest_files=["res://.godot/imported/Metal_15-256x256.png-cc4c67bff4dea04c63f5ed3186e73180.s3tc.ctex"]
 
 [params]
 
@@ -25,12 +22,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://meshes/ship_model/ship_Metal_08-256x256 1.png"
+roughness/mode=0
+roughness/src_normal=""
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

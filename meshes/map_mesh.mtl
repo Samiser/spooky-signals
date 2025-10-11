@@ -1,0 +1,79 @@
+newmtl ProBuilderDefault
+map_Kd GridBox_Default.png
+Kd 1 1 1
+d 1
+
+newmtl Metal_08-256x256
+map_Kd Metal_15-256x256.png
+bump Metal_08-256x256 1.png
+Kd 0.6226414 0.6226414 0.6226414
+d 1
+
+newmtl glass_1
+map_Kd glass.png
+map_Ke beam_distortion.png
+Kd 0.7988608 0.8621494 0.9056604
+d 0.3843137
+
+newmtl Metal_06-256x256
+map_Kd Metal_06-256x256.png
+bump Metal_06-256x256 1.png
+Kd 1 1 1
+d 1
+
+newmtl Plaster_15-256x256
+map_Kd Plaster_15-256x256.png
+bump Metal_05-256x256 1.png
+Kd 0.5754716 0.5754716 0.5754716
+d 1
+
+newmtl Metal_18-256x256
+map_Kd Metal_18-256x256.png
+bump Metal_17-256x256 1.png
+Kd 1 1 1
+d 1
+
+newmtl Metal_05-256x256
+map_Kd Metal_05-256x256.png
+bump Metal_05-256x256 1.png
+Kd 1 1 1
+d 1
+
+newmtl light
+Kd 1 1 1
+d 1
+
+newmtl Rail
+map_Kd rail_tex.png
+bump Metal_17-256x256 1.png
+Kd 1 1 1
+d 1
+
+newmtl Black
+Kd 0 0 0
+d 1
+
+newmtl Metal_17-256x256
+map_Kd Metal_17-256x256.png
+bump Metal_17-256x256 1.png
+Kd 1 1 1
+d 1
+
+newmtl Metal_11-256x256
+map_Kd Metal_11-256x256.png
+bump Metal_17-256x256 1.png
+Kd 1 1 1
+d 1
+
+newmtl Metal_13-256x256
+map_Kd Metal_13-256x256.png
+bump Metal_17-256x256 1.png
+Kd 1 1 1
+d 1
+
+newmtl panel_0
+map_Kd wall_decals.png
+bump wall_decals 1.png
+Kd 1 1 1
+d 1
+
