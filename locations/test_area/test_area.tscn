@@ -107,26 +107,27 @@ transform = Transform3D(0.902149, -0.13278748, 0.41048098, 0, 0.9514548, 0.30778
 transform = Transform3D(0.6273954, 0, 1.3624885, 0, 1.5, 0, -1.3624885, 0, 0.6273954, -5.2330604, 2.6377952, -2.0560055)
 viewport_override = NodePath("../SecurityCamViewport")
 
-[node name="SignalTuner" type="Node" parent="."]
+[node name="SignalTuner" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3201413, 1.807569, -0.09689063)
 
 [node name="Screen" parent="SignalTuner" instance=ExtResource("2_g35bj")]
-transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 4.549819, 1.8260555, -0.41034675)
+transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 0, 0.3926816, -0.022044182)
 current_screen_scene = ExtResource("5_rxbqj")
 
 [node name="CourseFrequency" parent="SignalTuner" node_paths=PackedStringArray("screen") instance=ExtResource("4_mw8hc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.316779, 0.99832726, -0.9751253)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.43504667, -0.58682275)
 screen = NodePath("../Screen")
 
 [node name="FineFrequency" parent="SignalTuner" node_paths=PackedStringArray("screen") instance=ExtResource("4_mw8hc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.316779, 0.99832726, -0.61655855)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.43504667, -0.22825599)
 screen = NodePath("../Screen")
 
 [node name="Amplitude" parent="SignalTuner" node_paths=PackedStringArray("screen") instance=ExtResource("4_mw8hc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.316779, 0.99832726, -0.23018885)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.43504667, 0.15811372)
 screen = NodePath("../Screen")
 
 [node name="Something" parent="SignalTuner" node_paths=PackedStringArray("screen") instance=ExtResource("4_mw8hc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.316779, 0.99832726, 0.16424513)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.43504667, 0.5525477)
 screen = NodePath("../Screen")
 
 [node name="Signals" type="Node" parent="."]
