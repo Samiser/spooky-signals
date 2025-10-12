@@ -6,16 +6,6 @@ const interactable: bool = true
 @onready var output_label: RichTextLabel = $%OutputTextLabel
 @onready var input: LineEdit = %InputLineEdit
 
-var data_string : String = '''
-00000000  30 31 32 33 34 35 36 37
-00000010  0a 2f 2a 20 2a 2a 2a 2a 
-00000020  2a 2a 2a 2a 2a 2a 2a 2a
-00000030  2a 2a 2a 2a 2a 2a 2a 2a 
-00000040  2a 2a 20 2a 2f 0a 09 54
-00000050  68 20 54 41 42 73 20 28
-00000060  32 09 09 33 0a 09 33 2e
-00000070  39 2e 34 32 0a'''
-
 func error(msg: String) -> String:
 	return "[b]Error:[/b] %s" % msg
 
@@ -51,13 +41,20 @@ func read_disk(params: Array[String]) -> String:
 	return "No disk drive found."
 
 func decode_disk(params: Array[String]) -> String:
-	for disk in get_tree().get_nodes_in_group("floppy"):
+	for disk: FloppyDisk in get_tree().get_nodes_in_group("floppy"):
 		if disk.inserted:
 			if params.size() < 3:
 				return "Enter a start and end address."
 			else:
-				if params[1] == disk.start_address and params[2] == disk.end_address:
-					return disk.data
+				var data: SignalData = disk.data
+				if data.decoded:
+					return "Data already decoded!"
+				if params[1] == data.start_address and params[2] == data.end_address:
+					if Signals.current.data == data:
+						Signals.set_current_decoded()
+					else:
+						data.decoded = true
+					return data.content_text
 	return "No disk drive found."
 
 func clear() -> String:

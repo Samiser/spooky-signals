@@ -1,4 +1,5 @@
 extends StaticBody3D
+class_name FloppyDisk
 
 @export var data : SignalData
 
