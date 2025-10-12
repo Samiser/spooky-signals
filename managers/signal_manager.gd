@@ -2,6 +2,8 @@ extends Node
 class_name SignalManager
 
 signal current_changed(previous: SignalSource, current: SignalSource)
+signal current_downloaded(current: SignalSource)
+signal current_decoded(current: SignalSource)
 
 var _current: SignalSource = null
 
@@ -20,6 +22,16 @@ func set_current(s: SignalSource) -> void:
 	_current = s
 	_bind_current()
 	emit_signal("current_changed", prev, _current)
+
+func set_current_downloaded() -> void:
+	if _current:
+		_current.downloaded = true
+		current_downloaded.emit(_current)
+
+func set_current_decoded() -> void:
+	if _current:
+		_current.decoded = true
+		current_decoded.emit(_current)
 
 func clear_current() -> void:
 	if _current == null:

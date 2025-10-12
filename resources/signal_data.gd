@@ -8,3 +8,6 @@ class_name SignalData
 
 @export_multiline var content_text: String
 @export var content_image: Texture2D
+
+var downloaded: bool = false
+var decoded: bool = false

@@ -115,19 +115,32 @@ transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08
 current_screen_scene = ExtResource("5_rxbqj")
 
 [node name="CourseFrequency" parent="SignalTuner" node_paths=PackedStringArray("screen") instance=ExtResource("4_mw8hc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.43504667, -0.58682275)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0.38496304, -0.8912009)
 screen = NodePath("../Screen")
 
 [node name="FineFrequency" parent="SignalTuner" node_paths=PackedStringArray("screen") instance=ExtResource("4_mw8hc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.43504667, -0.22825599)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.43504667, -0.40852493)
+max_value = 5.0
+min_value = 0.5
+value = 3.0
+step = 0.05
+drag_sensitivity = 0.01
 screen = NodePath("../Screen")
 
 [node name="Amplitude" parent="SignalTuner" node_paths=PackedStringArray("screen") instance=ExtResource("4_mw8hc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.43504667, 0.15811372)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.43504667, -0.022155225)
+max_value = 1.0
+min_value = 0.2
+value = 0.4
+step = 0.01
+drag_sensitivity = 0.01
 screen = NodePath("../Screen")
 
-[node name="Something" parent="SignalTuner" node_paths=PackedStringArray("screen") instance=ExtResource("4_mw8hc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.43504667, 0.5525477)
+[node name="Phase" parent="SignalTuner" node_paths=PackedStringArray("screen") instance=ExtResource("4_mw8hc")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.43504667, 0.37227875)
+max_value = 1.99
+step = 0.01
+drag_sensitivity = 0.01
 screen = NodePath("../Screen")
 
 [node name="Signals" type="Node" parent="."]
