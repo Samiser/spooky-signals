@@ -13,6 +13,7 @@ script = ExtResource("1_toexc")
 attributes = SubResource("CameraAttributesPractical_mw8hc")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://44blrtn7hqmd"]
+
+[ext_resource type="Script" uid="uid://drckdw847bgd6" path="res://entities/signal/signal.gd" id="1_sujve"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_sujve"]
+
+[node name="Signal" type="Node3D" groups=["signal_source"]]
+script = ExtResource("1_sujve")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_sujve")
