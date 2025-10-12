@@ -1,25 +1,43 @@
 extends Control
 
-@onready var target_line: Line2D = $MarginContainer/VBoxContainer/MarginContainer/CenterContainer/Control/TargetLine
-@onready var controlled_line: Line2D = $MarginContainer/VBoxContainer/MarginContainer/CenterContainer/Control/ControlledLine
+@onready var no_signal_display: MarginContainer = %NoSignalDisplay
+@onready var signal_tuner_display: MarginContainer = %SignalTunerDisplay
 
+@onready var target_line: Line2D = %TargetLine
+@onready var controlled_line: Line2D = %ControlledLine
+
+var coarse_frequency: float = 4651
 var cycles: float = 3.0
 var amplitude: float = 1.0
 var phase: float = 0.0
 
-const TGT_CYCLES := 2.25
-const TGT_AMPL   := 0.7
-const TGT_PHASE  := 0.35
+var data: SignalData
 
 const SAMPLES := 256
 const MARGIN  := 11
 
 @export var lock_tolerance := 0.9
 
+func _ready() -> void:
+	no_signal_display.show()
+	signal_tuner_display.hide()
+	Signals.current_changed.connect(_on_current_signal_changed)
+
+func _on_current_signal_changed(_old: SignalSource, new: SignalSource) -> void:
+	if new == null:
+		data = null
+		no_signal_display.show()
+		signal_tuner_display.hide()
+	else:
+		data = new.data
+		no_signal_display.hide()
+		signal_tuner_display.show()
+
 func control(caller: Node3D, value: float):
-	print(caller.name)
 	match caller.name:
 		"CourseFrequency":
+			if value >= 4000 and value <= 7000:
+				coarse_frequency = value
 			%CourseFrequencyLabel.text = str(value)
 		"FineFrequency":
 			if value >= 0.5 and value <= 5.0:
@@ -35,6 +53,9 @@ func _process(_delta: float) -> void:
 	_draw_and_score()
 
 func _draw_and_score() -> void:
+	if not data:
+		return
+	
 	var w := size.x - MARGIN * 2.0
 	var h := size.y - MARGIN * 2.0
 	if w <= 2.0 or h <= 2.0:
@@ -52,7 +73,7 @@ func _draw_and_score() -> void:
 	for i in SAMPLES:
 		var t := float(i) / float(SAMPLES - 1)
 
-		var y_tgt := TGT_AMPL * sin(TAU * (TGT_CYCLES * t) + (PI * TGT_PHASE))
+		var y_tgt := data.target_amplitude * sin(TAU * (data.target_cycles * t) + (PI * data.target_phase))
 		var y_ctl := amplitude * sin(TAU * (cycles * t) + (PI * phase))
 
 		var x := w / 2 - t * w
@@ -68,4 +89,16 @@ func _draw_and_score() -> void:
 
 	var rms := sqrt(err_acc / float(SAMPLES))
 	var score := clampf(1.0 - (rms / lock_tolerance), 0.0, 1.0)
-	print("Score: %d%% (rms=%.3f)" % [int(round(score * 100.0)), rms])
+	%ScoreLabel.text = "%d%%" % [int(round(score * 100.0))]
+	
+	var diff := absf(coarse_frequency - data.target_coarse_frequency)
+
+	var alpha := 1.0 - smoothstep(0.0, 50.0, diff)
+
+	_set_line_alpha(target_line, alpha)
+	_set_line_alpha(controlled_line, alpha)
+
+func _set_line_alpha(line: Line2D, a: float) -> void:
+	var c := line.modulate
+	c.a = clampf(a, 0.0, 1.0)
+	line.modulate = c

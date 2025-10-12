@@ -14,5 +14,10 @@ class_name SignalData
 
 @export var content_image: Texture2D
 
+@export var target_coarse_frequency := 5678
+@export var target_cycles := 2.25
+var target_amplitude := 0.7
+var target_phase := 0.35
+
 var downloaded: bool = false
 var decoded: bool = false
