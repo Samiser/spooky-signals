@@ -1,10 +1,13 @@
 extends StaticBody3D
 
-@export var data : String
-var inserted :bool = false
+@export var data : SignalData
+
+var inserted : bool = false
+
 var start_pos : Vector3
 var start_rot : Vector3
-@onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
+
+@onready var collider: CollisionShape3D = $CollisionShape3D
 
 func _ready() -> void:
 	start_pos = global_position
@@ -17,7 +20,7 @@ func interact(player: Player) -> void:
 				disk._remove_disk()
 			return
 	
-	collision_shape_3d.disabled = true
+	collider.disabled = true
 	inserted = true
 	
 	var tween := get_tree().create_tween()
@@ -29,10 +32,10 @@ func interact(player: Player) -> void:
 	tween.tween_property(self, "global_position", Vector3(-4.359, 0.754, -0.145), 0.3)
 	await tween.finished
 	
-	collision_shape_3d.disabled = false
+	collider.disabled = false
 	
 func _remove_disk() -> void:
-	collision_shape_3d.disabled = true
+	collider.disabled = true
 	inserted = false
 
 	var tween := get_tree().create_tween()
@@ -44,4 +47,4 @@ func _remove_disk() -> void:
 	tween.set_parallel().tween_property(self, "global_rotation", start_rot, 0.6)
 	await tween.finished
 	
-	collision_shape_3d.disabled = false
+	collider.disabled = false

@@ -25,6 +25,7 @@ func help(_params: Array[String]) -> String:
 	scan [name] - scan an in-range scannable
 	connect [host] - connect to in-range host
 	read - displays disk data
+	decode [start address] [end address] - decode a disk drives data
 	clear - clear terminal output'''
 
 func scan(params: Array[String]) -> String:
@@ -46,7 +47,17 @@ func host_disconnect() -> String:
 func read_disk(params: Array[String]) -> String:
 	for disk in get_tree().get_nodes_in_group("floppy"):
 		if disk.inserted:
-			return disk.data
+			return disk.jumbled_data
+	return "No disk drive found."
+
+func decode_disk(params: Array[String]) -> String:
+	for disk in get_tree().get_nodes_in_group("floppy"):
+		if disk.inserted:
+			if params.size() < 3:
+				return "Enter a start and end address."
+			else:
+				if params[1] == disk.start_address and params[2] == disk.end_address:
+					return disk.data
 	return "No disk drive found."
 
 func clear() -> String:
@@ -67,6 +78,8 @@ func parse_command(params: Array[String]) -> String:
 			return clear()
 		"read":
 			return read_disk(params)
+		"decode":
+			return decode_disk(params)
 		_:
 			return error("[b]Unknown Command[/b], type 'help' to see all commands")
 

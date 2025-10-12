@@ -120,8 +120,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.389588, -0.9791371, -2.935
 
 [node name="SignalDisplayScreen" parent="Interfaces" instance=ExtResource("3_1bvp3")]
 transform = Transform3D(-0.408912, -0.037810244, -0.2852392, -0.0010826895, 0.4958631, -0.064177625, 0.2877323, -0.051868342, -0.4056105, 0.35370415, 1.5860431, 3.9583058)
-height = 1024
-width = 1024
 current_screen_scene = ExtResource("6_5vw27")
 
 [node name="SignalTuner" type="Node3D" parent="Interfaces"]
@@ -129,7 +127,6 @@ transform = Transform3D(1, 0, -5.9604645e-08, 0, 1, 0, 5.9604645e-08, 0, 1, 1.00
 
 [node name="Screen" parent="Interfaces/SignalTuner" instance=ExtResource("3_1bvp3")]
 transform = Transform3D(-2.6226836e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.6226836e-08, 0, 0.40126026, 0)
-height = 1024
 width = 1494
 current_screen_scene = ExtResource("7_kek77")
 
@@ -164,7 +161,6 @@ control_target = NodePath("../SignalCamViewport/SignalCamera")
 
 [node name="SignalCameraScreen" parent="Interfaces/SignalCamera" node_paths=PackedStringArray("viewport_override") instance=ExtResource("3_1bvp3")]
 transform = Transform3D(-0.5, 5.6948912e-09, -4.3338822e-08, 1.150482e-08, 0.49540466, -0.06763298, 4.217019e-08, -0.06763298, -0.49540466, -1.1932571, 1.1492748, 4.2717648)
-height = 1024
 width = 2048
 viewport_override = NodePath("../SignalCamViewport")
 
@@ -187,8 +183,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.634969, 0.46993732, 0.0634
 
 [node name="FloppyDisk" parent="." instance=ExtResource("14_vivmo")]
 transform = Transform3D(-3.015472e-08, -0.68985957, 0.72394305, 1, -4.371138e-08, 0, 3.1644554e-08, 0.72394305, 0.68985957, -4.3591685, 0.48787183, -0.83678114)
-data = "00000000  30 31 32 33 34 35 36 37  38 39 41 42 43 44 45 46"
-
-[node name="FloppyDisk2" parent="." instance=ExtResource("14_vivmo")]
-transform = Transform3D(-4.359776e-08, -0.9974005, 0.072054505, 1, -4.371138e-08, 0, 3.1495997e-09, 0.072054505, 0.9974005, -4.022766, 0.49695694, -0.6214844)
-data = "CHEESE BALLZ"
+data = null

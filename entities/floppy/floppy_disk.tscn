@@ -10,6 +10,7 @@ data = PackedVector3Array(-0.01, 0.19999999, 0.19999999, 0.01, 0.19999999, 0.199
 
 [node name="FloppyDisk" type="StaticBody3D" groups=["floppy"]]
 script = ExtResource("1_0m87m")
+data = "I am a spooky alien coming to EAT you!"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_rfkfj")
