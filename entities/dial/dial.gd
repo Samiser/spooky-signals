@@ -1,4 +1,5 @@
 extends AnimatableBody3D
+class_name Dial
 
 var _active = false
 var _player: Player
@@ -9,6 +10,8 @@ var _player: Player
 @export var step: float = 1.
 
 @export var drag_sensitivity: float = 0.1
+
+@export var screen: Screen
 
 var max_rotation: float = -160
 var min_rotation: float = 160
@@ -42,6 +45,12 @@ func _input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 		return
 
+func _process(_delta: float) -> void:
+	if !_active: return
+	
+	if screen.current_screen.has_method("control"):
+		screen.current_screen.control(self, value)
+
 func _handle_motion(event: InputEventMouseMotion) -> void:
 	var dv := -event.relative.y * drag_sensitivity
 	if dv == 0.0:
@@ -53,7 +62,6 @@ func _handle_motion(event: InputEventMouseMotion) -> void:
 		new_val = round((new_val - min_value) / step) * step + min_value
 
 	value = clampf(new_val, min_value, max_value)
-	print(value)
 	_update_rotation_from_value()
 
 func _update_rotation_from_value() -> void:
