@@ -14,8 +14,9 @@ func help(_params: Array[String]) -> String:
 	scan - list scannable objects in range
 	scan [name] - scan an in-range scannable
 	connect [host] - connect to in-range host
-	read - displays disk data
-	decode [start address] [end address] - decode a disk drives data
+	read - displays raw disk data
+	decode [start address] [end address] - decode drive data
+	output - outputs decoded disk drive data to the monitor
 	clear - clear terminal output'''
 
 func scan(params: Array[String]) -> String:
@@ -35,27 +36,48 @@ func host_disconnect() -> String:
 	return "boop"
 
 func read_disk(params: Array[String]) -> String:
-	for disk in get_tree().get_nodes_in_group("floppy"):
-		if disk.inserted:
-			return disk.jumbled_data
+	var disk = _check_disk()
+	if disk:
+		var data: SignalData = disk.data
+		return data.encoded_content
+	return "No disk drive found."
+
+func output_disk_data(params: Array[String]) -> String:
+	var disk = _check_disk()
+	if disk:
+		var data: SignalData = disk.data
+		if data.decoded:
+			return "Displaying decoded data."
+			# display stuff here!!!
+		else:
+			return "Data not decoded, use the 'decode' command."
 	return "No disk drive found."
 
 func decode_disk(params: Array[String]) -> String:
-	for disk: FloppyDisk in get_tree().get_nodes_in_group("floppy"):
-		if disk.inserted:
-			if params.size() < 3:
-				return "Enter a start and end address."
+	var disk = _check_disk()
+
+	if disk:
+		if params.size() < 3:
+			return "Enter a start and end address."
+		else:
+			var data: SignalData = disk.data
+			if data.decoded:
+				return "Data already decoded, display with the 'output' command."
+			if params[1] == data.start_address and params[2] == data.end_address:
+				if Signals.current and Signals.current.data == data:
+					Signals.set_current_decoded()
+				else:
+					data.decoded = true
+				return "Data decoded, display with the 'output' command."
 			else:
-				var data: SignalData = disk.data
-				if data.decoded:
-					return "Data already decoded!"
-				if params[1] == data.start_address and params[2] == data.end_address:
-					if Signals.current.data == data:
-						Signals.set_current_decoded()
-					else:
-						data.decoded = true
-					return data.content_text
+				return "Failed to decode any relevant data, try different addresses."
 	return "No disk drive found."
+
+func _check_disk() -> Node3D:
+	for disk in get_tree().get_nodes_in_group("floppy"):
+		if disk.inserted:
+			return disk
+	return null
 
 func clear() -> String:
 	output_label.clear()
@@ -77,6 +99,8 @@ func parse_command(params: Array[String]) -> String:
 			return read_disk(params)
 		"decode":
 			return decode_disk(params)
+		"output":
+			return output_disk_data(params)
 		_:
 			return error("[b]Unknown Command[/b], type 'help' to see all commands")
 

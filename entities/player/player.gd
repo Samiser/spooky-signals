@@ -51,9 +51,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("zoom"):
 		is_zoomed = !is_zoomed
 		if is_zoomed:
-			camera.fov /= 2.0
+			camera.fov /= 2.4
 		else:
-			camera.fov *= 2.0
+			camera.fov *= 2.4
 	
 	if event.is_action_released("click"):
 		if interacting and current_interactable.has_method("on_release"):
