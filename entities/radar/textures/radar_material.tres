@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://cp2feuryo443a"]
+
+[ext_resource type="Texture2D" uid="uid://doa00rvc2ichq" path="res://entities/radar/textures/radar_low_initialShadingGroup_BaseMap.png" id="1_8nrtf"]
+[ext_resource type="Texture2D" uid="uid://dfglnd5vyqvjp" path="res://entities/radar/textures/radar_low_initialShadingGroup_Emissive.png" id="2_xkinb"]
+[ext_resource type="Texture2D" uid="uid://r0f1euetm0yw" path="res://entities/radar/textures/radar_low_initialShadingGroup_MaskMap.png" id="3_c2phk"]
+[ext_resource type="Texture2D" uid="uid://5bsauvgp05qf" path="res://entities/radar/textures/radar_low_initialShadingGroup_Normal.png" id="4_uu0c5"]
+
+[resource]
+albedo_texture = ExtResource("1_8nrtf")
+metallic = 1.0
+metallic_texture = ExtResource("3_c2phk")
+roughness_texture = ExtResource("3_c2phk")
+roughness_texture_channel = 2
+emission_enabled = true
+emission_texture = ExtResource("2_xkinb")
+normal_enabled = true
+normal_texture = ExtResource("4_uu0c5")
