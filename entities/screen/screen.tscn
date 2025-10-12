@@ -36,8 +36,6 @@ size = Vector3(2, 2, 0.047424316)
 
 [node name="Screen" type="StaticBody3D"]
 script = ExtResource("1_pik1a")
-height = null
-width = null
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)

@@ -5,6 +5,7 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 var speed: int = 5
 var jump_speed: int = 5
 var mouse_sensitivity: float = 0.002
+var is_zoomed : bool = false
 
 var interact_distance: float = 4.0
 
@@ -46,6 +47,13 @@ func _unhandled_input(event: InputEvent) -> void:
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		else:
 			_try_interact()
+	
+	if event.is_action_pressed("zoom"):
+		is_zoomed = !is_zoomed
+		if is_zoomed:
+			camera.fov /= 2.0
+		else:
+			camera.fov *= 2.0
 	
 	if event.is_action_released("click"):
 		if interacting and current_interactable.has_method("on_release"):
