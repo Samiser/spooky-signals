@@ -15,3 +15,4 @@ emission_enabled = true
 emission_texture = ExtResource("2_xkinb")
 normal_enabled = true
 normal_texture = ExtResource("4_uu0c5")
+texture_filter = 0
