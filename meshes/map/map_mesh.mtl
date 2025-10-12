@@ -72,8 +72,26 @@ bump Metal_17-256x256 1.png
 Kd 1 1 1
 d 1
 
+newmtl glass
+map_Kd glass.png
+bump glass_bump.png
+Kd 0.4811321 0.4811321 0.4811321
+d 0.3882353
+
 newmtl Metal_13-256x256
 map_Kd Metal_13-256x256.png
+bump Metal_17-256x256 1.png
+Kd 1 1 1
+d 1
+
+newmtl Metal_02-256x256
+map_Kd Metal_02-256x256.png
+bump Metal_17-256x256 1.png
+Kd 1 1 1
+d 1
+
+newmtl Metal_09-256x256
+map_Kd Metal_10-256x256.png
 bump Metal_17-256x256 1.png
 Kd 1 1 1
 d 1
