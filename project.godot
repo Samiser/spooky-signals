@@ -15,6 +15,10 @@ run/main_scene="uid://chxlkaq0opjy7"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Signals="*res://managers/signal_manager.gd"
+
 [input]
 
 move_forward={

@@ -60,6 +60,7 @@ func _update_selection() -> void:
 			return
 		else:
 			_current = null
+			Signals.clear_current()
 
 	# Find best candidate within on-angle
 	var best: SignalSource = null
@@ -85,9 +86,7 @@ func _update_selection() -> void:
 			best_score = score
 			best = s
 
-	if best != _current:
-		_current = best
-		print(_current)
+	Signals.set_current(best)
 
 func _within_selection(s: SignalSource, pos: Vector3, fwd: Vector3, limit_deg: float) -> bool:
 	if !is_instance_valid(s):

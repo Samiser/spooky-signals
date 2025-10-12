@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dnk6muhxi6jnc"]
+[gd_scene load_steps=23 format=3 uid="uid://dnk6muhxi6jnc"]
 
 [ext_resource type="PackedScene" uid="uid://vfatuya14sn3" path="res://entities/player/player.tscn" id="1_3ewf1"]
 [ext_resource type="PackedScene" uid="uid://ct5ty1nydcveo" path="res://entities/screen/screen.tscn" id="2_g35bj"]
@@ -7,13 +7,37 @@
 [ext_resource type="PackedScene" uid="uid://dfm5ubt1vvrrm" path="res://entities/signal_camera/signal_camera.tscn" id="5_onvax"]
 [ext_resource type="PackedScene" uid="uid://bihsc0t2rsvbi" path="res://ui/screens/signal_tuner/signal_tuner.tscn" id="5_rxbqj"]
 [ext_resource type="PackedScene" uid="uid://but8hh6p6o5w4" path="res://entities/joystick/joystick.tscn" id="6_onvax"]
+[ext_resource type="Texture2D" uid="uid://c5w7axry8fi81" path="res://icon.svg" id="8_3o6hu"]
 [ext_resource type="PackedScene" uid="uid://44blrtn7hqmd" path="res://entities/signal/signal.tscn" id="8_50bm6"]
+[ext_resource type="Script" uid="uid://7dw3dn04fi2k" path="res://resources/signal_data.gd" id="8_52td6"]
+[ext_resource type="PackedScene" uid="uid://dgrgk6qd0bxcb" path="res://ui/screens/signal_display/signal_display.tscn" id="10_woyvu"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_g35bj"]
 size = Vector3(10, 1, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7y0ld"]
 size = Vector3(10, 1, 10)
+
+[sub_resource type="Resource" id="Resource_woyvu"]
+script = ExtResource("8_52td6")
+title = "Text Transmission"
+content_text = "wahoooo!!"
+metadata/_custom_type_script = "uid://7dw3dn04fi2k"
+
+[sub_resource type="Resource" id="Resource_3o6hu"]
+script = ExtResource("8_52td6")
+id = &"sig_002"
+title = "Image Transmission"
+content_image = ExtResource("8_3o6hu")
+metadata/_custom_type_script = "uid://7dw3dn04fi2k"
+
+[sub_resource type="Resource" id="Resource_t00ul"]
+script = ExtResource("8_52td6")
+id = &"sig_003"
+title = "Double Transmission"
+content_text = "yipeee!!!!"
+content_image = ExtResource("8_3o6hu")
+metadata/_custom_type_script = "uid://7dw3dn04fi2k"
 
 [sub_resource type="Gradient" id="Gradient_onvax"]
 colors = PackedColorArray(0, 0, 0, 1, 0.007195848, 0.22476539, 0.31965184, 1)
@@ -108,7 +132,16 @@ screen = NodePath("../Screen")
 [node name="Signals" type="Node" parent="."]
 
 [node name="Signal" parent="Signals" instance=ExtResource("8_50bm6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5752416, 0, -31.544472)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.624329, 0, -31.544472)
+data = SubResource("Resource_woyvu")
+
+[node name="Signal2" parent="Signals" instance=ExtResource("8_50bm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.628588, 0, -31.544472)
+data = SubResource("Resource_3o6hu")
+
+[node name="Signal3" parent="Signals" instance=ExtResource("8_50bm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8558359, 14.04768, -31.544472)
+data = SubResource("Resource_t00ul")
 
 [node name="TerminalScreen" parent="." instance=ExtResource("2_g35bj")]
 transform = Transform3D(0.9837944, 0, -0.17930017, 0, 1, 0, 0.17930017, 0, 0.9837944, -0.44365543, 2.030398, -4.5553346)
@@ -116,6 +149,10 @@ current_screen_scene = ExtResource("3_7y0ld")
 
 [node name="TestScreen" parent="." instance=ExtResource("2_g35bj")]
 transform = Transform3D(0.5353152, 0, 0.27099377, 0, 0.59999996, 0, -0.27099377, 0, 0.5353152, -3.32793, 1.6587055, -4.5553346)
+
+[node name="SignalDisplayScreen" parent="." instance=ExtResource("2_g35bj")]
+transform = Transform3D(0.33558315, 0, -0.9420106, 0, 1, 0, 0.9420106, 0, 0.33558315, 4.9665084, 3.4036822, -1.9954134)
+current_screen_scene = ExtResource("10_woyvu")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7588897, 0)

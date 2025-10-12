@@ -1,0 +1,48 @@
+extends Node
+class_name SignalManager
+
+signal current_changed(previous: SignalSource, current: SignalSource)
+
+var _current: SignalSource = null
+
+var current: SignalSource:
+	get:
+		return _current
+
+func has_current() -> bool:
+	return _current != null and is_instance_valid(_current)
+
+func set_current(s: SignalSource) -> void:
+	var prev := _current
+	if prev == s:
+		return
+	_unbind_current()
+	_current = s
+	_bind_current()
+	emit_signal("current_changed", prev, _current)
+
+func clear_current() -> void:
+	if _current == null:
+		return
+	var prev := _current
+	_unbind_current()
+	_current = null
+	emit_signal("current_changed", prev, null)
+
+func _bind_current() -> void:
+	if _current == null:
+		return
+	if not _current.tree_exited.is_connected(_on_current_gone):
+		_current.tree_exited.connect(_on_current_gone)
+
+func _unbind_current() -> void:
+	if _current == null:
+		return
+	if _current.tree_exited.is_connected(_on_current_gone):
+		_current.tree_exited.disconnect(_on_current_gone)
+
+func _on_current_gone() -> void:
+	var prev := _current
+	_unbind_current()
+	_current = null
+	emit_signal("current_changed", prev, null)
