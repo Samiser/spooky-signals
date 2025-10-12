@@ -2,6 +2,17 @@
 extends StaticBody3D
 class_name Screen
 
+@export var height: int = 1024:
+	set(value):
+		height = value
+		if _viewport:
+			_viewport.size.y = value
+@export var width: int = 1024:
+	set(value):
+		width = value
+		if _viewport:
+			_viewport.size.x = value
+
 @export var current_screen_scene: PackedScene:
 	set(value):
 		current_screen_scene = value
@@ -22,6 +33,8 @@ var _player: Player
 
 func _ready() -> void:
 	_replace_screen()
+	if _viewport:
+		_viewport.size = Vector2(width, height)
 
 func _replace_screen() -> void:	
 	if !_viewport:

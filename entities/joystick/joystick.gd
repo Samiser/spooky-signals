@@ -41,7 +41,7 @@ func stop_interact() -> void:
 	_active = false
 	if _player:
 		_player.interacting = false
-		_player.camera.rotation.x -= deg_to_rad(20)
+		#_player.camera.rotation.x -= deg_to_rad(20)
 		_player = null
 	_start_center_tween()
 

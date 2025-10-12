@@ -29,13 +29,15 @@ shader_parameter/discolor = true
 shader_parameter/warp_amount = 1.0
 shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
-shader_parameter/vignette_opacity = 0.5
+shader_parameter/vignette_opacity = 0.2130000101175
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pik1a"]
 size = Vector3(2, 2, 0.047424316)
 
 [node name="Screen" type="StaticBody3D"]
 script = ExtResource("1_pik1a")
+height = null
+width = null
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
