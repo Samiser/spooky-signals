@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhjvdardmqhyg"]
+
+[ext_resource type="Material" uid="uid://52o1fxgkg4t0" path="res://meshes/terminal/textures/terminal_display_material.tres" id="1_q1rvj"]
+[ext_resource type="ArrayMesh" uid="uid://ds1us61ggs5ni" path="res://meshes/terminal/terminal.obj" id="2_lxx3f"]
+
+[node name="TerminalMonitor" type="Node3D"]
+
+[node name="Terminal" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9841585, -0.17729086, 0, 0.17729086, 0.9841585, 0, 0, 0, 1, 0, 0.05291602, 0)
+material_override = ExtResource("1_q1rvj")
+mesh = ExtResource("2_lxx3f")
