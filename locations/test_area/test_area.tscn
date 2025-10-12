@@ -21,7 +21,7 @@ size = Vector3(10, 1, 10)
 [sub_resource type="Resource" id="Resource_woyvu"]
 script = ExtResource("8_52td6")
 title = "Text Transmission"
-content_text = "wahoooo!!"
+content_text = "wahoooo!! now with [b]bold[/b] and [i]italics[/i] text!"
 metadata/_custom_type_script = "uid://7dw3dn04fi2k"
 
 [sub_resource type="Resource" id="Resource_3o6hu"]

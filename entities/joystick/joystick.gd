@@ -33,8 +33,7 @@ func interact(player: Player) -> void:
 	_player = player
 	_player.interacting = true
 	if screen:
-		# this breaks the camera
-		# _player.camera.look_at(screen.global_position)
+		_player.camera.rotation.x += deg_to_rad(20)
 		pass
 	_active = true
 
@@ -42,6 +41,7 @@ func stop_interact() -> void:
 	_active = false
 	if _player:
 		_player.interacting = false
+		_player.camera.rotation.x -= deg_to_rad(20)
 		_player = null
 	_start_center_tween()
 

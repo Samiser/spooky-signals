@@ -8,8 +8,8 @@ extends Node3D
 
 @export var slew_rate_deg_per_sec: float = 240.0
 @export var deadzone: float = 0.05
-@export var invert_x: bool = false
-@export var invert_y: bool = false
+@export var invert_x: bool = true
+@export var invert_y: bool = true
 
 # --- Selection settings ---
 @export var select_angle_on_deg: float = 10.0    # must be inside this to select
@@ -29,8 +29,8 @@ func _ready() -> void:
 	_base_rot = rotation_degrees
 
 func control(input: Vector2) -> void:
-	var ix := (-input.x) if invert_x else input.x
-	var iy := (-input.y) if invert_y else input.y
+	var ix := input.x if invert_x else -input.x
+	var iy := -input.y if invert_y else input.y
 
 	if absf(ix) < deadzone: ix = 0.0
 	if absf(iy) < deadzone: iy = 0.0

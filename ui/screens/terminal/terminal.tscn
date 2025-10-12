@@ -1,6 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://dp54nqbw0enmy"]
+[gd_scene load_steps=20 format=3 uid="uid://dp54nqbw0enmy"]
 
 [ext_resource type="Script" uid="uid://b7bgdn7is7bn6" path="res://ui/screens/terminal/terminal.gd" id="1_sxuvd"]
+[ext_resource type="FontFile" uid="uid://byl1pw6ncu61a" path="res://fonts/NK57 Monospace Sc Rg.otf" id="1_xukm4"]
+[ext_resource type="FontFile" uid="uid://dad1xr0e0pnhr" path="res://fonts/NK57 Monospace Sc Bd.otf" id="2_1pmws"]
+[ext_resource type="FontFile" uid="uid://diq1f4nx62ilc" path="res://fonts/NK57 Monospace Sc Bd It.otf" id="3_1vk6n"]
+[ext_resource type="FontFile" uid="uid://cbr3mass3sfw4" path="res://fonts/NK57 Monospace Sc Rg It.otf" id="4_p5bwx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_froon"]
 bg_color = Color(0, 0, 0, 1)
@@ -11,7 +15,7 @@ bg_color = Color(0, 0, 0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0uqvb"]
 bg_color = Color(0, 0, 0, 1)
 
-[sub_resource type="Image" id="Image_es1ik"]
+[sub_resource type="Image" id="Image_1vkbp"]
 data = {
 "data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 177, 177, 177, 153, 177, 177, 177, 166, 170, 170, 170, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 170, 170, 170, 18, 177, 177, 177, 166, 178, 178, 178, 151, 0, 0, 0, 0, 0, 0, 0, 0, 177, 177, 177, 166, 178, 178, 178, 217, 178, 178, 178, 178, 170, 170, 170, 18, 0, 0, 0, 0, 0, 0, 0, 0, 170, 170, 170, 18, 178, 178, 178, 179, 178, 178, 178, 217, 178, 178, 178, 165, 0, 0, 0, 0, 0, 0, 0, 0, 170, 170, 170, 18, 178, 178, 178, 178, 178, 178, 178, 217, 178, 178, 178, 178, 170, 170, 170, 18, 170, 170, 170, 18, 178, 178, 178, 179, 178, 178, 178, 217, 178, 178, 178, 178, 180, 180, 180, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 170, 170, 170, 18, 178, 178, 178, 178, 178, 178, 178, 217, 178, 178, 178, 197, 178, 178, 178, 197, 178, 178, 178, 217, 178, 178, 178, 178, 180, 180, 180, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 170, 170, 170, 18, 178, 178, 178, 178, 178, 178, 178, 217, 178, 178, 178, 217, 178, 178, 178, 178, 180, 180, 180, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 170, 170, 170, 18, 178, 178, 178, 165, 178, 178, 178, 165, 180, 180, 180, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "format": "RGBA8",
@@ -21,7 +25,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_in5st"]
-image = SubResource("Image_es1ik")
+image = SubResource("Image_1vkbp")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6snkg"]
 bg_color = Color(0, 0, 0, 1)
@@ -60,6 +64,7 @@ expand_margin_bottom = 5.0
 shadow_size = 30
 
 [sub_resource type="Theme" id="Theme_xukm4"]
+default_font = ExtResource("1_xukm4")
 default_font_size = 50
 Button/colors/font_color = Color(1, 0.690196, 0.854902, 1)
 Button/colors/font_focus_color = Color(1, 0.690196, 0.854902, 1)
@@ -88,10 +93,15 @@ OptionButton/constants/arrow_margin = 4
 OptionButton/constants/h_separation = 4
 OptionButton/constants/modulate_arrow = 0
 OptionButton/constants/outline_size = 0
-OptionButton/fonts/font = null
+OptionButton/fonts/font = ExtResource("1_xukm4")
 OptionButton/icons/arrow = SubResource("ImageTexture_in5st")
 Panel/styles/panel = SubResource("StyleBoxFlat_6snkg")
 RichTextLabel/colors/default_color = Color(1, 0.690196, 0.854902, 1)
+RichTextLabel/fonts/bold_font = ExtResource("2_1pmws")
+RichTextLabel/fonts/bold_italics_font = ExtResource("3_1vk6n")
+RichTextLabel/fonts/italics_font = ExtResource("4_p5bwx")
+RichTextLabel/fonts/mono_font = ExtResource("1_xukm4")
+RichTextLabel/fonts/normal_font = ExtResource("1_xukm4")
 RichTextLabel/styles/background = SubResource("StyleBoxFlat_kpsbd")
 RichTextLabel/styles/fill = SubResource("StyleBoxFlat_26roo")
 RichTextLabel/styles/focus = SubResource("StyleBoxFlat_6tdq8")
