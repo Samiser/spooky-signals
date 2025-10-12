@@ -62,7 +62,6 @@ func _input(event: InputEvent) -> void:
 func _process(_delta: float) -> void:
 	if !_active: return
 	
-	print(value)
 	if control_target.has_method("control"):
 		control_target.control(value)
 
