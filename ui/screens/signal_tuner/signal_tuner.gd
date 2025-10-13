@@ -90,18 +90,20 @@ func _draw_and_score() -> void:
 	controlled_line.points = pts_ctl
 	target_line.width = 3.0
 	controlled_line.width = 3.0
-
-	var rms := sqrt(err_acc / float(SAMPLES))
-	var score := clampf(1.0 - (rms / lock_tolerance), 0.0, 1.0)
-	%ScoreLabel.text = "%d%%" % [int(round(score * 100.0))]
 	
 	var diff := absf(coarse_frequency - data.target_coarse_frequency)
-	print(diff)
+	
+	print(1.0 - smoothstep(0.0, 50.0, diff))
 
 	var alpha := 1.0 - smoothstep(0.0, 50.0, diff)
 
 	_set_line_alpha(target_line, alpha)
 	_set_line_alpha(controlled_line, alpha)
+	
+	var rms := sqrt(err_acc / float(SAMPLES))
+	var score := clampf(1.0 - (rms / lock_tolerance), 0.0, 1.0) * (1.0 - smoothstep(0.0, 50.0, diff))
+	Signals.current.data.current_download_speed = score
+	%ScoreLabel.text = "%d%%" % [int(round(score * 100.0))]
 
 func _set_line_alpha(line: Line2D, a: float) -> void:
 	var c := line.modulate
