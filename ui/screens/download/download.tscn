@@ -1,0 +1,114 @@
+[gd_scene load_steps=3 format=3 uid="uid://g1y5a1yha34c"]
+
+[ext_resource type="Theme" uid="uid://c0eyo008u7c35" path="res://ui/screens/screen_theme.tres" id="1_spu6i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2esi"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0.9453271, 0.62108314, 1)
+
+[node name="Download" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_spu6i")
+
+[node name="NoSignalDisplay" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="NoSignalDisplay"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_m2esi")
+
+[node name="NoSignalLabel" type="RichTextLabel" parent="NoSignalDisplay"]
+layout_mode = 2
+bbcode_enabled = true
+text = "Awaiting signal selection..."
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DownloadDisplay" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DownloadDisplay"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="DownloadDisplay/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Panel" parent="DownloadDisplay/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_m2esi")
+
+[node name="MarginContainer" type="MarginContainer" parent="DownloadDisplay/HBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DownloadDisplay/HBoxContainer/MarginContainer/MarginContainer"]
+layout_mode = 2
+text = "V1cwNWRtTkhTblppTTBKcFlqSTVkMWx0T1haalIwcDJZak5DYVdJeU9YZFpiVGwyWTBkS2RtSXpRbWxpTWpsM1dXMDVkbU5IU25aaU0wSnBZakk1ZDFsdE9YWmpSMHAyWWpOQ2FXSXlPWGRaYlRsMlkwZEtkbUl6UW1saU1qbDNXVzA1ZG1OSFNuWmlNMEpwWWpJNWQxbHRPWFpqUjBwMllqTkNhV0l5T1hkWmJUbDJZMGRLZG1JelFUMD0="
+scroll_active = false
+scroll_following = true
+scroll_following_visible_characters = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DownloadDisplay/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="DownloadDisplay/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DownloadDisplay/HBoxContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DownloadDisplay/HBoxContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Download Progress:"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="DownloadDisplay/HBoxContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="Panel" type="Panel" parent="DownloadDisplay/HBoxContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_m2esi")
+
+[node name="MarginContainer3" type="MarginContainer" parent="DownloadDisplay/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="DownloadDisplay/HBoxContainer/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_m2esi")
