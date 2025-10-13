@@ -1,15 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3a0v46c2b81k"]
+[gd_scene load_steps=8 format=3 uid="uid://c3a0v46c2b81k"]
 
 [ext_resource type="PackedScene" uid="uid://ct5ty1nydcveo" path="res://entities/screen/screen.tscn" id="1_3nt8l"]
 [ext_resource type="PackedScene" uid="uid://g1y5a1yha34c" path="res://ui/screens/download/download.tscn" id="2_oqexv"]
+[ext_resource type="Texture2D" uid="uid://u0bqy1hpkfhb" path="res://meshes/tv/textures/tv_initialShadingGroup_BaseMap.png" id="3_lsv7p"]
+[ext_resource type="Texture2D" uid="uid://b1ng4tw57c8hy" path="res://meshes/tv/textures/tv_initialShadingGroup_MaskMap.png" id="4_ekwcc"]
+[ext_resource type="Texture2D" uid="uid://dp5tdgyfqaamb" path="res://meshes/tv/textures/tv_initialShadingGroup_Normal.png" id="5_oeo00"]
+[ext_resource type="ArrayMesh" uid="uid://bayndwgd2ged0" path="res://meshes/tv/tv.obj" id="6_ja1yb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nl8np"]
+albedo_texture = ExtResource("3_lsv7p")
+metallic = 1.0
+metallic_texture = ExtResource("4_ekwcc")
+roughness_texture = ExtResource("4_ekwcc")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("5_oeo00")
+texture_filter = 0
 
 [node name="DownloadScreen" type="Node3D"]
 
 [node name="Screen" parent="." instance=ExtResource("1_3nt8l")]
-transform = Transform3D(0.23, 0, 0, 0, 0.23, 0, 0, 0, 0.23, 0, 0, 0.19767219)
+transform = Transform3D(0.23, 0, 0, 0, 0.23, 0, 0, 0, 0.23, 0, -0.009306312, 0.19767219)
+height = 1014
+width = 1190
 current_screen_scene = ExtResource("2_oqexv")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+visible = false
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.022426814)
@@ -19,3 +36,8 @@ size = Vector3(0.5, 0.5, 0.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.22816214)
 operation = 2
 size = Vector3(0.45, 0.45, 0.06386718)
+
+[node name="Tv" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, -0.054559633, -0.1418919)
+material_override = SubResource("StandardMaterial3D_nl8np")
+mesh = ExtResource("6_ja1yb")

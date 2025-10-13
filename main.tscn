@@ -103,7 +103,7 @@ shape = SubResource("ConcavePolygonShape3D_w48qg")
 [node name="Lighting" type="Node3D" parent="."]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lighting"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7112641, 2.5086222, 3.056395)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7112641, 2.5086222, 2.913728)
 omni_range = 7.0
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="Lighting"]
@@ -120,6 +120,11 @@ omni_range = 7.0
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Lighting"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7112641, 2.5086222, -2.7240062)
+omni_range = 7.0
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7112641, 1.1560984, 0.27599382)
+light_energy = 0.5
 omni_range = 7.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting"]
@@ -139,7 +144,7 @@ transform = Transform3D(-0.055719398, 0, -0.67269635, 0, 0.675, 0, 0.67269635, 0
 transform = Transform3D(-1.6211016, 0, 0.37980828, 0, 1.6649997, 0, -0.37980828, 0, -1.6211016, -3.922383, 1.0840734, 3.1848218)
 
 [node name="TerminalMonitor" parent="Interfaces" instance=ExtResource("14_w48qg")]
-transform = Transform3D(-0.29402354, 0, 0.95579815, 0, 1, 0, -0.95579815, 0, -0.29402354, -1.2381169, 0.29128146, 3.3383973)
+transform = Transform3D(-0.29402354, 0, 0.95579815, 0, 1, 0, -0.95579815, 0, -0.29402354, -1.2381169, 0.1340785, 3.3383973)
 
 [node name="SignalDisplay" parent="Interfaces" instance=ExtResource("7_2cqfq")]
 transform = Transform3D(-1.9546578, 0, -0.52909106, 0, 2.0249999, 0, 0.52909106, 0, -1.9546578, -1.1883897, 1.5289115, 3.3153014)
