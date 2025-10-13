@@ -1,9 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://5ssga0463d5e"]
+[gd_scene load_steps=8 format=3 uid="uid://5ssga0463d5e"]
 
 [ext_resource type="Script" uid="uid://c5bvu5ebjh5ur" path="res://entities/floppy/floppy_disk.gd" id="1_0m87m"]
+[ext_resource type="Texture2D" uid="uid://b2d5x6b6xmwd3" path="res://meshes/floppy/textures/floppy_standardSurface2SG_BaseMap.png" id="2_w2lij"]
+[ext_resource type="Texture2D" uid="uid://b2d02oaq2lo16" path="res://meshes/floppy/textures/floppy_standardSurface2SG_MaskMap.png" id="3_0qns6"]
+[ext_resource type="Texture2D" uid="uid://bkquooetyndbg" path="res://meshes/floppy/textures/floppy_standardSurface2SG_Normal.png" id="4_wtn52"]
+[ext_resource type="ArrayMesh" uid="uid://5r8j7vcbdu4h" path="res://meshes/floppy/floppy.obj" id="5_qh85q"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_rfkfj"]
-size = Vector3(0.02, 0.2, 0.2)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p6bb4"]
+albedo_color = Color(0.57700837, 0.5770084, 0.57700837, 1)
+albedo_texture = ExtResource("2_w2lij")
+metallic = 1.0
+metallic_texture = ExtResource("3_0qns6")
+roughness_texture = ExtResource("3_0qns6")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_scale = 0.5
+normal_texture = ExtResource("4_wtn52")
+texture_filter = 0
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0m87m"]
 data = PackedVector3Array(-0.01, 0.19999999, 0.19999999, 0.01, 0.19999999, 0.19999999, -0.01, -0.19999999, 0.19999999, 0.01, 0.19999999, 0.19999999, 0.01, -0.19999999, 0.19999999, -0.01, -0.19999999, 0.19999999, 0.01, 0.19999999, -0.19999999, -0.01, 0.19999999, -0.19999999, 0.01, -0.19999999, -0.19999999, -0.01, 0.19999999, -0.19999999, -0.01, -0.19999999, -0.19999999, 0.01, -0.19999999, -0.19999999, 0.01, 0.19999999, 0.19999999, 0.01, 0.19999999, -0.19999999, 0.01, -0.19999999, 0.19999999, 0.01, 0.19999999, -0.19999999, 0.01, -0.19999999, -0.19999999, 0.01, -0.19999999, 0.19999999, -0.01, 0.19999999, -0.19999999, -0.01, 0.19999999, 0.19999999, -0.01, -0.19999999, -0.19999999, -0.01, 0.19999999, 0.19999999, -0.01, -0.19999999, 0.19999999, -0.01, -0.19999999, -0.19999999, 0.01, 0.19999999, 0.19999999, -0.01, 0.19999999, 0.19999999, 0.01, 0.19999999, -0.19999999, -0.01, 0.19999999, 0.19999999, -0.01, 0.19999999, -0.19999999, 0.01, 0.19999999, -0.19999999, -0.01, -0.19999999, 0.19999999, 0.01, -0.19999999, 0.19999999, -0.01, -0.19999999, -0.19999999, 0.01, -0.19999999, 0.19999999, 0.01, -0.19999999, -0.19999999, -0.01, -0.19999999, -0.19999999)
@@ -13,7 +26,9 @@ script = ExtResource("1_0m87m")
 data = "I am a spooky alien coming to EAT you!"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_rfkfj")
+transform = Transform3D(-8.742278e-09, 0.2, -8.742278e-09, 0, -8.742278e-09, -0.2, -0.2, -8.742278e-09, 3.821371e-16, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_p6bb4")
+mesh = ExtResource("5_qh85q")
 skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://chxlkaq0opjy7"]
+[gd_scene load_steps=28 format=3 uid="uid://chxlkaq0opjy7"]
 
 [ext_resource type="PackedScene" uid="uid://vfatuya14sn3" path="res://entities/player/player.tscn" id="1_68bq3"]
 [ext_resource type="ArrayMesh" uid="uid://bnj1bulcj4wq6" path="res://meshes/map/map_mesh.obj" id="2_0xm2m"]
@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://c5w7axry8fi81" path="res://icon.svg" id="13_vivmo"]
 [ext_resource type="PackedScene" uid="uid://5ssga0463d5e" path="res://entities/floppy/floppy_disk.tscn" id="14_vivmo"]
 [ext_resource type="PackedScene" uid="uid://die70vcqqywnl" path="res://entities/screen/terminal_monitor.tscn" id="14_w48qg"]
+[ext_resource type="Material" uid="uid://bp5rh2n0a0sst" path="res://meshes/keyboard/textures/keyboard_material.tres" id="15_2cqfq"]
+[ext_resource type="ArrayMesh" uid="uid://eucyspquvr43" path="res://meshes/keyboard/keyboard.obj" id="16_yaehf"]
 
 [sub_resource type="Gradient" id="Gradient_0xm2m"]
 colors = PackedColorArray(0, 0, 0, 1, 0.007195848, 0.22476539, 0.31965184, 1)
@@ -192,8 +194,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.834435, 14.047676, 0.0816
 data = SubResource("Resource_074og")
 
 [node name="TerminalMonitor" parent="." instance=ExtResource("14_w48qg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.634969, 0.46993732, 0.063492715)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.698024, 0.46993732, 0.063492715)
 
 [node name="FloppyDisk" parent="." instance=ExtResource("14_vivmo")]
 transform = Transform3D(-3.015472e-08, -0.68985957, 0.72394305, 1, -4.371138e-08, 0, 3.1644554e-08, 0.72394305, 0.68985957, -4.3591685, 0.48787183, -0.83678114)
 data = SubResource("Resource_w48qg")
+
+[node name="Keyboard" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.4662862e-08, 0, 0.09, 0, 0.09, 0, -0.09, 0, -1.4662862e-08, -4.0369377, 0.472, 0.07691571)
+material_override = ExtResource("15_2cqfq")
+mesh = ExtResource("16_yaehf")
