@@ -2,15 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://vfatuya14sn3" path="res://entities/player/player.tscn" id="1_3ewf1"]
 [ext_resource type="PackedScene" uid="uid://ct5ty1nydcveo" path="res://entities/screen/screen.tscn" id="2_g35bj"]
-[ext_resource type="PackedScene" uid="uid://dp54nqbw0enmy" path="res://ui/screens/terminal/terminal.tscn" id="3_7y0ld"]
 [ext_resource type="PackedScene" uid="uid://c7xnqj64cchkp" path="res://entities/signal_tuner/signal_tuner.tscn" id="5_3o6hu"]
 [ext_resource type="PackedScene" uid="uid://dfm5ubt1vvrrm" path="res://entities/signal_camera/signal_camera.tscn" id="5_onvax"]
-[ext_resource type="PackedScene" uid="uid://but8hh6p6o5w4" path="res://entities/joystick/joystick.tscn" id="6_onvax"]
 [ext_resource type="Texture2D" uid="uid://c5w7axry8fi81" path="res://icon.svg" id="8_3o6hu"]
 [ext_resource type="PackedScene" uid="uid://44blrtn7hqmd" path="res://entities/signal/signal.tscn" id="8_50bm6"]
 [ext_resource type="Script" uid="uid://7dw3dn04fi2k" path="res://resources/signal_data.gd" id="8_52td6"]
-[ext_resource type="PackedScene" uid="uid://dgrgk6qd0bxcb" path="res://ui/screens/signal_display/signal_display.tscn" id="10_woyvu"]
-[ext_resource type="PackedScene" uid="uid://g1y5a1yha34c" path="res://ui/screens/download/download.tscn" id="12_t00ul"]
+[ext_resource type="PackedScene" uid="uid://c3a0v46c2b81k" path="res://entities/download_screen/download_screen.tscn" id="11_3o6hu"]
+[ext_resource type="PackedScene" uid="uid://b2r1ao0ypyid8" path="res://entities/signal_display/signal_display.tscn" id="11_gwhpp"]
+[ext_resource type="PackedScene" uid="uid://die70vcqqywnl" path="res://entities/terminal_monitor/terminal_monitor.tscn" id="11_t00ul"]
+[ext_resource type="PackedScene" uid="uid://crbp5ajsm55gt" path="res://entities/signal_camera_interface/signal_camera_interface.tscn" id="12_t00ul"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_g35bj"]
 size = Vector3(10, 1, 10)
@@ -84,21 +84,21 @@ mesh = SubResource("BoxMesh_g35bj")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TestPlatform"]
 shape = SubResource("BoxShape3D_7y0ld")
 
-[node name="SignalCamera" type="Node" parent="."]
+[node name="SignalTuner" parent="." instance=ExtResource("5_3o6hu")]
+transform = Transform3D(0.675, 0, 0, 0, 0.675, 0, 0, 0, 0.675, 4.3201413, 1.807569, -0.09689063)
 
-[node name="SignalCamViewport" type="SubViewport" parent="SignalCamera"]
+[node name="DownloadScreen" parent="." instance=ExtResource("11_3o6hu")]
+transform = Transform3D(-0.44638, 0, -1.604048, 0, 1.665, 0, 1.604048, 0, -0.44638, 4.351995, 2.01573, 1.1186373)
 
-[node name="SignalCamera" parent="SignalCamera/SignalCamViewport" instance=ExtResource("5_onvax")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.396699)
+[node name="TerminalMonitor" parent="." instance=ExtResource("11_t00ul")]
+transform = Transform3D(-0.96711695, 0, -0.25433183, 0, 1, 0, 0.25433183, 0, -0.96711695, 4.6162066, 1.222938, -1.557005)
 
-[node name="Joystick" parent="SignalCamera" node_paths=PackedStringArray("screen", "control_target") instance=ExtResource("6_onvax")]
-transform = Transform3D(-0.4843975, 0, 0.8748482, 0, 1, 0, -0.8748482, 0, -0.4843975, 3.3857687, 1.1762142, -2.5122895)
-screen = NodePath("../SignalCameraScreen")
-control_target = NodePath("../SignalCamViewport/SignalCamera")
+[node name="SignalDisplay" parent="." instance=ExtResource("11_gwhpp")]
+transform = Transform3D(0.44798088, 0, -1.974826, 0, 2.0249999, 0, 1.974826, 0, 0.44798088, 4.5951824, 2.460568, -1.6076429)
 
-[node name="SignalCameraScreen" parent="SignalCamera" node_paths=PackedStringArray("viewport_override") instance=ExtResource("2_g35bj")]
-transform = Transform3D(0.27065733, 0, -0.53548545, 0, 0.6, 0, 0.53548545, 0, 0.27065733, 3.832747, 1.7454166, -2.760455)
-viewport_override = NodePath("../SignalCamViewport")
+[node name="SignalCameraInterface" parent="." node_paths=PackedStringArray("signal_camera_viewport") instance=ExtResource("12_t00ul")]
+transform = Transform3D(0.8332967, 0, -1.4299096, 0, 1.655, 0, 1.4299096, 0, 0.8332967, 3.8907013, 1.6774693, -2.715836)
+signal_camera_viewport = NodePath("../SignalCamViewport")
 
 [node name="SecurityCamera" type="Node" parent="."]
 
@@ -110,9 +110,6 @@ transform = Transform3D(0.902149, -0.13278748, 0.41048098, 0, 0.9514548, 0.30778
 [node name="CameraScreen" parent="SecurityCamera" node_paths=PackedStringArray("viewport_override") instance=ExtResource("2_g35bj")]
 transform = Transform3D(0.6273954, 0, 1.3624885, 0, 1.5, 0, -1.3624885, 0, 0.6273954, -5.2330604, 2.6377952, -2.0560055)
 viewport_override = NodePath("../SecurityCamViewport")
-
-[node name="SignalTuner" parent="." instance=ExtResource("5_3o6hu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3201413, 1.807569, -0.09689063)
 
 [node name="Signals" type="Node" parent="."]
 
@@ -128,21 +125,6 @@ data = SubResource("Resource_3o6hu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8558359, 14.04768, -31.544472)
 data = SubResource("Resource_t00ul")
 
-[node name="TerminalScreen" parent="." instance=ExtResource("2_g35bj")]
-transform = Transform3D(0.9837944, 0, -0.17930017, 0, 1, 0, 0.17930017, 0, 0.9837944, -0.44365543, 2.030398, -4.5553346)
-current_screen_scene = ExtResource("3_7y0ld")
-
-[node name="TestScreen" parent="." instance=ExtResource("2_g35bj")]
-transform = Transform3D(0.5353152, 0, 0.27099377, 0, 0.59999996, 0, -0.27099377, 0, 0.5353152, -3.32793, 1.6587055, -4.5553346)
-
-[node name="SignalDisplayScreen" parent="." instance=ExtResource("2_g35bj")]
-transform = Transform3D(0.33558315, 0, -0.9420106, 0, 1, 0, 0.9420106, 0, 0.33558315, 4.9665084, 3.4036822, -1.9954134)
-current_screen_scene = ExtResource("10_woyvu")
-
-[node name="DownloadScreen" parent="." instance=ExtResource("2_g35bj")]
-transform = Transform3D(-0.1459734, 0, -0.58712584, 0, 0.605, 0, 0.58712584, 0, -0.1459734, 4.115869, 2.1786273, 1.5174968)
-current_screen_scene = ExtResource("12_t00ul")
-
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7588897, 0)
 omni_range = 27.828
@@ -150,3 +132,11 @@ omni_attenuation = -0.165
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_3o6hu")
+
+[node name="TestScreen" parent="." instance=ExtResource("2_g35bj")]
+transform = Transform3D(0.5353152, 0, 0.27099377, 0, 0.59999996, 0, -0.27099377, 0, 0.5353152, -3.32793, 1.6587055, -4.5553346)
+
+[node name="SignalCamViewport" type="SubViewport" parent="."]
+
+[node name="SignalCamera" parent="SignalCamViewport" instance=ExtResource("5_onvax")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.396699)

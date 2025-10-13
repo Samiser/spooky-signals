@@ -117,7 +117,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4scx6")
 [node name="NoSignalLabel" type="RichTextLabel" parent="NoSignalDisplay"]
 layout_mode = 2
 bbcode_enabled = true
-text = "Awaiting signal selection..."
+text = "Awaiting signal..."
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1

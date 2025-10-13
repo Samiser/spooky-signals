@@ -92,8 +92,6 @@ func _draw_and_score() -> void:
 	controlled_line.width = 3.0
 	
 	var diff := absf(coarse_frequency - data.target_coarse_frequency)
-	
-	print(1.0 - smoothstep(0.0, 50.0, diff))
 
 	var alpha := 1.0 - smoothstep(0.0, 50.0, diff)
 

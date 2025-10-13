@@ -1,4 +1,5 @@
 extends Node3D
+class_name SignalCamera
 
 @onready var camera: Camera3D = $Camera3D
 
@@ -87,6 +88,10 @@ func _update_selection() -> void:
 			best = s
 
 	Signals.set_current(best)
+	if best and not $TextureRect.visible:
+		$TextureRect.show()
+	elif not best and $TextureRect.visible:
+		$TextureRect.hide() 
 
 func _within_selection(s: SignalSource, pos: Vector3, fwd: Vector3, limit_deg: float) -> bool:
 	if !is_instance_valid(s):

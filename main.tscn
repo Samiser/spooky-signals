@@ -2,17 +2,17 @@
 
 [ext_resource type="PackedScene" uid="uid://vfatuya14sn3" path="res://entities/player/player.tscn" id="1_68bq3"]
 [ext_resource type="ArrayMesh" uid="uid://bnj1bulcj4wq6" path="res://meshes/map/map_mesh.obj" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://ct5ty1nydcveo" path="res://entities/screen/screen.tscn" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bwp2sp8rqpv5n" path="res://entities/radar/radar.tscn" id="5_lquwl"]
-[ext_resource type="PackedScene" uid="uid://dgrgk6qd0bxcb" path="res://ui/screens/signal_display/signal_display.tscn" id="6_5vw27"]
+[ext_resource type="PackedScene" uid="uid://c3a0v46c2b81k" path="res://entities/download_screen/download_screen.tscn" id="5_vivmo"]
+[ext_resource type="PackedScene" uid="uid://b2r1ao0ypyid8" path="res://entities/signal_display/signal_display.tscn" id="7_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://c7xnqj64cchkp" path="res://entities/signal_tuner/signal_tuner.tscn" id="8_vivmo"]
+[ext_resource type="PackedScene" uid="uid://crbp5ajsm55gt" path="res://entities/signal_camera_interface/signal_camera_interface.tscn" id="8_yaehf"]
 [ext_resource type="PackedScene" uid="uid://dfm5ubt1vvrrm" path="res://entities/signal_camera/signal_camera.tscn" id="9_4c57u"]
-[ext_resource type="PackedScene" uid="uid://but8hh6p6o5w4" path="res://entities/joystick/joystick.tscn" id="10_efxa6"]
 [ext_resource type="PackedScene" uid="uid://44blrtn7hqmd" path="res://entities/signal/signal.tscn" id="11_ycdy4"]
 [ext_resource type="Script" uid="uid://7dw3dn04fi2k" path="res://resources/signal_data.gd" id="12_w48qg"]
 [ext_resource type="Texture2D" uid="uid://c5w7axry8fi81" path="res://icon.svg" id="13_vivmo"]
 [ext_resource type="PackedScene" uid="uid://5ssga0463d5e" path="res://entities/floppy/floppy_disk.tscn" id="14_vivmo"]
-[ext_resource type="PackedScene" uid="uid://die70vcqqywnl" path="res://entities/screen/terminal_monitor.tscn" id="14_w48qg"]
+[ext_resource type="PackedScene" uid="uid://die70vcqqywnl" path="res://entities/terminal_monitor/terminal_monitor.tscn" id="14_w48qg"]
 [ext_resource type="Material" uid="uid://bp5rh2n0a0sst" path="res://meshes/keyboard/textures/keyboard_material.tres" id="15_2cqfq"]
 [ext_resource type="ArrayMesh" uid="uid://eucyspquvr43" path="res://meshes/keyboard/keyboard.obj" id="16_yaehf"]
 
@@ -132,30 +132,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.389588, -0.9791371, -2.935
 
 [node name="Interfaces" type="Node" parent="."]
 
-[node name="SignalDisplayScreen" parent="Interfaces" instance=ExtResource("3_1bvp3")]
-transform = Transform3D(-0.408912, -0.037810244, -0.2852392, -0.0010826895, 0.4958631, -0.064177625, 0.2877323, -0.051868342, -0.4056105, 0.35370415, 1.5860431, 3.9583058)
-current_screen_scene = ExtResource("6_5vw27")
-
-[node name="SignalCamera" type="Node" parent="Interfaces"]
-
-[node name="SignalCamViewport" type="SubViewport" parent="Interfaces/SignalCamera"]
-size = Vector2i(1024, 512)
-
-[node name="SignalCamera" parent="Interfaces/SignalCamera/SignalCamViewport" instance=ExtResource("9_4c57u")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -14.503235, -0.7493961, -0.22835505)
-
-[node name="Joystick" parent="Interfaces/SignalCamera" node_paths=PackedStringArray("screen", "control_target") instance=ExtResource("10_efxa6")]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -1.2041407, 0.33538812, 3.9994888)
-screen = NodePath("../SignalCameraScreen")
-control_target = NodePath("../SignalCamViewport/SignalCamera")
-
-[node name="SignalCameraScreen" parent="Interfaces/SignalCamera" node_paths=PackedStringArray("viewport_override") instance=ExtResource("3_1bvp3")]
-transform = Transform3D(-0.5, 5.6948912e-09, -4.3338822e-08, 1.150482e-08, 0.49540466, -0.06763298, 4.217019e-08, -0.06763298, -0.49540466, -1.1932571, 1.1492748, 4.2717648)
-width = 2048
-viewport_override = NodePath("../SignalCamViewport")
-
 [node name="SignalTuner" parent="Interfaces" instance=ExtResource("8_vivmo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.82944095, 0.4223652, 2.9476454)
+transform = Transform3D(-0.055719398, 0, -0.67269635, 0, 0.675, 0, 0.67269635, 0, -0.055719398, -2.7102437, 0.94670486, 3.2391913)
+
+[node name="DownloadScreen" parent="Interfaces" instance=ExtResource("5_vivmo")]
+transform = Transform3D(-1.6211016, 0, 0.37980828, 0, 1.6649997, 0, -0.37980828, 0, -1.6211016, -3.922383, 1.0840734, 3.1848218)
+
+[node name="TerminalMonitor" parent="Interfaces" instance=ExtResource("14_w48qg")]
+transform = Transform3D(-0.29402354, 0, 0.95579815, 0, 1, 0, -0.95579815, 0, -0.29402354, -1.2381169, 0.29128146, 3.3383973)
+
+[node name="SignalDisplay" parent="Interfaces" instance=ExtResource("7_2cqfq")]
+transform = Transform3D(-1.9546578, 0, -0.52909106, 0, 2.0249999, 0, 0.52909106, 0, -1.9546578, -1.1883897, 1.5289115, 3.3153014)
+
+[node name="SignalCameraInterface" parent="Interfaces" node_paths=PackedStringArray("signal_camera_viewport") instance=ExtResource("8_yaehf")]
+transform = Transform3D(-1.3943053, 0, -0.89159256, 0, 1.655, 0, 0.89159256, 0, -1.3943053, -0.110211134, 0.7458128, 2.5656905)
+signal_camera_viewport = NodePath("../SignalCamViewport")
+
+[node name="SignalCamViewport" type="SubViewport" parent="Interfaces"]
+
+[node name="SignalCamera" parent="Interfaces/SignalCamViewport" instance=ExtResource("9_4c57u")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -14.503235, -0.7493961, -0.22835505)
 
 [node name="Signals" type="Node" parent="."]
 

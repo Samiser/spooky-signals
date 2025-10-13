@@ -7,11 +7,11 @@
 [node name="SignalTuner" type="Node3D"]
 
 [node name="Screen" parent="." instance=ExtResource("1_08uoe")]
-transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 0, 0.3926816, -0.022044182)
+transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 0.07526815, 0.3926816, -0.022044182)
 current_screen_scene = ExtResource("2_hdd5w")
 
 [node name="CourseFrequency" parent="." node_paths=PackedStringArray("screen") instance=ExtResource("3_u650r")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0.38496304, -0.8912009)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.01269269, 0.38496304, -0.88396645)
 max_value = 7000.0
 min_value = 4000.0
 value = 4531.0
@@ -19,7 +19,7 @@ drag_sensitivity = 1.0
 screen = NodePath("../Screen")
 
 [node name="FineFrequency" parent="." node_paths=PackedStringArray("screen") instance=ExtResource("3_u650r")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.43504667, -0.40852493)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.01269269, -0.44257143, -0.40852493)
 max_value = 5.0
 min_value = 0.5
 value = 3.0
@@ -28,7 +28,7 @@ drag_sensitivity = 0.01
 screen = NodePath("../Screen")
 
 [node name="Amplitude" parent="." node_paths=PackedStringArray("screen") instance=ExtResource("3_u650r")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.43504667, -0.022155225)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.01269269, -0.44257143, -0.022155225)
 max_value = 1.0
 min_value = 0.2
 value = 0.4
@@ -37,8 +37,20 @@ drag_sensitivity = 0.01
 screen = NodePath("../Screen")
 
 [node name="Phase" parent="." node_paths=PackedStringArray("screen") instance=ExtResource("3_u650r")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.43504667, 0.37227875)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.01269269, -0.44257143, 0.37227875)
 max_value = 1.99
 step = 0.01
 drag_sensitivity = 0.01
 screen = NodePath("../Screen")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.53361636)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.27032685, 0.29174805, -0.6728467)
+size = Vector3(1.7906494, 1.7387695, 0.5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13933839, 0.39329448, -0.55626047)
+operation = 2
+size = Vector3(0.45, 1.4041809, 1.4002564)

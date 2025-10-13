@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://crbp5ajsm55gt"]
+
+[ext_resource type="Script" uid="uid://0ckhbo6wejl0" path="res://entities/signal_camera_interface/signal_camera_interface.gd" id="1_klg2j"]
+[ext_resource type="PackedScene" uid="uid://ct5ty1nydcveo" path="res://entities/screen/screen.tscn" id="1_o2ovx"]
+[ext_resource type="PackedScene" uid="uid://but8hh6p6o5w4" path="res://entities/joystick/joystick.tscn" id="2_klg2j"]
+
+[node name="SignalCameraInterface" type="Node3D"]
+script = ExtResource("1_klg2j")
+
+[node name="Screen" parent="." instance=ExtResource("1_o2ovx")]
+transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, 0, 0, 0.19875523)
+
+[node name="Joystick" parent="." instance=ExtResource("2_klg2j")]
+transform = Transform3D(-0.40500006, 0, 3.5406227e-08, 0, 0.40500006, 0, -3.5406227e-08, 0, -0.40500006, 0, -0.257, 0.389)
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.022426814)
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3313442, 0.1041601)
+size = Vector3(0.5, 0.17333984, 0.7531738)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.22816214)
+operation = 2
+size = Vector3(0.45, 0.45, 0.06386718)

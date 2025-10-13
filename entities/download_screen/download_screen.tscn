@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3a0v46c2b81k"]
+
+[ext_resource type="PackedScene" uid="uid://ct5ty1nydcveo" path="res://entities/screen/screen.tscn" id="1_3nt8l"]
+[ext_resource type="PackedScene" uid="uid://g1y5a1yha34c" path="res://ui/screens/download/download.tscn" id="2_oqexv"]
+
+[node name="DownloadScreen" type="Node3D"]
+
+[node name="Screen" parent="." instance=ExtResource("1_3nt8l")]
+transform = Transform3D(0.23, 0, 0, 0, 0.23, 0, 0, 0, 0.23, 0, 0, 0.19767219)
+current_screen_scene = ExtResource("2_oqexv")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.022426814)
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.22816214)
+operation = 2
+size = Vector3(0.45, 0.45, 0.06386718)

@@ -25,7 +25,7 @@ func set_current(s: SignalSource) -> void:
 
 func set_current_downloaded() -> void:
 	if _current:
-		_current.downloaded = true
+		_current.data.downloaded = true
 		current_downloaded.emit(_current)
 
 func set_current_decoded() -> void:

@@ -1,4 +1,6 @@
 extends AnimatableBody3D
+class_name Joystick
+
 signal value_changed(value: Vector2)
 
 var _active := false
