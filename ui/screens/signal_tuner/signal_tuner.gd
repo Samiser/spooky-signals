@@ -96,6 +96,7 @@ func _draw_and_score() -> void:
 	%ScoreLabel.text = "%d%%" % [int(round(score * 100.0))]
 	
 	var diff := absf(coarse_frequency - data.target_coarse_frequency)
+	print(diff)
 
 	var alpha := 1.0 - smoothstep(0.0, 50.0, diff)
 

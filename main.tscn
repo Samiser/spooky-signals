@@ -1,12 +1,11 @@
-[gd_scene load_steps=28 format=3 uid="uid://chxlkaq0opjy7"]
+[gd_scene load_steps=27 format=3 uid="uid://chxlkaq0opjy7"]
 
 [ext_resource type="PackedScene" uid="uid://vfatuya14sn3" path="res://entities/player/player.tscn" id="1_68bq3"]
 [ext_resource type="ArrayMesh" uid="uid://bnj1bulcj4wq6" path="res://meshes/map/map_mesh.obj" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://ct5ty1nydcveo" path="res://entities/screen/screen.tscn" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bwp2sp8rqpv5n" path="res://entities/radar/radar.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://dgrgk6qd0bxcb" path="res://ui/screens/signal_display/signal_display.tscn" id="6_5vw27"]
-[ext_resource type="PackedScene" uid="uid://bihsc0t2rsvbi" path="res://ui/screens/signal_tuner/signal_tuner.tscn" id="7_kek77"]
-[ext_resource type="PackedScene" uid="uid://6j77mwnbq2hp" path="res://entities/dial/dial.tscn" id="8_4c57u"]
+[ext_resource type="PackedScene" uid="uid://c7xnqj64cchkp" path="res://entities/signal_tuner/signal_tuner.tscn" id="8_vivmo"]
 [ext_resource type="PackedScene" uid="uid://dfm5ubt1vvrrm" path="res://entities/signal_camera/signal_camera.tscn" id="9_4c57u"]
 [ext_resource type="PackedScene" uid="uid://but8hh6p6o5w4" path="res://entities/joystick/joystick.tscn" id="10_efxa6"]
 [ext_resource type="PackedScene" uid="uid://44blrtn7hqmd" path="res://entities/signal/signal.tscn" id="11_ycdy4"]
@@ -137,30 +136,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.389588, -0.9791371, -2.935
 transform = Transform3D(-0.408912, -0.037810244, -0.2852392, -0.0010826895, 0.4958631, -0.064177625, 0.2877323, -0.051868342, -0.4056105, 0.35370415, 1.5860431, 3.9583058)
 current_screen_scene = ExtResource("6_5vw27")
 
-[node name="SignalTuner" type="Node3D" parent="Interfaces"]
-transform = Transform3D(1, 0, -5.9604645e-08, 0, 1, 0, 5.9604645e-08, 0, 1, 1.0099196, 0.6296147, 2.9616277)
-
-[node name="Screen" parent="Interfaces/SignalTuner" instance=ExtResource("3_1bvp3")]
-transform = Transform3D(-2.6226836e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.6226836e-08, 0, 0.40126026, 0)
-width = 1494
-current_screen_scene = ExtResource("7_kek77")
-
-[node name="CourseFrequency" parent="Interfaces/SignalTuner" node_paths=PackedStringArray("screen") instance=ExtResource("8_4c57u")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.43504667, -0.58682275)
-screen = NodePath("../Screen")
-
-[node name="FineFrequency" parent="Interfaces/SignalTuner" node_paths=PackedStringArray("screen") instance=ExtResource("8_4c57u")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.43504667, -0.22825599)
-screen = NodePath("../Screen")
-
-[node name="Amplitude" parent="Interfaces/SignalTuner" node_paths=PackedStringArray("screen") instance=ExtResource("8_4c57u")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.43504667, 0.15811372)
-screen = NodePath("../Screen")
-
-[node name="Something" parent="Interfaces/SignalTuner" node_paths=PackedStringArray("screen") instance=ExtResource("8_4c57u")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.43504667, 0.5525477)
-screen = NodePath("../Screen")
-
 [node name="SignalCamera" type="Node" parent="Interfaces"]
 
 [node name="SignalCamViewport" type="SubViewport" parent="Interfaces/SignalCamera"]
@@ -178,6 +153,9 @@ control_target = NodePath("../SignalCamViewport/SignalCamera")
 transform = Transform3D(-0.5, 5.6948912e-09, -4.3338822e-08, 1.150482e-08, 0.49540466, -0.06763298, 4.217019e-08, -0.06763298, -0.49540466, -1.1932571, 1.1492748, 4.2717648)
 width = 2048
 viewport_override = NodePath("../SignalCamViewport")
+
+[node name="SignalTuner" parent="Interfaces" instance=ExtResource("8_vivmo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.82944095, 0.4223652, 2.9476454)
 
 [node name="Signals" type="Node" parent="."]
 

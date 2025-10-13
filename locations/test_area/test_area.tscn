@@ -3,14 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://vfatuya14sn3" path="res://entities/player/player.tscn" id="1_3ewf1"]
 [ext_resource type="PackedScene" uid="uid://ct5ty1nydcveo" path="res://entities/screen/screen.tscn" id="2_g35bj"]
 [ext_resource type="PackedScene" uid="uid://dp54nqbw0enmy" path="res://ui/screens/terminal/terminal.tscn" id="3_7y0ld"]
-[ext_resource type="PackedScene" uid="uid://6j77mwnbq2hp" path="res://entities/dial/dial.tscn" id="4_mw8hc"]
+[ext_resource type="PackedScene" uid="uid://c7xnqj64cchkp" path="res://entities/signal_tuner/signal_tuner.tscn" id="5_3o6hu"]
 [ext_resource type="PackedScene" uid="uid://dfm5ubt1vvrrm" path="res://entities/signal_camera/signal_camera.tscn" id="5_onvax"]
-[ext_resource type="PackedScene" uid="uid://bihsc0t2rsvbi" path="res://ui/screens/signal_tuner/signal_tuner.tscn" id="5_rxbqj"]
 [ext_resource type="PackedScene" uid="uid://but8hh6p6o5w4" path="res://entities/joystick/joystick.tscn" id="6_onvax"]
 [ext_resource type="Texture2D" uid="uid://c5w7axry8fi81" path="res://icon.svg" id="8_3o6hu"]
 [ext_resource type="PackedScene" uid="uid://44blrtn7hqmd" path="res://entities/signal/signal.tscn" id="8_50bm6"]
 [ext_resource type="Script" uid="uid://7dw3dn04fi2k" path="res://resources/signal_data.gd" id="8_52td6"]
 [ext_resource type="PackedScene" uid="uid://dgrgk6qd0bxcb" path="res://ui/screens/signal_display/signal_display.tscn" id="10_woyvu"]
+[ext_resource type="PackedScene" uid="uid://g1y5a1yha34c" path="res://ui/screens/download/download.tscn" id="12_t00ul"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_g35bj"]
 size = Vector3(10, 1, 10)
@@ -111,45 +111,8 @@ transform = Transform3D(0.902149, -0.13278748, 0.41048098, 0, 0.9514548, 0.30778
 transform = Transform3D(0.6273954, 0, 1.3624885, 0, 1.5, 0, -1.3624885, 0, 0.6273954, -5.2330604, 2.6377952, -2.0560055)
 viewport_override = NodePath("../SecurityCamViewport")
 
-[node name="SignalTuner" type="Node3D" parent="."]
+[node name="SignalTuner" parent="." instance=ExtResource("5_3o6hu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3201413, 1.807569, -0.09689063)
-
-[node name="Screen" parent="SignalTuner" instance=ExtResource("2_g35bj")]
-transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 0, 0.3926816, -0.022044182)
-current_screen_scene = ExtResource("5_rxbqj")
-
-[node name="CourseFrequency" parent="SignalTuner" node_paths=PackedStringArray("screen") instance=ExtResource("4_mw8hc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0.38496304, -0.8912009)
-max_value = 7000.0
-min_value = 4000.0
-value = 4531.0
-drag_sensitivity = 1.0
-screen = NodePath("../Screen")
-
-[node name="FineFrequency" parent="SignalTuner" node_paths=PackedStringArray("screen") instance=ExtResource("4_mw8hc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.43504667, -0.40852493)
-max_value = 5.0
-min_value = 0.5
-value = 3.0
-step = 0.01
-drag_sensitivity = 0.01
-screen = NodePath("../Screen")
-
-[node name="Amplitude" parent="SignalTuner" node_paths=PackedStringArray("screen") instance=ExtResource("4_mw8hc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.43504667, -0.022155225)
-max_value = 1.0
-min_value = 0.2
-value = 0.4
-step = 0.01
-drag_sensitivity = 0.01
-screen = NodePath("../Screen")
-
-[node name="Phase" parent="SignalTuner" node_paths=PackedStringArray("screen") instance=ExtResource("4_mw8hc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -0.43504667, 0.37227875)
-max_value = 1.99
-step = 0.01
-drag_sensitivity = 0.01
-screen = NodePath("../Screen")
 
 [node name="Signals" type="Node" parent="."]
 
@@ -175,6 +138,10 @@ transform = Transform3D(0.5353152, 0, 0.27099377, 0, 0.59999996, 0, -0.27099377,
 [node name="SignalDisplayScreen" parent="." instance=ExtResource("2_g35bj")]
 transform = Transform3D(0.33558315, 0, -0.9420106, 0, 1, 0, 0.9420106, 0, 0.33558315, 4.9665084, 3.4036822, -1.9954134)
 current_screen_scene = ExtResource("10_woyvu")
+
+[node name="DownloadScreen" parent="." instance=ExtResource("2_g35bj")]
+transform = Transform3D(-0.1459734, 0, -0.58712584, 0, 0.605, 0, 0.58712584, 0, -0.1459734, 4.115869, 2.1786273, 1.5174968)
+current_screen_scene = ExtResource("12_t00ul")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7588897, 0)
