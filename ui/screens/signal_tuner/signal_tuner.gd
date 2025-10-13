@@ -18,6 +18,9 @@ const MARGIN  := 11
 
 @export var lock_tolerance := 0.9
 
+@export var anim_hz := 0.6
+var _time_phase := 0.0
+
 func _ready() -> void:
 	no_signal_display.show()
 	signal_tuner_display.hide()
@@ -49,7 +52,8 @@ func control(caller: Node3D, value: float):
 			if value >= 0.0 and value <= 1.99:
 				phase = value
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
+	_time_phase = fposmod(_time_phase + TAU * anim_hz * delta, TAU)
 	_draw_and_score()
 
 func _draw_and_score() -> void:
@@ -73,8 +77,8 @@ func _draw_and_score() -> void:
 	for i in SAMPLES:
 		var t := float(i) / float(SAMPLES - 1)
 
-		var y_tgt := data.target_amplitude * sin(TAU * (data.target_cycles * t) + (PI * data.target_phase))
-		var y_ctl := amplitude * sin(TAU * (cycles * t) + (PI * phase))
+		var y_tgt := data.target_amplitude * sin(TAU * (data.target_cycles * t) + (PI * data.target_phase) + _time_phase)
+		var y_ctl := amplitude * sin(TAU * (cycles * t) + (PI * phase) + _time_phase)
 
 		var x := w / 2 - t * w
 		pts_tgt[i] = Vector2(x, y_tgt * scale_y)
