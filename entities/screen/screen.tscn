@@ -4,14 +4,14 @@
 [ext_resource type="Script" uid="uid://duxdbltehgvww" path="res://entities/screen/screen.gd" id="1_pik1a"]
 [ext_resource type="Shader" uid="uid://c5lt755eg0llh" path="res://entities/screen/crt.gdshader" id="2_pik1a"]
 [ext_resource type="AudioStream" uid="uid://butj5f5bg1gkd" path="res://audio/static.ogg" id="4_wo1mh"]
-[ext_resource type="AudioStream" uid="uid://pjr236ncdltn" path="res://audio/typing/keypress_01_trim.ogg" id="6_o1oye"]
-[ext_resource type="AudioStream" uid="uid://ccvguvpgmmnae" path="res://audio/typing/keypress_03_trim.ogg" id="8_puu5x"]
-[ext_resource type="AudioStream" uid="uid://bol47qih3m3kx" path="res://audio/typing/keypress_09_trim.ogg" id="9_x7irc"]
-[ext_resource type="AudioStream" uid="uid://cmrvfbu5rwtj0" path="res://audio/typing/keypress_05_trim.ogg" id="10_cowq2"]
-[ext_resource type="AudioStream" uid="uid://cnwmm7gd15bb4" path="res://audio/typing/keypress_11_trim.ogg" id="10_o1oye"]
-[ext_resource type="AudioStream" uid="uid://egn4oimcxtmj" path="res://audio/typing/keypress_13_trim.ogg" id="11_hl1n7"]
-[ext_resource type="AudioStream" uid="uid://b3ij2h0mh4g70" path="res://audio/typing/keypress_07_trim.ogg" id="12_lq224"]
-[ext_resource type="AudioStream" uid="uid://b3e55ojuxucxh" path="res://audio/typing/keypress_15_trim.ogg" id="12_puu5x"]
+[ext_resource type="AudioStream" uid="uid://cbs0pwp8i3r76" path="res://audio/typing/keypress_01_trim.ogg" id="6_o1oye"]
+[ext_resource type="AudioStream" uid="uid://ufxockd7ejqk" path="res://audio/typing/keypress_03_trim.ogg" id="8_puu5x"]
+[ext_resource type="AudioStream" uid="uid://b807it00v87d0" path="res://audio/typing/keypress_09_trim.ogg" id="9_x7irc"]
+[ext_resource type="AudioStream" uid="uid://droube32xtev8" path="res://audio/typing/keypress_05_trim.ogg" id="10_cowq2"]
+[ext_resource type="AudioStream" uid="uid://dkvmy4nyaw0w3" path="res://audio/typing/keypress_11_trim.ogg" id="10_o1oye"]
+[ext_resource type="AudioStream" uid="uid://bvr8yfxio8ovb" path="res://audio/typing/keypress_13_trim.ogg" id="11_hl1n7"]
+[ext_resource type="AudioStream" uid="uid://b71x4k5p6mliw" path="res://audio/typing/keypress_07_trim.ogg" id="12_lq224"]
+[ext_resource type="AudioStream" uid="uid://cu13y6q0oa3tp" path="res://audio/typing/keypress_15_trim.ogg" id="12_puu5x"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_pik1a"]
 viewport_path = NodePath("SubViewport")
@@ -84,8 +84,9 @@ shape = SubResource("BoxShape3D_pik1a")
 
 [node name="StaticAudio" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("4_wo1mh")
-volume_db = -35.0
+volume_db = -30.0
 autoplay = true
+max_distance = 6.0
 
 [node name="KeypressAudio" type="AudioStreamPlayer3D" parent="."]
 stream = SubResource("AudioStreamRandomizer_wo1mh")

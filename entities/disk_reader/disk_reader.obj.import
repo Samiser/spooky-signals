@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c1wqk0mlxdcy5"
+path="res://.godot/imported/disk_reader.obj-6a56255487d3bfb8677141e5a50fc073.mesh"
+
+[deps]
+
+files=["res://.godot/imported/disk_reader.obj-6a56255487d3bfb8677141e5a50fc073.mesh"]
+
+source_file="res://entities/disk_reader/disk_reader.obj"
+dest_files=["res://.godot/imported/disk_reader.obj-6a56255487d3bfb8677141e5a50fc073.mesh", "res://.godot/imported/disk_reader.obj-6a56255487d3bfb8677141e5a50fc073.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

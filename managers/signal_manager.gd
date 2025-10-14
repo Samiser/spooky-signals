@@ -30,14 +30,6 @@ func set_current_downloaded() -> void:
 		_current.data.downloaded = true
 		current_downloaded.emit(_current)
 		
-		var floppy_scene :PackedScene= load("res://entities/floppy/floppy_disk.tscn")
-		var floppy_disk :FloppyDisk= floppy_scene.instantiate()
-		get_tree().root.add_child(floppy_disk)
-		floppy_disk.data = _current.data.duplicate(true)
-		print(floppy_disk.data.title)
-		floppy_disk.global_position = Vector3(-3.987, 0.323, 2.268)
-		floppy_disk.global_rotation_degrees = Vector3(0.0, -105.8, 90.0)
-		
 func set_current_decoded() -> void:
 	if _current:
 		_current.decoded = true

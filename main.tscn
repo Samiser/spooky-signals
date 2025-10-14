@@ -1,7 +1,10 @@
-[gd_scene load_steps=33 format=3 uid="uid://chxlkaq0opjy7"]
+[gd_scene load_steps=31 format=3 uid="uid://chxlkaq0opjy7"]
 
 [ext_resource type="PackedScene" uid="uid://vfatuya14sn3" path="res://entities/player/player.tscn" id="1_68bq3"]
 [ext_resource type="ArrayMesh" uid="uid://bnj1bulcj4wq6" path="res://meshes/map/map_mesh.obj" id="2_0xm2m"]
+[ext_resource type="AudioStream" uid="uid://boqy33enm8fe5" path="res://audio/ambience/lab_ambience.wav" id="3_074og"]
+[ext_resource type="AudioStream" uid="uid://ch5feu6k1yumm" path="res://audio/ambience/hall_ambience.wav" id="4_82xsv"]
+[ext_resource type="AudioStream" uid="uid://j63wite4u2oq" path="res://audio/ambience/bridge_ambience.wav" id="5_getpj"]
 [ext_resource type="PackedScene" uid="uid://bwp2sp8rqpv5n" path="res://entities/radar/radar.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://c3a0v46c2b81k" path="res://entities/download_screen/download_screen.tscn" id="5_vivmo"]
 [ext_resource type="PackedScene" uid="uid://b2r1ao0ypyid8" path="res://entities/signal_display/signal_display.tscn" id="7_2cqfq"]
@@ -15,12 +18,8 @@
 [ext_resource type="Material" uid="uid://bp5rh2n0a0sst" path="res://meshes/keyboard/textures/keyboard_material.tres" id="15_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://8sldleje1mmt" path="res://entities/door/door.tscn" id="16_2cqfq"]
 [ext_resource type="ArrayMesh" uid="uid://eucyspquvr43" path="res://meshes/keyboard/keyboard.obj" id="16_yaehf"]
+[ext_resource type="PackedScene" uid="uid://mkh7nlicptxs" path="res://entities/disk_reader/disk_reader.tscn" id="17_074og"]
 [ext_resource type="PackedScene" uid="uid://2tbdcfvj6lk7" path="res://entities/button_pad/button_pad.tscn" id="17_yaehf"]
-[ext_resource type="Texture2D" uid="uid://dp1ucnaqok4qu" path="res://meshes/disk_reader/textures/disk_reader_initialShadingGroup_BaseMap.png" id="18_ryguw"]
-[ext_resource type="Texture2D" uid="uid://b7bi6x1xuw14j" path="res://meshes/disk_reader/textures/disk_reader_initialShadingGroup_Emissive.png" id="19_d13ii"]
-[ext_resource type="Texture2D" uid="uid://t6pj7r148vtw" path="res://meshes/disk_reader/textures/disk_reader_initialShadingGroup_MaskMap.png" id="20_1u8w0"]
-[ext_resource type="Texture2D" uid="uid://gkg3wrgofiuh" path="res://meshes/disk_reader/textures/disk_reader_initialShadingGroup_Normal.png" id="21_0odxb"]
-[ext_resource type="ArrayMesh" uid="uid://c1wqk0mlxdcy5" path="res://meshes/disk_reader/disk_reader.obj" id="22_lswn8"]
 
 [sub_resource type="Gradient" id="Gradient_0xm2m"]
 colors = PackedColorArray(0, 0, 0, 1, 0.007195848, 0.22476539, 0.31965184, 1)
@@ -85,20 +84,6 @@ end_address = "1"
 content_image = ExtResource("13_vivmo")
 metadata/_custom_type_script = "uid://7dw3dn04fi2k"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a6jrf"]
-albedo_texture = ExtResource("18_ryguw")
-metallic = 1.0
-metallic_texture = ExtResource("20_1u8w0")
-roughness_texture = ExtResource("20_1u8w0")
-roughness_texture_channel = 1
-emission_enabled = true
-emission = Color(0, 0.8666667, 0, 1)
-emission_operator = 1
-emission_texture = ExtResource("19_d13ii")
-normal_enabled = true
-normal_texture = ExtResource("21_0odxb")
-texture_filter = 0
-
 [node name="Main" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_68bq3")]
@@ -115,6 +100,30 @@ skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MapParent"]
 shape = SubResource("ConcavePolygonShape3D_yaehf")
+
+[node name="lab_ambience" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.54724, 3.3740854, 0.27599382)
+stream = ExtResource("3_074og")
+volume_db = -20.0
+autoplay = true
+max_distance = 10.0
+panning_strength = 0.2
+
+[node name="hall_ambience" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.276347, 3.3740854, 5.630802)
+stream = ExtResource("4_82xsv")
+volume_db = -20.0
+autoplay = true
+max_distance = 9.0
+panning_strength = 0.2
+
+[node name="bridge_ambience" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.916856, 3.3740854, -1.0546403)
+stream = ExtResource("5_getpj")
+volume_db = -10.0
+autoplay = true
+max_distance = 5.0
+panning_strength = 0.5
 
 [node name="Lighting" type="Node3D" parent="."]
 
@@ -226,7 +235,5 @@ targets = [NodePath("../Door3"), NodePath("../ButtonPad3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.570262, 0.6170598, -2.6352606)
 default_pad_text = "MDAwMDAwMDAgIDc0IDY4IDY5IDczIDIwIDYzIDY4IDc1IDZlIDY3IDc1IDczIDIwIDY0IDZmIDZmICB8dGhpcyBjaHVuZ3VzIGRvb3wKMDAwMDAwMTAgIDcyIDIwIDY5IDczIDIwIDYyIDcyIDZmIDZiIDY1IDZlIDIwIDYxIDY2ICAgICAgICB8ciBpcyBicm9rZW4gYWZ8"
 
-[node name="DiskReader" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.26402983, 0, 0.076897696, 0, 0.275, 0, -0.076897696, 0, -0.26402983, -4.0192137, 0.2945, 2.3760278)
-material_override = SubResource("StandardMaterial3D_a6jrf")
-mesh = ExtResource("22_lswn8")
+[node name="DiskReader" parent="." instance=ExtResource("17_074og")]
+transform = Transform3D(-0.8750679, 0, 0.48400033, 0, 1, 0, -0.48400033, 0, -0.8750679, -3.8623497, 0.2945, 2.3336804)

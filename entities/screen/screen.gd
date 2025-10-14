@@ -35,6 +35,7 @@ var _active: bool = false
 var _player: Player
 
 func _ready() -> void:
+	$StaticAudio.pitch_scale += randf_range(-0.2, 0.2)
 	_replace_screen()
 	if _viewport:
 		_viewport.size = Vector2(width, height)
