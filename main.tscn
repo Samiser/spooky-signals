@@ -210,4 +210,4 @@ targets = [NodePath("../Door3"), NodePath("../ButtonPad3")]
 
 [node name="ButtonPad5" parent="." instance=ExtResource("17_yaehf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.570262, 0.6170598, -2.6352606)
-default_pad_text = ""
+default_pad_text = "MDAwMDAwMDAgIDc0IDY4IDY5IDczIDIwIDYzIDY4IDc1IDZlIDY3IDc1IDczIDIwIDY0IDZmIDZmICB8dGhpcyBjaHVuZ3VzIGRvb3wKMDAwMDAwMTAgIDcyIDIwIDY5IDczIDIwIDYyIDcyIDZmIDZiIDY1IDZlIDIwIDYxIDY2ICAgICAgICB8ciBpcyBicm9rZW4gYWZ8"
