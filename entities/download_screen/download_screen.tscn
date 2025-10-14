@@ -1,11 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://c3a0v46c2b81k"]
+[gd_scene load_steps=10 format=3 uid="uid://c3a0v46c2b81k"]
 
 [ext_resource type="PackedScene" uid="uid://ct5ty1nydcveo" path="res://entities/screen/screen.tscn" id="1_3nt8l"]
+[ext_resource type="Script" uid="uid://byslgfcclrt2r" path="res://entities/download_screen/download_screen.gd" id="1_ekwcc"]
 [ext_resource type="PackedScene" uid="uid://g1y5a1yha34c" path="res://ui/screens/download/download.tscn" id="2_oqexv"]
 [ext_resource type="Texture2D" uid="uid://u0bqy1hpkfhb" path="res://meshes/tv/textures/tv_initialShadingGroup_BaseMap.png" id="3_lsv7p"]
 [ext_resource type="Texture2D" uid="uid://b1ng4tw57c8hy" path="res://meshes/tv/textures/tv_initialShadingGroup_MaskMap.png" id="4_ekwcc"]
 [ext_resource type="Texture2D" uid="uid://dp5tdgyfqaamb" path="res://meshes/tv/textures/tv_initialShadingGroup_Normal.png" id="5_oeo00"]
 [ext_resource type="ArrayMesh" uid="uid://bayndwgd2ged0" path="res://meshes/tv/tv.obj" id="6_ja1yb"]
+[ext_resource type="AudioStream" uid="uid://kiesfpub4mqv" path="res://audio/downloading.ogg" id="8_oeo00"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nl8np"]
 albedo_texture = ExtResource("3_lsv7p")
@@ -18,6 +20,7 @@ normal_texture = ExtResource("5_oeo00")
 texture_filter = 0
 
 [node name="DownloadScreen" type="Node3D"]
+script = ExtResource("1_ekwcc")
 
 [node name="Screen" parent="." instance=ExtResource("1_3nt8l")]
 transform = Transform3D(0.23, 0, 0, 0, 0.23, 0, 0, 0, 0.23, 0, -0.009306312, 0.19767219)
@@ -41,3 +44,7 @@ size = Vector3(0.45, 0.45, 0.06386718)
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, -0.054559633, -0.1418919)
 material_override = SubResource("StandardMaterial3D_nl8np")
 mesh = ExtResource("6_ja1yb")
+
+[node name="DownloadingSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("8_oeo00")
+volume_db = -20.0

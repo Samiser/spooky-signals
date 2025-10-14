@@ -63,11 +63,15 @@ func interact(player: Player) -> void:
 	if current_screen is Terminal:
 		_active = true
 		_player = player
+		if not player.is_zoomed:
+			player.toggle_zoom()
 		player.interacting = true
 
 func stop_interact() -> void:
 	_active = false
 	_player.interacting = false
+	if _player.is_zoomed:
+		_player.toggle_zoom()
 	_player = null
 
 func _input(event: InputEvent) -> void:

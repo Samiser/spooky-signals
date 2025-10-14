@@ -33,6 +33,13 @@ func _physics_process(delta):
 		
 	move_and_slide()
 
+func toggle_zoom() -> void:
+	is_zoomed = !is_zoomed
+	if is_zoomed:
+		camera.fov /= 2.4
+	else:
+		camera.fov *= 2.4
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		rotate_y(-event.relative.x * mouse_sensitivity)
@@ -49,11 +56,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			_try_interact()
 	
 	if event.is_action_pressed("zoom"):
-		is_zoomed = !is_zoomed
-		if is_zoomed:
-			camera.fov /= 2.4
-		else:
-			camera.fov *= 2.4
+		toggle_zoom()
 	
 	if event.is_action_released("click"):
 		if interacting and current_interactable.has_method("on_release"):
