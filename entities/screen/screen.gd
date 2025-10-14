@@ -2,7 +2,8 @@
 extends StaticBody3D
 class_name Screen
 
-@onready var typing_audio: AudioStreamPlayer3D = $KeypressAudio
+@onready var keypress_audio: AudioStreamPlayer3D = $KeypressAudio
+@onready var keyrelease_audio: AudioStreamPlayer3D = $KeyreleaseAudio
 
 @export var height: int = 1024:
 	set(value):
@@ -92,7 +93,9 @@ func _input(event: InputEvent) -> void:
 	
 	if event is InputEventKey or event is InputEventShortcut:
 		if event.is_pressed() and not event.is_echo():
-			typing_audio.play()
+			keypress_audio.play()
+		elif event.is_released():
+			keyrelease_audio.play()
 		_viewport.push_input(event)
 		get_viewport().set_input_as_handled()
 		return
