@@ -138,11 +138,8 @@ transform = Transform3D(-0.055719398, 0, -0.67269635, 0, 0.675, 0, 0.67269635, 0
 [node name="DownloadScreen" parent="Interfaces" instance=ExtResource("5_vivmo")]
 transform = Transform3D(-1.6211016, 0, 0.37980828, 0, 1.6649997, 0, -0.37980828, 0, -1.6211016, -3.922383, 1.0840734, 3.1848218)
 
-[node name="TerminalMonitor" parent="Interfaces" instance=ExtResource("14_w48qg")]
-transform = Transform3D(-0.29402354, 0, 0.95579815, 0, 1, 0, -0.95579815, 0, -0.29402354, -1.2381169, 0.29128146, 3.3383973)
-
 [node name="SignalDisplay" parent="Interfaces" instance=ExtResource("7_2cqfq")]
-transform = Transform3D(-1.9546578, 0, -0.52909106, 0, 2.0249999, 0, 0.52909106, 0, -1.9546578, -1.1883897, 1.5289115, 3.3153014)
+transform = Transform3D(-1.9546578, 0, -0.52909106, 0, 2.0249999, 0, 0.52909106, 0, -1.9546578, -1.1883897, 1.1159308, 3.3153014)
 
 [node name="SignalCameraInterface" parent="Interfaces" node_paths=PackedStringArray("signal_camera_viewport") instance=ExtResource("8_yaehf")]
 transform = Transform3D(-1.3943053, 0, -0.89159256, 0, 1.655, 0, 0.89159256, 0, -1.3943053, -0.110211134, 0.7458128, 2.5656905)
