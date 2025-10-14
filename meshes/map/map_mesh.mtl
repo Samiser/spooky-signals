@@ -102,3 +102,18 @@ bump wall_decals 1.png
 Kd 1 1 1
 d 1
 
+newmtl Metal_15-256x256_1
+map_Kd Stone_08-256x256.png
+bump Metal_05-256x256 1.png
+disp Metal_05-256x256 1.png
+Kd 1 1 1
+d 1
+
+newmtl ceiling_light_lambert1_BaseMap
+map_Kd ceiling_light_lambert1_BaseMap.png
+map_Pm ceiling_light_lambert1_MaskMap.png
+bump ceiling_light_lambert1_Normal.png
+map_Ke ceiling_light_lambert1_Emissive.png
+Kd 1 1 1
+d 1
+
