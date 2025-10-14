@@ -102,11 +102,11 @@ skeleton = NodePath("../..")
 shape = SubResource("ConcavePolygonShape3D_yaehf")
 
 [node name="lab_ambience" type="AudioStreamPlayer3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.54724, 3.3740854, 0.27599382)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.54724, 15.701377, 0.27599382)
 stream = ExtResource("3_074og")
-volume_db = -20.0
+volume_db = -5.0
 autoplay = true
-max_distance = 10.0
+max_distance = 20.0
 panning_strength = 0.2
 
 [node name="hall_ambience" type="AudioStreamPlayer3D" parent="."]
