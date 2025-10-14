@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://c7xnqj64cchkp"]
+[gd_scene load_steps=5 format=3 uid="uid://c7xnqj64cchkp"]
 
 [ext_resource type="PackedScene" uid="uid://ct5ty1nydcveo" path="res://entities/screen/screen.tscn" id="1_08uoe"]
+[ext_resource type="Script" uid="uid://bdumjbbq66sq2" path="res://entities/signal_tuner/signal_tuner.gd" id="1_hdd5w"]
 [ext_resource type="PackedScene" uid="uid://bihsc0t2rsvbi" path="res://ui/screens/signal_tuner/signal_tuner.tscn" id="2_hdd5w"]
 [ext_resource type="PackedScene" uid="uid://6j77mwnbq2hp" path="res://entities/dial/dial.tscn" id="3_u650r"]
 
 [node name="SignalTuner" type="Node3D"]
+script = ExtResource("1_hdd5w")
 
 [node name="Screen" parent="." instance=ExtResource("1_08uoe")]
 transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 0.07526815, 0.3926816, -0.022044182)
@@ -54,3 +56,6 @@ size = Vector3(1.7906494, 1.7387695, 0.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13933839, 0.39329448, -0.55626047)
 operation = 2
 size = Vector3(0.45, 1.4041809, 1.4002564)
+
+[node name="SignalAudio" type="AudioStreamPlayer3D" parent="."]
+volume_db = -40.0

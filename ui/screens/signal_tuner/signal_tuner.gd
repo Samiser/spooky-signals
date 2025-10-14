@@ -1,4 +1,5 @@
 extends Control
+class_name SignalTunerUI
 
 @onready var no_signal_display: MarginContainer = %NoSignalDisplay
 @onready var signal_tuner_display: MarginContainer = %SignalTunerDisplay
@@ -6,9 +7,9 @@ extends Control
 @onready var target_line: Line2D = %TargetLine
 @onready var controlled_line: Line2D = %ControlledLine
 
-var coarse_frequency: float = 4651
+var coarse_frequency: float = 4531
 var cycles: float = 3.0
-var amplitude: float = 1.0
+var amplitude: float = 0.4
 var phase: float = 0.0
 
 var data: SignalData
