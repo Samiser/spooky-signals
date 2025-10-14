@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="SignalData" load_steps=2 format=3 uid="uid://du8gaa8a008t2"]
+
+[ext_resource type="Script" uid="uid://7dw3dn04fi2k" path="res://resources/signal_data.gd" id="1_ummff"]
+
+[resource]
+script = ExtResource("1_ummff")
+metadata/_custom_type_script = "uid://7dw3dn04fi2k"
