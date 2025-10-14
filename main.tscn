@@ -113,6 +113,7 @@ panning_strength = 0.2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.276347, 3.3740854, 5.630802)
 stream = ExtResource("4_82xsv")
 volume_db = -20.0
+pitch_scale = 0.4
 autoplay = true
 max_distance = 9.0
 panning_strength = 0.2
