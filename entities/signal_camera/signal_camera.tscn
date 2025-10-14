@@ -10,6 +10,7 @@ exposure_multiplier = 2.697
 script = ExtResource("1_toexc")
 
 [node name="Camera3D" type="Camera3D" parent="."]
+cull_mask = 1048559
 attributes = SubResource("CameraAttributesPractical_mw8hc")
 fov = 20.0
 

@@ -3,14 +3,25 @@ class_name SignalCamera
 
 @onready var camera: Camera3D = $Camera3D
 
-@export var max_yaw_deg: float = 60.0
-@export var max_pitch_deg: float = 60.0
+# Aim bounds
+@export var max_yaw_deg: float = 40.0
+@export var max_pitch_deg: float = 40.0
 
-@export var slew_rate_deg_per_sec: float = 240.0
+# Camera control parameters
+@export var max_speed_deg_per_sec: float = 30.0
+@export var accel_deg_per_sec2: float = 200.0
+@export var damping: float = 6.0
 @export var deadzone: float = 0.05
+@export var response_gamma: float = 0.8
 @export var invert_x: bool = true
 @export var invert_y: bool = true
 
+@export var brake_deg_per_sec2: float = 500.0
+@export var input_timeout: float = 0.08
+var _last_input_time := 0.0
+
+
+# Selection settings (unchanged)
 @export var select_angle_on_deg: float = 3.0
 @export var select_angle_off_deg: float = 5.0
 @export var max_select_range: float = INF
@@ -18,51 +29,77 @@ class_name SignalCamera
 
 var _base_basis: Basis
 var _base_origin: Vector3
-var _target_yaw := 0.0
-var _target_pitch := 0.0
-var _yaw := 0.0
-var _pitch := 0.0
+var _yaw := 0.0              # current yaw offset (deg)
+var _pitch := 0.0            # current pitch offset (deg)
+var _vel := Vector2.ZERO     # current yaw/pitch speed (deg/s): (x=yaw, y=pitch)
+var _input_vec := Vector2.ZERO  # processed stick input in [-1..1]
+
 var _current: SignalSource = null
 
 func _ready() -> void:
 	_base_basis = transform.basis.orthonormalized()
 	_base_origin = transform.origin
 
+# Joystick -> desired direction (not position)
 func control(input: Vector2) -> void:
+	_last_input_time = Time.get_ticks_msec() * 0.001
 	var ix := (-input.x) if invert_x else input.x
 	var iy := (-input.y) if invert_y else input.y
-
 	var v := _apply_soft_deadzone(Vector2(ix, iy), deadzone)
-	_target_yaw   = clampf(v.x, -1.0, 1.0) * max_yaw_deg
-	_target_pitch = clampf(v.y, -1.0, 1.0) * max_pitch_deg
+	_input_vec = v.clamp(Vector2(-1,-1), Vector2(1,1))
 
 func _apply_soft_deadzone(v: Vector2, dz: float) -> Vector2:
 	var m := v.length()
-	if m <= dz:
-		return Vector2.ZERO
+	if m <= dz: return Vector2.ZERO
 	var k := (m - dz) / (1.0 - dz)
 	return v * (k / max(m, 1e-6))
 
 func _process(delta: float) -> void:
-	var step := slew_rate_deg_per_sec * delta
-	_yaw   = move_toward(_yaw, _target_yaw, step)
-	_pitch = move_toward(_pitch, _target_pitch, step)
+	var target_speed := _input_vec * max_speed_deg_per_sec
 
-	var yaw_rad := deg_to_rad(_yaw)
-	var pitch_rad := deg_to_rad(_pitch)
-	var rot := Basis(Vector3.UP, yaw_rad) * Basis(Vector3.RIGHT, pitch_rad)
-	var xform := Transform3D(_base_basis * rot, _base_origin)
-	transform = xform
+	if (Time.get_ticks_msec() * 0.001 - _last_input_time) > input_timeout:
+		_input_vec = Vector2.ZERO
+		target_speed = Vector2.ZERO
+
+	if accel_deg_per_sec2 > 0.0:
+		var step := accel_deg_per_sec2 * delta
+		_vel.x = move_toward(_vel.x, target_speed.x, step)
+		_vel.y = move_toward(_vel.y, target_speed.y, step)
+	else:
+		_vel = target_speed
+
+	if _input_vec == Vector2.ZERO and brake_deg_per_sec2 > 0.0:
+		var b := brake_deg_per_sec2 * delta
+		_vel.x = move_toward(_vel.x, 0.0, b)
+		_vel.y = move_toward(_vel.y, 0.0, b)
+
+	if _input_vec.length_squared() < 1e-5 and damping > 0.0:
+		var decay := pow(0.5, damping * delta)
+		_vel *= decay
+
+	# Integrate yaw/pitch, clamp to cone
+	_yaw   = clampf(_yaw   + _vel.x * delta, -max_yaw_deg,   max_yaw_deg)
+	_pitch = clampf(_pitch + _vel.y * delta, -max_pitch_deg, max_pitch_deg)
+
+	# Soft-stop at limits: zero velocity if pushing further into the clamp
+	if (_yaw <= -max_yaw_deg and _vel.x < 0.0) or (_yaw >= max_yaw_deg and _vel.x > 0.0):
+		_vel.x = 0.0
+	if (_pitch <= -max_pitch_deg and _vel.y < 0.0) or (_pitch >= max_pitch_deg and _vel.y > 0.0):
+		_vel.y = 0.0
+
+	# Apply rotation via Basis (no Euler wrap)
+	var rot := Basis(Vector3.UP, deg_to_rad(_yaw)) * Basis(Vector3.RIGHT, deg_to_rad(_pitch))
+	transform = Transform3D(_base_basis * rot, _base_origin)
 
 	_update_selection()
 
+# ---------------- selection helpers (same as before) ----------------
 func _update_selection() -> void:
 	var pos := camera.global_transform.origin
 	var fwd := (-camera.global_transform.basis.z).normalized()
 
 	if _current and is_instance_valid(_current):
-		if _within_selection(_current, pos, fwd, select_angle_off_deg):
-			return
+		if _within_selection(_current, pos, fwd, select_angle_off_deg): return
 		_current = null
 		Signals.clear_current()
 

@@ -25,6 +25,12 @@ var target_phase := 0.35
 
 var download_progress: float = 0.0 # / 100.0
 var current_download_speed: float = 0.0
-var downloaded: bool = false
+var downloaded: bool = false:
+	set(value):
+		downloaded = value
+		if value:
+			dowload_complete.emit()
 
 var decoded: bool = false
+
+signal dowload_complete

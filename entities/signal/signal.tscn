@@ -1,11 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://44blrtn7hqmd"]
+[gd_scene load_steps=4 format=3 uid="uid://44blrtn7hqmd"]
 
 [ext_resource type="Script" uid="uid://drckdw847bgd6" path="res://entities/signal/signal.gd" id="1_sujve"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_sujve"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sujve"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 10.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_hc5qh"]
+material = SubResource("StandardMaterial3D_sujve")
+radius = 1.0
+height = 2.0
 
 [node name="Signal" type="Node3D" groups=["signal_source"]]
 script = ExtResource("1_sujve")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("SphereMesh_sujve")
+layers = 16
+mesh = SubResource("SphereMesh_hc5qh")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://chxlkaq0opjy7"]
+[gd_scene load_steps=33 format=3 uid="uid://chxlkaq0opjy7"]
 
 [ext_resource type="PackedScene" uid="uid://vfatuya14sn3" path="res://entities/player/player.tscn" id="1_68bq3"]
 [ext_resource type="ArrayMesh" uid="uid://bnj1bulcj4wq6" path="res://meshes/map/map_mesh.obj" id="2_0xm2m"]
@@ -82,6 +82,11 @@ start_address = "1"
 end_address = "1"
 metadata/_custom_type_script = "uid://7dw3dn04fi2k"
 
+[sub_resource type="BoxMesh" id="BoxMesh_82xsv"]
+size = Vector3(1, 100, 100)
+
+[sub_resource type="Environment" id="Environment_82xsv"]
+
 [node name="Main" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_68bq3")]
@@ -160,8 +165,9 @@ transform = Transform3D(0.18077774, 0.37474406, -0.909333, -0.08596439, 0.927048
 shadow_enabled = true
 shadow_blur = 0.0
 
-[node name="Radar" parent="." instance=ExtResource("5_lquwl")]
+[node name="Radar" parent="." node_paths=PackedStringArray("radar_viewport") instance=ExtResource("5_lquwl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.389588, -0.9791371, -2.935564)
+radar_viewport = NodePath("../RadarViewport")
 
 [node name="Interfaces" type="Node" parent="."]
 
@@ -181,7 +187,7 @@ signal_camera_viewport = NodePath("../SignalCamViewport")
 [node name="SignalCamViewport" type="SubViewport" parent="Interfaces"]
 
 [node name="SignalCamera" parent="Interfaces/SignalCamViewport" instance=ExtResource("9_4c57u")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -14.503235, -0.7493961, -0.22835505)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -14.17317, 0, 0)
 
 [node name="Signals" type="Node" parent="."]
 
@@ -236,3 +242,17 @@ default_pad_text = "MDAwMDAwMDAgIDc0IDY4IDY5IDczIDIwIDYzIDY4IDc1IDZlIDY3IDc1IDcz
 
 [node name="DiskReader" parent="." instance=ExtResource("17_074og")]
 transform = Transform3D(-0.8750679, 0, 0.48400033, 0, 1, 0, -0.48400033, 0, -0.8750679, -3.8623497, 0.2945, 2.3336804)
+
+[node name="SignalSpaceReference" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.12263, 0, 0)
+visible = false
+mesh = SubResource("BoxMesh_82xsv")
+
+[node name="RadarViewport" type="SubViewport" parent="."]
+transparent_bg = true
+
+[node name="Camera3D" type="Camera3D" parent="RadarViewport"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -23.651592, 0, 0)
+environment = SubResource("Environment_82xsv")
+projection = 1
+size = 104.41106
