@@ -1,10 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://dp54nqbw0enmy"]
+[gd_scene load_steps=21 format=3 uid="uid://dp54nqbw0enmy"]
 
 [ext_resource type="Script" uid="uid://b7bgdn7is7bn6" path="res://ui/screens/terminal/terminal.gd" id="1_sxuvd"]
 [ext_resource type="FontFile" uid="uid://byl1pw6ncu61a" path="res://fonts/NK57 Monospace Sc Rg.otf" id="1_xukm4"]
 [ext_resource type="FontFile" uid="uid://dad1xr0e0pnhr" path="res://fonts/NK57 Monospace Sc Bd.otf" id="2_1pmws"]
 [ext_resource type="FontFile" uid="uid://diq1f4nx62ilc" path="res://fonts/NK57 Monospace Sc Bd It.otf" id="3_1vk6n"]
 [ext_resource type="FontFile" uid="uid://cbr3mass3sfw4" path="res://fonts/NK57 Monospace Sc Rg It.otf" id="4_p5bwx"]
+[ext_resource type="AudioStream" uid="uid://doyqk5jpaeyri" path="res://audio/music/intro_music.ogg" id="6_1vk6n"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_froon"]
 bg_color = Color(0, 0, 0, 1)
@@ -15,7 +16,7 @@ bg_color = Color(0, 0, 0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0uqvb"]
 bg_color = Color(0, 0, 0, 1)
 
-[sub_resource type="Image" id="Image_1pmws"]
+[sub_resource type="Image" id="Image_1vk6n"]
 data = {
 "data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 177, 177, 177, 153, 177, 177, 177, 166, 170, 170, 170, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 170, 170, 170, 18, 177, 177, 177, 166, 178, 178, 178, 151, 0, 0, 0, 0, 0, 0, 0, 0, 177, 177, 177, 166, 178, 178, 178, 217, 178, 178, 178, 178, 170, 170, 170, 18, 0, 0, 0, 0, 0, 0, 0, 0, 170, 170, 170, 18, 178, 178, 178, 179, 178, 178, 178, 217, 178, 178, 178, 165, 0, 0, 0, 0, 0, 0, 0, 0, 170, 170, 170, 18, 178, 178, 178, 178, 178, 178, 178, 217, 178, 178, 178, 178, 170, 170, 170, 18, 170, 170, 170, 18, 178, 178, 178, 179, 178, 178, 178, 217, 178, 178, 178, 178, 180, 180, 180, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 170, 170, 170, 18, 178, 178, 178, 178, 178, 178, 178, 217, 178, 178, 178, 197, 178, 178, 178, 197, 178, 178, 178, 217, 178, 178, 178, 178, 180, 180, 180, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 170, 170, 170, 18, 178, 178, 178, 178, 178, 178, 178, 217, 178, 178, 178, 217, 178, 178, 178, 178, 180, 180, 180, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 170, 170, 170, 18, 178, 178, 178, 165, 178, 178, 178, 165, 180, 180, 180, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "format": "RGBA8",
@@ -25,7 +26,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_in5st"]
-image = SubResource("Image_1pmws")
+image = SubResource("Image_1vk6n")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6snkg"]
 bg_color = Color(0, 0, 0, 1)
@@ -211,3 +212,6 @@ size_flags_stretch_ratio = 20.0
 theme_override_font_sizes/font_size = 32
 keep_editing_on_text_submit = true
 flat = true
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_1vk6n")

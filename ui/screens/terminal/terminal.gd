@@ -126,8 +126,9 @@ func _ready() -> void:
 	output_label.visible_ratio = 0
 
 func initialise() -> void:
+	$MusicPlayer.play()
 	var tween := create_tween()
-	tween.tween_property(output_label, "visible_ratio", 1.0, 30.0)
+	tween.tween_property(output_label, "visible_ratio", 1.0, 21.818)
 	initialised = true
 	await tween.finished
 	input.grab_focus()
