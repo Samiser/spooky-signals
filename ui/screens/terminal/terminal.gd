@@ -13,29 +13,10 @@ func error(msg: String) -> String:
 
 func help(_params: Array[String]) -> String:
 	return '''Commands:
-	scan - list scannable objects in range
-	scan [name] - scan an in-range scannable
-	connect [host] - connect to in-range host
 	read - displays raw disk data
 	decode [start address] [end address] - decode drive data
 	output - outputs decoded disk drive data to the monitor
 	clear - clear terminal output'''
-
-func scan(params: Array[String]) -> String:
-	pass
-	return "boop"
-
-func dna(params: Array[String]) -> String:
-	pass
-	return "boop"
-
-func host_connect(params: Array[String]) -> String:
-	pass
-	return "boop"
-
-func host_disconnect() -> String:
-	pass
-	return "boop"
 
 func read_disk(params: Array[String]) -> String:
 	var disk = _check_disk()
@@ -89,12 +70,6 @@ func parse_command(params: Array[String]) -> String:
 	match params[0]:
 		"help":
 			return help(params)
-		"scan":
-			return scan(params)
-		"dna":
-			return dna(params)
-		"connect":
-			return host_connect(params)
 		"clear":
 			return clear()
 		"read":

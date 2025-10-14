@@ -175,7 +175,7 @@ transform = Transform3D(-1.6211016, 0, 0.37980828, 0, 1.6649997, 0, -0.37980828,
 transform = Transform3D(-1.9546578, 0, -0.52909106, 0, 2.0249999, 0, 0.52909106, 0, -1.9546578, -1.1883897, 1.0880446, 3.3153014)
 
 [node name="SignalCameraInterface" parent="Interfaces" node_paths=PackedStringArray("signal_camera_viewport") instance=ExtResource("8_yaehf")]
-transform = Transform3D(-1.3943053, 0, -0.89159256, 0, 1.655, 0, 0.89159256, 0, -1.3943053, -0.110211134, 0.7458128, 2.5656905)
+transform = Transform3D(1.540176, 0, -0.93158865, 0, 1.8, 0, 0.93158865, 0, 1.540176, 0.016936302, 0.7458128, -2.7669773)
 signal_camera_viewport = NodePath("../SignalCamViewport")
 
 [node name="SignalCamViewport" type="SubViewport" parent="Interfaces"]
