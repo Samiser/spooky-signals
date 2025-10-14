@@ -20,7 +20,7 @@ func toggle_open() -> void:
 		
 	var target_door_pos := 0.0
 	if is_open:
-		target_door_pos = 0.66
+		target_door_pos = -0.66
 
 	var tween := get_tree().create_tween()
 	tween.set_trans(Tween.TRANS_QUINT)
