@@ -1,0 +1,156 @@
+[gd_scene load_steps=20 format=3 uid="uid://dacgfvab6l1fm"]
+
+[ext_resource type="FontFile" uid="uid://byl1pw6ncu61a" path="res://fonts/NK57 Monospace Sc Rg.otf" id="1_i6i6g"]
+[ext_resource type="FontFile" uid="uid://dad1xr0e0pnhr" path="res://fonts/NK57 Monospace Sc Bd.otf" id="2_fc3bd"]
+[ext_resource type="FontFile" uid="uid://diq1f4nx62ilc" path="res://fonts/NK57 Monospace Sc Bd It.otf" id="3_qxocx"]
+[ext_resource type="FontFile" uid="uid://cbr3mass3sfw4" path="res://fonts/NK57 Monospace Sc Rg It.otf" id="4_lf7hp"]
+[ext_resource type="Script" uid="uid://sgt4pp2jp6xs" path="res://ui/screens/button_pad/pad_screen.gd" id="5_xqe13"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_froon"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rdsj4"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0uqvb"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Image" id="Image_5h653"]
+data = {
+"data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 177, 177, 177, 153, 177, 177, 177, 166, 170, 170, 170, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 170, 170, 170, 18, 177, 177, 177, 166, 178, 178, 178, 151, 0, 0, 0, 0, 0, 0, 0, 0, 177, 177, 177, 166, 178, 178, 178, 217, 178, 178, 178, 178, 170, 170, 170, 18, 0, 0, 0, 0, 0, 0, 0, 0, 170, 170, 170, 18, 178, 178, 178, 179, 178, 178, 178, 217, 178, 178, 178, 165, 0, 0, 0, 0, 0, 0, 0, 0, 170, 170, 170, 18, 178, 178, 178, 178, 178, 178, 178, 217, 178, 178, 178, 178, 170, 170, 170, 18, 170, 170, 170, 18, 178, 178, 178, 179, 178, 178, 178, 217, 178, 178, 178, 178, 180, 180, 180, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 170, 170, 170, 18, 178, 178, 178, 178, 178, 178, 178, 217, 178, 178, 178, 197, 178, 178, 178, 197, 178, 178, 178, 217, 178, 178, 178, 178, 180, 180, 180, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 170, 170, 170, 18, 178, 178, 178, 178, 178, 178, 178, 217, 178, 178, 178, 217, 178, 178, 178, 178, 180, 180, 180, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 170, 170, 170, 18, 178, 178, 178, 165, 178, 178, 178, 165, 180, 180, 180, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"format": "RGBA8",
+"height": 12,
+"mipmaps": false,
+"width": 12
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_in5st"]
+image = SubResource("Image_5h653")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6snkg"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpsbd"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_26roo"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6tdq8"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uqe2u"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ymi1"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htgwf"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 5.0
+expand_margin_top = 40.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+shadow_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kgxmr"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 5.0
+expand_margin_top = 40.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+shadow_size = 30
+
+[sub_resource type="Theme" id="Theme_xukm4"]
+default_font = ExtResource("1_i6i6g")
+default_font_size = 50
+Button/colors/font_color = Color(1, 0.690196, 0.854902, 1)
+Button/colors/font_focus_color = Color(1, 0.690196, 0.854902, 1)
+Button/colors/font_hover_color = Color(1, 0.690196, 0.854902, 1)
+Button/colors/font_hover_pressed_color = Color(1, 0.690196, 0.854902, 1)
+HBoxContainer/constants/separation = 0
+Label/colors/font_color = Color(1, 0.690196, 0.854902, 1)
+LineEdit/colors/font_color = Color(1, 0.690196, 0.854902, 1)
+LineEdit/colors/font_selected_color = Color(1, 1, 1, 1)
+LineEdit/colors/selection_color = Color(0, 0, 0, 1)
+LineEdit/styles/focus = SubResource("StyleBoxFlat_froon")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_rdsj4")
+LineEdit/styles/read_only = SubResource("StyleBoxFlat_0uqvb")
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 10
+OptionButton/colors/font_color = Color(1, 0.690196, 0.854902, 1)
+OptionButton/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+OptionButton/colors/font_focus_color = Color(1, 0.690196, 0.854902, 1)
+OptionButton/colors/font_hover_color = Color(1, 0.690196, 0.854902, 1)
+OptionButton/colors/font_hover_pressed_color = Color(1, 0.690196, 0.854902, 1)
+OptionButton/colors/font_outline_color = Color(0, 0, 0, 1)
+OptionButton/colors/font_pressed_color = Color(1, 1, 1, 1)
+OptionButton/constants/arrow_margin = 4
+OptionButton/constants/h_separation = 4
+OptionButton/constants/modulate_arrow = 0
+OptionButton/constants/outline_size = 0
+OptionButton/fonts/font = ExtResource("1_i6i6g")
+OptionButton/icons/arrow = SubResource("ImageTexture_in5st")
+Panel/styles/panel = SubResource("StyleBoxFlat_6snkg")
+RichTextLabel/colors/default_color = Color(1, 0.690196, 0.854902, 1)
+RichTextLabel/fonts/bold_font = ExtResource("2_fc3bd")
+RichTextLabel/fonts/bold_italics_font = ExtResource("3_qxocx")
+RichTextLabel/fonts/italics_font = ExtResource("4_lf7hp")
+RichTextLabel/fonts/mono_font = ExtResource("1_i6i6g")
+RichTextLabel/fonts/normal_font = ExtResource("1_i6i6g")
+RichTextLabel/styles/background = SubResource("StyleBoxFlat_kpsbd")
+RichTextLabel/styles/fill = SubResource("StyleBoxFlat_26roo")
+RichTextLabel/styles/focus = SubResource("StyleBoxFlat_6tdq8")
+RichTextLabel/styles/normal = SubResource("StyleBoxFlat_uqe2u")
+TabBar/colors/font_selected_color = Color(1, 0.690196, 0.854902, 1)
+TabBar/colors/font_unselected_color = Color(1, 0.690196, 0.854902, 0.454902)
+TabBar/font_sizes/font_size = 22
+TabContainer/colors/drop_mark_color = Color(1, 0.690196, 0.854902, 1)
+TabContainer/colors/font_hovered_color = Color(1, 0.690196, 0.854902, 1)
+TabContainer/colors/font_selected_color = Color(1, 0.690196, 0.854902, 1)
+TabContainer/colors/font_unselected_color = Color(1, 0.690196, 0.854902, 0.498039)
+TabContainer/styles/panel = SubResource("StyleBoxFlat_3ymi1")
+Window/colors/title_color = Color(1, 0.690196, 0.854902, 1)
+Window/styles/embedded_border = SubResource("StyleBoxFlat_htgwf")
+Window/styles/embedded_unfocused_border = SubResource("StyleBoxFlat_kgxmr")
+
+[node name="PadScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_xukm4")
+script = ExtResource("5_xqe13")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OutputTextLabel" type="RichTextLabel" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 1122.0
+offset_bottom = 618.0
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/bold_font_size = 16
+theme_override_font_sizes/bold_italics_font_size = 16
+theme_override_font_sizes/italics_font_size = 16
+theme_override_font_sizes/mono_font_size = 16
+bbcode_enabled = true
+text = "PAD TEXT"
+scroll_active = false
+scroll_following = true
