@@ -70,6 +70,8 @@ func interact(player: Player) -> void:
 		if not player.is_zoomed:
 			player.toggle_zoom()
 		player.interacting = true
+		if not current_screen.initialised:
+			await current_screen.initialise()
 
 func stop_interact() -> void:
 	_active = false

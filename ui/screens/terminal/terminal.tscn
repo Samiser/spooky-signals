@@ -156,18 +156,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="StatusTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/Terminal"]
-layout_mode = 2
-theme_override_font_sizes/normal_font_size = 32
-theme_override_font_sizes/bold_font_size = 32
-theme_override_font_sizes/bold_italics_font_size = 32
-theme_override_font_sizes/italics_font_size = 32
-theme_override_font_sizes/mono_font_size = 32
-bbcode_enabled = true
-fit_content = true
-shortcut_keys_enabled = false
-horizontal_alignment = 1
-
 [node name="OutputTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/Terminal"]
 unique_name_in_owner = true
 layout_mode = 2
@@ -178,13 +166,22 @@ theme_override_font_sizes/bold_italics_font_size = 32
 theme_override_font_sizes/italics_font_size = 32
 theme_override_font_sizes/mono_font_size = 32
 bbcode_enabled = true
-text = "This failed mining expedition stopped making contact a few days ago, and you've been sent in to investigate why.
+text = "[center][i]Shipboard Terminal — Low Power Mode[/i][/center]
+[center]────────────────────────────────────────[/center]
 
-Use your trusty portable terminal to investigate the station and determine what happened.
+[b]Time:[/b] ≈ unknown (chronometer drift exceeded)  
+[b]User:[/b] Commander — [i]stasis occupant #01[/i]  
 
-When you're ready to submit your findings back to home base, use the other tab (\"Investigation\") to do so.
+[b]Wake Reason:[/b] Power reserves below critical threshold.
 
+[b]Notes:[/b]
+• Warp event anomaly detected prior to stasis entry.  
+• Colony communication link [color=red]lost[/color]; passive listening enabled. 
 
+[b]Communication Loss Protocol:[/b]
+1) Reactivate radio equipment
+2) Acquire signal lock
+3) Download and decode signal
 
 Type [b]help[/b] to see available commands"
 scroll_active = false

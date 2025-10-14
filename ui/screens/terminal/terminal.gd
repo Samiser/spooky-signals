@@ -3,6 +3,8 @@ class_name Terminal
 
 const interactable: bool = true
 
+var initialised: bool = false
+
 @onready var output_label: RichTextLabel = $%OutputTextLabel
 @onready var input: LineEdit = %InputLineEdit
 
@@ -121,5 +123,11 @@ func set_visibility(visibility: bool) -> void:
 
 func _ready() -> void:
 	input.text_submitted.connect(text_submitted)
+	output_label.visible_ratio = 0
+
+func initialise() -> void:
+	var tween := create_tween()
+	tween.tween_property(output_label, "visible_ratio", 1.0, 30.0)
+	initialised = true
+	await tween.finished
 	input.grab_focus()
-	
