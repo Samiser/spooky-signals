@@ -47,8 +47,8 @@ func output_disk_data(params: Array[String]) -> String:
 	if disk:
 		var data: SignalData = disk.data
 		if data.decoded:
+			Signals.display_data(data)
 			return "Displaying decoded data."
-			# display stuff here!!!
 		else:
 			return "Data not decoded, use the 'decode' command."
 	return "No disk drive found."

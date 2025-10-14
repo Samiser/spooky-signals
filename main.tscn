@@ -59,12 +59,18 @@ data = PackedVector3Array(8.2027, 1.4570999, -1.3345, 8.2027, 2.2071, -1.3345, 8
 script = ExtResource("12_w48qg")
 title = "Text Transmission"
 content_text = "wahoooo!! now with [b]bold[/b] and [i]italics[/i] text!"
+encoded_content = "boop"
+start_address = "1"
+end_address = "1"
 metadata/_custom_type_script = "uid://7dw3dn04fi2k"
 
 [sub_resource type="Resource" id="Resource_yaehf"]
 script = ExtResource("12_w48qg")
 id = &"sig_002"
 title = "Image Transmission"
+encoded_content = "boop"
+start_address = "1"
+end_address = "1"
 content_image = ExtResource("13_vivmo")
 metadata/_custom_type_script = "uid://7dw3dn04fi2k"
 
@@ -73,6 +79,9 @@ script = ExtResource("12_w48qg")
 id = &"sig_003"
 title = "Double Transmission"
 content_text = "yipeee!!!!"
+encoded_content = "boop"
+start_address = "1"
+end_address = "1"
 content_image = ExtResource("13_vivmo")
 metadata/_custom_type_script = "uid://7dw3dn04fi2k"
 

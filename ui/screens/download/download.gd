@@ -26,7 +26,7 @@ func _on_current_signal_changed(_old: SignalSource, new: SignalSource) -> void:
 func _process(_delta: float) -> void:
 	if Signals.has_current() and not Signals.current.data.downloaded:
 		var data: SignalData = Signals.current.data
-		data.download_progress += 0.02 * data.current_download_speed
+		data.download_progress += 0.5 * data.current_download_speed
 		download_progress_bar.value = data.download_progress
 		base_64_label.visible_ratio = data.download_progress / 100
 		if data.download_progress >= 100.0:

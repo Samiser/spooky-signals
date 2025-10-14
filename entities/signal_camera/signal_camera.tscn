@@ -11,6 +11,7 @@ script = ExtResource("1_toexc")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 attributes = SubResource("CameraAttributesPractical_mw8hc")
+fov = 20.0
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visible = false

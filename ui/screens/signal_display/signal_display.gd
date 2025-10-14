@@ -8,11 +8,11 @@ extends Control
 @onready var image_contents_rect: TextureRect = %ImageContentsRect
 
 func _ready() -> void:
-	Signals.current_downloaded.connect(_on_current_signal_downloaded)
+	Signals.display.connect(_on_display)
 
-func _on_current_signal_downloaded(source: SignalSource) -> void:
-	if source != null:
-		_show_signal_data(source.data)
+func _on_display(data: SignalData) -> void:
+	if data != null:
+		_show_signal_data(data)
 	else:
 		_hide_signal_data()
 

@@ -5,6 +5,8 @@ signal current_changed(previous: SignalSource, current: SignalSource)
 signal current_downloaded(current: SignalSource)
 signal current_decoded(current: SignalSource)
 
+signal display(data: SignalData)
+
 var _current: SignalSource = null
 
 var current: SignalSource:
@@ -31,7 +33,8 @@ func set_current_downloaded() -> void:
 		var floppy_scene :PackedScene= load("res://entities/floppy/floppy_disk.tscn")
 		var floppy_disk :FloppyDisk= floppy_scene.instantiate()
 		get_tree().root.add_child(floppy_disk)
-		floppy_disk.data = _current.data
+		floppy_disk.data = _current.data.duplicate(true)
+		print(floppy_disk.data.title)
 		floppy_disk.global_position = Vector3(-3.987, 0.323, 2.268)
 		floppy_disk.global_rotation_degrees = Vector3(0.0, -105.8, 90.0)
 		
@@ -39,6 +42,9 @@ func set_current_decoded() -> void:
 	if _current:
 		_current.decoded = true
 		current_decoded.emit(_current)
+
+func display_data(data: SignalData) -> void:
+	display.emit(data)
 
 func clear_current() -> void:
 	if _current == null:
