@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://chxlkaq0opjy7"]
+[gd_scene load_steps=29 format=3 uid="uid://chxlkaq0opjy7"]
 
 [ext_resource type="PackedScene" uid="uid://vfatuya14sn3" path="res://entities/player/player.tscn" id="1_68bq3"]
 [ext_resource type="ArrayMesh" uid="uid://bnj1bulcj4wq6" path="res://meshes/map/map_mesh.obj" id="2_0xm2m"]
@@ -14,7 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://5ssga0463d5e" path="res://entities/floppy/floppy_disk.tscn" id="14_vivmo"]
 [ext_resource type="PackedScene" uid="uid://die70vcqqywnl" path="res://entities/terminal_monitor/terminal_monitor.tscn" id="14_w48qg"]
 [ext_resource type="Material" uid="uid://bp5rh2n0a0sst" path="res://meshes/keyboard/textures/keyboard_material.tres" id="15_2cqfq"]
+[ext_resource type="PackedScene" uid="uid://8sldleje1mmt" path="res://entities/door/door.tscn" id="16_2cqfq"]
 [ext_resource type="ArrayMesh" uid="uid://eucyspquvr43" path="res://meshes/keyboard/keyboard.obj" id="16_yaehf"]
+[ext_resource type="PackedScene" uid="uid://2tbdcfvj6lk7" path="res://entities/button_pad/button_pad.tscn" id="17_yaehf"]
 
 [sub_resource type="Gradient" id="Gradient_0xm2m"]
 colors = PackedColorArray(0, 0, 0, 1, 0.007195848, 0.22476539, 0.31965184, 1)
@@ -180,3 +182,32 @@ data = SubResource("Resource_w48qg")
 transform = Transform3D(-1.4662862e-08, 0, 0.09, 0, 0.09, 0, -0.09, 0, -1.4662862e-08, -4.0369377, 0.472, 0.07691571)
 material_override = ExtResource("15_2cqfq")
 mesh = ExtResource("16_yaehf")
+
+[node name="Door" parent="." instance=ExtResource("16_2cqfq")]
+transform = Transform3D(-9.616505e-08, 0, -2.2, 0, 2.2, 0, 2.2, 0, -9.616505e-08, 1.5247643, -0.79339945, 0.16337472)
+
+[node name="Door2" parent="." instance=ExtResource("16_2cqfq")]
+transform = Transform3D(2.2, 0, 1.4210855e-14, 0, 2.2, 0, -1.4210855e-14, 0, 2.2, 9.632927, -0.79339945, -2.8366253)
+
+[node name="Door3" parent="." instance=ExtResource("16_2cqfq")]
+transform = Transform3D(2.2, 0, 1.4210855e-14, 0, 2.2, 0, -1.4210855e-14, 0, 2.2, 14.688399, -0.79339945, 2.595113)
+
+[node name="ButtonPad" parent="." node_paths=PackedStringArray("targets") instance=ExtResource("17_yaehf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.3272117, 0.5633272, -0.98892415)
+targets = [NodePath("../Door"), NodePath("../ButtonPad2")]
+
+[node name="ButtonPad2" parent="." node_paths=PackedStringArray("targets") instance=ExtResource("17_yaehf")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.726393, 0.5633272, -0.98892415)
+targets = [NodePath("../Door"), NodePath("../ButtonPad")]
+
+[node name="ButtonPad3" parent="." node_paths=PackedStringArray("targets") instance=ExtResource("17_yaehf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.568754, 0.6372913, 2.7978487)
+targets = [NodePath("../Door3"), NodePath("../ButtonPad4")]
+
+[node name="ButtonPad4" parent="." node_paths=PackedStringArray("targets") instance=ExtResource("17_yaehf")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 13.568754, 0.6372913, 2.399197)
+targets = [NodePath("../Door3"), NodePath("../ButtonPad3")]
+
+[node name="ButtonPad5" parent="." instance=ExtResource("17_yaehf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.570262, 0.6170598, -2.6352606)
+default_pad_text = ""
