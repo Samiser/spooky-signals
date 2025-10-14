@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://byukxd2qclpq"]
+
+[ext_resource type="PackedScene" uid="uid://nxlgchgo8yj2" path="res://ui/screens/radar_ui/radar_ui.tscn" id="1_aie0j"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_jxnl1"]
+viewport_path = NodePath("SubViewport")
+
+[node name="RadarInterface" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+modulate = Color(0.6066667, 1, 0.6, 0.6)
+texture = SubResource("ViewportTexture_jxnl1")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+
+[node name="RadarUI" parent="SubViewport" instance=ExtResource("1_aie0j")]
