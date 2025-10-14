@@ -65,7 +65,6 @@ metadata/_custom_type_script = "uid://7dw3dn04fi2k"
 
 [sub_resource type="Resource" id="Resource_yaehf"]
 script = ExtResource("12_w48qg")
-id = &"sig_002"
 title = "Image Transmission"
 encoded_content = "boop"
 start_address = "1"
@@ -75,7 +74,6 @@ metadata/_custom_type_script = "uid://7dw3dn04fi2k"
 
 [sub_resource type="Resource" id="Resource_074og"]
 script = ExtResource("12_w48qg")
-id = &"sig_003"
 title = "Double Transmission"
 content_text = "yipeee!!!!"
 encoded_content = "boop"
@@ -110,19 +108,19 @@ max_distance = 20.0
 panning_strength = 0.2
 
 [node name="hall_ambience" type="AudioStreamPlayer3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.276347, 3.3740854, 5.630802)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.836792, 10.6768675, 5.8278685)
 stream = ExtResource("4_82xsv")
-volume_db = -20.0
+volume_db = -5.0
 autoplay = true
-max_distance = 9.0
+max_distance = 12.0
 panning_strength = 0.2
 
 [node name="bridge_ambience" type="AudioStreamPlayer3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.916856, 3.3740854, -1.0546403)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.565933, 3.9390774, -0.9077246)
 stream = ExtResource("5_getpj")
-volume_db = -10.0
+volume_db = 40.0
 autoplay = true
-max_distance = 5.0
+max_distance = 10.0
 panning_strength = 0.5
 
 [node name="Lighting" type="Node3D" parent="."]
