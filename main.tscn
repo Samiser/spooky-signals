@@ -110,7 +110,7 @@ panning_strength = 0.2
 [node name="hall_ambience" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.836792, 10.6768675, 5.8278685)
 stream = ExtResource("4_82xsv")
-volume_db = -20.0
+volume_db = -14.0
 pitch_scale = 0.4
 autoplay = true
 max_distance = 12.0
