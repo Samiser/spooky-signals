@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://chxlkaq0opjy7"]
+[gd_scene load_steps=36 format=3 uid="uid://chxlkaq0opjy7"]
 
 [ext_resource type="PackedScene" uid="uid://vfatuya14sn3" path="res://entities/player/player.tscn" id="1_68bq3"]
 [ext_resource type="ArrayMesh" uid="uid://bnj1bulcj4wq6" path="res://meshes/map/map_mesh.obj" id="2_0xm2m"]
@@ -20,6 +20,10 @@
 [ext_resource type="ArrayMesh" uid="uid://eucyspquvr43" path="res://meshes/keyboard/keyboard.obj" id="16_yaehf"]
 [ext_resource type="PackedScene" uid="uid://mkh7nlicptxs" path="res://entities/disk_reader/disk_reader.tscn" id="17_074og"]
 [ext_resource type="PackedScene" uid="uid://2tbdcfvj6lk7" path="res://entities/button_pad/button_pad.tscn" id="17_yaehf"]
+[ext_resource type="Texture2D" uid="uid://u0bqy1hpkfhb" path="res://meshes/tv/textures/tv_initialShadingGroup_BaseMap.png" id="21_1u8w0"]
+[ext_resource type="Texture2D" uid="uid://b1ng4tw57c8hy" path="res://meshes/tv/textures/tv_initialShadingGroup_MaskMap.png" id="22_0odxb"]
+[ext_resource type="Texture2D" uid="uid://dp5tdgyfqaamb" path="res://meshes/tv/textures/tv_initialShadingGroup_Normal.png" id="23_lswn8"]
+[ext_resource type="ArrayMesh" uid="uid://bayndwgd2ged0" path="res://meshes/tv/tv.obj" id="24_a6jrf"]
 
 [sub_resource type="Gradient" id="Gradient_0xm2m"]
 colors = PackedColorArray(0, 0, 0, 1, 0.007195848, 0.22476539, 0.31965184, 1)
@@ -81,6 +85,16 @@ encoded_content = "boop"
 start_address = "1"
 end_address = "1"
 metadata/_custom_type_script = "uid://7dw3dn04fi2k"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xuqvo"]
+albedo_texture = ExtResource("21_1u8w0")
+metallic = 1.0
+metallic_texture = ExtResource("22_0odxb")
+roughness_texture = ExtResource("22_0odxb")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("23_lswn8")
+texture_filter = 0
 
 [node name="Main" type="Node3D"]
 
@@ -236,3 +250,23 @@ default_pad_text = "MDAwMDAwMDAgIDc0IDY4IDY5IDczIDIwIDYzIDY4IDc1IDZlIDY3IDc1IDcz
 
 [node name="DiskReader" parent="." instance=ExtResource("17_074og")]
 transform = Transform3D(-0.8750679, 0, 0.48400033, 0, 1, 0, -0.48400033, 0, -0.8750679, -3.8623497, 0.2945, 2.3336804)
+
+[node name="Tv" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.059797e-08, -0.2622246, -0.64902866, 0, 0.6490288, -0.26222458, 0.6999999, -1.1462202e-08, -2.8369943e-08, 17.701962, 2.1983163, -1.6874671)
+material_override = SubResource("StandardMaterial3D_xuqvo")
+mesh = ExtResource("24_a6jrf")
+
+[node name="Tv4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2604452, -0.24323046, -0.6025008, -7.450581e-09, 0.64910185, -0.2620434, 0.64974475, 0.097497076, 0.24150784, 17.481789, 2.2101178, -3.025604)
+material_override = SubResource("StandardMaterial3D_xuqvo")
+mesh = ExtResource("24_a6jrf")
+
+[node name="Tv2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.059797e-08, -0.2622246, -0.64902866, 0, 0.6490288, -0.26222458, 0.6999999, -1.1462202e-08, -2.8369943e-08, 17.701962, 2.1983163, -0.702812)
+material_override = SubResource("StandardMaterial3D_xuqvo")
+mesh = ExtResource("24_a6jrf")
+
+[node name="Tv3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.35, -0.22709319, -0.5620752, 0, 0.6490288, -0.26222456, 0.6062177, -0.13111232, -0.32451433, 17.334986, 2.210111, 0.5850126)
+material_override = SubResource("StandardMaterial3D_xuqvo")
+mesh = ExtResource("24_a6jrf")
