@@ -13,6 +13,7 @@ var interacting: bool = false
 var current_interactable: Node3D 
 
 @onready var camera: Camera3D = $Camera3D
+@onready var crosshair: ColorRect = $UI/CenterContainer/Crosshair
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -32,6 +33,19 @@ func _physics_process(delta):
 		velocity.z = 0
 		
 	move_and_slide()
+
+func _process(delta: float) -> void:
+	_set_crosshair_visibility()
+
+func _set_crosshair_visibility() -> void:
+	if interacting:
+		crosshair.hide()
+		return
+	
+	if _looking_at_interactable():
+		crosshair.show()
+	else:
+		crosshair.hide()
 
 func toggle_zoom() -> void:
 	is_zoomed = !is_zoomed
@@ -66,7 +80,7 @@ func stop_interacting() -> void:
 	interacting = false
 	current_interactable = null
 
-func _try_interact():
+func _looking_at_interactable() -> Node3D:
 	var cam: Camera3D = $Camera3D
 	var from := cam.global_transform.origin
 	var to := from + (-cam.global_transform.basis.z) * interact_distance
@@ -77,12 +91,18 @@ func _try_interact():
 
 	var hit := space_state.intersect_ray(query)
 	if hit.is_empty():
-		return
+		return null
 
 	var collider: Node3D = hit.collider
 
-	if collider and collider.has_method("interact"):
-		collider.interact(self)
-		current_interactable = collider
+	if collider and collider.has_method("interact") and not (collider is Screen and not collider.current_screen is Terminal):
+		return collider
 	else:
-		print("not interactable!")
+		return null
+
+func _try_interact():
+	var interactable: Node3D = _looking_at_interactable()
+	
+	if interactable:
+		interactable.interact(self)
+		current_interactable = interactable
