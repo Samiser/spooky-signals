@@ -206,7 +206,35 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.1464, 0, -13.184837)
 data = SubResource("Resource_yaehf")
 
 [node name="Signal3" parent="Signals" instance=ExtResource("11_ycdy4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.834435, 14.047676, 0.081653595)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.834435, 14.040132, 1.2074413)
+data = SubResource("Resource_074og")
+
+[node name="Signals2" type="Node" parent="."]
+
+[node name="Signal" parent="Signals2" instance=ExtResource("11_ycdy4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.108994, -16.103786, -10.736725)
+data = SubResource("Resource_2cqfq")
+
+[node name="Signal2" parent="Signals2" instance=ExtResource("11_ycdy4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.1464, 8.716481, -24.167473)
+data = SubResource("Resource_yaehf")
+
+[node name="Signal3" parent="Signals2" instance=ExtResource("11_ycdy4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.834435, 27.44218, 6.59181)
+data = SubResource("Resource_074og")
+
+[node name="Signals3" type="Node" parent="."]
+
+[node name="Signal" parent="Signals3" instance=ExtResource("11_ycdy4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.108994, -9.686861, 4.443987)
+data = SubResource("Resource_2cqfq")
+
+[node name="Signal2" parent="Signals3" instance=ExtResource("11_ycdy4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.1464, 19.668274, -15.992834)
+data = SubResource("Resource_yaehf")
+
+[node name="Signal3" parent="Signals3" instance=ExtResource("11_ycdy4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.834435, 14.04981, 19.384106)
 data = SubResource("Resource_074og")
 
 [node name="TerminalMonitor" parent="." instance=ExtResource("14_w48qg")]
