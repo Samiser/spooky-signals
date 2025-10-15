@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dyfwg1g470der"]
+
+[ext_resource type="Texture2D" uid="uid://dydlt4j6djhjy" path="res://meshes/map/Stone_08-256x256.png" id="1_00c13"]
+
+[resource]
+resource_name = "Metal_15-256x256_1"
+albedo_texture = ExtResource("1_00c13")
+roughness = 0.66
+texture_filter = 0

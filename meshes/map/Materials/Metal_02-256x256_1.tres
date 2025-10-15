@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cjq8plq1pkxg3"]
+
+[ext_resource type="Texture2D" uid="uid://ckcmonrw646h" path="res://meshes/map/Metal_09-256x256.png" id="1_cix7y"]
+
+[resource]
+resource_name = "Metal_02-256x256_1"
+albedo_texture = ExtResource("1_cix7y")
+metallic = 0.83
+roughness = 0.61
+texture_filter = 0

@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bxi7mreio2o5g"]
+
+[ext_resource type="Texture2D" uid="uid://bntlg0twiwu43" path="res://meshes/map/glass.png" id="1_amt8r"]
+
+[resource]
+resource_name = "glass_1"
+transparency = 1
+albedo_color = Color(0.7988608, 0.8621494, 0.9056604, 0.3843137)
+albedo_texture = ExtResource("1_amt8r")
+metallic = 0.2
+roughness = 0.28
+texture_filter = 0

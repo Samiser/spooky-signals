@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://cbg07ehgn44oq"]
+
+[ext_resource type="Texture2D" uid="uid://6r4rx5avssy7" path="res://meshes/map/Metal_18-256x256.png" id="1_l4mfd"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_l4mfd"]
+frequency = 0.0017
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_a53w5"]
+noise = SubResource("FastNoiseLite_l4mfd")
+as_normal_map = true
+
+[resource]
+resource_name = "Metal_18-256x256"
+albedo_texture = ExtResource("1_l4mfd")
+roughness = 0.35
+normal_enabled = true
+normal_texture = SubResource("NoiseTexture2D_a53w5")
+texture_filter = 0

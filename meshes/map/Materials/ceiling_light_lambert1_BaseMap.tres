@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dan5uhq1cu0ya"]
+
+[ext_resource type="Texture2D" uid="uid://0l0g3ysgf6yy" path="res://meshes/map/ceiling_light_lambert1_BaseMap.png" id="1_1vtyy"]
+
+[resource]
+resource_name = "ceiling_light_lambert1_BaseMap"
+albedo_texture = ExtResource("1_1vtyy")
+texture_filter = 0

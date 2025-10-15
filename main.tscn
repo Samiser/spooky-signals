@@ -1,7 +1,7 @@
 [gd_scene load_steps=48 format=3 uid="uid://chxlkaq0opjy7"]
 
 [ext_resource type="PackedScene" uid="uid://vfatuya14sn3" path="res://entities/player/player.tscn" id="1_68bq3"]
-[ext_resource type="ArrayMesh" uid="uid://bnj1bulcj4wq6" path="res://meshes/map/map_mesh.obj" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://bnj1bulcj4wq6" path="res://meshes/map/map_mesh.obj" id="2_0xm2m"]
 [ext_resource type="AudioStream" uid="uid://boqy33enm8fe5" path="res://audio/ambience/lab_ambience.wav" id="3_074og"]
 [ext_resource type="ArrayMesh" uid="uid://g6dpoeuebhvj" path="res://meshes/map/blast_covers_mesh.obj" id="3_jq2sk"]
 [ext_resource type="Script" uid="uid://1cnhfxgfo4ti" path="res://blast_covers.gd" id="4_4k2k6"]
@@ -121,9 +121,7 @@ environment = SubResource("Environment_0xm2m")
 
 [node name="MapParent" type="StaticBody3D" parent="."]
 
-[node name="MapMesh" type="MeshInstance3D" parent="MapParent"]
-mesh = ExtResource("2_0xm2m")
-skeleton = NodePath("../..")
+[node name="map_mesh" parent="MapParent" instance=ExtResource("2_0xm2m")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MapParent"]
 shape = SubResource("ConcavePolygonShape3D_htxhm")
