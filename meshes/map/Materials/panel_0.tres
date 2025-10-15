@@ -5,3 +5,5 @@
 [resource]
 resource_name = "panel_0"
 albedo_texture = ExtResource("1_w6wd8")
+metallic = 0.15
+roughness = 0.58

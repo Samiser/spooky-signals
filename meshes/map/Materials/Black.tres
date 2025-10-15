@@ -2,4 +2,5 @@
 
 [resource]
 resource_name = "Black"
+shading_mode = 0
 albedo_color = Color(0, 0, 0, 1)

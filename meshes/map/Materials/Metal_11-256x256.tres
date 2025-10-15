@@ -5,3 +5,5 @@
 [resource]
 resource_name = "Metal_11-256x256"
 albedo_texture = ExtResource("1_oiq2i")
+metallic = 0.51
+roughness = 0.26
