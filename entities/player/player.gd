@@ -42,10 +42,13 @@ func _set_crosshair_visibility() -> void:
 		crosshair.hide()
 		return
 	
+	crosshair.show()
 	if _looking_at_interactable():
-		crosshair.show()
+		crosshair.modulate.a = 1.0
+		crosshair.custom_minimum_size = Vector2(10, 10)
 	else:
-		crosshair.hide()
+		crosshair.modulate.a = 0.4
+		crosshair.custom_minimum_size = Vector2(7, 7)
 
 func toggle_zoom() -> void:
 	is_zoomed = !is_zoomed
