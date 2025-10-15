@@ -4,7 +4,7 @@
 [ext_resource type="ArrayMesh" uid="uid://bnj1bulcj4wq6" path="res://meshes/map/map_mesh.obj" id="2_0xm2m"]
 [ext_resource type="AudioStream" uid="uid://boqy33enm8fe5" path="res://audio/ambience/lab_ambience.wav" id="3_074og"]
 [ext_resource type="ArrayMesh" uid="uid://g6dpoeuebhvj" path="res://meshes/map/blast_covers_mesh.obj" id="3_jq2sk"]
-[ext_resource type="Script" uid="uid://1cnhfxgfo4ti" path="res://blast_covers.gd" id="4_4k2k6"]
+[ext_resource type="Script" path="res://blast_covers.gd" id="4_4k2k6"]
 [ext_resource type="AudioStream" uid="uid://ch5feu6k1yumm" path="res://audio/ambience/hall_ambience.wav" id="4_82xsv"]
 [ext_resource type="AudioStream" uid="uid://j63wite4u2oq" path="res://audio/ambience/bridge_ambience.wav" id="5_getpj"]
 [ext_resource type="PackedScene" uid="uid://bwp2sp8rqpv5n" path="res://entities/radar/radar.tscn" id="5_lquwl"]
@@ -33,7 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://dp5tdgyfqaamb" path="res://meshes/tv/textures/tv_initialShadingGroup_Normal.png" id="23_lswn8"]
 [ext_resource type="ArrayMesh" uid="uid://bayndwgd2ged0" path="res://meshes/tv/tv.obj" id="24_a6jrf"]
 [ext_resource type="AudioStream" uid="uid://1hifhns3g50k" path="res://audio/music/start_sting.ogg" id="29_qsp4k"]
-[ext_resource type="Script" path="res://ui/start_transition.gd" id="30_kq58d"]
+[ext_resource type="Script" uid="uid://cr2j4646m6gg4" path="res://ui/start_transition.gd" id="30_kq58d"]
 
 [sub_resource type="Gradient" id="Gradient_0xm2m"]
 colors = PackedColorArray(0, 0, 0, 1, 0.007195848, 0.22476539, 0.31965184, 1)

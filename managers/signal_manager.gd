@@ -46,6 +46,8 @@ func set_current_decoded() -> void:
 
 func display_data(data: SignalData) -> void:
 	data.content_text = data.content_text.replace("{{PLAYER_NAME}}", Signals.player_name)
+	data.content_text = data.content_text.replace("[[", "[b]")
+	data.content_text = data.content_text.replace("]]", "[/b]")
 	display.emit(data)
 
 func clear_current() -> void:
