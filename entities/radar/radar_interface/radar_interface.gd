@@ -6,6 +6,9 @@ var ping_rate := 3.0
 var ping_time := 0.0
 
 func _process(delta: float) -> void:
+	if Engine.is_editor_hint():
+		return
+	
 	ping_time += delta
 	if ping_time > ping_rate:
 		sprite.modulate = Color.WHITE

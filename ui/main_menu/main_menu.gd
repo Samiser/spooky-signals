@@ -22,12 +22,18 @@ func _ready() -> void:
 			glitch_music.play(0.0)
 	)
 	glitch_music.finished.connect(func() -> void: get_tree().change_scene_to_packed(name_entry_scene))
-	options_button.pressed.connect(options_menu.show)
+	options_button.pressed.connect(_show_options)
 
 func start() -> void:
 	if not start_pressed:
+		start_button.disabled = true
+		options_button.disabled = true
 		start_pressed = true
 		_switch_audio()
+
+func _show_options() -> void:
+	if not start_pressed:
+		options_menu.show()
 
 func _switch_audio() -> void:
 	var tween := create_tween()
