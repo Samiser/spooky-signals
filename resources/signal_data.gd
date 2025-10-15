@@ -4,6 +4,7 @@ class_name SignalData
 @export var title: String = "Unknown Transmission"
 
 @export_category("Content")
+@export var timestamp: String
 @export var sender: String
 @export_multiline var content_text: String
 @export var content_image: Texture2D
