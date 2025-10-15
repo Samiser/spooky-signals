@@ -13,7 +13,7 @@ content_text = "ORIGIN // [[Nova Sector]] // GRID F06-10.02
 GENERAL BROADCAST //
 TIMECODE 2156.10.02
 
-After extensive research into the Zephyr incident, new information has been discovered. The malfunctioning probe Science Officer {PLAYER_NAME} was sent to repair contained code that copied to their ships systems mid-jump. From their ship, it was bounced back to the [[Jump Gate]], overriding the destination trajectory, and tapping into deep-nested subroutines that were previously unknown.
+After extensive research into the Zephyr incident, new information has been discovered. The malfunctioning probe Science Officer {PLAYER_NAME} was sent to repair contained code that self-propagated to their ships systems mid-jump. From their ship, it was bounced back to the [[Jump Gate]], overriding the destination trajectory, and tapping into deep-nested subroutines that were previously unknown.
 
 From what we can ascertain, a second stream branched off ahead of the Zephyr, with the trajectory and velocity directed to the uncharted [[Echo Sector]], likely where the Zephyr ended up.
 
