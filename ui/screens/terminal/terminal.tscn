@@ -184,7 +184,8 @@ text = "[center][i]Zephyr Terminal — Low Power Mode[/i][/center]
 2) Acquire signal lock
 3) Download and decode signals
 
-Type [b]help[/b] to see available commands"
+Type [b]help[/b] to see available commands
+"
 scroll_active = false
 scroll_following = true
 vertical_alignment = 2

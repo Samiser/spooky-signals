@@ -36,6 +36,15 @@ func _init_audio() -> void:
 	_pb = signal_audio.get_stream_playback() as AudioStreamGeneratorPlayback
 
 func _fill_buffer() -> void:
+	if signal_tuner_ui == null:
+		return
+	
+	if signal_tuner_ui.data == null:
+		return
+	
+	if signal_tuner_ui.data.downloaded:
+		return
+	
 	if _pb == null:
 		return
 
@@ -47,13 +56,12 @@ func _fill_buffer() -> void:
 	var amp := 0.0
 	var phase_offset := 0.0
 
-	if signal_tuner_ui != null and signal_tuner_ui.data != null:
-		freq_hz = clampf(signal_tuner_ui.coarse_frequency, 1.0, 20000.0) / 3.0
-		amp = clampf(signal_tuner_ui.amplitude, 0.0, 1.0)
-		phase_offset = PI * signal_tuner_ui.phase
+	freq_hz = clampf(signal_tuner_ui.coarse_frequency, 1.0, 20000.0) / 3.0
+	amp = clampf(signal_tuner_ui.amplitude, 0.0, 1.0)
+	phase_offset = PI * signal_tuner_ui.phase
 
-		var fine_hz: float = signal_tuner_ui.cycles * 100.0
-		freq_hz += fine_hz
+	var fine_hz: float = signal_tuner_ui.cycles * 100.0
+	freq_hz += fine_hz
 
 	var incr := TAU * freq_hz / sample_hz
 
