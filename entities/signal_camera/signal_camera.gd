@@ -116,22 +116,28 @@ func _emit_bearings() -> void:
 		var yaw := _signed_yaw_deg(fwd, dir, up)
 		var pitch := _signed_pitch_deg(fwd, dir, right)
 		var ang := sqrt(yaw * yaw + pitch * pitch)
-		out.append({"source": s, "yaw_deg": yaw, "pitch_deg": pitch, "angle_deg": ang, "distance": d})
+		if not s.data.downloaded:
+			out.append({"source": s, "yaw_deg": yaw, "pitch_deg": pitch, "angle_deg": ang, "distance": d})
 	
-	var s = out[0]
-	var to = s.source.global_transform.origin - pos
-	var dir = to.normalized()
+	if out.size() > 0:
+		$TextureRect.visible = true
+		
+		var s = out[0]
+		var to = s.source.global_transform.origin - pos
+		var dir = to.normalized()
 
-	var local = camera.global_transform.basis.inverse() * dir
-	var v2 := Vector2(local.x, local.y)
+		var local = camera.global_transform.basis.inverse() * dir
+		var v2 := Vector2(local.x, local.y)
 
-	if v2.length() > 0.0001:
-		$TextureRect.pivot_offset = $TextureRect.size * 0.5
-		var angle := atan2(-v2.y, v2.x)
+		if v2.length() > 0.0001:
+			$TextureRect.pivot_offset = $TextureRect.size * 0.5
+			var angle := atan2(-v2.y, v2.x)
 
-		angle += PI * 0.5
+			angle += PI * 0.5
 
-		$TextureRect.rotation = angle
+			$TextureRect.rotation = angle
+	else:
+		$TextureRect.visible = false
 
 func _within_selection(s: SignalSource, pos: Vector3, fwd: Vector3, limit_deg: float) -> bool:
 	if !is_instance_valid(s): return false

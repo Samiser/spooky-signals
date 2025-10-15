@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://chxlkaq0opjy7"]
+[gd_scene load_steps=38 format=3 uid="uid://chxlkaq0opjy7"]
 
 [ext_resource type="PackedScene" uid="uid://vfatuya14sn3" path="res://entities/player/player.tscn" id="1_68bq3"]
 [ext_resource type="ArrayMesh" uid="uid://bnj1bulcj4wq6" path="res://meshes/map/map_mesh.obj" id="2_0xm2m"]
@@ -62,7 +62,7 @@ data = PackedVector3Array(8.2027, 1.4570999, -1.3345, 8.2027, 2.2071, -1.3345, 8
 script = ExtResource("12_w48qg")
 title = "Text Transmission"
 content_text = "wahoooo!! now with [b]bold[/b] and [i]italics[/i] text!"
-encoded_content = "boop"
+encoded_content = "1 and 1 to decode"
 start_address = "1"
 end_address = "1"
 metadata/_custom_type_script = "uid://7dw3dn04fi2k"
@@ -71,7 +71,7 @@ metadata/_custom_type_script = "uid://7dw3dn04fi2k"
 script = ExtResource("12_w48qg")
 title = "Image Transmission"
 content_image = ExtResource("13_vivmo")
-encoded_content = "boop"
+encoded_content = "1 and 1 to decode"
 start_address = "1"
 end_address = "1"
 metadata/_custom_type_script = "uid://7dw3dn04fi2k"
@@ -81,7 +81,7 @@ script = ExtResource("12_w48qg")
 title = "Double Transmission"
 content_text = "yipeee!!!!"
 content_image = ExtResource("13_vivmo")
-encoded_content = "boop"
+encoded_content = "1 and 1 to decode"
 start_address = "1"
 end_address = "1"
 metadata/_custom_type_script = "uid://7dw3dn04fi2k"
