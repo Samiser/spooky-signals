@@ -31,7 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://dp5tdgyfqaamb" path="res://meshes/tv/textures/tv_initialShadingGroup_Normal.png" id="23_lswn8"]
 [ext_resource type="ArrayMesh" uid="uid://bayndwgd2ged0" path="res://meshes/tv/tv.obj" id="24_a6jrf"]
 [ext_resource type="AudioStream" uid="uid://1hifhns3g50k" path="res://audio/music/start_sting.ogg" id="29_qsp4k"]
-[ext_resource type="Script" path="res://ui/start_transition.gd" id="30_kq58d"]
+[ext_resource type="Script" uid="uid://cr2j4646m6gg4" path="res://ui/start_transition.gd" id="30_kq58d"]
 
 [sub_resource type="Gradient" id="Gradient_0xm2m"]
 colors = PackedColorArray(0, 0, 0, 1, 0.007195848, 0.22476539, 0.31965184, 1)
@@ -112,7 +112,7 @@ texture_filter = 0
 [node name="Main" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_68bq3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7882614, 0)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.5640042, -0.7882614, 0.14757097)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_0xm2m")
