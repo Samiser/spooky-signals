@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource("1_ummff")
 title = "Missing Research Vessel"
+timestamp = "2156.0308"
+sender = "COMMANDER [[HAYDEN COLE]]"
 content_text = "ORIGIN // [[Nova Sector]] // GRID M14-12.09
 [[VANGUARD]] FLEET VESSEL // SOLARIS // COMMANDER [[HAYDEN COLE]]
 

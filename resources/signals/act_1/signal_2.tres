@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="SignalData" load_steps=2 format=3 uid="uid://8vc2k8l4e84t"]
+
+[ext_resource type="Script" uid="uid://7dw3dn04fi2k" path="res://resources/signal_data.gd" id="1_388tf"]
+
+[resource]
+script = ExtResource("1_388tf")
+title = "Missing Research Vessel"
+timestamp = "COMMS OFFICER [[TAYLOR CONWAY]]"
+sender = "2156.0421"
+content_text = "ORIGIN // [[Nova Sector]] // GRID F06-10.02 // 
+RELAYED FROM  //  [[Nova Sector]] // GRID M14-12.09
+[[VANGUARD]] FLEET VESSEL // SOLARIS
+
+[[ODYSSEY RESEARCH STATION]] // COMMS OFFICER [[TAYLOR CONWAY]]
+
+DESTINATION // [[SOLARIS]]
+TIMECODE 2156.0421
+
+General outbound message for Chief Science Officer {{PLAYER_NAME}} onboard the Research Vessel Zephyr:
+
+Relay your coordinates to the nearest fleet vessel along the border, the probe network has collapsed and may be related to your failed jump. We are still investigating what went wrong and working to restore the network for long-range communication.
+
+Ships are sweeping the [[Nova Sector]] to locate your transponder, if you are beyond the [[Nova Sector]] disable the transponder and move to the closest point along the border and broadcast the callsign \"SLB-Z01\" when in range."
+encoded_content = "0000  54 49 4f 4e 20 2f 2f 20 5b 5b 53 4f 4c 41 e2 a0
+0010  9b e2 a0 8a 20 53 65 63 74 6f 72 5d 5d 20 2f 2f
+0020  20 47 52 49 e2 a0 9d e2 a0 8a e2 a0 8a e2 a0 9d
+0030  e2 a0 80 e2 a0 9d e2 a0 80 e2 a0 80 e2 a0 8c e2
+0040  a0 8c e2 a0 80 4f 52 49 47 49 4e 20 2f 2f 20 5b
+0050  5b 4e 6f 76 61 44 20 30 30 30 46 30 36 2d 31 30
+0060  2e 30 32 20 2f 2f 20 0a 52 45 4c 41 59 45 44 20
+0070  46 52 4f 4d 20 20 2f 2f 20 20 5b 5b 4e 6f 76 61
+0080  20 53 65 63 74 6f 72 5d 5d 20 2f 2f 20 47 52 49
+0090  44 20 4d 31 34 2d 31 32 2e 30 39 0a 5b 5b 56 41
+00a0  4e 47 55 41 52 44 5d 5d 30 30 30 2f 2f 20 53 4f
+00b0  4c 41 52 49 53 5d 5d e2 a0 95 e2 a0 8a e2 a0 9d
+00c0  e2 a0 80 e2 a0 93 e2 a0 91 0a 0a"
+start_address = "0050"
+end_address = "00a0"
+metadata/_custom_type_script = "uid://7dw3dn04fi2k"
