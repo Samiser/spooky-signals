@@ -1,0 +1,136 @@
+[gd_scene load_steps=9 format=3 uid="uid://chwtuwoa1blu7"]
+
+[ext_resource type="Theme" uid="uid://c0eyo008u7c35" path="res://ui/screens/screen_theme.tres" id="1_mu8pm"]
+[ext_resource type="Texture2D" uid="uid://c5w7axry8fi81" path="res://icon.svg" id="2_i5wg5"]
+[ext_resource type="Script" uid="uid://uny8qdlc4ew" path="res://ui/main_menu/main_menu.gd" id="2_joh67"]
+[ext_resource type="Shader" uid="uid://c5lt755eg0llh" path="res://entities/screen/crt.gdshader" id="2_omy8q"]
+[ext_resource type="AudioStream" uid="uid://bjoexkn76wpnn" path="res://audio/music/main_menu.ogg" id="4_i5wg5"]
+[ext_resource type="AudioStream" uid="uid://dt3tfdbffpppr" path="res://audio/music/main_menu_cooked.ogg" id="5_3c04x"]
+[ext_resource type="AudioStream" uid="uid://butj5f5bg1gkd" path="res://audio/static.ogg" id="7_u184e"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i5wg5"]
+shader = ExtResource("2_omy8q")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.0
+shader_parameter/scanlines_width = 0.25
+shader_parameter/grille_opacity = 0.3
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/pixelate = false
+shader_parameter/roll = false
+shader_parameter/roll_speed = 8.0
+shader_parameter/roll_size = 0.0
+shader_parameter/roll_variation = 1.8
+shader_parameter/distort_intensity = 0.05
+shader_parameter/noise_opacity = 0.4
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.06
+shader_parameter/aberration = 0.01500004821249989
+shader_parameter/brightness = 1.4
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 1.0
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.2130000101175
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_mu8pm")
+script = ExtResource("2_joh67")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 185
+theme_override_constants/margin_top = 115
+theme_override_constants/margin_right = 170
+theme_override_constants/margin_bottom = 140
+
+[node name="Panel" type="Panel" parent="UI/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 19
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="UI/MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_i5wg5")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Start" type="Button" parent="UI/MarginContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "start"
+
+[node name="Options" type="Button" parent="UI/MarginContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "options"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 5
+material = SubResource("ShaderMaterial_i5wg5")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_i5wg5")
+autoplay = true
+
+[node name="GlitchMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_3c04x")
+volume_db = -80.0
+autoplay = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 21.818
+autostart = true
+
+[node name="StaticAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_u184e")
+volume_db = -30.0
+pitch_scale = 1.1613208
+autoplay = true
