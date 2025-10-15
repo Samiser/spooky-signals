@@ -4,6 +4,8 @@ extends Control
 @onready var glitch_music: AudioStreamPlayer = $GlitchMusic
 @onready var static_audio: AudioStreamPlayer = $StaticAudio
 @onready var start_button: Button = $UI/MarginContainer/MarginContainer/VBoxContainer/Start
+@onready var options_button: Button = $UI/MarginContainer/MarginContainer/VBoxContainer/Options
+@onready var options_menu: Control = $OptionsMenu
 @onready var crt_filter: ColorRect = $ColorRect
 
 @onready var timer: Timer = $Timer
@@ -20,6 +22,7 @@ func _ready() -> void:
 			glitch_music.play(0.0)
 	)
 	glitch_music.finished.connect(func() -> void: get_tree().change_scene_to_packed(name_entry_scene))
+	options_button.pressed.connect(options_menu.show)
 
 func start() -> void:
 	if not start_pressed:
