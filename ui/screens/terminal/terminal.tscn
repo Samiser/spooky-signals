@@ -171,7 +171,7 @@ text = "[center][i]Shipboard Terminal — Low Power Mode[/i][/center]
 [center]────────────────────────────────────────[/center]
 
 [b]Time:[/b] ≈ unknown (chronometer drift exceeded)  
-[b]User:[/b] Commander — [i]stasis occupant #01[/i]  
+[b]User:[/b] Commander {{PLAYER_NAME}} — [i]stasis occupant #01[/i] 
 
 [b]Wake Reason:[/b] Power reserves below critical threshold.
 

@@ -124,6 +124,8 @@ func set_visibility(visibility: bool) -> void:
 		visible = false
 
 func _ready() -> void:
+	print(Signals.player_name)
+	output_label.text = output_label.text.replace("{{PLAYER_NAME}}", Signals.player_name)
 	input.text_submitted.connect(text_submitted)
 	output_label.visible_ratio = 0
 

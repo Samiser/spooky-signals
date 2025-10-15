@@ -11,6 +11,8 @@ signal display(data: SignalData)
 
 var _current: SignalSource = null
 
+var player_name: String
+
 var current_act: int = -1:
 	set(value):
 		current_act = value
@@ -43,6 +45,7 @@ func set_current_decoded() -> void:
 		current_decoded.emit(_current)
 
 func display_data(data: SignalData) -> void:
+	data.content_text = data.content_text.replace("{{PLAYER_NAME}}", Signals.player_name)
 	display.emit(data)
 
 func clear_current() -> void:
