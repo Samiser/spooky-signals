@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dfm5ubt1vvrrm"]
 
-[ext_resource type="Texture2D" uid="uid://c5w7axry8fi81" path="res://icon.svg" id="1_n07x0"]
 [ext_resource type="Script" uid="uid://2v5cmq3i54o1" path="res://entities/signal_camera/signal_camera.gd" id="1_toexc"]
+[ext_resource type="Texture2D" uid="uid://bs0nnyl567q57" path="res://entities/signal_camera/arrow.png" id="2_toexc"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_mw8hc"]
 exposure_multiplier = 2.697
@@ -15,16 +15,19 @@ attributes = SubResource("CameraAttributesPractical_mw8hc")
 fov = 20.0
 
 [node name="TextureRect" type="TextureRect" parent="."]
-visible = false
+modulate = Color(1, 1, 1, 0.5568628)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -64.0
-offset_top = -64.0
-offset_right = 64.0
-offset_bottom = 64.0
+offset_left = -27.0
+offset_top = -69.0
+offset_right = 27.0
+offset_bottom = 69.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_n07x0")
+pivot_offset = Vector2(27, 69)
+texture = ExtResource("2_toexc")
+expand_mode = 1
+stretch_mode = 4
