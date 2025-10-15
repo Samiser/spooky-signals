@@ -1,14 +1,8 @@
-[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bsscawdffaam8"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bsscawdffaam8"]
 
 [ext_resource type="Texture2D" uid="uid://053xu6203pa3" path="res://meshes/map/Plaster_15-256x256.png" id="1_50p6x"]
-[ext_resource type="Texture2D" uid="uid://ciev35ctong2n" path="res://meshes/map/Metal_05-256x256.png" id="2_5mbjj"]
 
 [resource]
 resource_name = "Plaster_15-256x256"
-albedo_color = Color(0.4467767, 0.4467771, 0.44677705, 1)
+albedo_color = Color(0.5754716, 0.5754716, 0.5754716, 1)
 albedo_texture = ExtResource("1_50p6x")
-metallic = 0.39
-roughness = 0.46
-normal_enabled = true
-normal_texture = ExtResource("2_5mbjj")
-texture_filter = 0

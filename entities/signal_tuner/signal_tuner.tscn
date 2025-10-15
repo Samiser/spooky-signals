@@ -64,9 +64,6 @@ screen = NodePath("../Screen")
 [node name="SignalAudio" type="AudioStreamPlayer3D" parent="."]
 volume_db = -40.0
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1488495, 0, 0)
-
 [node name="SignalTv" type="MeshInstance3D" parent="."]
 transform = Transform3D(-2, 0, -3.019916e-07, 0, 2, 0, 3.019916e-07, 0, -2, 0.99781084, -0.7824184, 0)
 material_override = SubResource("StandardMaterial3D_qvj1w")

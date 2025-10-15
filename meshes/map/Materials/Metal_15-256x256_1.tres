@@ -5,5 +5,3 @@
 [resource]
 resource_name = "Metal_15-256x256_1"
 albedo_texture = ExtResource("1_00c13")
-roughness = 0.66
-texture_filter = 0

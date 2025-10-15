@@ -4,6 +4,4 @@
 
 [resource]
 resource_name = "panel_0"
-transparency = 1
 albedo_texture = ExtResource("1_w6wd8")
-texture_filter = 0

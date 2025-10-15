@@ -4,8 +4,4 @@
 
 [resource]
 resource_name = "Metal_09-256x256"
-albedo_color = Color(0.89492244, 0.89492244, 0.8949224, 1)
 albedo_texture = ExtResource("1_4kl5m")
-metallic = 0.32
-roughness = 0.6
-texture_filter = 0

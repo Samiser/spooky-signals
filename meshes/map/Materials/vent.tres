@@ -5,7 +5,3 @@
 [resource]
 resource_name = "vent"
 albedo_texture = ExtResource("1_jfw00")
-metallic = 0.27
-roughness = 0.06
-emission_enabled = true
-texture_filter = 0

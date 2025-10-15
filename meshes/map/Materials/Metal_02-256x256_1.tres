@@ -4,6 +4,7 @@
 
 [resource]
 resource_name = "Metal_02-256x256_1"
+albedo_color = Color(0.39308554, 0.3930855, 0.39308548, 1)
 albedo_texture = ExtResource("1_cix7y")
 metallic = 0.83
 roughness = 0.61

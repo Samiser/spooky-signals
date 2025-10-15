@@ -195,7 +195,6 @@ distance_fade_enabled = true
 distance_fade_begin = 8.0
 distance_fade_length = 2.0
 omni_range = 7.0
-script = ExtResource("8_0rl1p")
 
 [node name="OmniLight3D8" type="OmniLight3D" parent="Lighting"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.132736, 4.3662252, 0.39683074)

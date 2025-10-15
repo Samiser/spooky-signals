@@ -4,8 +4,4 @@
 
 [resource]
 resource_name = "Rail"
-transparency = 1
 albedo_texture = ExtResource("1_0rrkq")
-metallic = 0.4
-roughness = 0.28
-texture_filter = 0

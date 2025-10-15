@@ -5,9 +5,5 @@
 [resource]
 resource_name = "glass"
 transparency = 1
-albedo_color = Color(1, 1, 1, 0.3882353)
+albedo_color = Color(0.4811321, 0.4811321, 0.4811321, 0.3882353)
 albedo_texture = ExtResource("1_ra60k")
-metallic = 0.18
-metallic_specular = 0.54
-roughness = 0.34
-texture_filter = 0
