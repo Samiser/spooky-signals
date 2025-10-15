@@ -9,4 +9,3 @@ func _ready() -> void:
 
 func _set_name_and_start() -> void:
 	get_tree().change_scene_to_packed(main_scene)
-	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://chxlkaq0opjy7"]
+[gd_scene load_steps=44 format=3 uid="uid://chxlkaq0opjy7"]
 
 [ext_resource type="PackedScene" uid="uid://vfatuya14sn3" path="res://entities/player/player.tscn" id="1_68bq3"]
 [ext_resource type="ArrayMesh" uid="uid://bnj1bulcj4wq6" path="res://meshes/map/map_mesh.obj" id="2_0xm2m"]
@@ -28,6 +28,8 @@
 [ext_resource type="Texture2D" uid="uid://b1ng4tw57c8hy" path="res://meshes/tv/textures/tv_initialShadingGroup_MaskMap.png" id="22_0odxb"]
 [ext_resource type="Texture2D" uid="uid://dp5tdgyfqaamb" path="res://meshes/tv/textures/tv_initialShadingGroup_Normal.png" id="23_lswn8"]
 [ext_resource type="ArrayMesh" uid="uid://bayndwgd2ged0" path="res://meshes/tv/tv.obj" id="24_a6jrf"]
+[ext_resource type="AudioStream" uid="uid://1hifhns3g50k" path="res://audio/music/start_sting.ogg" id="29_qsp4k"]
+[ext_resource type="Script" uid="uid://cr2j4646m6gg4" path="res://ui/start_transition.gd" id="30_kq58d"]
 
 [sub_resource type="Gradient" id="Gradient_0xm2m"]
 colors = PackedColorArray(0, 0, 0, 1, 0.007195848, 0.22476539, 0.31965184, 1)
@@ -327,3 +329,17 @@ mesh = ExtResource("24_a6jrf")
 transform = Transform3D(-0.35, -0.22709319, -0.5620752, 0, 0.6490288, -0.26222456, 0.6062177, -0.13111232, -0.32451433, 17.334986, 2.210111, 0.5850126)
 material_override = SubResource("StandardMaterial3D_xuqvo")
 mesh = ExtResource("24_a6jrf")
+
+[node name="StartSting" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("29_qsp4k")
+autoplay = true
+
+[node name="StartTransition" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("30_kq58d")
