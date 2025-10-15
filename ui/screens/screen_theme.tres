@@ -1,9 +1,9 @@
 [gd_resource type="Theme" load_steps=6 format=3 uid="uid://c0eyo008u7c35"]
 
 [ext_resource type="FontFile" uid="uid://dad1xr0e0pnhr" path="res://fonts/NK57 Monospace Sc Bd.otf" id="1_7gxs5"]
-[ext_resource type="FontFile" uid="uid://byl1pw6ncu61a" path="res://fonts/NK57 Monospace Sc Rg.otf" id="1_8afnw"]
 [ext_resource type="FontFile" uid="uid://diq1f4nx62ilc" path="res://fonts/NK57 Monospace Sc Bd It.otf" id="2_u8g5q"]
 [ext_resource type="FontFile" uid="uid://cbr3mass3sfw4" path="res://fonts/NK57 Monospace Sc Rg It.otf" id="3_woimq"]
+[ext_resource type="FontFile" uid="uid://byl1pw6ncu61a" path="res://fonts/NK57 Monospace Sc Rg.otf" id="4_k0ivf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7gxs5"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -14,7 +14,7 @@ border_width_bottom = 5
 border_color = Color(0, 0.9453271, 0.62108314, 1)
 
 [resource]
-default_font = ExtResource("1_8afnw")
+default_font = ExtResource("4_k0ivf")
 default_font_size = 50
 MarginContainer/constants/margin_bottom = 5
 MarginContainer/constants/margin_left = 5
@@ -24,5 +24,5 @@ Panel/styles/panel = SubResource("StyleBoxFlat_7gxs5")
 RichTextLabel/fonts/bold_font = ExtResource("1_7gxs5")
 RichTextLabel/fonts/bold_italics_font = ExtResource("2_u8g5q")
 RichTextLabel/fonts/italics_font = ExtResource("3_woimq")
-RichTextLabel/fonts/mono_font = ExtResource("1_8afnw")
-RichTextLabel/fonts/normal_font = ExtResource("1_8afnw")
+RichTextLabel/fonts/mono_font = ExtResource("4_k0ivf")
+RichTextLabel/fonts/normal_font = ExtResource("4_k0ivf")
