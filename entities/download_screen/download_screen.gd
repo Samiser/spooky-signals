@@ -10,5 +10,4 @@ func _ready() -> void:
 		download.downloading.connect(_on_downloading_change)
 
 func _on_downloading_change(status: bool):
-	print(status)
 	$DownloadingSound.playing = status

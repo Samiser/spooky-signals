@@ -106,7 +106,7 @@ func _update_selection() -> void:
 		return
 
 	_current = null
-	Signals.clear_current()
+
 
 	var best: SignalSource = null
 	var best_score := -INF
@@ -122,7 +122,10 @@ func _update_selection() -> void:
 			best_score = score
 			best = s
 
-	Signals.set_current(best)
+	if best:
+		Signals.set_current(best)
+	else:
+		Signals.clear_current()
 
 func _update_bearings_and_arrow() -> void:
 	if Signals.current_act == -1:

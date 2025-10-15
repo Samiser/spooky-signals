@@ -19,6 +19,9 @@ func _on_current_signal_changed(_old: SignalSource, new: SignalSource) -> void:
 	if new == null:
 		no_signal_display.show()
 		download_display.hide()
+		if is_downloading:
+			is_downloading = false
+			downloading.emit(false)
 	else:
 		no_signal_display.hide()
 		download_display.show()
