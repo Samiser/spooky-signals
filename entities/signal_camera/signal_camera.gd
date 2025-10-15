@@ -98,6 +98,7 @@ func _update_selection() -> void:
 	if Signals.current_act == -1:
 		_current = null
 		Signals.clear_current()
+		return
 	
 	var pos := camera.global_transform.origin
 	var fwd := (-camera.global_transform.basis.z).normalized()

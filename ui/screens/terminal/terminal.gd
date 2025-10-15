@@ -8,6 +8,9 @@ var initialised: bool = false
 @onready var output_label: RichTextLabel = $%OutputTextLabel
 @onready var input: LineEdit = %InputLineEdit
 
+signal correct_sound
+signal incorrect_sound
+
 func error(msg: String) -> String:
 	return "[b]Error:[/b] %s" % msg
 
@@ -23,7 +26,9 @@ func read_disk(params: Array[String]) -> String:
 	var disk = _check_disk()
 	if disk:
 		var data: SignalData = disk.data
+		correct_sound.emit()
 		return data.encoded_content
+	incorrect_sound.emit()
 	return "No disk drive found."
 
 func output_disk_data(params: Array[String]) -> String:
@@ -32,9 +37,12 @@ func output_disk_data(params: Array[String]) -> String:
 		var data: SignalData = disk.data
 		if data.decoded:
 			Signals.display_data(data)
+			correct_sound.emit()
 			return "Displaying decoded data."
 		else:
+			incorrect_sound.emit()
 			return "Data not decoded, use the 'decode' command."
+	incorrect_sound.emit()
 	return "No disk drive found."
 
 func frequency(params: Array[String]) -> String:
@@ -58,6 +66,7 @@ func frequency(params: Array[String]) -> String:
 		"3":
 			Signals.current_act = 2
 	
+	correct_sound.emit()
 	return("Frequency set to %s" % params[1])
 
 
@@ -76,9 +85,12 @@ func decode_disk(params: Array[String]) -> String:
 					Signals.set_current_decoded()
 				else:
 					data.decoded = true
+				correct_sound.emit()
 				return "Data decoded, display with the 'output' command."
 			else:
+				incorrect_sound.emit()
 				return "Failed to decode any relevant data, try different addresses."
+	incorrect_sound.emit()
 	return "No disk drive found."
 
 func _check_disk() -> Node3D:

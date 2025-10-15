@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://c0eyo008u7c35" path="res://ui/screens/screen_theme.tres" id="1_nxnii"]
 [ext_resource type="Script" uid="uid://cm8oifd6ddk0p" path="res://ui/enter_name/enter_name.gd" id="2_5h0k8"]
 [ext_resource type="Shader" uid="uid://c5lt755eg0llh" path="res://entities/screen/crt.gdshader" id="4_g3fur"]
-[ext_resource type="AudioStream" uid="uid://butj5f5bg1gkd" path="res://audio/static.ogg" id="7_so1v4"]
+[ext_resource type="AudioStream" uid="uid://butj5f5bg1gkd" path="res://audio/sfx/static.ogg" id="7_so1v4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_i5wg5"]
 shader = ExtResource("4_g3fur")
