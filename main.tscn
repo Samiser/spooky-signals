@@ -200,20 +200,21 @@ signal_camera_viewport = NodePath("../SignalCamViewport")
 
 [node name="SignalCamViewport" type="SubViewport" parent="Interfaces"]
 
-[node name="SignalCamera" parent="Interfaces/SignalCamViewport" instance=ExtResource("9_4c57u")]
+[node name="SignalCamera" parent="Interfaces/SignalCamViewport" node_paths=PackedStringArray("signal_parents") instance=ExtResource("9_4c57u")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -14.17317, 0, 0)
+signal_parents = [NodePath("../../../Signals1"), NodePath("../../../Signals2"), NodePath("../../../Signals3")]
 
-[node name="Signals" type="Node" parent="."]
+[node name="Signals1" type="Node" parent="."]
 
-[node name="Signal" parent="Signals" instance=ExtResource("11_ycdy4")]
+[node name="Signal" parent="Signals1" instance=ExtResource("11_ycdy4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.108994, 0, 16.839493)
 data = SubResource("Resource_2cqfq")
 
-[node name="Signal2" parent="Signals" instance=ExtResource("11_ycdy4")]
+[node name="Signal2" parent="Signals1" instance=ExtResource("11_ycdy4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.1464, 0, -13.184837)
 data = SubResource("Resource_yaehf")
 
-[node name="Signal3" parent="Signals" instance=ExtResource("11_ycdy4")]
+[node name="Signal3" parent="Signals1" instance=ExtResource("11_ycdy4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.834435, 14.040132, 1.2074413)
 data = SubResource("Resource_074og")
 

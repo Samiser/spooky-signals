@@ -13,6 +13,7 @@ func error(msg: String) -> String:
 
 func help(_params: Array[String]) -> String:
 	return '''Commands:
+	frequency [frequency] - set signal scanning frequency
 	read - displays raw disk data
 	decode [start address] [end address] - decode drive data
 	output - outputs decoded disk drive data to the monitor
@@ -35,6 +36,30 @@ func output_disk_data(params: Array[String]) -> String:
 		else:
 			return "Data not decoded, use the 'decode' command."
 	return "No disk drive found."
+
+func frequency(params: Array[String]) -> String:
+	if params.size() != 2:
+		return "Usage: frequency [frequency value]"
+	
+	var regex = RegEx.new()
+	regex.compile("[^0-9]")
+	var result = regex.search(params[1])
+	
+	if result:
+		return "Frequency must be a number"
+	
+	Signals.current_act = -1
+
+	match params[1]:
+		"1":
+			Signals.current_act = 0
+		"2":
+			Signals.current_act = 1
+		"3":
+			Signals.current_act = 2
+	
+	return("Frequency set to %s" % params[1])
+
 
 func decode_disk(params: Array[String]) -> String:
 	var disk = _check_disk()
@@ -74,6 +99,8 @@ func parse_command(params: Array[String]) -> String:
 			return clear()
 		"read":
 			return read_disk(params)
+		"frequency":
+			return frequency(params)
 		"decode":
 			return decode_disk(params)
 		"output":

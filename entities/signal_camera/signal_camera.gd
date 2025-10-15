@@ -23,6 +23,8 @@ class_name SignalCamera
 @export var max_select_range := INF
 @export var los_mask := 0
 
+@export var signal_parents: Array[Node]
+
 var _base_basis: Basis
 var _base_origin := Vector3.ZERO
 var _yaw := 0.0
@@ -33,10 +35,21 @@ var _last_input_time := 0.0
 var _current: SignalSource = null
 
 func _ready() -> void:
+	_on_act_changed(0)
+	Signals.act_changed.connect(_on_act_changed)
 	_base_basis = transform.basis.orthonormalized()
 	_base_origin = transform.origin
 	arrow.visible = false
 	arrow.pivot_offset = arrow.size * 0.5
+
+func _on_act_changed(new_act: int):
+	for parent in signal_parents:
+		for source in parent.get_children():
+			source.active = false
+	
+	if new_act >= 0 and new_act <= 2:
+		for source in signal_parents[new_act].get_children():
+			source.active = true
 
 func control(stick: Vector2) -> void:
 	_last_input_time = Time.get_ticks_usec() * 1e-6
@@ -82,6 +95,10 @@ func _update_motion(delta: float) -> void:
 	transform = Transform3D(_base_basis * rot, _base_origin)
 
 func _update_selection() -> void:
+	if Signals.current_act == -1:
+		_current = null
+		Signals.clear_current()
+	
 	var pos := camera.global_transform.origin
 	var fwd := (-camera.global_transform.basis.z).normalized()
 
@@ -93,7 +110,7 @@ func _update_selection() -> void:
 
 	var best: SignalSource = null
 	var best_score := -INF
-	for s: SignalSource in get_tree().get_nodes_in_group("signal_source"):
+	for s: SignalSource in signal_parents[Signals.current_act].get_children():
 		var to := s.global_transform.origin - pos
 		var d := to.length()
 		if d > max_select_range: continue
@@ -108,10 +125,14 @@ func _update_selection() -> void:
 	Signals.set_current(best)
 
 func _update_bearings_and_arrow() -> void:
+	if Signals.current_act == -1:
+		arrow.visible = false
+		return
+	
 	var pos := camera.global_transform.origin
 	var basis := camera.global_transform.basis
 	var out := []
-	for s: SignalSource in get_tree().get_nodes_in_group("signal_source"):
+	for s: SignalSource in signal_parents[Signals.current_act].get_children():
 		if s.data and s.data.downloaded: continue
 		var to := s.global_transform.origin - pos
 		var d := to.length()

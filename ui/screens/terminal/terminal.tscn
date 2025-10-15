@@ -180,9 +180,9 @@ text = "[center][i]Shipboard Terminal — Low Power Mode[/i][/center]
 • Colony communication link [color=red]lost[/color]; passive listening enabled. 
 
 [b]Communication Loss Protocol:[/b]
-1) Reactivate radio equipment
+1) Set scanner frequency to emergency comms (1)
 2) Acquire signal lock
-3) Download and decode signal
+3) Download and decode signals
 
 Type [b]help[/b] to see available commands"
 scroll_active = false

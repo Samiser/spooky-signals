@@ -5,9 +5,16 @@ signal current_changed(previous: SignalSource, current: SignalSource)
 signal current_downloaded(current: SignalSource)
 signal current_decoded(current: SignalSource)
 
+signal act_changed(act: int)
+
 signal display(data: SignalData)
 
 var _current: SignalSource = null
+
+var current_act: int = -1:
+	set(value):
+		current_act = value
+		act_changed.emit(value)
 
 var current: SignalSource:
 	get:

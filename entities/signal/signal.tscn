@@ -16,5 +16,6 @@ height = 2.0
 script = ExtResource("1_sujve")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
 layers = 16
 mesh = SubResource("SphereMesh_hc5qh")
