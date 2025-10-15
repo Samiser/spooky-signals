@@ -4,4 +4,36 @@
 
 [resource]
 script = ExtResource("1_ummff")
+title = "Missing Research Vessel"
+content_text = "ORIGIN // [[Nova Sector]] // GRID M14-12.09
+[[VANGUARD]] FLEET VESSEL // SOLARIS // COMMANDER [[HAYDEN COLE]]
+
+DESTINATION // [[ODYSSEY RESEARCH STATION]]
+TIMECODE 2156.0308
+
+The research probe in grid P10.08.12 is still transmitting garbage data, we've made no further progress on figuring out the cause. Is there a new ETA on the research vessel arriving? The interference is making it difficult to scan the border, my crew are sat idle until this is resolved.
+
+<<<<<<<<<<<<<<<<<<<<<<
+REPLY
+ORIGIN // [[Nova Sector]] // GRID F06-10.02
+[[ODYSSEY RESEARCH STATION]] // COMMS OFFICER [[TAYLOR CONWAY]]
+
+DESTINATION // [[SOLARIS]]
+TIMECODE 2156.0312
+
+The ship jumped six hours ago and the Jump Gate logs indicate they should have exited in your grid space. Move to investigate the area immediately and report back in the 30 minutes, consider this a top priority.
+
+We will transmit any discoveries on our end as soon as we find them."
+encoded_content = "0000  e2 a0 9b e2 a0 8a e2 a0 9d e2 a0 80 e2 a0 8c e2
+0010  a0 8c e2 a0 80 30 30 30 4f 52 49 47 49 4e 20 2f
+0020  2f 20 5b 5b 4e 6f 76 61 20 53 65 63 74 6f 72 5d
+0030  5d 20 2f 2f 20 47 52 49 44 20 4d 31 34 2d 31 32
+0040  2e 30 39 0a 44 45 53 54 49 4e 41 54 49 4f 4e 20
+0050  2f 2f 20 5b 5b 4f 44 59 53 53 45 59 20 52 45 53
+0060  45 41 52 43 48 20 53 54 41 54 49 4f 4e 5d 5d 0a
+0070  54 49 4d 45 43 4f 44 45 20 32 31 35 36 2e 30 33
+0080  30 30 30 0a e2 a0 95 e2 a0 a5 e2 a0 9e e2 a0 80
+0090  e2 a0 9e e2 a0 93 e2 a0 91 0a"
+start_address = "0010"
+end_address = "0080"
 metadata/_custom_type_script = "uid://7dw3dn04fi2k"
