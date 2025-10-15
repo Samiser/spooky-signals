@@ -9,6 +9,9 @@ func _process(delta: float) -> void:
 	if Engine.is_editor_hint():
 		return
 	
+	if Signals.current_act == -1:
+		return
+	
 	ping_time += delta
 	if ping_time > ping_rate:
 		sprite.modulate = Color.WHITE

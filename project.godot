@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="spooky-signals"
-run/main_scene="uid://chxlkaq0opjy7"
+run/main_scene="uid://chwtuwoa1blu7"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 

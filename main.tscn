@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bwp2sp8rqpv5n" path="res://entities/radar/radar.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://c3a0v46c2b81k" path="res://entities/download_screen/download_screen.tscn" id="5_vivmo"]
 [ext_resource type="PackedScene" uid="uid://b2r1ao0ypyid8" path="res://entities/signal_display/signal_display.tscn" id="7_2cqfq"]
-[ext_resource type="Script" uid="uid://bkdvrh4g3u8vc" path="res://light_flicker.gd" id="8_0rl1p"]
+[ext_resource type="Script" path="res://light_flicker.gd" id="8_0rl1p"]
 [ext_resource type="PackedScene" uid="uid://c7xnqj64cchkp" path="res://entities/signal_tuner/signal_tuner.tscn" id="8_vivmo"]
 [ext_resource type="PackedScene" uid="uid://crbp5ajsm55gt" path="res://entities/signal_camera_interface/signal_camera_interface.tscn" id="8_yaehf"]
 [ext_resource type="PackedScene" uid="uid://dfm5ubt1vvrrm" path="res://entities/signal_camera/signal_camera.tscn" id="9_4c57u"]
@@ -34,7 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://dp5tdgyfqaamb" path="res://meshes/tv/textures/tv_initialShadingGroup_Normal.png" id="23_lswn8"]
 [ext_resource type="ArrayMesh" uid="uid://bayndwgd2ged0" path="res://meshes/tv/tv.obj" id="24_a6jrf"]
 [ext_resource type="AudioStream" uid="uid://1hifhns3g50k" path="res://audio/music/start_sting.ogg" id="29_qsp4k"]
-[ext_resource type="Script" path="res://ui/start_transition.gd" id="30_kq58d"]
+[ext_resource type="Script" uid="uid://cr2j4646m6gg4" path="res://ui/start_transition.gd" id="30_kq58d"]
 
 [sub_resource type="Gradient" id="Gradient_0xm2m"]
 colors = PackedColorArray(0, 0, 0, 1, 0.007195848, 0.22476539, 0.31965184, 1)
@@ -221,8 +221,9 @@ radar_viewport = NodePath("../RadarViewport")
 [node name="SignalTuner" parent="Interfaces" instance=ExtResource("8_vivmo")]
 transform = Transform3D(-0.014536556, 0, -0.67484343, 0, 0.6750001, 0, 0.67484343, 0, -0.014536556, -2.7102437, 0.82253885, 2.7625535)
 
-[node name="DownloadScreen" parent="Interfaces" instance=ExtResource("5_vivmo")]
+[node name="DownloadScreen" parent="Interfaces" node_paths=PackedStringArray("disk_reader") instance=ExtResource("5_vivmo")]
 transform = Transform3D(-1.52058, 0, 0.67827845, 0, 1.665, 0, -0.67827845, 0, -1.52058, -4.0896196, 0.95624495, 3.1848218)
+disk_reader = NodePath("../../DiskReader")
 
 [node name="SignalDisplay" parent="Interfaces" instance=ExtResource("7_2cqfq")]
 transform = Transform3D(-1.9546578, 0, -0.52909106, 0, 2.0249999, 0, 0.52909106, 0, -1.9546578, -0.7969558, 1.0880446, 2.8638835)

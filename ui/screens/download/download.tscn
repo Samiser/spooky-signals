@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://g1y5a1yha34c"]
+[gd_scene load_steps=5 format=3 uid="uid://g1y5a1yha34c"]
 
 [ext_resource type="Theme" uid="uid://c0eyo008u7c35" path="res://ui/screens/screen_theme.tres" id="1_spu6i"]
 [ext_resource type="Script" uid="uid://bc0kn07ir2mji" path="res://ui/screens/download/download.gd" id="2_m2esi"]
+[ext_resource type="Texture2D" uid="uid://bv0hph0wv86up" path="res://ui/screens/download/floppy.svg" id="3_16ccd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2esi"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -116,3 +117,11 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_m2esi")
+
+[node name="DiskIndicator" type="TextureRect" parent="DownloadDisplay/HBoxContainer/VBoxContainer/MarginContainer3"]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 0.52, 0.52, 1)
+layout_mode = 2
+texture = ExtResource("3_16ccd")
+stretch_mode = 5

@@ -10,11 +10,15 @@ var start_rot : Vector3
 
 @onready var collider: CollisionShape3D = $CollisionShape3D
 
+signal interacted()
+
 func _ready() -> void:
 	start_pos = global_position
 	start_rot = global_rotation
 
 func interact(player: Player) -> void:
+	interacted.emit()
+	
 	var disk_index := 0
 	for disk in get_tree().get_nodes_in_group("floppy"):
 		if disk.inserted:
