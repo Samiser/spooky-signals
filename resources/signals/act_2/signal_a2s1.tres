@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="SignalData" load_steps=2 format=3 uid="uid://cycr7bfcoxqqb"]
+
+[ext_resource type="Script" uid="uid://7dw3dn04fi2k" path="res://resources/signal_data.gd" id="1_vxngl"]
+
+[resource]
+script = ExtResource("1_vxngl")
+title = "Intercepted Empyrean Communication"
+timestamp = "COMMANDER [[KIRA PRICE]]"
+sender = "2156.0908"
+content_text = "ORIGIN // PROBE E4.02  // [[Zulu Sector]] // GRID N12-08.12
+
+DESTINATION // [[VANGUARD]] FLEET VESSEL // SOLARIS
+TIMECODE 2156.0908
+
+[[EMPYREAN]] FLEET SHIP TRANSMISSION INTERCEPTED:
+COMMANDER [[KIRA PRICE]] // STORMBREAKER
+
+We have established a perimeter into the [[Zulu Sector]], no contact has been made with any [[Vanguard]] forces. One ship has been spotted on the outer edge of our sensor range, they likely know we're coming.
+
+A ship from the fleet has gone missing, the [[Horizon]]. They just disappeared from sensors in a split-second and all communication has been lost. We're maintaining position until we can find out what happened, but the longer we delay, the more time the [[Vanguard]] can move in to stop our push.
+
+Our sensors have been showing the occasional 'phantom' ping ever since we entered the sector, we haven't found what's causing the interference. We know it's not an issue with our systems locally, every ship in the fleet has been affected by it."
+encoded_content = "0000  2f 2f e2 a0 8a e2 a0 9d e2 a0 80 e2 a0 93 4f 52
+0010  49 47 49 4e 20 2f 2f 20 50 52 4f 42 45 20 45 34
+0020  2e 30 32 20 20 2f 2f 20 5b 5b 2f 20 47 52 49 44
+0030  20 4e 31 32 2d 30 38 2e 31 32 0a 44 45 53 54 49
+0040  4e 41 54 49 4f 4e 20 2f 2f 20 5b 5b 56 41 4e 47
+0050  55 41 52 44 5d 5d 0a 5b 5b 45 4d 50 59 30 30 30
+0060  52 45 41 4e 5d 5d 20 46 4c 45 45 54 20 53 48 49  
+0070  50 20 54 52 41 4e 53 4d 49 53 53 49 4f 4e 20 49
+0080  4e 54 45 52 43 45 50 54 45 44 3a 0a 43 4f 4d 4d 
+0090  41 4e 44 45 52 20 5b 5b 4b 49 52 41 20 50 52 49
+00a0  43 45 5d 5d 20 2f 2f 20 53 54 4f 52 4d 42 52 45
+00b0  41 4b 45 52 34 e2 a0 95 e2 a0 8a 30 30 30 e2 a0
+00c0  9d e2 a0 80 e2 a0 93 e2 a0 91 0a 0a"
+start_address = "0050"
+end_address = "00b0"
+metadata/_custom_type_script = "uid://7dw3dn04fi2k"
