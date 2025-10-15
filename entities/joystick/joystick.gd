@@ -29,6 +29,7 @@ var _center_tween: Tween
 
 func _ready() -> void:
 	_update_rotation_from_value()
+	$base_mesh.top_level = true
 
 func interact(player: Player) -> void:
 	_kill_center_tween()

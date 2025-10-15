@@ -1,34 +1,52 @@
-[gd_scene load_steps=6 format=3 uid="uid://6j77mwnbq2hp"]
+[gd_scene load_steps=13 format=3 uid="uid://6j77mwnbq2hp"]
 
 [ext_resource type="Script" uid="uid://bbrlewidrv7br" path="res://entities/dial/dial.gd" id="1_ic1c3"]
+[ext_resource type="Texture2D" uid="uid://6litjl6j5rd5" path="res://meshes/signal_tv/handle_dial_textures/dial_handle_initialShadingGroup_BaseMap.png" id="2_kfa7l"]
+[ext_resource type="Texture2D" uid="uid://h8ygac728413" path="res://meshes/signal_tv/handle_dial_textures/dial_handle_initialShadingGroup_MaskMap.png" id="3_1sww2"]
+[ext_resource type="Texture2D" uid="uid://dohb37ilaedyi" path="res://meshes/signal_tv/handle_dial_textures/dial_handle_initialShadingGroup_Normal.png" id="4_ab7wq"]
+[ext_resource type="ArrayMesh" uid="uid://c6qqku2qpqtgg" path="res://meshes/signal_tv/dial_handle.obj" id="5_e7c02"]
+[ext_resource type="Texture2D" uid="uid://v00ji8ws3c4w" path="res://meshes/signal_tv/base_dial_textures/dial_base_initialShadingGroup_BaseMap.png" id="6_a0knn"]
+[ext_resource type="Texture2D" uid="uid://cx32227qu6akt" path="res://meshes/signal_tv/base_dial_textures/dial_base_initialShadingGroup_MaskMap.png" id="7_i0ke2"]
+[ext_resource type="Texture2D" uid="uid://dr4csktynqp4b" path="res://meshes/signal_tv/base_dial_textures/dial_base_initialShadingGroup_Normal.png" id="8_wdxjk"]
+[ext_resource type="ArrayMesh" uid="uid://btnnp6358fbk5" path="res://meshes/signal_tv/dial_base.obj" id="9_fv3mg"]
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_rwhtm"]
-top_radius = 0.1
-bottom_radius = 0.1
-height = 0.05
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0knn"]
+albedo_texture = ExtResource("2_kfa7l")
+metallic = 1.0
+metallic_texture = ExtResource("3_1sww2")
+roughness_texture = ExtResource("3_1sww2")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("4_ab7wq")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_opodm"]
+albedo_texture = ExtResource("6_a0knn")
+metallic = 1.0
+metallic_texture = ExtResource("7_i0ke2")
+roughness_texture = ExtResource("7_i0ke2")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("8_wdxjk")
+texture_filter = 0
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_rwhtm"]
 height = 0.05
 radius = 0.1
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwhtm"]
-albedo_color = Color(0, 0, 0, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_rwhtm"]
-material = SubResource("StandardMaterial3D_rwhtm")
-size = Vector3(0.01, 0.05, 0.01)
-
 [node name="Dial" type="AnimatableBody3D"]
 script = ExtResource("1_ic1c3")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
-mesh = SubResource("CylinderMesh_rwhtm")
+transform = Transform3D(1, 0, 0, 0, 4.371139e-08, -1, 0, -1, -4.371139e-08, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_a0knn")
+mesh = ExtResource("5_e7c02")
+
+[node name="dial_base" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, 4.371139e-08, -1, 1, 4.371139e-08, 1.9106855e-15, 0, 0, -0.015369363)
+material_override = SubResource("StandardMaterial3D_opodm")
+mesh = ExtResource("9_fv3mg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 shape = SubResource("CylinderShape3D_rwhtm")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.075028375, 0.02354572)
-mesh = SubResource("BoxMesh_rwhtm")

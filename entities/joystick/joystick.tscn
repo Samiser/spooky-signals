@@ -1,19 +1,34 @@
-[gd_scene load_steps=6 format=3 uid="uid://but8hh6p6o5w4"]
+[gd_scene load_steps=13 format=3 uid="uid://but8hh6p6o5w4"]
 
 [ext_resource type="Script" uid="uid://bu325wklcw3pu" path="res://entities/joystick/joystick.gd" id="1_xrylo"]
+[ext_resource type="Texture2D" uid="uid://dut34wdebwp8l" path="res://meshes/joystick/base_textures/joy_base_mesh_initialShadingGroup_BaseMap.png" id="2_x5kje"]
+[ext_resource type="Texture2D" uid="uid://dmbu3d13kp7jo" path="res://meshes/joystick/base_textures/joy_base_mesh_initialShadingGroup_MaskMap.png" id="3_uqocy"]
+[ext_resource type="Texture2D" uid="uid://bdkyj4e8pqssr" path="res://meshes/joystick/base_textures/joy_base_mesh_initialShadingGroup_Normal.png" id="4_e52xi"]
+[ext_resource type="ArrayMesh" uid="uid://byjpg8eqxsu5k" path="res://meshes/joystick/joy_base_mesh.obj" id="5_sx51l"]
+[ext_resource type="Texture2D" uid="uid://7if4dgb53ggh" path="res://meshes/joystick/stick_textures/joy_stick_mesh_initialShadingGroup_BaseMap.png" id="6_ogc5v"]
+[ext_resource type="Texture2D" uid="uid://b3kbggbs3j3qj" path="res://meshes/joystick/stick_textures/joy_stick_mesh_initialShadingGroup_MaskMap.png" id="7_s52kp"]
+[ext_resource type="Texture2D" uid="uid://8to6fn2rm8ps" path="res://meshes/joystick/stick_textures/joy_stick_mesh_initialShadingGroup_Normal.png" id="8_tmud5"]
+[ext_resource type="ArrayMesh" uid="uid://dwbakyv4fkgx0" path="res://meshes/joystick/joy_stick_mesh.obj" id="9_q0giv"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_knfnp"]
-radius = 0.1
-height = 0.2
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_id3hg"]
+albedo_texture = ExtResource("2_x5kje")
+metallic = 1.0
+metallic_texture = ExtResource("3_uqocy")
+roughness_texture = ExtResource("3_uqocy")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("4_e52xi")
+texture_filter = 0
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_xrylo"]
-top_radius = 0.02
-bottom_radius = 0.02
-height = 0.3
-
-[sub_resource type="SphereMesh" id="SphereMesh_usjbv"]
-radius = 0.04
-height = 0.08
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vr25w"]
+albedo_texture = ExtResource("6_ogc5v")
+metallic = 1.0
+metallic_texture = ExtResource("7_s52kp")
+roughness_texture = ExtResource("7_s52kp")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("8_tmud5")
+texture_filter = 0
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_knfnp"]
 radius = 0.080566406
@@ -23,16 +38,15 @@ height = 0.47320557
 sync_to_physics = false
 script = ExtResource("1_xrylo")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("SphereMesh_knfnp")
+[node name="base_mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_id3hg")
+mesh = ExtResource("5_sx51l")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19797832, 0)
-mesh = SubResource("CylinderMesh_xrylo")
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.34531924, 0)
-mesh = SubResource("SphereMesh_usjbv")
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_vr25w")
+mesh = ExtResource("9_q0giv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14822388, 0)

@@ -17,7 +17,7 @@ func toggle_open() -> void:
 	is_moving = true
 	is_down = !is_down
 		
-	var target_height := 1.34
+	var target_height := 2.858
 	if is_down:
 		target_height = 0.0
 

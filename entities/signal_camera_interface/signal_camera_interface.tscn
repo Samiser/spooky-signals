@@ -1,29 +1,38 @@
-[gd_scene load_steps=4 format=3 uid="uid://crbp5ajsm55gt"]
+[gd_scene load_steps=9 format=3 uid="uid://crbp5ajsm55gt"]
 
 [ext_resource type="Script" uid="uid://0ckhbo6wejl0" path="res://entities/signal_camera_interface/signal_camera_interface.gd" id="1_klg2j"]
 [ext_resource type="PackedScene" uid="uid://ct5ty1nydcveo" path="res://entities/screen/screen.tscn" id="1_o2ovx"]
 [ext_resource type="PackedScene" uid="uid://but8hh6p6o5w4" path="res://entities/joystick/joystick.tscn" id="2_klg2j"]
+[ext_resource type="Texture2D" uid="uid://u0bqy1hpkfhb" path="res://meshes/tv/textures/tv_initialShadingGroup_BaseMap.png" id="4_dkixn"]
+[ext_resource type="Texture2D" uid="uid://b1ng4tw57c8hy" path="res://meshes/tv/textures/tv_initialShadingGroup_MaskMap.png" id="5_d1lu1"]
+[ext_resource type="Texture2D" uid="uid://dp5tdgyfqaamb" path="res://meshes/tv/textures/tv_initialShadingGroup_Normal.png" id="6_n2ibr"]
+[ext_resource type="ArrayMesh" uid="uid://bayndwgd2ged0" path="res://meshes/tv/tv.obj" id="7_mb8ch"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2blu3"]
+albedo_texture = ExtResource("4_dkixn")
+metallic = 1.0
+metallic_texture = ExtResource("5_d1lu1")
+roughness_texture = ExtResource("5_d1lu1")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("6_n2ibr")
+texture_filter = 0
 
 [node name="SignalCameraInterface" type="Node3D"]
 script = ExtResource("1_klg2j")
 
 [node name="Screen" parent="." instance=ExtResource("1_o2ovx")]
-transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, 0, 0, 0.19875523)
+transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, 0, -0.010080837, 0.19875523)
+height = 1074
+width = 1259
 
 [node name="Joystick" parent="." instance=ExtResource("2_klg2j")]
-transform = Transform3D(-0.40500006, 0, 3.5406227e-08, 0, 0.40500006, 0, -3.5406227e-08, 0, -0.40500006, 0, -0.257, 0.389)
+transform = Transform3D(-0.7, 0, 1.0569706e-07, 0, 0.7, 0, -1.0569706e-07, 0, -0.7, 0, -0.4127009, 0.389)
 
-[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+[node name="Tv" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, -0.054559633, -0.14277142)
+material_override = SubResource("StandardMaterial3D_2blu3")
+mesh = ExtResource("7_mb8ch")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.022426814)
-size = Vector3(0.5, 0.5, 0.5)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3313442, 0.1041601)
-size = Vector3(0.5, 0.17333984, 0.7531738)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.22816214)
-operation = 2
-size = Vector3(0.45, 0.45, 0.06386718)
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.7008618)

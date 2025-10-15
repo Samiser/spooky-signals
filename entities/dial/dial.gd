@@ -18,6 +18,7 @@ var min_rotation: float = 160
 
 func _ready() -> void:
 	_update_rotation_from_value()
+	$dial_base.top_level = true
 
 func interact(player: Player) -> void:
 	_player = player

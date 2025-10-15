@@ -4,7 +4,7 @@
 [ext_resource type="ArrayMesh" uid="uid://bnj1bulcj4wq6" path="res://meshes/map/map_mesh.obj" id="2_0xm2m"]
 [ext_resource type="AudioStream" uid="uid://boqy33enm8fe5" path="res://audio/ambience/lab_ambience.wav" id="3_074og"]
 [ext_resource type="ArrayMesh" uid="uid://g6dpoeuebhvj" path="res://meshes/map/blast_covers_mesh.obj" id="3_jq2sk"]
-[ext_resource type="Script" path="res://blast_covers.gd" id="4_4k2k6"]
+[ext_resource type="Script" uid="uid://1cnhfxgfo4ti" path="res://blast_covers.gd" id="4_4k2k6"]
 [ext_resource type="AudioStream" uid="uid://ch5feu6k1yumm" path="res://audio/ambience/hall_ambience.wav" id="4_82xsv"]
 [ext_resource type="AudioStream" uid="uid://j63wite4u2oq" path="res://audio/ambience/bridge_ambience.wav" id="5_getpj"]
 [ext_resource type="PackedScene" uid="uid://bwp2sp8rqpv5n" path="res://entities/radar/radar.tscn" id="5_lquwl"]
@@ -33,7 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://dp5tdgyfqaamb" path="res://meshes/tv/textures/tv_initialShadingGroup_Normal.png" id="23_lswn8"]
 [ext_resource type="ArrayMesh" uid="uid://bayndwgd2ged0" path="res://meshes/tv/tv.obj" id="24_a6jrf"]
 [ext_resource type="AudioStream" uid="uid://1hifhns3g50k" path="res://audio/music/start_sting.ogg" id="29_qsp4k"]
-[ext_resource type="Script" uid="uid://cr2j4646m6gg4" path="res://ui/start_transition.gd" id="30_kq58d"]
+[ext_resource type="Script" path="res://ui/start_transition.gd" id="30_kq58d"]
 
 [sub_resource type="Gradient" id="Gradient_0xm2m"]
 colors = PackedColorArray(0, 0, 0, 1, 0.007195848, 0.22476539, 0.31965184, 1)
@@ -129,7 +129,7 @@ skeleton = NodePath("../..")
 shape = SubResource("ConcavePolygonShape3D_htxhm")
 
 [node name="BlastCoversMesh" type="MeshInstance3D" parent="MapParent"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3403955, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.857695, 0)
 mesh = ExtResource("3_jq2sk")
 skeleton = NodePath("../..")
 script = ExtResource("4_4k2k6")
@@ -202,19 +202,20 @@ radar_viewport = NodePath("../RadarViewport")
 [node name="Interfaces" type="Node" parent="."]
 
 [node name="SignalTuner" parent="Interfaces" instance=ExtResource("8_vivmo")]
-transform = Transform3D(-0.055719398, 0, -0.67269635, 0, 0.675, 0, 0.67269635, 0, -0.055719398, -2.7102437, 0.6836995, 3.2391913)
+transform = Transform3D(-0.014536556, 0, -0.67484343, 0, 0.6750001, 0, 0.67484343, 0, -0.014536556, -2.7102437, 0.82253885, 2.7625535)
 
 [node name="DownloadScreen" parent="Interfaces" instance=ExtResource("5_vivmo")]
-transform = Transform3D(-1.6211016, 0, 0.37980828, 0, 1.6649997, 0, -0.37980828, 0, -1.6211016, -3.922383, 0.95624495, 3.1848218)
+transform = Transform3D(-1.52058, 0, 0.67827845, 0, 1.665, 0, -0.67827845, 0, -1.52058, -4.0896196, 0.95624495, 3.1848218)
 
 [node name="SignalDisplay" parent="Interfaces" instance=ExtResource("7_2cqfq")]
-transform = Transform3D(-1.9546578, 0, -0.52909106, 0, 2.0249999, 0, 0.52909106, 0, -1.9546578, -1.1883897, 1.0880446, 3.3153014)
+transform = Transform3D(-1.9546578, 0, -0.52909106, 0, 2.0249999, 0, 0.52909106, 0, -1.9546578, -0.7969558, 1.0880446, 2.8638835)
 
 [node name="SignalCameraInterface" parent="Interfaces" node_paths=PackedStringArray("signal_camera_viewport") instance=ExtResource("8_yaehf")]
 transform = Transform3D(1.5768673, 0, 0.8680374, 0, 1.8000002, 0, -0.8680374, 0, 1.5768673, -3.8069358, 0.99577737, -2.7669773)
 signal_camera_viewport = NodePath("../SignalCamViewport")
 
 [node name="SignalCamViewport" type="SubViewport" parent="Interfaces"]
+size = Vector2i(629, 537)
 
 [node name="SignalCamera" parent="Interfaces/SignalCamViewport" node_paths=PackedStringArray("signal_parents") instance=ExtResource("9_4c57u")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -14.17317, 0, 0)
