@@ -35,7 +35,7 @@ var _last_input_time := 0.0
 var _current: SignalSource = null
 
 func _ready() -> void:
-	_on_act_changed(0)
+	_on_act_changed(-1)
 	Signals.act_changed.connect(_on_act_changed)
 	_base_basis = transform.basis.orthonormalized()
 	_base_origin = transform.origin
