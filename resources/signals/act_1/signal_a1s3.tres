@@ -5,8 +5,8 @@
 [resource]
 script = ExtResource("1_8r1wg")
 title = "Terminating Search Operation"
-timestamp = "COMMS OFFICER [[TAYLOR CONWAY]]"
-sender = "2156.0814"
+timestamp = "2156.0814"
+sender = "COMMS OFFICER [[TAYLOR CONWAY]]"
 content_text = "ORIGIN // [[Nova Sector]] // GRID F06-10.02
 [[ODYSSEY RESEARCH STATION]] // COMMS OFFICER [[TAYLOR CONWAY]]
 

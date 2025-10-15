@@ -5,8 +5,8 @@
 [resource]
 script = ExtResource("1_vxngl")
 title = "Intercepted Empyrean Communication"
-timestamp = "COMMANDER [[KIRA PRICE]]"
-sender = "2156.0908"
+timestamp = "2156.0908"
+sender = "COMMANDER [[KIRA PRICE]]"
 content_text = "ORIGIN // PROBE E4.02  // [[Zulu Sector]] // GRID N12-08.12
 
 DESTINATION // [[VANGUARD]] FLEET VESSEL // SOLARIS

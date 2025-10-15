@@ -5,8 +5,8 @@
 [resource]
 script = ExtResource("1_jqnq6")
 title = "New Probe Frequency"
-timestamp = "COMMANDER [[HAYDEN COLE]]"
-sender = "2156.0904"
+timestamp = "2156.0904"
+sender = "COMMANDER [[HAYDEN COLE]]"
 content_text = "ORIGIN // [[Zulu Sector]] // GRID P14-12.09
 [[VANGUARD]] FLEET VESSEL // SOLARIS // COMMANDER [[HAYDEN COLE]]
 RELAYED FROM PROBE E4.02 // GRID N12-08.12

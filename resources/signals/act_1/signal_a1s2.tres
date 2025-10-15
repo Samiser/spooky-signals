@@ -5,8 +5,8 @@
 [resource]
 script = ExtResource("1_388tf")
 title = "Missing Research Vessel"
-timestamp = "COMMS OFFICER [[TAYLOR CONWAY]]"
-sender = "2156.0421"
+timestamp = "2156.0421"
+sender = "COMMS OFFICER [[TAYLOR CONWAY]]"
 content_text = "ORIGIN // [[Nova Sector]] // GRID F06-10.02 // 
 RELAYED FROM  //  [[Nova Sector]] // GRID M14-12.09
 [[VANGUARD]] FLEET VESSEL // SOLARIS
