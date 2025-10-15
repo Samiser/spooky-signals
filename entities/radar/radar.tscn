@@ -10,6 +10,7 @@ data = PackedVector3Array(1.2506, -0.013599999, 0.1478, 0, -0.013599999, 0.1478,
 
 [node name="Radar" type="Node3D"]
 script = ExtResource("1_85dw0")
+ping_rate = null
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
