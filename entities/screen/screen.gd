@@ -40,7 +40,7 @@ func _ready() -> void:
 	if _viewport:
 		_viewport.size = Vector2(width, height)
 
-func _replace_screen() -> void:	
+func _replace_screen() -> void:
 	if !_viewport:
 		return
 	
@@ -84,7 +84,7 @@ func _input(event: InputEvent) -> void:
 	if !_active:
 		return
 
-	if event.is_action_pressed("ui_cancel"):
+	if event.is_action_pressed("ui_cancel") or event.is_action_pressed("click"):
 		stop_interact()
 		get_viewport().set_input_as_handled()
 		return

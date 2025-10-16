@@ -77,7 +77,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			_try_interact()
 	
 	if event.is_action_pressed("zoom"):
-		toggle_zoom()
+		if not interacting:
+			toggle_zoom()
 	
 	if event.is_action_released("click"):
 		if interacting and current_interactable.has_method("on_release"):

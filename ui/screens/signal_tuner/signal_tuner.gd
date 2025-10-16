@@ -39,11 +39,11 @@ func _on_current_signal_changed(_old: SignalSource, new: SignalSource) -> void:
 
 func control(caller: Node3D, value: float):
 	match caller.name:
-		"CourseFrequency":
+		"Course Frequency":
 			if value >= 4000 and value <= 7000:
 				coarse_frequency = value
 			%CourseFrequencyLabel.text = str(value)
-		"FineFrequency":
+		"Fine Frequency":
 			if value >= 0.5 and value <= 5.0:
 				cycles = value
 		"Amplitude":

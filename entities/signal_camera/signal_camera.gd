@@ -13,7 +13,7 @@ class_name SignalCamera
 @export var deadzone := 0.05
 @export var response_gamma := 0.8
 @export var invert_x := true
-@export var invert_y := true
+@export var invert_y := false
 
 @export var brake_deg_per_sec2 := 500.0
 @export var input_timeout := 0.08
