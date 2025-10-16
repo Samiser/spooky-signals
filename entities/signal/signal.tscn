@@ -19,3 +19,5 @@ script = ExtResource("1_sujve")
 visible = false
 layers = 16
 mesh = SubResource("SphereMesh_hc5qh")
+
+[node name="MoveTimer" type="Timer" parent="."]
