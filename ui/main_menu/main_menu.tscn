@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://chwtuwoa1blu7"]
 
 [ext_resource type="Theme" uid="uid://c0eyo008u7c35" path="res://ui/screens/screen_theme.tres" id="1_mu8pm"]
-[ext_resource type="Texture2D" uid="uid://c5w7axry8fi81" path="res://icon.svg" id="2_i5wg5"]
 [ext_resource type="Script" uid="uid://uny8qdlc4ew" path="res://ui/main_menu/main_menu.gd" id="2_joh67"]
 [ext_resource type="Shader" uid="uid://c5lt755eg0llh" path="res://entities/screen/crt.gdshader" id="2_omy8q"]
+[ext_resource type="Texture2D" uid="uid://x0vx55yjki3m" path="res://ui/logo.png" id="3_6mijq"]
 [ext_resource type="PackedScene" uid="uid://tidipi0jy80q" path="res://ui/options_menu/options_menu.tscn" id="4_6mijq"]
 [ext_resource type="AudioStream" uid="uid://bjoexkn76wpnn" path="res://audio/music/main_menu.ogg" id="4_i5wg5"]
 [ext_resource type="AudioStream" uid="uid://dt3tfdbffpppr" path="res://audio/music/main_menu_cooked.ogg" id="5_3c04x"]
@@ -90,8 +90,8 @@ alignment = 1
 [node name="TextureRect" type="TextureRect" parent="UI/MarginContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("2_i5wg5")
-expand_mode = 3
+texture = ExtResource("3_6mijq")
+expand_mode = 5
 stretch_mode = 5
 
 [node name="Start" type="Button" parent="UI/MarginContainer/MarginContainer/VBoxContainer"]
