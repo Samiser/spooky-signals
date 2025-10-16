@@ -180,7 +180,7 @@ text = "[center][i]Zephyr Terminal — Low Power Mode[/i][/center]
 • Colony communication link [color=red]lost[/color]; passive listening enabled. 
 
 [b]Communication Loss Protocol:[/b]
-1) Set scanner frequency to emergency comms (1)
+1) Set scanner frequency to emergency comms [color=green]1564.24[/color]
 2) Acquire signal lock
 3) Download and decode signals
 

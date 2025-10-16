@@ -53,7 +53,7 @@ func frequency(params: Array[String]) -> String:
 		return "Usage: frequency [frequency value]"
 	
 	var regex = RegEx.new()
-	regex.compile("[^0-9]")
+	regex.compile("[^0-9\\.]")
 	var result = regex.search(params[1])
 	
 	if result:
@@ -62,11 +62,11 @@ func frequency(params: Array[String]) -> String:
 	Signals.current_act = -1
 
 	match params[1]:
-		"1":
+		"1564.24":
 			Signals.current_act = 0
-		"2":
+		"2842.59":
 			Signals.current_act = 1
-		"3":
+		"3572.67":
 			Signals.current_act = 2
 	
 	correct_sound.emit()
@@ -76,7 +76,7 @@ func protocol() -> String:
 	return '''
 
 [b]1) Set scanner frequency to emergency comms[/b]
-Use the [i]frequency[/i] command to set the frequency of your signal scanner to the emergency comms channel [b](1)[/b]. You may be instructed to change the frequency if the situation changes.
+Use the [i]frequency[/i] command to set the frequency of your signal scanner to the emergency comms channel [color=green]1564.24[/color]. You may be instructed to change the frequency if the situation changes.
 
 [b]2) Acquire signal lock[/b]
 Use the [b]Signal Targeting System[/b] (to the right of this terminal) to find signal beacons. The arrow will guide you to a signal. The radar shows all signals on the current frequency.
