@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="SignalData" load_steps=2 format=3 uid="uid://derqq5yhtoo6x"]
+
+[ext_resource type="Script" uid="uid://7dw3dn04fi2k" path="res://resources/signal_data.gd" id="1_48p5t"]
+
+[resource]
+script = ExtResource("1_48p5t")
+title = "PRIORITY ALERT"
+timestamp = "2157.02.07"
+sender = "AUTOMATED BROADCAST"
+content_text = "ORIGIN // [[Nova Sector]] // GRID F024-11.07
+PROBE F7.04
+
+AUTOMATED BROADCAST
+TIMECODE 2157.02.07
+
+//////// PRIORITY ALERT TO ALL VESSELS ///////////
+DISABLE ALL ONBOARD COMMUNICATION SYSTEMS, HOSTILE ALIEN FORCE ARE CAPABLE OF TRACKING THE SOURCE.
+
+THE [[VANGUARD]] FLEET IS NO LONGER OPERATIONAL.
+[[STRADUS]] IS NO LONGER.
+REMEMBER HUMANITY."
+encoded_content = "0000  4f 52 49 47 49 4e 20 2f 2f 20 5b 5b 4e 6f 76 61
+0010  20 53 65 63 74 6f 72 5d 5d 20 2f 2f 20 47 52 49
+0020  44 20 46 30 32 34 2d 30 30 30 37 0a 50 52 4f 
+0030  42 45 30 30 30 2e 30 34 0a 0a 41 55 54 4f 4d 41
+0040  54 45 44 20 42 52 4f 41 44 43 41 53 54 0a 54 49 
+0050  4d 45 43 4f 44 45 20 32 31 35 37 2e 30 32 2e 30
+0060  37"
+start_address = "0020"
+end_address = "0030"
+metadata/_custom_type_script = "uid://7dw3dn04fi2k"
