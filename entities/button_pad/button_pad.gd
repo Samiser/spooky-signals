@@ -4,6 +4,8 @@ class_name ButtonPad
 @export var targets : Array[Node3D]
 @export var default_pad_text : String
 
+@onready var sound: AudioStreamPlayer3D = $Sound
+
 func _ready() -> void:
 	$Screen.current_screen.set_text(default_pad_text)
 
@@ -14,6 +16,7 @@ func interact(player: Player) -> void:
 
 func set_display(text: String, origin: bool) -> void:
 	$Screen.current_screen.set_text(text)
+	sound.play()
 	
 	if !origin:
 		return

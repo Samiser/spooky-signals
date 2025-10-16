@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://8sldleje1mmt"]
+[gd_scene load_steps=17 format=3 uid="uid://8sldleje1mmt"]
 
 [ext_resource type="Script" uid="uid://dl56mdx02ei2h" path="res://entities/door/door.gd" id="1_6agv2"]
 [ext_resource type="Texture2D" uid="uid://bvp4aaxmv0d5x" path="res://entities/door/door_textures/door_initialShadingGroup_BaseMap.png" id="1_mjxdi"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://cj7jjrbx0jobq" path="res://entities/door/frame_textures/door_frame_initialShadingGroup_MaskMap.png" id="6_p4e65"]
 [ext_resource type="Texture2D" uid="uid://1jpg7fpuf2qj" path="res://entities/door/frame_textures/door_frame_initialShadingGroup_Normal.png" id="7_605cj"]
 [ext_resource type="ArrayMesh" uid="uid://bamv6jel3w0ow" path="res://entities/door/door_frame.obj" id="8_6wd7r"]
+[ext_resource type="AudioStream" uid="uid://do1qlqoo3ktst" path="res://audio/sfx/door_open.ogg" id="10_4ul54"]
+[ext_resource type="AudioStream" uid="uid://busule5nqdybu" path="res://audio/sfx/door_close.ogg" id="11_363kk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6agv2"]
 albedo_texture = ExtResource("1_mjxdi")
@@ -71,3 +73,13 @@ shape = SubResource("BoxShape3D_6agv2")
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="Frame"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2637204, 0)
 shape = SubResource("BoxShape3D_4ul54")
+
+[node name="OpenSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("10_4ul54")
+volume_db = -10.0
+pitch_scale = 0.8
+
+[node name="CloseSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("11_363kk")
+volume_db = -10.0
+pitch_scale = 0.8

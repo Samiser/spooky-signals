@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://2tbdcfvj6lk7"]
+[gd_scene load_steps=11 format=3 uid="uid://2tbdcfvj6lk7"]
 
 [ext_resource type="Script" uid="uid://4i7urn8jofnj" path="res://entities/button_pad/button_pad.gd" id="1_jewq6"]
 [ext_resource type="Texture2D" uid="uid://q0h4ww1fy5lr" path="res://entities/button_pad/textures/button_pad_initialShadingGroup_BaseMap.png" id="1_yabsw"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cyrxcfl4gdduj" path="res://entities/button_pad/textures/button_pad_initialShadingGroup_Normal.png" id="3_466vi"]
 [ext_resource type="PackedScene" uid="uid://dacgfvab6l1fm" path="res://ui/screens/button_pad/pad_screen.tscn" id="3_cfglt"]
 [ext_resource type="ArrayMesh" uid="uid://hkhym7x4pxcj" path="res://entities/button_pad/button_pad.obj" id="4_cfglt"]
+[ext_resource type="AudioStream" uid="uid://bk1a1bkywd4nq" path="res://audio/sfx/button.ogg" id="8_8sj52"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yabsw"]
 albedo_texture = ExtResource("1_yabsw")
@@ -41,3 +42,7 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_jewq6")
+
+[node name="Sound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("8_8sj52")
+volume_db = -20.0
