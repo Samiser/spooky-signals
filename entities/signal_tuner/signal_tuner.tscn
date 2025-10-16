@@ -28,7 +28,7 @@ height = 1009
 width = 1239
 current_screen_scene = ExtResource("2_hdd5w")
 
-[node name="CourseFrequency" parent="." node_paths=PackedStringArray("screen") instance=ExtResource("3_u650r")]
+[node name="Course Frequency" parent="." node_paths=PackedStringArray("screen") instance=ExtResource("3_u650r")]
 transform = Transform3D(-7.86805e-08, 0, -1.8, 0, 1.8, 0, 1.8, 0, -7.86805e-08, -0.070341766, -0.57571185, 0.5981157)
 max_value = 7000.0
 min_value = 4000.0
@@ -36,7 +36,7 @@ value = 4531.0
 drag_sensitivity = 1.0
 screen = NodePath("../Screen")
 
-[node name="FineFrequency" parent="." node_paths=PackedStringArray("screen") instance=ExtResource("3_u650r")]
+[node name="Fine Frequency" parent="." node_paths=PackedStringArray("screen") instance=ExtResource("3_u650r")]
 transform = Transform3D(-7.86805e-08, 0, -1.8, 0, 1.8, 0, 1.8, 0, -7.86805e-08, 0, -0.44257143, -1.3750011)
 max_value = 5.0
 min_value = 0.5

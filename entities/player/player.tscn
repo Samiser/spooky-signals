@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://vfatuya14sn3"]
+[gd_scene load_steps=5 format=3 uid="uid://vfatuya14sn3"]
 
 [ext_resource type="Script" uid="uid://blfdaraj2aj0l" path="res://entities/player/player.gd" id="1_symyc"]
+[ext_resource type="Theme" uid="uid://c0eyo008u7c35" path="res://ui/screens/screen_theme.tres" id="2_abrql"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_sfv1e"]
 radius = 0.4
@@ -37,6 +38,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme = ExtResource("2_abrql")
 
 [node name="CenterContainer" type="CenterContainer" parent="UI"]
 layout_mode = 1
@@ -53,6 +55,7 @@ layout_mode = 2
 mouse_filter = 2
 
 [node name="interactLabel" type="RichTextLabel" parent="UI"]
+modulate = Color(1, 1, 1, 0.7490196)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -60,12 +63,13 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -240.0
-offset_top = 211.0
+offset_top = 77.0
 offset_right = 240.0
-offset_bottom = 251.0
+offset_bottom = 153.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 25
 autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
