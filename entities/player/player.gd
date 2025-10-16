@@ -46,14 +46,18 @@ func _set_crosshair_visibility() -> void:
 	if _looking_at_interactable():
 		crosshair.modulate.a = 1.0
 		crosshair.custom_minimum_size = Vector2(10, 10)
+		if !is_zoomed:
+			$UI/interactLabel.text = _looking_at_interactable().name
 	else:
 		crosshair.modulate.a = 0.4
 		crosshair.custom_minimum_size = Vector2(7, 7)
+		$UI/interactLabel.text = ""
 
 func toggle_zoom() -> void:
 	is_zoomed = !is_zoomed
 	if is_zoomed:
 		camera.fov /= 2.4
+		$UI/interactLabel.text = ""
 	else:
 		camera.fov *= 2.4
 

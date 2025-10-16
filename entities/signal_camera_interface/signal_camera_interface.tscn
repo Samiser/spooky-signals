@@ -26,7 +26,7 @@ transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, 0, -0.010080837, 0.1
 height = 1074
 width = 1259
 
-[node name="Joystick" parent="." instance=ExtResource("2_klg2j")]
+[node name="Tracking Joystick" parent="." instance=ExtResource("2_klg2j")]
 transform = Transform3D(-0.7, 0, 1.0569706e-07, 0, 0.7, 0, -1.0569706e-07, 0, -0.7, 0, -0.4127009, 0.389)
 
 [node name="Tv" type="MeshInstance3D" parent="."]

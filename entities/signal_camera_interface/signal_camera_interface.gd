@@ -2,7 +2,7 @@
 extends Node3D
 
 @onready var screen: Screen = $Screen
-@onready var joystick: Joystick = $Joystick
+@onready var joystick: Joystick = $"Tracking Joystick"
 
 @export var signal_camera_viewport: SubViewport:
 	set(value):

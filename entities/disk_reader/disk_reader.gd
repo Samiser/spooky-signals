@@ -19,6 +19,7 @@ func spawn_disk(data: SignalData) -> void:
 	
 	current_disk.interacted.connect(_remove_disk)
 	floppy_disk.data = data.duplicate(true)
+	floppy_disk.name = "Raw Signal Data Disk"
 	floppy_disk.global_position = $disk_pos.global_position
 	floppy_disk.global_rotation = $disk_pos.global_rotation
 

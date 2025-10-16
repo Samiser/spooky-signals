@@ -120,6 +120,7 @@ func decode_disk(params: Array[String]) -> String:
 				else:
 					data.decoded = true
 				correct_sound.emit()
+				disk.name = data.title
 				return "Data decoded, display with the 'output' command."
 			else:
 				incorrect_sound.emit()

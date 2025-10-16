@@ -23,7 +23,7 @@ func interact(player: Player) -> void:
 	for disk in get_tree().get_nodes_in_group("floppy"):
 		if disk.inserted:
 			if disk == self:
-				disk.remove_disk(disk.global_position, Vector3(-4.197 + (disk_index * -0.3), 0.474, 0.897))
+				disk.remove_disk(disk.global_position, Vector3(-4.197, 0.474 + (disk_index * 0.01), 0.897))
 			return
 		disk_index += 1
 	

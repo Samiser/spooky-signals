@@ -3,7 +3,7 @@ extends Node3D
 @onready var correct: AudioStreamPlayer3D = $Correct
 @onready var incorrect: AudioStreamPlayer3D = $Incorrect
 
-@onready var screen: Screen = $Screen
+@onready var screen: Screen = $"Terminal Screen"
 
 func _ready() -> void:
 	if screen.current_screen is Terminal:
