@@ -20,7 +20,10 @@ func help(_params: Array[String]) -> String:
 	read - displays raw disk data
 	decode [start address] [end address] - decode drive data
 	output - outputs decoded disk drive data to the monitor
-	clear - clear terminal output'''
+	clear - clear terminal output
+	
+	protocol - show detailed protocol instructions
+	decoding - show detailed decoding instructions'''
 
 func read_disk(params: Array[String]) -> String:
 	var disk = _check_disk()
@@ -69,6 +72,37 @@ func frequency(params: Array[String]) -> String:
 	correct_sound.emit()
 	return("Frequency set to %s" % params[1])
 
+func protocol() -> String:
+	return '''
+
+[b]1) Set scanner frequency to emergency comms[/b]
+Use the [i]frequency[/i] command to set the frequency of your signal scanner to the emergency comms channel [b](1)[/b]. You may be instructed to change the frequency if the situation changes.
+
+[b]2) Acquire signal lock[/b]
+Use the [b]Signal Targeting System[/b] (to the right of this terminal) to find signal beacons. The arrow will guide you to a signal. The radar shows all signals on the current frequency.
+
+[b]3) Download and decode signals[/b]
+Use the [b]Signal Tuner[/b] (to the left of this terminal) to tune into the signal's precise frequency. First set the coarse signal, then match the signal's waveform with the three fine-tuning knobs to increase download speed.
+
+Once downloaded, use the [b]Disk Writer[/b] to insert the created disk into this terminal. There must be no disk in the terminal. For instructions on decoding, run the [i]decoding[/i] command.
+'''
+
+func decoding() -> String:
+	return '''
+Raw signal data on a disk will be noisy. You can use the [i]decode[/i] command to extract the data. First, use the [i]read[/i] command to see a hexdump of the raw disk data, it will look like this:
+
+0010  2f 20 5b 5b 4e 6f 76 61 20 53 65 63 74 6f 72 5d
+0020  a0 8c e2 a0 80 [color=red]30 30 30[/color] 4f 52 49 47 49 4e 20 2f
+0030  5d 20 2f 2f 20 47 52 49 44 20 4d 31 34 2d 31 32
+0040  [color=red]30 30 30[/color] 0a e2 a0 95 e2 a0 a5 e2 a0 9e e2 a0 80
+0050  54 49 4d 45 43 4f 44 45 20 32 31 35 36 2e 30 33
+
+Signal data starts and ends with the byte sequence [b]30 30 30[/b], which has been highlighted in the above example.
+
+To decode, pass the data start and end addresses to the [i]decode[/i] command, in this case [i]decode 0020 0040[/i]
+
+With the signal decoded, you can display its contents on the [b]Signal Data Display[/b] with the [i]output[/i] command. Now return to step 2 of the protocol.
+'''
 
 func decode_disk(params: Array[String]) -> String:
 	var disk = _check_disk()
@@ -117,6 +151,10 @@ func parse_command(params: Array[String]) -> String:
 			return decode_disk(params)
 		"output":
 			return output_disk_data(params)
+		"protocol":
+			return protocol()
+		"decoding":
+			return decoding()
 		_:
 			return error("[b]Unknown Command[/b], type 'help' to see all commands")
 
