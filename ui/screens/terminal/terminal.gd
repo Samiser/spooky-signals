@@ -11,6 +11,10 @@ var initialised: bool = false
 signal correct_sound
 signal incorrect_sound
 
+var first_act_entered: bool = false
+var second_act_entered: bool = false
+var third_act_entered: bool = false
+
 func error(msg: String) -> String:
 	return "[b]Error:[/b] %s" % msg
 
@@ -64,10 +68,19 @@ func frequency(params: Array[String]) -> String:
 	match params[1]:
 		"1564.24":
 			Signals.current_act = 0
+			if not first_act_entered:
+				first_act_entered = true
+				get_tree().create_timer(1).timeout.connect(func() -> void: $MusicAct1.play())
 		"2842.59":
 			Signals.current_act = 1
+			if not second_act_entered:
+				second_act_entered = true
+				get_tree().create_timer(1).timeout.connect(func() -> void: $MusicAct2.play())
 		"3572.67":
 			Signals.current_act = 2
+			if not third_act_entered:
+				third_act_entered = true
+				get_tree().create_timer(1).timeout.connect(func() -> void: $MusicAct3.play())
 	
 	correct_sound.emit()
 	return("Frequency set to %s" % params[1])

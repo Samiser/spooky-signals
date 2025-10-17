@@ -9,6 +9,8 @@ signal act_changed(act: int)
 
 signal display(data: SignalData)
 
+signal game_end
+
 var _current: SignalSource = null
 
 var player_name: String
@@ -49,6 +51,18 @@ func display_data(data: SignalData) -> void:
 	data.content_text = data.content_text.replace("[[", "[b]")
 	data.content_text = data.content_text.replace("]]", "[/b]")
 	display.emit(data)
+	
+	var floppys := get_tree().get_nodes_in_group("floppy")
+	if floppys.size() < get_tree().get_nodes_in_group("signal_source").size():
+		return
+	
+	for f in floppys:
+		if not f.data.decoded:
+			return
+	
+	print("game end!")
+	game_end.emit()
+	
 
 func clear_current() -> void:
 	if _current == null:

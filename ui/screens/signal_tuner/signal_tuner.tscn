@@ -57,7 +57,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_3ht51")
 [node name="CourseFrequencyLabel" type="RichTextLabel" parent="SignalTunerDisplay/VBoxContainer/HBoxContainer/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "test"
+text = "4531.0"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1

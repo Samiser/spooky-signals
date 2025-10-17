@@ -76,10 +76,10 @@ shape = SubResource("BoxShape3D_4ul54")
 
 [node name="OpenSound" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("10_4ul54")
-volume_db = -15.0
+volume_db = -25.0
 pitch_scale = 0.8
 
 [node name="CloseSound" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("11_363kk")
-volume_db = -15.0
+volume_db = -25.0
 pitch_scale = 0.8

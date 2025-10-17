@@ -1,6 +1,7 @@
-[gd_scene load_steps=47 format=3 uid="uid://chxlkaq0opjy7"]
+[gd_scene load_steps=49 format=3 uid="uid://chxlkaq0opjy7"]
 
 [ext_resource type="PackedScene" uid="uid://vfatuya14sn3" path="res://entities/player/player.tscn" id="1_68bq3"]
+[ext_resource type="Script" uid="uid://c2fo4s362iuqd" path="res://main.gd" id="1_facbu"]
 [ext_resource type="PackedScene" uid="uid://bnj1bulcj4wq6" path="res://meshes/map/map_mesh.obj" id="2_0xm2m"]
 [ext_resource type="AudioStream" uid="uid://boqy33enm8fe5" path="res://audio/ambience/lab_ambience.wav" id="3_074og"]
 [ext_resource type="ArrayMesh" uid="uid://g6dpoeuebhvj" path="res://meshes/map/blast_covers_mesh.obj" id="3_jq2sk"]
@@ -10,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bwp2sp8rqpv5n" path="res://entities/radar/radar.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://c3a0v46c2b81k" path="res://entities/download_screen/download_screen.tscn" id="5_vivmo"]
 [ext_resource type="PackedScene" uid="uid://b2r1ao0ypyid8" path="res://entities/signal_display/signal_display.tscn" id="7_2cqfq"]
-[ext_resource type="Script" uid="uid://bkdvrh4g3u8vc" path="res://light_flicker.gd" id="8_0rl1p"]
+[ext_resource type="Script" path="res://light_flicker.gd" id="8_0rl1p"]
 [ext_resource type="PackedScene" uid="uid://c7xnqj64cchkp" path="res://entities/signal_tuner/signal_tuner.tscn" id="8_vivmo"]
 [ext_resource type="PackedScene" uid="uid://crbp5ajsm55gt" path="res://entities/signal_camera_interface/signal_camera_interface.tscn" id="8_yaehf"]
 [ext_resource type="PackedScene" uid="uid://dfm5ubt1vvrrm" path="res://entities/signal_camera/signal_camera.tscn" id="9_4c57u"]
@@ -33,9 +34,10 @@
 [ext_resource type="Resource" uid="uid://c4tf4cq2dkwhc" path="res://resources/signals/act_3/signal_a3s1.tres" id="23_facbu"]
 [ext_resource type="Texture2D" uid="uid://dp5tdgyfqaamb" path="res://meshes/tv/textures/tv_initialShadingGroup_Normal.png" id="23_lswn8"]
 [ext_resource type="ArrayMesh" uid="uid://bayndwgd2ged0" path="res://meshes/tv/tv.obj" id="24_a6jrf"]
-[ext_resource type="Resource" uid="uid://derqq5yhtoo6x" path="res://resources/signals/act_3/signal_a3s2.tres" id="24_ok6jj"]
+[ext_resource type="Resource" path="res://resources/signals/act_3/signal_a3s2.tres" id="24_ok6jj"]
 [ext_resource type="AudioStream" uid="uid://1hifhns3g50k" path="res://audio/music/start_sting.ogg" id="29_qsp4k"]
-[ext_resource type="Script" path="res://ui/start_transition.gd" id="30_kq58d"]
+[ext_resource type="Script" uid="uid://cr2j4646m6gg4" path="res://ui/start_transition.gd" id="30_kq58d"]
+[ext_resource type="AudioStream" uid="uid://dt3tfdbffpppr" path="res://audio/music/main_menu_cooked.ogg" id="38_b1qrp"]
 
 [sub_resource type="Gradient" id="Gradient_0xm2m"]
 colors = PackedColorArray(0, 0, 0, 1, 0.007195848, 0.22476539, 0.31965184, 1)
@@ -86,6 +88,7 @@ normal_texture = ExtResource("23_lswn8")
 texture_filter = 0
 
 [node name="Main" type="Node3D"]
+script = ExtResource("1_facbu")
 
 [node name="Player" parent="." instance=ExtResource("1_68bq3")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.5640042, -0.7882614, 0.14757097)
@@ -343,6 +346,18 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 script = ExtResource("30_kq58d")
+
+[node name="EndTransition" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="EndMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("38_b1qrp")
 
 [node name="Blast Shield Control" parent="." node_paths=PackedStringArray("targets") instance=ExtResource("17_yaehf")]
 transform = Transform3D(-1, 0, 8.742278e-08, 8.649959e-08, 0.1449434, 0.98943996, -1.2671351e-08, 0.98943996, -0.1449434, 15.363288, 0.12100884, 0.05537443)

@@ -17,12 +17,10 @@ class_name SignalData
 @export var start_address: String
 @export var end_address: String
 
-# TODO: randomise these values
 var target_coarse_frequency := 5678
 var target_cycles := 2.25
 var target_amplitude := 0.7
 var target_phase := 0.35
-# ---
 
 var download_progress: float = 0.0 # / 100.0
 var current_download_speed: float = 0.0
