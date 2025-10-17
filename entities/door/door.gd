@@ -37,4 +37,3 @@ func toggle_open() -> void:
 	await tween.finished
 	
 	is_moving = false
-	
