@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c18gky2thocxs"]
+
+[ext_resource type="Texture2D" uid="uid://7wb8fl6fj3m7" path="res://trenchbroom/textures/Grating/Grating_18-128x128.png" id="1_r5jva"]
+
+[resource]
+albedo_texture = ExtResource("1_r5jva")
+metallic_specular = 0.0
+texture_filter = 2

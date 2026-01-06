@@ -5,9 +5,4 @@
 [resource]
 resource_name = "Metal_08-256x256"
 albedo_color = Color(0.6226414, 0.6226414, 0.6226414, 1)
-metallic = 0.75
-metallic_specular = 0.2
-roughness = 0.32
-normal_enabled = true
-normal_texture = ExtResource("1_exqf7")
-texture_filter = 0
+albedo_texture = ExtResource("1_exqf7")

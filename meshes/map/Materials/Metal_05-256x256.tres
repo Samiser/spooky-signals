@@ -1,11 +1,7 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dr0fg2cr1b2c6"]
 
-[ext_resource type="Texture2D" uid="uid://c0twdx7jxfx3t" path="res://meshes/map/Metal_05-256x256 1.png" id="1_l82om"]
+[ext_resource type="Texture2D" uid="uid://l6l2nl1mp816" path="res://meshes/map/Metal_05-256x256.png" id="1_l82om"]
 
 [resource]
 resource_name = "Metal_05-256x256"
-metallic = 0.39
-roughness = 0.27
-normal_enabled = true
-normal_texture = ExtResource("1_l82om")
-texture_filter = 0
+albedo_texture = ExtResource("1_l82om")
