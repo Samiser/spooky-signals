@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bwrkxg5thcsce"]
+
+[ext_resource type="Texture2D" uid="uid://rowl134c0n6u" path="res://trenchbroom/textures/Terrain/Terrain_14-128x128.png" id="1_ht8ky"]
+
+[resource]
+albedo_texture = ExtResource("1_ht8ky")
+metallic_specular = 0.0
+texture_filter = 0
+billboard_mode = 1

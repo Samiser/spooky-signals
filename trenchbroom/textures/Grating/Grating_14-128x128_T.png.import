@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bahihbijicx3"
-path.s3tc="res://.godot/imported/Terrain_11-128x128.png-8bf726cdb0798369ca6628565e6eb541.s3tc.ctex"
+uid="uid://dfyao1hfhon8n"
+path.s3tc="res://.godot/imported/Grating_14-128x128_T.png-30108df5ffcfcb9e11547947f6e19b60.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://trenchbroom/textures/Terrain/Terrain_11-128x128.png"
-dest_files=["res://.godot/imported/Terrain_11-128x128.png-8bf726cdb0798369ca6628565e6eb541.s3tc.ctex"]
+source_file="res://trenchbroom/textures/Grating/Grating_14-128x128_T.png"
+dest_files=["res://.godot/imported/Grating_14-128x128_T.png-30108df5ffcfcb9e11547947f6e19b60.s3tc.ctex"]
 
 [params]
 
