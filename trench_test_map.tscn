@@ -2906,7 +2906,7 @@ transform = Transform3D(1.3907092e-07, 0, 1, 0, 1, 0, -1, 0, 1.3907092e-07, 5.5,
 transform = Transform3D(1.3907092e-07, 0, 1, 0, 1, 0, -1, 0, 1.3907092e-07, 3, 0.75, 2.59375)
 
 [node name="entity_4_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
-transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 6.5, -2.375, 1.375)
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 6.5, -2, 1.375)
 
 [node name="entity_5_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 20.75, 1.25, 2)
