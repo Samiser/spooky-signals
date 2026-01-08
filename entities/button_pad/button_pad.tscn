@@ -26,7 +26,7 @@ script = ExtResource("1_jewq6")
 default_pad_text = "Open"
 
 [node name="Screen" parent="." instance=ExtResource("2_cfglt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0011204183, 0.04415518)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, -0.001, 0.21213233)
 collision_layer = 0
 input_ray_pickable = false
 height = 139
@@ -34,15 +34,16 @@ width = 79
 current_screen_scene = ExtResource("3_cfglt")
 
 [node name="button_mesh" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+transform = Transform3D(-0.5, 0, 4.371139e-08, 0, 0.5, 0, -4.371139e-08, 0, -0.5, 0, 0, 0.2561323)
 material_override = SubResource("StandardMaterial3D_yabsw")
 mesh = ExtResource("4_cfglt")
 skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+transform = Transform3D(-0.5, 0, 4.371139e-08, 0, 0.5, 0, -4.371139e-08, 0, -0.5, 0, 0, 0.2561323)
 shape = SubResource("ConcavePolygonShape3D_jewq6")
 
 [node name="Sound" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.22713232)
 stream = ExtResource("8_8sj52")
 volume_db = -30.0

@@ -3565,3 +3565,33 @@
 "origin" "-8 40 8"
 "angle" "90"
 }
+// entity 2
+{
+"classname" "ButtonPad"
+"origin" "-40 176 40"
+"angle" "270"
+}
+// entity 3
+{
+"classname" "ButtonPad"
+"origin" "83 96 24"
+"angle" "270"
+}
+// entity 4
+{
+"classname" "ButtonPad"
+"origin" "44 208 -76"
+"angle" "90"
+}
+// entity 5
+{
+"classname" "ButtonPad"
+"origin" "64 664 40"
+"angle" "90"
+}
+// entity 6
+{
+"classname" "ButtonPad"
+"origin" "72 628 40"
+"angle" "0"
+}
