@@ -1,0 +1,226 @@
+OS:	Windows 11 Version 24H2
+Qt:	6.9.3
+GL_VENDOR:	NVIDIA Corporation
+GL_RENDERER:	NVIDIA GeForce RTX 3060 Laptop GPU/PCIe/SSE2
+GL_VERSION:	4.6.0 NVIDIA 581.42
+TrenchBroom Version:	2025.4
+TrenchBroom Build:	v2025.4 Release Win64
+Reason:	3765269347
+Stack trace:
+SymInit: Symbol-SearchPath: '.;C:\WINDOWS\system32;C:\Users\legob\OneDrive\Desktop\TrenchBroom;C:\WINDOWS;C:\WINDOWS\system32;SRV*C:\websymbols*http://msdl.microsoft.com/download/symbols;', symOptions: 530, UserName: 'legob'
+OS-Version: 6.2.9200 () 0x300-0x1
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\TrenchBroom.exe:TrenchBroom.exe (00007FF6C6F50000), size: 15790080 (result: 0), SymType: 'PDB', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\TrenchBroom-stripped.pdb', fileVersion: 2025.4.0.0
+C:\WINDOWS\SYSTEM32\ntdll.dll:ntdll.dll (00007FFF0A180000), size: 2519040 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\ntdll.dll', fileVersion: 6.2.26100.7462
+C:\WINDOWS\System32\KERNEL32.DLL:KERNEL32.DLL (00007FFF08EF0000), size: 823296 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\KERNEL32.DLL', fileVersion: 6.2.26100.7309
+C:\WINDOWS\System32\KERNELBASE.dll:KERNELBASE.dll (00007FFF07930000), size: 4124672 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\KERNELBASE.dll', fileVersion: 6.2.26100.7462
+C:\WINDOWS\System32\ADVAPI32.dll:ADVAPI32.dll (00007FFF07F20000), size: 737280 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\ADVAPI32.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\System32\msvcrt.dll:msvcrt.dll (00007FFF098E0000), size: 692224 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\msvcrt.dll', fileVersion: 7.0.26100.7019
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\Qt6OpenGLWidgets.dll:Qt6OpenGLWidgets.dll (00007FFED7780000), size: 69632 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\Qt6OpenGLWidgets.dll', fileVersion: 6.9.3.0
+C:\WINDOWS\System32\sechost.dll:sechost.dll (00007FFF09A10000), size: 679936 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\sechost.dll', fileVersion: 6.2.26100.7309
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\Qt6Svg.dll:Qt6Svg.dll (00007FFE6DE40000), size: 610304 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\Qt6Svg.dll', fileVersion: 6.9.3.0
+C:\WINDOWS\System32\RPCRT4.dll:RPCRT4.dll (00007FFF089E0000), size: 1146880 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\RPCRT4.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\System32\ucrtbase.dll:ucrtbase.dll (00007FFF072D0000), size: 1355776 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\ucrtbase.dll', fileVersion: 6.2.26100.7019
+C:\WINDOWS\System32\SHELL32.dll:SHELL32.dll (00007FFF08280000), size: 7680000 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\SHELL32.dll', fileVersion: 6.2.26100.7462
+C:\WINDOWS\System32\msvcp_win.dll:msvcp_win.dll (00007FFF07450000), size: 667648 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\msvcp_win.dll', fileVersion: 6.2.26100.7019
+C:\WINDOWS\System32\USER32.dll:USER32.dll (00007FFF09F70000), size: 1855488 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\USER32.dll', fileVersion: 6.2.26100.7462
+C:\WINDOWS\System32\win32u.dll:win32u.dll (00007FFF07420000), size: 159744 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\win32u.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\System32\GDI32.dll:GDI32.dll (00007FFF09850000), size: 176128 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\GDI32.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\OPENGL32.dll:OPENGL32.dll (00007FFE80980000), size: 1114112 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\OPENGL32.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\System32\gdi32full.dll:gdi32full.dll (00007FFF07D30000), size: 1228800 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\gdi32full.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\System32\combase.dll:combase.dll (00007FFF09450000), size: 3690496 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\combase.dll', fileVersion: 6.2.26100.7462
+C:\WINDOWS\System32\wintypes.dll:wintypes.dll (00007FFF07730000), size: 1482752 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\wintypes.dll', fileVersion: 6.2.26100.7309
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\Qt6Widgets.dll:Qt6Widgets.dll (00007FFE522C0000), size: 6541312 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\Qt6Widgets.dll', fileVersion: 6.9.3.0
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\Qt6Network.dll:Qt6Network.dll (00007FFE6D740000), size: 1740800 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\Qt6Network.dll', fileVersion: 6.9.3.0
+C:\WINDOWS\System32\WS2_32.dll:WS2_32.dll (00007FFF08CC0000), size: 475136 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\WS2_32.dll', fileVersion: 6.2.26100.7019
+C:\WINDOWS\System32\ole32.dll:ole32.dll (00007FFF08D40000), size: 1667072 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\ole32.dll', fileVersion: 6.2.26100.7462
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\Qt6Gui.dll:Qt6Gui.dll (00007FFE519A0000), size: 9564160 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\Qt6Gui.dll', fileVersion: 6.9.3.0
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\Qt6Core.dll:Qt6Core.dll (00007FFE4F790000), size: 10047488 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\Qt6Core.dll', fileVersion: 6.9.3.0
+C:\WINDOWS\System32\OLEAUT32.dll:OLEAUT32.dll (00007FFF09E90000), size: 876544 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\OLEAUT32.dll', fileVersion: 6.2.26100.7309
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\tinyxml2.dll:tinyxml2.dll (00007FFED6450000), size: 114688 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\tinyxml2.dll'
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\miniz.dll:miniz.dll (00007FFED1860000), size: 110592 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\miniz.dll'
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\FreeImage.dll:FreeImage.dll (00007FFE6D940000), size: 978944 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\FreeImage.dll', fileVersion: 3.18.0.0
+C:\WINDOWS\SYSTEM32\MSVCP140.dll:MSVCP140.dll (00007FFEE2870000), size: 561152 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\MSVCP140.dll', fileVersion: 14.44.35211.0
+C:\WINDOWS\SYSTEM32\VERSION.dll:VERSION.dll (00007FFF000F0000), size: 45056 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\VERSION.dll', fileVersion: 6.2.26100.1150
+C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll:VCRUNTIME140.dll (00007FFEE2C70000), size: 122880 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll', fileVersion: 14.44.35211.0
+C:\WINDOWS\SYSTEM32\VCRUNTIME140_1.dll:VCRUNTIME140_1.dll (00007FFEE2FE0000), size: 49152 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\VCRUNTIME140_1.dll', fileVersion: 14.44.35211.0
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\Qt6OpenGL.dll:Qt6OpenGL.dll (00007FFE5A320000), size: 1974272 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\Qt6OpenGL.dll', fileVersion: 6.9.3.0
+C:\WINDOWS\SYSTEM32\GLU32.dll:GLU32.dll (00007FFEA7440000), size: 184320 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\GLU32.dll', fileVersion: 6.2.26100.1150
+C:\WINDOWS\SYSTEM32\dwmapi.dll:dwmapi.dll (00007FFF04640000), size: 196608 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\dwmapi.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\UxTheme.dll:UxTheme.dll (00007FFF041B0000), size: 700416 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\UxTheme.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\DNSAPI.dll:DNSAPI.dll (00007FFF05AC0000), size: 1228800 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\DNSAPI.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL:IPHLPAPI.DLL (00007FFF05A30000), size: 212992 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\Secur32.dll:Secur32.dll (00007FFF03EE0000), size: 53248 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\Secur32.dll', fileVersion: 6.2.26100.1
+C:\WINDOWS\SYSTEM32\WINHTTP.dll:WINHTTP.dll (00007FFEFEE70000), size: 1212416 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\WINHTTP.dll', fileVersion: 6.2.26100.7462
+C:\WINDOWS\SYSTEM32\MSVCP140_1.dll:MSVCP140_1.dll (00007FFEF9BA0000), size: 36864 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\MSVCP140_1.dll', fileVersion: 14.44.35211.0
+C:\WINDOWS\SYSTEM32\MPR.dll:MPR.dll (00007FFEE86D0000), size: 135168 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\MPR.dll', fileVersion: 6.2.26100.7019
+C:\WINDOWS\SYSTEM32\USERENV.dll:USERENV.dll (00007FFF066A0000), size: 176128 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\USERENV.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\AUTHZ.dll:AUTHZ.dll (00007FFF05BF0000), size: 327680 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\AUTHZ.dll', fileVersion: 6.2.26100.7019
+C:\WINDOWS\SYSTEM32\NETAPI32.dll:NETAPI32.dll (00007FFEE6630000), size: 106496 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\NETAPI32.dll', fileVersion: 6.2.26100.7019
+C:\WINDOWS\SYSTEM32\WINMM.dll:WINMM.dll (00007FFEFA000000), size: 217088 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\WINMM.dll', fileVersion: 6.2.26100.7309
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\glew32.dll:glew32.dll (00007FFE6DD10000), size: 544768 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\glew32.dll', fileVersion: 2.2.0.0
+C:\WINDOWS\SYSTEM32\d3d11.dll:d3d11.dll (00007FFF03260000), size: 2498560 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\d3d11.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\dxgi.dll:dxgi.dll (00007FFF043E0000), size: 1290240 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\dxgi.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\d3d12.dll:d3d12.dll (00007FFEBBC10000), size: 143360 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\d3d12.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\DWrite.dll:DWrite.dll (00007FFF029B0000), size: 2519040 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\DWrite.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\MSVCP140_2.dll:MSVCP140_2.dll (00007FFED0F90000), size: 278528 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\MSVCP140_2.dll', fileVersion: 14.44.35211.0
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\freetype.dll:freetype.dll (00007FFE6D690000), size: 708608 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\freetype.dll', fileVersion: 2.13.3.0
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\zlib1.dll:zlib1.dll (00007FFED1840000), size: 106496 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\zlib1.dll', fileVersion: 1.3.1.0
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\assimp-vc143-mt.dll:assimp-vc143-mt.dll (00007FFE4F250000), size: 5496832 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\assimp-vc143-mt.dll', fileVersion: 6.0.2.0
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\jpeg8.dll:jpeg8.dll (00007FFE6D5E0000), size: 704512 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\jpeg8.dll', fileVersion: 8.3.2.0
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\tiff.dll:tiff.dll (00007FFEC7270000), size: 487424 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\tiff.dll', fileVersion: 4.7.1.0
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\libwebpmux.dll:libwebpmux.dll (00007FFEEF010000), size: 57344 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\libwebpmux.dll'
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\libpng16.dll:libpng16.dll (00007FFECFD80000), size: 217088 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\libpng16.dll'
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\openjp2.dll:openjp2.dll (00007FFEC35F0000), size: 380928 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\openjp2.dll'
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\libwebp.dll:libwebp.dll (00007FFE90580000), size: 393216 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\libwebp.dll'
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\raw.dll:raw.dll (00007FFE5A1C0000), size: 1417216 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\raw.dll'
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\OpenEXR-3_3.dll:OpenEXR-3_3.dll (00007FFE59920000), size: 864256 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\OpenEXR-3_3.dll'
+C:\WINDOWS\SYSTEM32\powrprof.dll:powrprof.dll (00007FFF07130000), size: 385024 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\powrprof.dll', fileVersion: 6.2.26100.3912
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\Imath-3_2.dll:Imath-3_2.dll (00007FFE90290000), size: 356352 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\Imath-3_2.dll'
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\libwebpdecoder.dll:libwebpdecoder.dll (00007FFECFA70000), size: 180224 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\libwebpdecoder.dll'
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\Iex-3_3.dll:Iex-3_3.dll (00007FFEC3300000), size: 311296 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\Iex-3_3.dll'
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\bz2.dll:bz2.dll (00007FFED1820000), size: 98304 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\bz2.dll'
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\brotlidec.dll:brotlidec.dll (00007FFED0F70000), size: 69632 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\brotlidec.dll'
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\poly2tri.dll:poly2tri.dll (00007FFEEEEE0000), size: 65536 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\poly2tri.dll'
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\minizip.dll:minizip.dll (00007FFECFA50000), size: 69632 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\minizip.dll'
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\pugixml.dll:pugixml.dll (00007FFECA110000), size: 217088 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\pugixml.dll', fileVersion: 1.15.0.0
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\liblzma.dll:liblzma.dll (00007FFEC6E30000), size: 204800 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\liblzma.dll', fileVersion: 5.8.1.0
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\libsharpyuv.dll:libsharpyuv.dll (00007FFEEEC20000), size: 49152 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\libsharpyuv.dll'
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\lcms2-2.dll:lcms2-2.dll (00007FFE8E5C0000), size: 389120 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\lcms2-2.dll', fileVersion: 2.17.0.0
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\IlmThread-3_3.dll:IlmThread-3_3.dll (00007FFEEEAC0000), size: 61440 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\IlmThread-3_3.dll'
+C:\WINDOWS\SYSTEM32\dxcore.dll:dxcore.dll (00007FFF04290000), size: 278528 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\dxcore.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\SSPICLI.DLL:SSPICLI.DLL (00007FFF06300000), size: 299008 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\SSPICLI.DLL', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\CRYPTBASE.DLL:CRYPTBASE.DLL (00007FFF068D0000), size: 49152 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\CRYPTBASE.DLL', fileVersion: 6.2.26100.7019
+C:\WINDOWS\SYSTEM32\NETUTILS.DLL:NETUTILS.DLL (00007FFF05A20000), size: 53248 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\NETUTILS.DLL', fileVersion: 6.2.26100.1882
+C:\WINDOWS\SYSTEM32\SRVCLI.DLL:SRVCLI.DLL (00007FFEE6FF0000), size: 167936 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\SRVCLI.DLL', fileVersion: 6.2.26100.1150
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\OpenEXRCore-3_3.dll:OpenEXRCore-3_3.dll (00007FFE59850000), size: 835584 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\OpenEXRCore-3_3.dll'
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\brotlicommon.dll:brotlicommon.dll (00007FFEC3240000), size: 159744 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\brotlicommon.dll'
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\deflate.dll:deflate.dll (00007FFEC35D0000), size: 106496 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\deflate.dll'
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\kubazip.dll:kubazip.dll (00007FFEC31F0000), size: 98304 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\kubazip.dll'
+C:\WINDOWS\SYSTEM32\UMPDC.dll:UMPDC.dll (00007FFF07110000), size: 81920 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\UMPDC.dll', fileVersion: 6.2.26100.7019
+C:\WINDOWS\System32\IMM32.DLL:IMM32.DLL (00007FFF08070000), size: 200704 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\IMM32.DLL', fileVersion: 6.2.26100.7309
+C:\WINDOWS\System32\bcryptPrimitives.dll:bcryptPrimitives.dll (00007FFF07500000), size: 675840 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\bcryptPrimitives.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\System32\NSI.dll:NSI.dll (00007FFF080B0000), size: 40960 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\NSI.dll', fileVersion: 6.2.26100.7019
+C:\WINDOWS\SYSTEM32\windows.storage.dll:windows.storage.dll (00007FFF04EB0000), size: 8773632 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\windows.storage.dll', fileVersion: 6.2.26100.7462
+C:\WINDOWS\System32\SHCORE.dll:SHCORE.dll (00007FFF08B00000), size: 1003520 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\SHCORE.dll', fileVersion: 6.2.26100.7462
+C:\WINDOWS\System32\shlwapi.dll:shlwapi.dll (00007FFF097E0000), size: 417792 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\shlwapi.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\profapi.dll:profapi.dll (00007FFF071F0000), size: 167936 (result: 0), SymType: '-nosymbols-', PDB: 'C:\WINDOWS\SYSTEM32\profapi.dll', fileVersion: 6.2.26100.7309
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\platforms\qwindows.dll:qwindows.dll (00007FFE57C80000), size: 942080 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\platforms\qwindows.dll', fileVersion: 6.9.3.0
+C:\WINDOWS\System32\SETUPAPI.dll:SETUPAPI.dll (00007FFF08FC0000), size: 4759552 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\SETUPAPI.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\System32\COMDLG32.dll:COMDLG32.dll (00007FFF09AC0000), size: 983040 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\COMDLG32.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\WTSAPI32.dll:WTSAPI32.dll (00007FFF03EF0000), size: 167936 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\WTSAPI32.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\System32\CRYPT32.dll:CRYPT32.dll (00007FFF075B0000), size: 1536000 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\CRYPT32.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.26100.7309_none_87ef0e2f7a2c9771\COMCTL32.dll:COMCTL32.dll (00007FFEEA4B0000), size: 737280 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.26100.7309_none_87ef0e2f7a2c9771\COMCTL32.dll', fileVersion: 5.82.26100.7309
+C:\WINDOWS\SYSTEM32\UIAutomationCore.DLL:UIAutomationCore.DLL (00007FFED4840000), size: 4333568 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\UIAutomationCore.DLL', fileVersion: 7.2.26100.7309
+C:\WINDOWS\SYSTEM32\d3d9.dll:d3d9.dll (00007FFED80D0000), size: 1781760 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\d3d9.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\kernel.appcore.dll:kernel.appcore.dll (00007FFF06050000), size: 110592 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\kernel.appcore.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\System32\MSCTF.dll:MSCTF.dll (00007FFF08110000), size: 1433600 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\MSCTF.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\DEVOBJ.dll:DEVOBJ.dll (00007FFF06E10000), size: 184320 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\DEVOBJ.dll', fileVersion: 6.2.26100.1150
+C:\WINDOWS\SYSTEM32\cfgmgr32.dll:cfgmgr32.dll (00007FFF06E40000), size: 356352 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\cfgmgr32.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\System32\WINTRUST.dll:WINTRUST.dll (00007FFF078A0000), size: 524288 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\WINTRUST.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\MSASN1.dll:MSASN1.dll (00007FFF069E0000), size: 77824 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\MSASN1.dll', fileVersion: 6.2.26100.7019
+C:\WINDOWS\System32\clbcatq.dll:clbcatq.dll (00007FFF08C00000), size: 720896 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\clbcatq.dll', fileVersion: 2001.12.10941.16384
+C:\Windows\System32\Windows.UI.dll:Windows.UI.dll (00007FFEEC240000), size: 1384448 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\Windows.UI.dll', fileVersion: 6.2.26100.7309
+C:\Windows\System32\Windows.UI.Immersive.dll:Windows.UI.Immersive.dll (00007FFED28E0000), size: 1376256 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\Windows.UI.Immersive.dll', fileVersion: 6.2.26100.7462
+C:\WINDOWS\SYSTEM32\cryptnet.dll:cryptnet.dll (00007FFEFFF40000), size: 241664 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\cryptnet.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\System32\imagehlp.dll:imagehlp.dll (00007FFF09DC0000), size: 131072 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\imagehlp.dll', fileVersion: 6.2.26100.4202
+C:\WINDOWS\SYSTEM32\CRYPTSP.dll:CRYPTSP.dll (00007FFF068B0000), size: 110592 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\CRYPTSP.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\system32\rsaenh.dll:rsaenh.dll (00007FFF05FB0000), size: 237568 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\rsaenh.dll', fileVersion: 6.2.26100.7019
+C:\WINDOWS\SYSTEM32\bcrypt.dll:bcrypt.dll (00007FFF071C0000), size: 172032 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\bcrypt.dll', fileVersion: 6.2.26100.7019
+C:\WINDOWS\SYSTEM32\directxdatabasehelper.dll:directxdatabasehelper.dll (00007FFF01B30000), size: 405504 (result: 0), SymType: '-nosymbols-', PDB: 'C:\WINDOWS\SYSTEM32\directxdatabasehelper.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\windows.staterepositorycore.dll:windows.staterepositorycore.dll (00007FFEEF3B0000), size: 106496 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\windows.staterepositorycore.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\System32\DriverStore\FileRepository\nvlti.inf_amd64_6384267f46f550b9\nvoglv64.dll:nvoglv64.dll (00007FFE4AF60000), size: 43331584 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\DriverStore\FileRepository\nvlti.inf_amd64_6384267f46f550b9\nvoglv64.dll', fileVersion: 32.0.15.8142
+C:\WINDOWS\SYSTEM32\wldp.dll:wldp.dll (00007FFF06970000), size: 413696 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\wldp.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\drvstore.dll:drvstore.dll (00007FFEFFA80000), size: 1552384 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\drvstore.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\ntmarta.dll:ntmarta.dll (00007FFF06170000), size: 221184 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\ntmarta.dll', fileVersion: 6.2.26100.7019
+C:\WINDOWS\System32\DriverStore\FileRepository\nvlti.inf_amd64_6384267f46f550b9\nvgpucomp64.dll:nvgpucomp64.dll (00007FFEFACB0000), size: 64569344 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\DriverStore\FileRepository\nvlti.inf_amd64_6384267f46f550b9\nvgpucomp64.dll', fileVersion: 32.0.15.8142
+C:\WINDOWS\system32\nvspcap64.dll:nvspcap64.dll (00007FFED1C40000), size: 1339392 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\nvspcap64.dll', fileVersion: 11.0.5.266
+C:\WINDOWS\SYSTEM32\WINSTA.dll:WINSTA.dll (00007FFF06ED0000), size: 409600 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\WINSTA.dll', fileVersion: 6.2.26100.7309
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\styles\qmodernwindowsstyle.dll:qmodernwindowsstyle.dll (00007FFED5A30000), size: 225280 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\styles\qmodernwindowsstyle.dll', fileVersion: 6.9.3.0
+C:\WINDOWS\system32\dataexchange.dll:dataexchange.dll (00007FFEDA420000), size: 368640 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\dataexchange.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\system32\twinapi.appcore.dll:twinapi.appcore.dll (00007FFEF97E0000), size: 2375680 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\twinapi.appcore.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\textinputframework.dll:textinputframework.dll (00007FFEBF230000), size: 1343488 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\textinputframework.dll', fileVersion: 6.2.26100.7309
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\tls\qcertonlybackend.dll:qcertonlybackend.dll (00007FFEC2EE0000), size: 110592 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\tls\qcertonlybackend.dll', fileVersion: 6.9.3.0
+C:\Users\legob\OneDrive\Desktop\TrenchBroom\tls\qschannelbackend.dll:qschannelbackend.dll (00007FFEB34E0000), size: 266240 (result: 0), SymType: '-exported-', PDB: 'C:\Users\legob\OneDrive\Desktop\TrenchBroom\tls\qschannelbackend.dll', fileVersion: 6.9.3.0
+C:\WINDOWS\SYSTEM32\ncrypt.dll:ncrypt.dll (00007FFF06AD0000), size: 196608 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\ncrypt.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\NTASN1.dll:NTASN1.dll (00007FFF06A80000), size: 258048 (result: 0), SymType: '-nosymbols-', PDB: 'C:\WINDOWS\SYSTEM32\NTASN1.dll', fileVersion: 6.2.26100.1882
+C:\WINDOWS\SYSTEM32\dhcpcsvc6.DLL:dhcpcsvc6.DLL (00007FFEFEBD0000), size: 122880 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\dhcpcsvc6.DLL', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\dhcpcsvc.DLL:dhcpcsvc.DLL (00007FFEFF1B0000), size: 143360 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\dhcpcsvc.DLL', fileVersion: 6.2.26100.7309
+C:\WINDOWS\System32\netprofm.dll:netprofm.dll (00007FFF019C0000), size: 458752 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\netprofm.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\system32\mswsock.dll:mswsock.dll (00007FFF065F0000), size: 438272 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\mswsock.dll', fileVersion: 6.2.26100.7309
+C:\Windows\System32\rasadhlp.dll:rasadhlp.dll (00007FFEFF280000), size: 45056 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\rasadhlp.dll', fileVersion: 6.2.26100.7171
+C:\WINDOWS\System32\fwpuclnt.dll:fwpuclnt.dll (00007FFEFA720000), size: 548864 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\fwpuclnt.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\system32\schannel.DLL:schannel.DLL (00007FFF05E80000), size: 802816 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\schannel.DLL', fileVersion: 6.2.26100.7309
+C:\WINDOWS\System32\npmproxy.dll:npmproxy.dll (00007FFEF9A30000), size: 102400 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\System32\npmproxy.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\system32\ncryptsslp.dll:ncryptsslp.dll (00007FFEDB050000), size: 270336 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\system32\ncryptsslp.dll', fileVersion: 6.2.26100.5074
+C:\WINDOWS\SYSTEM32\WINNSI.DLL:WINNSI.DLL (00007FFF01EA0000), size: 61440 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\WINNSI.DLL', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\CoreMessaging.dll:CoreMessaging.dll (00007FFF03C30000), size: 1208320 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\CoreMessaging.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\CoreUIComponents.dll:CoreUIComponents.dll (00007FFF009D0000), size: 3022848 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\CoreUIComponents.dll', fileVersion: 6.2.26100.7462
+C:\WINDOWS\SYSTEM32\edputil.dll:edputil.dll (00007FFEBE090000), size: 167936 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\edputil.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.7309_none_3e05feeae336a044\comctl32.dll:comctl32.dll (00007FFEEB790000), size: 2699264 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.7309_none_3e05feeae336a044\comctl32.dll', fileVersion: 6.10.26100.7309
+C:\WINDOWS\SYSTEM32\WindowsCodecs.dll:WindowsCodecs.dll (00007FFF02750000), size: 2293760 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\WindowsCodecs.dll', fileVersion: 6.2.26100.7309
+C:\WINDOWS\SYSTEM32\dbghelp.dll:dbghelp.dll (00007FFF04A70000), size: 2367488 (result: 0), SymType: '-exported-', PDB: 'C:\WINDOWS\SYSTEM32\dbghelp.dll', fileVersion: 6.2.26100.5074
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFF079F782A)
+00007FFF079F782A (KERNELBASE): (filename not available): RaiseException
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFEE2C752C7)
+00007FFEE2C752C7 (VCRUNTIME140): (filename not available): CxxThrowException
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFE4F7AACDF)
+00007FFE4F7AACDF (Qt6Core): (filename not available): qBadAlloc
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFE4F90618B)
+00007FFE4F90618B (Qt6Core): (filename not available): QString::QString
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFE4F920D8D)
+00007FFE4F920D8D (Qt6Core): (filename not available): QUtf32::convertToUnicode
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFE4F90FECA)
+00007FFE4F90FECA (Qt6Core): (filename not available): QString::fromUtf8
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFE4F794941)
+00007FFE4F794941 (Qt6Core): (filename not available): QString::fromStdString
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FF6C77A565E)
+00007FF6C77A565E (TrenchBroom): (filename not available): tb::ui::EntityBrowserView::dndData
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FF6C770FC85)
+00007FF6C770FC85 (TrenchBroom): (filename not available): tb::ui::CellView::mouseMoveEvent
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFE52317796)
+00007FFE52317796 (Qt6Widgets): (filename not available): QWidget::event
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFE522D3B01)
+00007FFE522D3B01 (Qt6Widgets): (filename not available): QApplicationPrivate::notify_helper
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFE522D1C88)
+00007FFE522D1C88 (Qt6Widgets): (filename not available): QApplication::notify
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FF6C76A251A)
+00007FF6C76A251A (TrenchBroom): (filename not available): tb::ui::TrenchBroomApp::notify
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFE4F838331)
+00007FFE4F838331 (Qt6Core): (filename not available): QCoreApplication::notifyInternal2
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFE522D6646)
+00007FFE522D6646 (Qt6Widgets): (filename not available): QApplicationPrivate::sendMouseEvent
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFE5233E11D)
+00007FFE5233E11D (Qt6Widgets): (filename not available): QWidgetRepaintManager::updateStaticContentsSize
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFE5233B86E)
+00007FFE5233B86E (Qt6Widgets): (filename not available): QWidgetRepaintManager::updateStaticContentsSize
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFE522D3B01)
+00007FFE522D3B01 (Qt6Widgets): (filename not available): QApplicationPrivate::notify_helper
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFE522D2BF9)
+00007FFE522D2BF9 (Qt6Widgets): (filename not available): QApplication::notify
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FF6C76A251A)
+00007FF6C76A251A (TrenchBroom): (filename not available): tb::ui::TrenchBroomApp::notify
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFE4F838331)
+00007FFE4F838331 (Qt6Core): (filename not available): QCoreApplication::notifyInternal2
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFE51A3B8F4)
+00007FFE51A3B8F4 (Qt6Gui): (filename not available): QGuiApplicationPrivate::processMouseEvent
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFE51A9A45B)
+00007FFE51A9A45B (Qt6Gui): (filename not available): QWindowSystemInterface::sendWindowSystemEvents
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFE4F9CE460)
+00007FFE4F9CE460 (Qt6Core): (filename not available): QEventDispatcherWin32::processEvents
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFE51D57B29)
+00007FFE51D57B29 (Qt6Gui): (filename not available): QWindowsGuiEventDispatcher::processEvents
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFE4F83EF84)
+00007FFE4F83EF84 (Qt6Core): (filename not available): QEventLoop::exec
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFE4F8369CA)
+00007FFE4F8369CA (Qt6Core): (filename not available): QCoreApplication::exec
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FF6C796A5A9)
+00007FF6C796A5A9 (TrenchBroom): (filename not available): main
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FF6C79BE2E0)
+00007FF6C79BE2E0 (TrenchBroom): (filename not available): qtEntryPoint
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FF6C79BD3DA)
+00007FF6C79BD3DA (TrenchBroom): (filename not available): __scrt_common_main_seh
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFF08F1E8D7)
+00007FFF08F1E8D7 (KERNEL32): (filename not available): BaseThreadInitThunk
+ERROR: SymGetLineFromAddr64, GetLastError: 487 (Address: 00007FFF0A20C53C)
+00007FFF0A20C53C (ntdll): (filename not available): RtlUserThreadStart
+
