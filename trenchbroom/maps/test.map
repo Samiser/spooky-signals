@@ -3580,7 +3580,7 @@
 // entity 4
 {
 "classname" "ButtonPad"
-"origin" "44 208 -76"
+"origin" "44 208 -64"
 "angle" "90"
 }
 // entity 5
