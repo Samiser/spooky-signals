@@ -1,4 +1,4 @@
-[gd_scene load_steps=431 format=4 uid="uid://bbkkxfiknq0dd"]
+[gd_scene load_steps=433 format=4 uid="uid://bbkkxfiknq0dd"]
 
 [ext_resource type="Script" uid="uid://cwu5cf7a0awcd" path="res://addons/func_godot/src/map/func_godot_map.gd" id="1_fuxfd"]
 [ext_resource type="Resource" uid="uid://gg6etwqjsbcb" path="res://trenchbroom/spooky-signals_map_settings.tres" id="2_hd67a"]
@@ -1701,6 +1701,46 @@ points = PackedVector3Array(20.5, 3, 5, 20.5, 2.5, 5, 20, 3, 5, 20, 2.5, 5, 20.5
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_xomuo"]
 points = PackedVector3Array(20.5, 3, 2.25, 20.5, -0.25, 2.25, 20, 3, 2.25, 20, -0.25, 2.25, 20.5, 3, -0.5, 20.5, -0.25, -0.5, 20, 3, -0.5, 20, -0.25, -0.5)
 
+[sub_resource type="Environment" id="Environment_0w2em"]
+background_mode = 1
+ambient_light_source = 2
+ambient_light_color = Color(0.17641911, 0.17641908, 0.17641908, 1)
+tonemap_mode = 2
+tonemap_white = 1.42
+ssao_radius = 0.8
+ssao_intensity = 4.0
+ssil_intensity = 6.0
+ssil_sharpness = 0.0
+ssil_normal_rejection = 0.0
+sdfgi_use_occlusion = true
+glow_enabled = true
+glow_levels/5 = 0.0
+glow_normalized = true
+glow_intensity = 1.0
+glow_bloom = 0.6
+glow_blend_mode = 0
+glow_hdr_threshold = 0.4
+glow_hdr_luminance_cap = 0.1
+fog_light_color = Color(0, 0, 0, 1)
+fog_density = 0.0616
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.15
+volumetric_fog_albedo = Color(0.8474744, 0.84747446, 0.84747446, 1)
+volumetric_fog_ambient_inject = 0.43
+volumetric_fog_sky_affect = 0.0
+adjustment_enabled = true
+adjustment_contrast = 1.01
+adjustment_saturation = 1.2
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_0w2em"]
+auto_exposure_enabled = true
+auto_exposure_scale = 0.01
+dof_blur_far_distance = 2.0
+dof_blur_far_transition = 12.0
+dof_blur_amount = 0.5
+auto_exposure_min_sensitivity = 10.0
+auto_exposure_max_sensitivity = 600.0
+
 [node name="TrenchTestMap" type="Node3D"]
 
 [node name="FuncGodotMap" type="Node3D" parent="."]
@@ -2859,9 +2899,9 @@ shape = SubResource("ConvexPolygonShape3D_xomuo")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.5640042, 0.11582041, 0.14757097)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(0.6997008, -0.41889518, 0.57874495, 0.6786242, 0.13643533, -0.72170264, 0.22335649, 0.8977262, 0.3797363, 10.957344, -1.8839915, 0)
-light_color = Color(0.72468954, 0.093802564, 0.15811554, 1)
-light_energy = 2.271
+transform = Transform3D(0.6997008, -0.41889518, 0.57874495, 0.6786242, 0.13643533, -0.72170264, 0.22335649, 0.8977262, 0.3797363, 10.338879, -2.103079, 0.220451)
+light_color = Color(0.82907397, 0.12294825, 0.18872464, 1)
+light_energy = 4.0
 shadow_enabled = true
 omni_range = 14.0
 omni_attenuation = 0.745
@@ -2890,3 +2930,7 @@ unit_size = 9.0
 autoplay = true
 max_distance = 12.0
 panning_strength = 0.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0w2em")
+camera_attributes = SubResource("CameraAttributesPractical_0w2em")
