@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://nxlgchgo8yj2" path="res://ui/screens/radar_ui/radar_ui.tscn" id="1_aie0j"]
 [ext_resource type="Script" uid="uid://dwmiwrjrh8fm3" path="res://entities/radar/radar_interface/radar_interface.gd" id="1_vpam2"]
-[ext_resource type="AudioStream" uid="uid://bkm2npneuc34b" path="res://audio/sfx/radar_ping.wav" id="3_2sj8d"]
+[ext_resource type="AudioStream" uid="uid://bkm2npneuc34b" path="res://audio/sfx/old_sfx/radar_ping.wav" id="3_2sj8d"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_jxnl1"]
 viewport_path = NodePath("SubViewport")

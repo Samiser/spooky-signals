@@ -3118,7 +3118,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 19.6
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.625, -0.40625, 2.625)
 collision_mask = 0
 script = ExtResource("47_3qoln")
-func_godot_properties = Dictionary[String, Variant]({
+func_godot_properties = {
 "_cull_interior_faces": false,
 "_phong": 0,
 "_phong_angle": 89.0,
@@ -3127,7 +3127,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "classname": "func_moveable",
 "move_offset": Vector3(0, -3, 0),
 "move_rate": 3.0
-})
+}
 
 [node name="entity_7_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_7_func_moveable"]
 mesh = SubResource("ArrayMesh_26pkf")
@@ -3139,7 +3139,7 @@ shape = SubResource("ConcavePolygonShape3D_f2x7w")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.96875, 1, 1.0625)
 collision_mask = 0
 script = ExtResource("50_j3oi3")
-func_godot_properties = Dictionary[String, Variant]({
+func_godot_properties = {
 "_cull_interior_faces": false,
 "_phong": 0,
 "_phong_angle": 89.0,
@@ -3148,7 +3148,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "classname": "func_rotator",
 "rotate_dir": Vector3i(0, 0, 1),
 "rotate_speed": 800.0
-})
+}
 
 [node name="entity_8_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_8_func_rotator"]
 mesh = SubResource("ArrayMesh_jv0ia")
@@ -3160,7 +3160,7 @@ shape = SubResource("ConcavePolygonShape3D_30yhr")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.390625, -3.375, 5.28125)
 collision_mask = 0
 script = ExtResource("50_j3oi3")
-func_godot_properties = Dictionary[String, Variant]({
+func_godot_properties = {
 "_cull_interior_faces": false,
 "_phong": 0,
 "_phong_angle": 89.0,
@@ -3169,7 +3169,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "classname": "func_rotator",
 "rotate_dir": Vector3i(0, 0, 1),
 "rotate_speed": 600.0
-})
+}
 
 [node name="entity_9_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_9_func_rotator"]
 mesh = SubResource("ArrayMesh_81vj4")

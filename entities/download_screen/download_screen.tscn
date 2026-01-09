@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b1ng4tw57c8hy" path="res://meshes/tv/textures/tv_initialShadingGroup_MaskMap.png" id="4_ekwcc"]
 [ext_resource type="Texture2D" uid="uid://dp5tdgyfqaamb" path="res://meshes/tv/textures/tv_initialShadingGroup_Normal.png" id="5_oeo00"]
 [ext_resource type="ArrayMesh" uid="uid://bayndwgd2ged0" path="res://meshes/tv/tv.obj" id="6_ja1yb"]
-[ext_resource type="AudioStream" uid="uid://kiesfpub4mqv" path="res://audio/sfx/downloading.ogg" id="8_oeo00"]
+[ext_resource type="AudioStream" uid="uid://kiesfpub4mqv" path="res://audio/sfx/old_sfx/downloading.ogg" id="8_oeo00"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nl8np"]
 albedo_texture = ExtResource("3_lsv7p")

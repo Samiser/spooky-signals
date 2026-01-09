@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://tidipi0jy80q" path="res://ui/options_menu/options_menu.tscn" id="4_6mijq"]
 [ext_resource type="AudioStream" uid="uid://bjoexkn76wpnn" path="res://audio/music/main_menu.ogg" id="4_i5wg5"]
 [ext_resource type="AudioStream" uid="uid://dt3tfdbffpppr" path="res://audio/music/main_menu_cooked.ogg" id="5_3c04x"]
-[ext_resource type="AudioStream" uid="uid://butj5f5bg1gkd" path="res://audio/sfx/static.ogg" id="7_u184e"]
+[ext_resource type="AudioStream" uid="uid://butj5f5bg1gkd" path="res://audio/sfx/old_sfx/static.ogg" id="7_u184e"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_i5wg5"]
 shader = ExtResource("2_omy8q")
@@ -25,7 +25,7 @@ shader_parameter/distort_intensity = 0.01200000057
 shader_parameter/noise_opacity = 0.310000014725
 shader_parameter/noise_speed = 5.01
 shader_parameter/static_noise_intensity = 0.06
-shader_parameter/aberration = 0.015000048212499895
+shader_parameter/aberration = 0.01500004821249989
 shader_parameter/brightness = 1.4
 shader_parameter/discolor = true
 shader_parameter/warp_amount = 1.0

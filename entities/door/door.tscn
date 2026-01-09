@@ -9,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://cj7jjrbx0jobq" path="res://entities/door/frame_textures/door_frame_initialShadingGroup_MaskMap.png" id="6_p4e65"]
 [ext_resource type="Texture2D" uid="uid://1jpg7fpuf2qj" path="res://entities/door/frame_textures/door_frame_initialShadingGroup_Normal.png" id="7_605cj"]
 [ext_resource type="ArrayMesh" uid="uid://bamv6jel3w0ow" path="res://entities/door/door_frame.obj" id="8_6wd7r"]
-[ext_resource type="AudioStream" uid="uid://do1qlqoo3ktst" path="res://audio/sfx/door_open.ogg" id="10_4ul54"]
-[ext_resource type="AudioStream" uid="uid://busule5nqdybu" path="res://audio/sfx/door_close.ogg" id="11_363kk"]
+[ext_resource type="AudioStream" uid="uid://do1qlqoo3ktst" path="res://audio/sfx/old_sfx/door_open.ogg" id="10_4ul54"]
+[ext_resource type="AudioStream" uid="uid://busule5nqdybu" path="res://audio/sfx/old_sfx/door_close.ogg" id="11_363kk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6agv2"]
 albedo_texture = ExtResource("1_mjxdi")

@@ -19,7 +19,7 @@ func _ready() -> void:
 	
 	audio_source = AudioStreamPlayer3D.new()
 	add_child(audio_source)
-	audio_source.stream = load("res://audio/music/main_menu.ogg")
+	audio_source.stream = load("res://audio/sfx/elevator.wav")
 	audio_source.max_distance = 10.0
 	audio_source.unit_size = 4.0
 	

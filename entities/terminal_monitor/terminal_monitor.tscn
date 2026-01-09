@@ -5,8 +5,8 @@
 [ext_resource type="ArrayMesh" uid="uid://ds1us61ggs5ni" path="res://meshes/terminal/terminal.obj" id="2_lxx3f"]
 [ext_resource type="PackedScene" uid="uid://ct5ty1nydcveo" path="res://entities/screen/screen.tscn" id="3_jp8dh"]
 [ext_resource type="PackedScene" uid="uid://dp54nqbw0enmy" path="res://ui/screens/terminal/terminal.tscn" id="4_8iapq"]
-[ext_resource type="AudioStream" uid="uid://dbge0mtwhkaie" path="res://audio/sfx/terminal_correct.ogg" id="6_t4vgw"]
-[ext_resource type="AudioStream" uid="uid://dkg4jnv81m73n" path="res://audio/sfx/terminal_incorrect.ogg" id="7_lj6k8"]
+[ext_resource type="AudioStream" uid="uid://dbge0mtwhkaie" path="res://audio/sfx/old_sfx/terminal_correct.ogg" id="6_t4vgw"]
+[ext_resource type="AudioStream" uid="uid://dkg4jnv81m73n" path="res://audio/sfx/old_sfx/terminal_incorrect.ogg" id="7_lj6k8"]
 
 [node name="TerminalMonitor" type="Node3D"]
 script = ExtResource("1_nux0n")

@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://c0eyo008u7c35" path="res://ui/screens/screen_theme.tres" id="1_5ekja"]
 [ext_resource type="Script" uid="uid://bsr8sq36s5heq" path="res://ui/game_end/game_end.gd" id="2_cr4ji"]
 [ext_resource type="Shader" uid="uid://c5lt755eg0llh" path="res://entities/screen/crt.gdshader" id="3_4s2xu"]
-[ext_resource type="AudioStream" uid="uid://butj5f5bg1gkd" path="res://audio/sfx/static.ogg" id="4_dvw7w"]
+[ext_resource type="AudioStream" uid="uid://butj5f5bg1gkd" path="res://audio/sfx/old_sfx/static.ogg" id="4_dvw7w"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_i5wg5"]
 shader = ExtResource("3_4s2xu")
