@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDSolidClass" load_steps=6 format=3 uid="uid://d3bjedvfegsnc"]
+
+[ext_resource type="Resource" uid="uid://nayxb8n7see2" path="res://addons/func_godot/fgd/phong_base.tres" id="1_ehebr"]
+[ext_resource type="Resource" uid="uid://doo4ly322b4jc" path="res://addons/func_godot/fgd/vertex_merge_distance_base.tres" id="2_cs8ux"]
+[ext_resource type="Resource" uid="uid://bcdsueg5pysfq" path="res://addons/func_godot/fgd/cull_interior_faces.tres" id="3_28ttc"]
+[ext_resource type="Script" uid="uid://5cow84q03m6a" path="res://addons/func_godot/src/fgd/func_godot_fgd_solid_class.gd" id="4_oipe6"]
+[ext_resource type="Script" uid="uid://bwix4rb64hlxc" path="res://trenchbroom/scripts/rotator.gd" id="5_ehebr"]
+
+[resource]
+script = ExtResource("4_oipe6")
+collision_shape_type = 2
+collision_mask = 0
+script_class = ExtResource("5_ehebr")
+classname = "func_rotator"
+description = "Dynamic collidable geometry. Builds a AnimatableBody3D with a MeshInstance3D and a single concave CollisionShape3D. Does not occlude other VisualInstance3D nodes."
+base_classes = Array[Resource]([ExtResource("1_ehebr"), ExtResource("2_cs8ux"), ExtResource("3_28ttc")])
+class_properties = Dictionary[String, Variant]({
+"rotate_dir": Vector3i(0, 0, 0),
+"rotate_speed": 0.0
+})
+meta_properties = Dictionary[String, Variant]({
+"color": Color(0.8, 0.8, 0.8, 1)
+})
+node_class = "AnimatableBody3D"
