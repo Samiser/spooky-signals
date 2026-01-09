@@ -19,9 +19,19 @@ func _ready() -> void:
 	
 	audio_source = AudioStreamPlayer3D.new()
 	add_child(audio_source)
-	audio_source.stream = load("res://audio/sfx/elevator.wav")
+	
+	match(func_godot_properties.get("sound_ID", 0)):
+		0:
+			audio_source.stream = load("res://audio/sfx/elevator.wav")
+		1:
+			audio_source.stream = load("res://audio/sfx/gears.wav")
+		_: # missing sound ID
+			audio_source.stream = load("res://audio/music/intro_music.ogg")
+	
 	audio_source.max_distance = 10.0
 	audio_source.unit_size = 4.0
+	audio_source.pitch_scale = move_time / 2
+	audio_source.volume_db = func_godot_properties.get("volume_db", 0.0);
 	
 func _process(delta: float) -> void:
 	if(!is_moving): return

@@ -17,7 +17,9 @@ base_classes = Array[Resource]([ExtResource("1_lnax8"), ExtResource("2_sb7rt"), 
 class_properties = Dictionary[String, Variant]({
 "move_offset": Vector3(0, 0, 0),
 "move_rate": 0.0,
-"signal_ID": ""
+"signal_ID": "",
+"sound_ID": 0,
+"volume_db": 0.0
 })
 meta_properties = Dictionary[String, Variant]({
 "color": Color(0.8, 0.8, 0.8, 1)
