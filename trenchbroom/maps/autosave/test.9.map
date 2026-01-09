@@ -3957,6 +3957,4 @@
 "size" "12"
 "colour" "255 255 255"
 "shadows" "1"
-"flicker_amount" "2"
-"fog_energy" "2"
 }

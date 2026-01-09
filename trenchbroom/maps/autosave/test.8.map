@@ -3933,30 +3933,17 @@
 // entity 13
 {
 "classname" "point_light"
-"origin" "-4 0 56"
-"energy" ".5"
-"size" "20"
-"colour" "255 255 255"
+"origin" "-4 0 68"
+"energy" "2.0"
+"size" "16"
 }
 // entity 14
 {
 "classname" "point_light"
-"origin" "-16 308 -48"
+"origin" "-16 308 -44"
 "energy" "2.0"
 "size" "16"
 "colour" "255 0 0"
-"flicker_amount" "0.6"
+"flicker_amount" "0"
 "shadows" "1"
-"fog_energy" "4"
-}
-// entity 15
-{
-"classname" "point_light"
-"origin" "-200 496 -48"
-"energy" ".5"
-"size" "12"
-"colour" "255 255 255"
-"shadows" "1"
-"flicker_amount" "2"
-"fog_energy" "2"
 }

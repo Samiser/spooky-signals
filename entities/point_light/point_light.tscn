@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://brbdph66t1hvc"]
+
+[ext_resource type="Script" uid="uid://bocqyvmwxxisg" path="res://entities/point_light/point_light.gd" id="1_1cwtj"]
+
+[node name="PointLight" type="OmniLight3D"]
+script = ExtResource("1_1cwtj")
