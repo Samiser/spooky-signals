@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dciyy2g2d7bv8"]
+
+[ext_resource type="Script" uid="uid://tk8tskbhk0jv" path="res://entities/3d_label/3d_label.gd" id="1_sjote"]
+
+[node name="3dLabel" type="Label3D"]
+visibility_range_end = 6.0
+visibility_range_end_margin = 1.0
+visibility_range_fade_mode = 1
+billboard = 1
+text = "debug text"
+script = ExtResource("1_sjote")

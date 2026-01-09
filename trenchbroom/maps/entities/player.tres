@@ -10,4 +10,8 @@ scene_file = ExtResource("2_p4rq3")
 apply_scale_on_map_build = false
 classname = "player"
 description = "the player spawn point"
+meta_properties = Dictionary[String, Variant]({
+"color": Color(0.8, 0.8, 0, 1),
+"size": AABB(-8, -8, -8, 8, 8, 32)
+})
 metadata/_custom_type_script = "uid://cxsqwtsqd8w33"

@@ -10,4 +10,11 @@ scene_file = ExtResource("2_wuc36")
 apply_scale_on_map_build = false
 classname = "ButtonPad"
 description = "Interactable button pad."
+class_properties = Dictionary[String, Variant]({
+"signal_ID": ""
+})
+meta_properties = Dictionary[String, Variant]({
+"color": Color(0.2913991, 0.5621904, 0, 1),
+"size": AABB(-8, -8, -8, 8, 8, 8)
+})
 metadata/_custom_type_script = "uid://cxsqwtsqd8w33"

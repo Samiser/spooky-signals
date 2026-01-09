@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDPointClass" load_steps=4 format=3 uid="uid://clqioc7j4ei4e"]
+
+[ext_resource type="Script" uid="uid://d1nwwgcrner8b" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class_display_descriptor.gd" id="1_geofd"]
+[ext_resource type="PackedScene" uid="uid://dciyy2g2d7bv8" path="res://entities/3d_label/3d_label.tscn" id="2_geofd"]
+[ext_resource type="Script" uid="uid://cxsqwtsqd8w33" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class.gd" id="3_5yxum"]
+
+[resource]
+script = ExtResource("3_5yxum")
+scene_file = ExtResource("2_geofd")
+apply_scale_on_map_build = false
+classname = "3d_label"
+description = "used to add debug labels to the map"
+class_properties = Dictionary[String, Variant]({
+"colour": Color(1, 1, 1, 1),
+"text": ""
+})
+meta_properties = Dictionary[String, Variant]({
+"color": Color(0.8, 0, 0.8, 1),
+"size": AABB(-2, -2, -2, 2, 2, 2)
+})
+metadata/_custom_type_script = "uid://cxsqwtsqd8w33"

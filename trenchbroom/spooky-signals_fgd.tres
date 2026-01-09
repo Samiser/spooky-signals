@@ -1,14 +1,15 @@
-[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=6 format=3 uid="uid://c3nj06cmura8b"]
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=7 format=3 uid="uid://c3nj06cmura8b"]
 
 [ext_resource type="Script" uid="uid://drlmgulwbjwqu" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="1_pilib"]
 [ext_resource type="Resource" uid="uid://crgpdahjaj" path="res://addons/func_godot/fgd/func_godot_fgd.tres" id="1_tjg7f"]
 [ext_resource type="Resource" uid="uid://vrb7bblj77ee" path="res://trenchbroom/maps/entities/player.tres" id="2_wyvka"]
 [ext_resource type="Resource" uid="uid://buy7616rnlbb1" path="res://trenchbroom/maps/entities/button_pad.tres" id="3_5kpoa"]
 [ext_resource type="Resource" uid="uid://ltqg2vdph4m7" path="res://trenchbroom/maps/entities/point_light.tres" id="4_3e5ja"]
+[ext_resource type="Resource" uid="uid://clqioc7j4ei4e" path="res://trenchbroom/maps/entities/3d_label.tres" id="5_ehsxs"]
 
 [resource]
 script = ExtResource("1_pilib")
 fgd_name = "spooky-signals"
 base_fgd_files = Array[Resource]([ExtResource("1_tjg7f")])
-entity_definitions = Array[Resource]([ExtResource("2_wyvka"), ExtResource("3_5kpoa"), ExtResource("4_3e5ja")])
+entity_definitions = Array[Resource]([ExtResource("2_wyvka"), ExtResource("3_5kpoa"), ExtResource("4_3e5ja"), ExtResource("5_ehsxs")])
 metadata/_custom_type_script = "uid://drlmgulwbjwqu"

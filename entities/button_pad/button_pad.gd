@@ -1,26 +1,13 @@
 extends StaticBody3D
-class_name ButtonPad
 
-@export var targets : Array[Node3D]
-@export var default_pad_text : String
-
+@export var func_godot_properties : Dictionary
 @onready var sound: AudioStreamPlayer3D = $Sound
+var signal_ID : String
 
 func _ready() -> void:
-	$Screen.current_screen.set_text(default_pad_text)
+	signal_ID = func_godot_properties.get("signal_ID", "0")
+	$Screen.current_screen.set_text(signal_ID)
 
 func interact(player: Player) -> void:
-	for target in targets:
-		if target.has_method("button_trigger"):
-			target.button_trigger(self)
-
-func set_display(text: String, origin: bool) -> void:
-	$Screen.current_screen.set_text(text)
 	sound.play()
-	
-	if !origin:
-		return
-	
-	for target in targets:
-		if target is ButtonPad:
-			target.set_display(text, false)
+	print(name + " sending signal: " + signal_ID)

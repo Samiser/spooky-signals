@@ -3996,6 +3996,5 @@
 {
 "classname" "3d_label"
 "origin" "-194 502 50"
-"text" "some blockade"
-"colour" "255 0 0"
+"text" "something blockade"
 }

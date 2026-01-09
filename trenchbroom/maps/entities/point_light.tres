@@ -18,4 +18,8 @@ class_properties = Dictionary[String, Variant]({
 "shadows": false,
 "size": 12.0
 })
+meta_properties = Dictionary[String, Variant]({
+"color": Color(0.8, 0.8, 0.8, 1),
+"size": AABB(-4, -4, -4, 4, 4, 4)
+})
 metadata/_custom_type_script = "uid://cxsqwtsqd8w33"
