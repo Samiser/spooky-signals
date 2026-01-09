@@ -1,4 +1,4 @@
-[gd_scene load_steps=491 format=4 uid="uid://bbkkxfiknq0dd"]
+[gd_scene load_steps=489 format=4 uid="uid://bbkkxfiknq0dd"]
 
 [ext_resource type="Script" uid="uid://cwu5cf7a0awcd" path="res://addons/func_godot/src/map/func_godot_map.gd" id="1_fuxfd"]
 [ext_resource type="Resource" uid="uid://gg6etwqjsbcb" path="res://trenchbroom/spooky-signals_map_settings.tres" id="2_hd67a"]
@@ -2034,12 +2034,7 @@ data = PackedVector3Array(0.03125, 1.28125, -1, -0.03125, 1.28125, -1, -0.03125,
 [sub_resource type="ArrayMesh" id="ArrayMesh_247l5"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_r25i6"]
-data = PackedVector3Array(0.625, 0.25, -1.375, -0.625, 0.25, -1.375, -0.625, -0.25, -1.375, 0.625, 0.25, -1.375, -0.625, -0.25, -1.375, 0.625, -0.25, -1.375, -0.625, -0.25, 1.375, -0.625, -0.25, -1.375, -0.625, 0.25, -1.375, -0.625, -0.25, 1.375, -0.625, 0.25, -1.375, -0.625, 0.25, 1.375, -0.625, -0.25, 1.375, 0.625, -0.25, 1.375, 0.625, -0.25, -1.375, -0.625, -0.25, 1.375, 0.625, -0.25, -1.375, -0.625, -0.25, -1.375, -0.625, 0.25, 1.375, -0.625, 0.25, -1.375, 0.625, 0.25, -1.375, -0.625, 0.25, 1.375, 0.625, 0.25, -1.375, 0.625, 0.25, 1.375, 0.625, 0.25, 1.375, 0.625, 0.25, -1.375, 0.625, -0.25, -1.375, 0.625, 0.25, 1.375, 0.625, -0.25, -1.375, 0.625, -0.25, 1.375, 0.625, -0.25, 1.375, -0.625, -0.25, 1.375, -0.625, 0.25, 1.375, 0.625, -0.25, 1.375, -0.625, 0.25, 1.375, 0.625, 0.25, 1.375)
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_j7lso"]
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_d5dap"]
-data = PackedVector3Array(0.625, 0.25, -1.375, -0.625, 0.25, -1.375, -0.625, -0.25, -1.375, 0.625, 0.25, -1.375, -0.625, -0.25, -1.375, 0.625, -0.25, -1.375, -0.625, -0.25, 1.375, -0.625, -0.25, -1.375, -0.625, 0.25, -1.375, -0.625, -0.25, 1.375, -0.625, 0.25, -1.375, -0.625, 0.25, 1.375, -0.625, -0.25, 1.375, 0.625, -0.25, 1.375, 0.625, -0.25, -1.375, -0.625, -0.25, 1.375, 0.625, -0.25, -1.375, -0.625, -0.25, -1.375, -0.625, 0.25, 1.375, -0.625, 0.25, -1.375, 0.625, 0.25, -1.375, -0.625, 0.25, 1.375, 0.625, 0.25, -1.375, 0.625, 0.25, 1.375, 0.625, 0.25, 1.375, 0.625, 0.25, -1.375, 0.625, -0.25, -1.375, 0.625, 0.25, 1.375, 0.625, -0.25, -1.375, 0.625, -0.25, 1.375, 0.625, -0.25, 1.375, -0.625, -0.25, 1.375, -0.625, 0.25, 1.375, 0.625, -0.25, 1.375, -0.625, 0.25, 1.375, 0.625, 0.25, 1.375)
+data = PackedVector3Array(0.375, 1.75, -0.875, -0.375, 1.75, -0.875, -0.375, -1.75, -0.875, 0.375, 1.75, -0.875, -0.375, -1.75, -0.875, 0.375, -1.75, -0.875, -0.375, -1.75, 0.875, -0.375, -1.75, -0.875, -0.375, 1.75, -0.875, -0.375, -1.75, 0.875, -0.375, 1.75, -0.875, -0.375, 1.75, 0.875, -0.375, -1.75, 0.875, 0.375, -1.75, 0.875, 0.375, -1.75, -0.875, -0.375, -1.75, 0.875, 0.375, -1.75, -0.875, -0.375, -1.75, -0.875, -0.375, 1.75, 0.875, -0.375, 1.75, -0.875, 0.375, 1.75, -0.875, -0.375, 1.75, 0.875, 0.375, 1.75, -0.875, 0.375, 1.75, 0.875, 0.375, 1.75, 0.875, 0.375, 1.75, -0.875, 0.375, -1.75, -0.875, 0.375, 1.75, 0.875, 0.375, -1.75, -0.875, 0.375, -1.75, 0.875, 0.375, -1.75, 0.875, -0.375, -1.75, 0.875, -0.375, 1.75, 0.875, 0.375, -1.75, 0.875, -0.375, 1.75, 0.875, 0.375, 1.75, 0.875)
 
 [sub_resource type="Environment" id="Environment_0w2em"]
 background_mode = 1
@@ -3667,7 +3662,7 @@ mesh = SubResource("ArrayMesh_ahhxw")
 shape = SubResource("ConcavePolygonShape3D_tb6rl")
 
 [node name="entity_25_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.875, 0.25, 2.625)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.625, -1.5, 2.625)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
 "_cull_interior_faces": false,
@@ -3676,7 +3671,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "_vertex_merge_distance": 0.03125,
 "classname": "func_trigger",
 "signal_ID": "bridge_lift",
-"signal_parameter": 2
+"signal_parameter": 0
 })
 
 [node name="entity_25_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_25_func_trigger"]
@@ -3684,25 +3679,6 @@ mesh = SubResource("ArrayMesh_247l5")
 
 [node name="entity_25_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_25_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_r25i6")
-
-[node name="entity_26_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.375, -3, 2.625)
-script = ExtResource("54_g7cg2")
-func_godot_properties = Dictionary[String, Variant]({
-"_cull_interior_faces": false,
-"_phong": 0,
-"_phong_angle": 89.0,
-"_vertex_merge_distance": 0.03125,
-"classname": "func_trigger",
-"signal_ID": "bridge_lift",
-"signal_parameter": 1
-})
-
-[node name="entity_26_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_26_func_trigger"]
-mesh = SubResource("ArrayMesh_j7lso")
-
-[node name="entity_26_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_26_func_trigger"]
-shape = SubResource("ConcavePolygonShape3D_d5dap")
 
 [node name="mechanical_ambience" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.286251, -3.59395, 1.7845306)

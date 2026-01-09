@@ -11,7 +11,8 @@ apply_scale_on_map_build = false
 classname = "ButtonPad"
 description = "Interactable button pad."
 class_properties = Dictionary[String, Variant]({
-"signal_ID": ""
+"signal_ID": "",
+"signal_parameter": 0
 })
 meta_properties = Dictionary[String, Variant]({
 "color": Color(0.2913991, 0.5621904, 0, 1),
