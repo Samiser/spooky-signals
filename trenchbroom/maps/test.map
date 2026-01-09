@@ -3938,9 +3938,9 @@
 // entity 13
 {
 "classname" "point_light"
-"origin" "-4 0 56"
-"energy" ".5"
-"size" "26"
+"origin" "-4 40 80"
+"energy" "1"
+"size" "8"
 "colour" "255 255 255"
 }
 // entity 14
@@ -3948,7 +3948,7 @@
 "classname" "point_light"
 "origin" "-16 308 -48"
 "energy" "2.0"
-"size" "16"
+"size" "8"
 "colour" "255 0 0"
 "flicker_amount" "0.6"
 "shadows" "1"
@@ -3959,7 +3959,7 @@
 "classname" "point_light"
 "origin" "-200 496 -48"
 "energy" ".5"
-"size" "12"
+"size" "8"
 "colour" "255 255 255"
 "shadows" "1"
 "flicker_amount" "2"

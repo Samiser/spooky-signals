@@ -3246,26 +3246,20 @@ mesh = SubResource("ArrayMesh_lba4j")
 shape = SubResource("ConcavePolygonShape3D_xwtan")
 
 [node name="entity_10_point_light" parent="FuncGodotMap" instance=ExtResource("53_4cm40")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1.75, -0.125)
-light_volumetric_fog_energy = 0.0
-light_size = 10.0
-shadow_blur = 0.0
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.25, 2.5, -0.125)
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "point_light",
 "colour": Color(1, 1, 1, 1),
-"energy": 0.5,
+"energy": 1.0,
 "flicker_amount": 0.0,
 "fog_energy": 0.0,
-"origin": "-4 0 56",
+"origin": "-4 40 80",
 "shadows": false,
-"size": 26.0
+"size": 8.0
 })
 
 [node name="entity_11_point_light" parent="FuncGodotMap" instance=ExtResource("53_4cm40")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.625, -1.5, -0.5)
-light_volumetric_fog_energy = 0.0
-light_size = 10.0
-shadow_blur = 0.0
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "point_light",
 "colour": Color(1, 0, 0, 1),
@@ -3274,14 +3268,11 @@ func_godot_properties = Dictionary[String, Variant]({
 "fog_energy": 4.0,
 "origin": "-16 308 -48",
 "shadows": true,
-"size": 16.0
+"size": 8.0
 })
 
 [node name="entity_12_point_light" parent="FuncGodotMap" instance=ExtResource("53_4cm40")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 15.5, -1.5, -6.25)
-light_volumetric_fog_energy = 0.0
-light_size = 10.0
-shadow_blur = 0.0
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "point_light",
 "colour": Color(1, 1, 1, 1),
@@ -3290,7 +3281,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "fog_energy": 2.0,
 "origin": "-200 496 -48",
 "shadows": true,
-"size": 12.0
+"size": 8.0
 })
 
 [node name="entity_13_func_trigger" type="Area3D" parent="FuncGodotMap"]

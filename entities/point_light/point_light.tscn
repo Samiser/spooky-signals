@@ -3,4 +3,12 @@
 [ext_resource type="Script" uid="uid://bocqyvmwxxisg" path="res://entities/point_light/point_light.gd" id="1_1cwtj"]
 
 [node name="PointLight" type="OmniLight3D"]
+light_volumetric_fog_energy = 0.0
+light_size = 10.0
+shadow_blur = 0.0
+distance_fade_enabled = true
+distance_fade_begin = 10.0
+distance_fade_shadow = 10.0
+distance_fade_length = 5.0
+omni_range = 10.0
 script = ExtResource("1_1cwtj")
