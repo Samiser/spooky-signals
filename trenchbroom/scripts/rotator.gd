@@ -8,7 +8,7 @@ var rotate_speed : float
 
 func _ready() -> void:
 	rotate_dir = func_godot_properties.get("rotate_dir", Vector3.ZERO);
-	rotate_speed = func_godot_properties.get("rotate_speed", 0.0);
+	rotate_speed = deg_to_rad(func_godot_properties.get("rotate_speed", 0.0));
 	
 func _process(delta: float) -> void:
 	rotate(rotate_dir, delta * rotate_speed)
