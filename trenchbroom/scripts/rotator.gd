@@ -41,7 +41,14 @@ func _physics_process(delta: float) -> void:
 		power_level = move_toward(power_level, target_power_level, delta)
 	
 	$".".rotation += rotate_dir * delta * rotate_speed * power_level
-	audio_source.pitch_scale = abs(power_level) * rotate_speed
+	
+	var pitch_level : float = abs(power_level) * rotate_speed
+	if pitch_level > 0.0:
+		if !audio_source.playing:
+			audio_source.play()
+		audio_source.pitch_scale = abs(power_level) * rotate_speed
+	else:
+		audio_source.stop()
 
 func signal_recieved(parameters: String) -> void:
 	var param_list : PackedStringArray = parameters.split(', ', false)
