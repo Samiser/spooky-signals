@@ -4302,7 +4302,7 @@
 {
 "classname" "func_trigger"
 "signal_ID" "bridge_light"
-"signal_parameter" "light_toggle, sfx_play"
+"signal_parameter" "light_toggle"
 // brush 0
 {
 ( -120 -64 0 ) ( -120 -63 0 ) ( -120 -64 1 ) Grating/Grating_14-128x128_T [ 0 -1 0 0 ] [ 0 0 -1 0 ] 270 1 1
@@ -4770,6 +4770,4 @@
 {
 "classname" "3d_sfx"
 "origin" "-4 32 80"
-"sfx_file_path" "res://audio/sfx/button.wav"
-"signal_ID" "bridge_light"
 }

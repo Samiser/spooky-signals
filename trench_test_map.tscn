@@ -3756,7 +3756,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "classname": "func_trigger",
 "repeatable": true,
 "signal_ID": "bridge_light",
-"signal_parameter": "light_toggle"
+"signal_parameter": "light_toggle, sfx_play"
 })
 
 [node name="entity_14_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_14_func_trigger"]
@@ -4204,6 +4204,20 @@ func_godot_properties = Dictionary[String, Variant]({
 "repeatable": true,
 "signal_ID": "spinny_machine",
 "signal_parameter": "rotate_toggle, light_toggle"
+})
+
+[node name="entity_41_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1, 2.5, -0.125)
+func_godot_properties = Dictionary[String, Variant]({
+"autoplay": false,
+"classname": "3d_sfx",
+"origin": "-4 32 80",
+"pan_strength": 1.0,
+"pitch_level": 1.0,
+"range": 12.0,
+"sfx_file_path": "res://audio/sfx/button.wav",
+"signal_ID": "bridge_light",
+"volume_db": 0.0
 })
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
