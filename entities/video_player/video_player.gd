@@ -22,6 +22,10 @@ func signal_recieved(parameters: String) -> void:
 	for parameter in param_list:
 		match parameter:
 			"video_play":
+				video_stream_player.show()
 				video_stream_player.play()
+				var timer := get_tree().create_timer(video_stream_player.get_stream_length())
+				await timer.timeout
+				video_stream_player.hide()
 			"video_stop":
 				video_stream_player.stop()
