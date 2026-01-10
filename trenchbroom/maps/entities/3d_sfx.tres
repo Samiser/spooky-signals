@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDPointClass" load_steps=4 format=3 uid="uid://cx6rlttm0nyer"]
+
+[ext_resource type="Script" uid="uid://d1nwwgcrner8b" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class_display_descriptor.gd" id="1_s63kx"]
+[ext_resource type="PackedScene" uid="uid://1efpsgbwx61i" path="res://entities/sfx/3d_sfx.tscn" id="2_s63kx"]
+[ext_resource type="Script" uid="uid://cxsqwtsqd8w33" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class.gd" id="3_fn00u"]
+
+[resource]
+script = ExtResource("3_fn00u")
+scene_file = ExtResource("2_s63kx")
+apply_scale_on_map_build = false
+classname = "3d_sfx"
+description = "a 3D sound effect source"
+class_properties = Dictionary[String, Variant]({
+"autoplay": false,
+"pan_strength": 1.0,
+"pitch_level": 1.0,
+"range": 12.0,
+"sfx_file_path": "",
+"volume_db": 0.0
+})
+meta_properties = Dictionary[String, Variant]({
+"color": Color(0.4392157, 0, 0.8, 1),
+"size": AABB(-4, -4, -4, 4, 4, 4)
+})
+metadata/_custom_type_script = "uid://cxsqwtsqd8w33"
