@@ -4629,6 +4629,7 @@
 "classname" "func_trigger"
 "signal_ID" "corridor_light"
 "signal_parameter" "start_flicker"
+"repeatable" "0"
 // brush 0
 {
 ( -304 472 0 ) ( -304 473 0 ) ( -304 472 1 ) clip [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
@@ -4703,7 +4704,7 @@
 "rotate_speed" "4"
 "signal_ID" "spinny_machine"
 "sound_path" "res://audio/sfx/scifi_loop_2.wav"
-"sound_dist" "12"
+"sound_dist" "9"
 "_tb_group" "8"
 // brush 0
 {
@@ -4772,4 +4773,21 @@
 "origin" "-4 32 80"
 "sfx_file_path" "res://audio/sfx/button.wav"
 "signal_ID" "bridge_light"
+}
+// entity 49
+{
+"classname" "video_player"
+"origin" "-56 -128 40"
+"killtarget" ""
+"signal_ID" "logo_video"
+"targetname" ""
+"video_file_path" "res://videos/logo_vid_short.ogv"
+}
+// entity 50
+{
+"classname" "ButtonPad"
+"origin" "-40 -184 32"
+"angle" "90"
+"signal_ID" "logo_video"
+"signal_parameter" "video_play"
 }
