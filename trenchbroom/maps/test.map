@@ -4108,13 +4108,30 @@
 }
 // entity 9
 {
+"classname" "func_moveable"
+"move_offset" "0.0 -3 0.0"
+"move_rate" "2"
+"signal_ID" "bridge_lift"
+"_tb_group" "1"
+// brush 0
+{
+( 40 160 -16 ) ( 40 144 112 ) ( 40 144 -16 ) clip [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 96 112 -16 ) ( 72 112 -16 ) ( 72 112 112 ) clip [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 40 112 -104 ) ( 41 112 -104 ) ( 40 113 -104 ) clip [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 128 184 -18 ) ( 128 185 -18 ) ( 129 184 -18 ) clip [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.2 0.2
+( 104 184 -16 ) ( 72 184 112 ) ( 72 184 -16 ) clip [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 128 128 -16 ) ( 128 152 112 ) ( 128 152 -16 ) clip [ 0 0 1.0000000000000002 21 ] [ 0 -1.0000000000000002 0 -13 ] 180 0.5 0.5
+}
+}
+// entity 10
+{
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "fan"
 "_tb_id" "3"
 "_tb_linked_group_id" "{c8b1ea1f-2dac-48d8-a286-1803064e8088}"
 }
-// entity 10
+// entity 11
 {
 "classname" "func_rotator"
 "rotate_dir" "0, 0, 1"
@@ -4176,7 +4193,7 @@
 ( 32.72497720464331 442.7134726326173 36 ) ( 31.335791783307855 450.59193465671495 36 ) ( 31.335791783307855 450.59193465671495 28 ) Metal2/Metal_22-128x128 [ 0.17364817766692542 -0.9848077530122087 0 -13.694977 ] [ 0 0 -1 2 ] 90 1 1
 }
 }
-// entity 11
+// entity 12
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -4185,7 +4202,7 @@
 "_tb_linked_group_id" "{647d6152-ab0e-4efe-94dc-eb864132c64e}"
 "_tb_transformation" "0.9848077530126375 0.17364817766700522 0 58.69176830877561 -0.20673926765197798 1.1724766500357482 0 -152.40003157415805 0 0 1.1428571428571428 -144.57142857142858 0 0 0 1"
 }
-// entity 12
+// entity 13
 {
 "classname" "func_rotator"
 "rotate_dir" "0, 0, 1"
@@ -4247,7 +4264,7 @@
 ( 167.7959673283558 359.90563992261025 -103.42857142857142 ) ( 167.79596732835577 369.43015186069795 -103.42857142857142 ) ( 167.79596732835577 369.43015186069795 -112.57142857142856 ) Metal2/Metal_22-128x128 [ -4.135580766726905e-15 -0.8399380516295838 0 -13.701569 ] [ 0 0 -0.8750000000000001 3.5 ] 270 1 1
 }
 }
-// entity 13
+// entity 14
 {
 "classname" "point_light"
 "origin" "-4 40 80"
@@ -4256,7 +4273,7 @@
 "colour" "255 255 255"
 "signal_ID" "bridge_light"
 }
-// entity 14
+// entity 15
 {
 "classname" "point_light"
 "origin" "8 248 -64"
@@ -4268,7 +4285,7 @@
 "fog_energy" "4"
 "signal_ID" "spinny_machine"
 }
-// entity 15
+// entity 16
 {
 "classname" "point_light"
 "origin" "-200 496 -48"
@@ -4281,7 +4298,7 @@
 "signal_ID" "broken_corridor_door"
 "autoflicker" "0"
 }
-// entity 16
+// entity 17
 {
 "classname" "func_trigger"
 "signal_ID" "bridge_light"
@@ -4296,7 +4313,7 @@
 ( -72 -16 80 ) ( -72 -16 81 ) ( -72 -15 80 ) Grating/Grating_14-128x128_T [ 0 1 0 0 ] [ 0 0 -1 0 ] 270 1 1
 }
 }
-// entity 17
+// entity 18
 {
 "classname" "ButtonPad"
 "origin" "-24 200 24"
@@ -4304,13 +4321,13 @@
 "signal_ID" "bridge_door"
 "signal_parameter" "move_switch"
 }
-// entity 18
+// entity 19
 {
 "classname" "3d_label"
 "origin" "-58 -42 18"
 "text" "func_trigger"
 }
-// entity 19
+// entity 20
 {
 "classname" "func_rotator"
 "rotate_dir" "0, 1, 0"
@@ -4326,26 +4343,26 @@
 ( -88 24 8 ) ( -88 24 9 ) ( -88 25 8 ) Animal/Animal_05-128x128 [ 0 1 0 16 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
-// entity 20
+// entity 21
 {
 "classname" "3d_label"
 "origin" "-58 30 18"
 "text" "func_rotator"
 }
-// entity 21
+// entity 22
 {
 "classname" "3d_label"
 "origin" "-58 126 18"
 "text" "func_moveable"
 }
-// entity 22
+// entity 23
 {
 "classname" "3d_label"
 "origin" "-74 54 90"
 "text" "brush entities"
 "colour" "255 255 0"
 }
-// entity 23
+// entity 24
 {
 "classname" "func_moveable"
 "volume_db" "-20"
@@ -4364,7 +4381,7 @@
 ( -80 112 8 ) ( -80 112 9 ) ( -80 113 8 ) Animal/Animal_07-128x128 [ 0 1 0 0 ] [ 0 0 -1 0 ] 270 1 1
 }
 }
-// entity 24
+// entity 25
 {
 "classname" "func_moveable"
 "volume_db" "-20"
@@ -4383,7 +4400,7 @@
 ( -80 152 32 ) ( -80 152 33 ) ( -80 153 32 ) Animal/Animal_07-128x128 [ 0 1 0 0 ] [ 0 0 -1 24 ] 90 1 1
 }
 }
-// entity 25
+// entity 26
 {
 "classname" "func_rotator"
 "rotate_dir" "0, 1, 0"
@@ -4399,7 +4416,7 @@
 ( -92 52 8 ) ( -92 52 9 ) ( -92 52.5 8 ) Cloth/Cloth_24-128x128 [ 0 2 0 -64 ] [ 0 0 -1 0 ] 180 1 1
 }
 }
-// entity 26
+// entity 27
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -4407,7 +4424,7 @@
 "_tb_id" "5"
 "_tb_linked_group_id" "{82a29af2-4296-472e-baa9-92e674f42329}"
 }
-// entity 27
+// entity 28
 {
 "classname" "func_moveable"
 "move_offset" "0.0 0.0 -1.9"
@@ -4451,7 +4468,7 @@
 ( 32 192 8 ) ( 32 192 9 ) ( 32 193 8 ) Grating/Grating_16-128x128 [ 0 -1.0000000000000002 0 16.732285 ] [ 0 0 -1.0000000000000002 -20.90168 ] 270 0.93131626 0.7414113
 }
 }
-// entity 28
+// entity 29
 {
 "classname" "func_trigger"
 "signal_ID" "bridge_lift"
@@ -4466,7 +4483,7 @@
 ( 128 160 16 ) ( 128 160 17 ) ( 128 161 16 ) clip [ 0 1 0 0 ] [ 0 0 -1 24 ] 180 1 1
 }
 }
-// entity 29
+// entity 30
 {
 "classname" "func_trigger"
 "signal_ID" "bridge_lift"
@@ -4481,7 +4498,7 @@
 ( 128 144 -88 ) ( 128 144 -87 ) ( 128 145 -88 ) clip [ 0 1 0 16 ] [ 0 0 -1 -16 ] 270 1 1
 }
 }
-// entity 30
+// entity 31
 {
 "classname" "3d_sfx"
 "origin" "-4 452 132"
@@ -4490,7 +4507,7 @@
 "pan_strength" "0"
 "range" "8"
 }
-// entity 31
+// entity 32
 {
 "classname" "3d_sfx"
 "origin" "84 308 -148"
@@ -4499,7 +4516,7 @@
 "sfx_file_path" "res://audio/ambience/mechanical_ambience.wav"
 "range" "4"
 }
-// entity 32
+// entity 33
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -4508,7 +4525,7 @@
 "_tb_linked_group_id" "{8f6a5185-1b46-48ab-a3f9-3f16a30113ab}"
 "_tb_transformation" "-1.8369701987210297e-16 1 0 -540 -1 -1.8369701987210297e-16 0 502 0 0 1 0 0 0 0 1"
 }
-// entity 33
+// entity 34
 {
 "classname" "func_moveable"
 "move_offset" "0.34 0.0 0.0"
@@ -4554,7 +4571,7 @@
 ( -350 470 60 ) ( -350 470 54 ) ( -350 342 54 ) Grating/Grating_16-128x128 [ -1.8369701987210297e-16 -1 0 -0.60565186 ] [ 0 0 -1 -18.987 ] 180 0.8351654 0.7192162
 }
 }
-// entity 34
+// entity 35
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -4563,7 +4580,7 @@
 "_tb_linked_group_id" "{14a36ae6-e16c-487c-86d8-21529f94933c}"
 "_tb_transformation" "1 0 0 100 0 1 0 460 0 0 1 0 0 0 0 1"
 }
-// entity 35
+// entity 36
 {
 "classname" "func_moveable"
 "move_offset" "0.0 0.0 -1.9"
@@ -4607,7 +4624,7 @@
 ( 132 652 8 ) ( 132 652 9 ) ( 132 653 8 ) Grating/Grating_16-128x128 [ 0 -1.0000000000000002 0 -1.3431396 ] [ 0 0 -1.0000000000000002 -20.90168 ] 90 0.93131626 0.7414113
 }
 }
-// entity 36
+// entity 37
 {
 "classname" "func_trigger"
 "signal_ID" "corridor_light"
@@ -4622,7 +4639,7 @@
 ( -288 532 4 ) ( -288 532 5 ) ( -288 533 4 ) clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
-// entity 37
+// entity 38
 {
 "classname" "3d_sfx"
 "origin" "-324 412 4"
@@ -4630,7 +4647,7 @@
 "sfx_file_path" "res://audio/sfx/sparks.wav"
 "pitch_level" ".5"
 }
-// entity 38
+// entity 39
 {
 "classname" "ButtonPad"
 "origin" "-340 480 24"
@@ -4640,7 +4657,7 @@
 "target" ""
 "repeatable" "0"
 }
-// entity 39
+// entity 40
 {
 "classname" "func_trigger"
 "signal_ID" "steam_scare"
@@ -4656,7 +4673,7 @@
 ( 16 464 16 ) ( 16 464 17 ) ( 16 465 16 ) clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
-// entity 40
+// entity 41
 {
 "classname" "spawner"
 "origin" "-32 460 28"
@@ -4664,14 +4681,14 @@
 "signal_ID" "steam_scare"
 "scene_path" "res://entities/particles/steam.tscn"
 }
-// entity 41
+// entity 42
 {
 "classname" "3d_sfx"
 "origin" "-40 456 28"
 "signal_ID" "steam_scare"
 "sfx_file_path" "res://audio/sfx/steam_burst.wav"
 }
-// entity 42
+// entity 43
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -4679,7 +4696,7 @@
 "_tb_id" "8"
 "_tb_linked_group_id" "{d90a9526-c886-4f14-aed9-78747f3520e5}"
 }
-// entity 43
+// entity 44
 {
 "classname" "func_rotator"
 "rotate_dir" "1 0 0"
@@ -4725,7 +4742,7 @@
 ( 6.343145750507617 200 -56 ) ( 4.686291501015235 184 -52 ) ( 4.686291501015235 200 -52 ) Metal2/Metal_03-128x128 [ 0 1 0 0 ] [ 0.38268343236508945 0 -0.9238795325112868 -3.6955185 ] 270 1 1
 }
 }
-// entity 44
+// entity 45
 {
 "classname" "point_light"
 "origin" "108 372 -60"
@@ -4733,7 +4750,7 @@
 "colour" "255 200 200"
 "energy" ".5"
 }
-// entity 45
+// entity 46
 {
 "classname" "ButtonPad"
 "origin" "8 316 -64"
@@ -4741,7 +4758,7 @@
 "signal_ID" "spinny_machine"
 "signal_parameter" "rotate_flip"
 }
-// entity 46
+// entity 47
 {
 "classname" "ButtonPad"
 "origin" "36 248 -72"
