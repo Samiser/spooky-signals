@@ -12,7 +12,7 @@ classname = "ButtonPad"
 description = "Interactable button pad."
 class_properties = Dictionary[String, Variant]({
 "signal_ID": "",
-"signal_parameter": 0
+"signal_parameter": ""
 })
 meta_properties = Dictionary[String, Variant]({
 "color": Color(0.2913991, 0.5621904, 0, 1),

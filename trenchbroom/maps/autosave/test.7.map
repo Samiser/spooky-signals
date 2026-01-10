@@ -4155,7 +4155,6 @@
 "energy" "1"
 "size" "8"
 "colour" "255 255 255"
-"signal_ID" "bridge_light"
 }
 // entity 14
 {
@@ -4182,8 +4181,8 @@
 // entity 16
 {
 "classname" "func_trigger"
-"signal_ID" "bridge_light"
-"signal_parameter" "toggle"
+"signal_ID" "1234"
+"signal_parameter" "0"
 // brush 0
 {
 ( -120 -64 0 ) ( -120 -63 0 ) ( -120 -64 1 ) Grating/Grating_14-128x128_T [ 0 -1 0 0 ] [ 0 0 -1 0 ] 270 1 1
@@ -4250,7 +4249,6 @@
 "move_offset" "0.0 2.0 0.0"
 "sound_ID" "1"
 "continuous" "1"
-"sound_path" "res://audio/sfx/gears.wav"
 // brush 0
 {
 ( -112 104 0 ) ( -112 105 0 ) ( -112 104 1 ) Animal/Animal_07-128x128 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
@@ -4269,7 +4267,6 @@
 "move_rate" "2"
 "sound_ID" "1"
 "continuous" "1"
-"sound_path" "res://audio/sfx/gears.wav"
 // brush 0
 {
 ( -120 144 24 ) ( -120 145 24 ) ( -120 144 25 ) Animal/Animal_07-128x128 [ 0 -1 0 0 ] [ 0 0 -1 24 ] 90 1 1

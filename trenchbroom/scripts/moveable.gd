@@ -1,8 +1,10 @@
-extends AnimatableBody3D
+extends Reciever
 
 @export var func_godot_properties : Dictionary
-
 var signal_ID : String
+
+@onready var body: AnimatableBody3D = $"."
+
 var at_end := false
 var moving_to_end := false
 var is_moving := false
@@ -15,7 +17,7 @@ var wait_time := 0.0
 var audio_source : AudioStreamPlayer3D
 
 func _ready() -> void:
-	origin = global_position
+	origin = body.global_position
 	dest = origin + func_godot_properties.get("move_offset", Vector3.ZERO);
 	move_time = func_godot_properties.get("move_rate", 0.0);
 	continuous = func_godot_properties.get("continuous", false)
@@ -28,29 +30,18 @@ func _ready() -> void:
 	audio_source = AudioStreamPlayer3D.new()
 	add_child(audio_source)
 	
-	match(func_godot_properties.get("sound_ID", 0)):
-		0:
-			audio_source.stream = load("res://audio/sfx/elevator.wav")
-		1:
-			audio_source.stream = load("res://audio/sfx/gears.wav")
-		_: # missing sound ID
-			audio_source.stream = load("res://audio/music/intro_music.ogg")
+	var sound_path : String = func_godot_properties.get("sound_path", "0")
+	if !sound_path.contains("res://"): # missing sound path
+		sound_path = "res://audio/sfx/elevator.wav"
+	
+	audio_source.stream = load(sound_path)
 	
 	audio_source.max_distance = 10.0
 	audio_source.unit_size = 4.0
 	audio_source.pitch_scale = move_time / 2
 	audio_source.volume_db = func_godot_properties.get("volume_db", 0.0);
 	
-	_connect_senders()
-
-func _connect_senders() -> void:
-	var timer := get_tree().create_timer(0.01) # silly fix as not all objects are done spawning once this is called
-	await timer.timeout
-	
-	var sender_objs := get_tree().get_nodes_in_group("sender")
-	for sender in sender_objs:
-		if sender.signal_ID == signal_ID:
-			sender.send_signal.connect(signal_recieved)
+	connect_senders(signal_ID, signal_recieved)
 	
 func _process(delta: float) -> void:
 	if(!is_moving): 
@@ -67,9 +58,9 @@ func _process(delta: float) -> void:
 	if moving_to_end:
 		cur_dest = dest
 	
-	global_position = global_position.move_toward(cur_dest, move_time * delta)
+	body.global_position = body.global_position.move_toward(cur_dest, move_time * delta)
 	
-	if global_position == cur_dest:
+	if body.global_position == cur_dest:
 		audio_source.stop()
 
 		if continuous:
@@ -81,14 +72,14 @@ func _process(delta: float) -> void:
 			
 		restarted = false
 
-func signal_recieved(parameter: int) -> void:
+func signal_recieved(parameter: String) -> void:
 	match parameter:
-		0:
+		"move_switch":
 			_set_move(!moving_to_end)
-		1:
-			_set_move(false)
-		2:
+		"move_end":
 			_set_move(true)
+		"move_start":
+			_set_move(false)
 
 func _set_move(to_end: bool) -> void:
 	if is_moving:
