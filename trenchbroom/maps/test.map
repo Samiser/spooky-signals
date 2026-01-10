@@ -3938,7 +3938,7 @@
 }
 // brush 422
 {
-( 20 264 -56 ) ( 20 232 -56 ) ( 20 232 -80 ) Elements2/Elements_11-128x128 [ 0 1 0 0 ] [ 0 0 -1 0 ] 180 0.5 0.5
+( 18 264 -56 ) ( 18 232 -56 ) ( 18 232 -80 ) Metal/Metal_06-128x128 [ 0 1 0 0 ] [ 0 0 -1 0 ] 270 0.5 0.5
 ( 20 232 -56 ) ( 28 232 -64 ) ( 28 232 -80 ) Metal/Metal_17-128x128 [ 1 0 0 -4 ] [ 0 0 -1 0 ] 270 1 1
 ( 20 260 -64 ) ( 20 248 -64 ) ( 148 248 -64 ) Metal/Metal_17-128x128 [ -1 0 0 -4 ] [ 0 -1 0 0 ] 270 1 1
 ( 28 264 -80 ) ( 28 264 -64 ) ( 20 264 -56 ) Metal/Metal_17-128x128 [ -1 0 0 4 ] [ 0 0 -1 0 ] 270 1 1
@@ -3968,7 +3968,7 @@
 ( -12 232 -64 ) ( -4 232 -56 ) ( -4 232 -80 ) Metal/Metal_17-128x128 [ 1 0 0 4 ] [ 0 0 -1 0 ] 270 1 1
 ( -4 252 -64 ) ( 124 260 -64 ) ( -4 260 -64 ) Metal/Metal_17-128x128 [ -1 0 0 4 ] [ 0 -1 0 0 ] 270 1 1
 ( -4 264 -80 ) ( -4 264 -56 ) ( -12 264 -64 ) Metal/Metal_17-128x128 [ -1 0 0 -4 ] [ 0 0 -1 0 ] 270 1 1
-( -4 232 -56 ) ( -4 264 -56 ) ( -4 264 -80 ) Elements2/Elements_11-128x128 [ 0 1 0 0 ] [ 0 0 -1 0 ] 180 0.5 0.5
+( -2 232 -56 ) ( -2 264 -56 ) ( -2 264 -80 ) Metal/Metal_06-128x128 [ 0 1 0 0 ] [ 0 0 -1 0 ] 90 0.5 0.5
 }
 // brush 426
 {
@@ -4039,7 +4039,7 @@
 {
 "classname" "func_moveable"
 "move_offset" "0.0 -3 0.0"
-"move_rate" "3"
+"move_rate" "2"
 "signal_ID" "bridge_lift"
 "_tb_group" "1"
 // brush 0
@@ -4118,7 +4118,8 @@
 {
 "classname" "func_rotator"
 "rotate_dir" "0, 0, 1"
-"rotate_speed" "40"
+"rotate_speed" "10"
+"sound_dist" "6"
 "_tb_group" "3"
 // brush 0
 {
@@ -4188,7 +4189,8 @@
 {
 "classname" "func_rotator"
 "rotate_dir" "0, 0, 1"
-"rotate_speed" "50"
+"rotate_speed" "10"
+"sound_dist" "6"
 "_tb_group" "4"
 // brush 0
 {
@@ -4264,6 +4266,7 @@
 "flicker_amount" "0.6"
 "shadows" "1"
 "fog_energy" "4"
+"signal_ID" "spinny_machine"
 }
 // entity 15
 {
@@ -4311,7 +4314,8 @@
 {
 "classname" "func_rotator"
 "rotate_dir" "0, 1, 0"
-"rotate_speed" "30"
+"rotate_speed" "5"
+"sound_dist" "6"
 // brush 0
 {
 ( -104 8 0 ) ( -104 9 0 ) ( -104 8 1 ) Animal/Animal_05-128x128 [ 0 -1 0 -16 ] [ 0 0 -1 0 ] 0 1 1
@@ -4383,7 +4387,8 @@
 {
 "classname" "func_rotator"
 "rotate_dir" "0, 1, 0"
-"rotate_speed" "-6"
+"rotate_speed" "-2"
+"sound_dist" "3"
 // brush 0
 {
 ( -100 44 0 ) ( -100 44.5 0 ) ( -100 44 1 ) Cloth/Cloth_24-128x128 [ 0 -2 0 64 ] [ 0 0 -1 0 ] 180 1 1
@@ -4406,7 +4411,7 @@
 {
 "classname" "func_moveable"
 "move_offset" "0.0 0.0 -1.9"
-"move_rate" "4"
+"move_rate" "2"
 "signal_ID" "bridge_door"
 "_tb_group" "5"
 // brush 0
@@ -4507,7 +4512,7 @@
 {
 "classname" "func_moveable"
 "move_offset" "0.34 0.0 0.0"
-"move_rate" "3"
+"move_rate" "1"
 "signal_ID" "broken_corridor_door"
 "continuous" "1"
 "_cull_interior_faces" "0"
@@ -4562,7 +4567,7 @@
 {
 "classname" "func_moveable"
 "move_offset" "0.0 0.0 -1.9"
-"move_rate" "4"
+"move_rate" "2"
 "signal_ID" "lab_door"
 "_tb_group" "7"
 // brush 0
@@ -4677,9 +4682,10 @@
 {
 "classname" "func_rotator"
 "rotate_dir" "1 0 0"
-"rotate_speed" "10"
+"rotate_speed" "4"
 "signal_ID" "spinny_machine"
 "sound_path" "res://audio/sfx/scifi_loop_2.wav"
+"sound_dist" "12"
 "_tb_group" "8"
 // brush 0
 {
@@ -4729,8 +4735,16 @@
 // entity 45
 {
 "classname" "ButtonPad"
-"origin" "8 316 -68"
+"origin" "8 316 -64"
 "angle" "90"
 "signal_ID" "spinny_machine"
-"signal_parameter" "rotate_toggle"
+"signal_parameter" "rotate_flip"
+}
+// entity 46
+{
+"classname" "ButtonPad"
+"origin" "36 248 -72"
+"angle" "0"
+"signal_ID" "spinny_machine"
+"signal_parameter" "rotate_toggle, light_toggle"
 }

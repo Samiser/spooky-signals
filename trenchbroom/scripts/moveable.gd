@@ -43,7 +43,7 @@ func _ready() -> void:
 	
 	connect_senders(signal_ID, signal_recieved)
 	
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if(!is_moving): 
 		return
 	

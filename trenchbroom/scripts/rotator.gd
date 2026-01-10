@@ -7,6 +7,9 @@ var is_moving := true
 var rotate_dir : Vector3i
 var rotate_speed : float
 
+var power_level := 0.0
+var target_power_level := 1.0
+
 var audio_source : AudioStreamPlayer3D
 
 func _ready() -> void:
@@ -25,18 +28,20 @@ func _ready() -> void:
 	
 	is_moving = func_godot_properties.get("autostart", true)
 	
-	audio_source.max_distance = 12.0
-	audio_source.unit_size = 3.0
-	audio_source.pitch_scale = clampf(abs(rotate_speed / 10.0), 0.0, 10.0) 
+	audio_source.max_distance = func_godot_properties.get("sound_dist", 12.0)
+	audio_source.unit_size = audio_source.max_distance / 2.6
 	audio_source.play()
 	
 	connect_senders(signal_ID, signal_recieved)
 	
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if !is_moving:
-		return
+		power_level = move_toward(power_level, 0.0, delta)
+	else:
+		power_level = move_toward(power_level, target_power_level, delta)
 	
-	$".".rotate_object_local(rotate_dir, delta * rotate_speed)
+	$".".rotation += rotate_dir * delta * rotate_speed * power_level
+	audio_source.pitch_scale = abs(power_level) * rotate_speed
 
 func signal_recieved(parameters: String) -> void:
 	var param_list : PackedStringArray = parameters.split(', ', false)
@@ -44,13 +49,9 @@ func signal_recieved(parameters: String) -> void:
 		match parameter:
 			"rotate_start":
 				is_moving = true
-				audio_source.play()
 			"rotate_stop":
 				is_moving = false
-				audio_source.stop()
 			"rotate_toggle":
 				is_moving = !is_moving
-				if is_moving:
-					audio_source.play()
-				else:
-					audio_source.stop()
+			"rotate_flip":
+				target_power_level = target_power_level * -1
