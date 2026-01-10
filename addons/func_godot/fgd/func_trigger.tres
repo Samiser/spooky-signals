@@ -14,6 +14,7 @@ classname = "func_trigger"
 description = "Static collidable geometry. Builds a Area3D and a single concave CollisionShape3D. Does not occlude other VisualInstance3D nodes."
 base_classes = Array[Resource]([ExtResource("1_u6umc"), ExtResource("2_dr03x"), ExtResource("3_g2em5")])
 class_properties = Dictionary[String, Variant]({
+"repeatable": true,
 "signal_ID": "",
 "signal_parameter": ""
 })

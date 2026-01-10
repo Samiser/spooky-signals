@@ -5,6 +5,7 @@ signal send_signal
 @onready var sound: AudioStreamPlayer3D = $Sound
 var signal_ID : String
 var signal_parameter : String
+var triggered := false
 
 func _ready() -> void:
 	signal_ID = func_godot_properties.get("signal_ID", "0")
@@ -12,6 +13,7 @@ func _ready() -> void:
 	$Screen.current_screen.set_text(signal_ID)
 
 func interact(player: Player) -> void:
-	print(name + " sending signal: " + signal_ID)
 	sound.play()
-	send_signal.emit(signal_parameter)
+	if !triggered or func_godot_properties.get("repeatable", true):
+		send_signal.emit(signal_parameter)
+		triggered = true

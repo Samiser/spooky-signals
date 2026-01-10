@@ -4185,7 +4185,7 @@
 {
 "classname" "func_trigger"
 "signal_ID" "bridge_light"
-"signal_parameter" "light_toggle"
+"signal_parameter" "toggle"
 // brush 0
 {
 ( -120 -64 0 ) ( -120 -63 0 ) ( -120 -64 1 ) Grating/Grating_14-128x128_T [ 0 -1 0 0 ] [ 0 0 -1 0 ] 270 1 1
@@ -4410,10 +4410,9 @@
 {
 "classname" "func_moveable"
 "move_offset" "0.34 0.0 0.0"
-"move_rate" "3"
-"signal_ID" "broken_corridor_door"
+"move_rate" "2"
+"signal_ID" ""
 "continuous" "1"
-"_cull_interior_faces" "0"
 "_tb_group" "6"
 // brush 0
 {
@@ -4523,9 +4522,9 @@
 // entity 37
 {
 "classname" "3d_sfx"
-"origin" "-324 412 4"
+"origin" "-372 480 40"
 "signal_ID" "broken_corridor_door"
-"sfx_file_path" "res://audio/sfx/sparks.wav"
+"sfx_file_path" "res://audio/sfx/old_sfx/door_close.ogg"
 }
 // entity 38
 {
@@ -4533,7 +4532,6 @@
 "origin" "-340 480 24"
 "angle" "90"
 "signal_ID" "broken_corridor_door"
-"signal_parameter" "light_start_flicker, sfx_play, move_stop"
+"signal_parameter" "light_start_flicker, sfx_play"
 "target" ""
-"repeatable" "0"
 }

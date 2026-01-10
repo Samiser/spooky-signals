@@ -72,14 +72,20 @@ func _process(delta: float) -> void:
 			
 		restarted = false
 
-func signal_recieved(parameter: String) -> void:
-	match parameter:
-		"move_switch":
-			_set_move(!moving_to_end)
-		"move_end":
-			_set_move(true)
-		"move_start":
-			_set_move(false)
+func signal_recieved(parameters: String) -> void:
+	var param_list : PackedStringArray = parameters.split(', ', false)
+	for parameter in param_list:
+		match parameter:
+			"move_switch":
+				_set_move(!moving_to_end)
+			"move_end":
+				_set_move(true)
+			"move_start":
+				_set_move(false)
+			"move_stop":
+				is_moving = false
+				audio_source.stop()
+				restarted = false
 
 func _set_move(to_end: bool) -> void:
 	if is_moving:

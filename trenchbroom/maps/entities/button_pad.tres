@@ -11,6 +11,7 @@ apply_scale_on_map_build = false
 classname = "ButtonPad"
 description = "Interactable button pad."
 class_properties = Dictionary[String, Variant]({
+"repeatable": true,
 "signal_ID": "",
 "signal_parameter": ""
 })

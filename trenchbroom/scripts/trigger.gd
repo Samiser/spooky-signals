@@ -3,6 +3,7 @@ signal send_signal
 @export var func_godot_properties : Dictionary
 var signal_ID : String
 var signal_parameter : String
+var triggered := false
 
 func _ready() -> void:
 	signal_ID = func_godot_properties.get("signal_ID", "0");
@@ -11,5 +12,7 @@ func _ready() -> void:
 	body_entered.connect(_on_area_3d_body_entered)
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	print(name + " entered, sigID: " + signal_ID + ", param: " + signal_parameter)
-	send_signal.emit(signal_parameter)
+	if !triggered or  func_godot_properties.get("repeatable", true):
+		print(name + " entered, sigID: " + signal_ID + ", param: " + signal_parameter)
+		send_signal.emit(signal_parameter)
+		triggered = true

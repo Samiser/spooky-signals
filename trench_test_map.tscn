@@ -1,4 +1,4 @@
-[gd_scene load_steps=506 format=4 uid="uid://bbkkxfiknq0dd"]
+[gd_scene load_steps=508 format=4 uid="uid://bbkkxfiknq0dd"]
 
 [ext_resource type="Script" uid="uid://cwu5cf7a0awcd" path="res://addons/func_godot/src/map/func_godot_map.gd" id="1_fuxfd"]
 [ext_resource type="Resource" uid="uid://gg6etwqjsbcb" path="res://trenchbroom/spooky-signals_map_settings.tres" id="2_hd67a"]
@@ -2136,6 +2136,11 @@ _surfaces = [{
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_sculh"]
 data = PackedVector3Array(0.03125, 1.28125, -1, -0.03125, 1.28125, -1, -0.03125, 0.78125, -1, 0.03125, 1.28125, -1, -0.03125, 0.78125, -1, 0.03125, 0.78125, -1, -0.03125, 0.78125, 1, -0.03125, 0.78125, -1, -0.03125, 1.28125, -1, -0.03125, 0.78125, 1, -0.03125, 1.28125, -1, -0.03125, 1.28125, 1, -0.03125, 0.78125, 1, 0.03125, 0.78125, 1, 0.03125, 0.78125, -1, -0.03125, 0.78125, 1, 0.03125, 0.78125, -1, -0.03125, 0.78125, -1, -0.03125, 1.28125, 1, -0.03125, 1.28125, -1, 0.03125, 1.28125, -1, -0.03125, 1.28125, 1, 0.03125, 1.28125, -1, 0.03125, 1.28125, 1, 0.03125, 1.28125, 1, 0.03125, 1.28125, -1, 0.03125, 0.78125, -1, 0.03125, 1.28125, 1, 0.03125, 0.78125, -1, 0.03125, 0.78125, 1, 0.0625, 0.78125, -1, -0.0625, 0.78125, -1, -0.0625, 0.15625, -1, 0.0625, 0.78125, -1, -0.0625, 0.15625, -1, 0.0625, 0.15625, -1, -0.0625, 0.15625, 1, -0.0625, 0.15625, -1, -0.0625, 0.78125, -1, -0.0625, 0.15625, 1, -0.0625, 0.78125, -1, -0.0625, 0.78125, 1, -0.0625, 0.15625, 1, 0.0625, 0.15625, 1, 0.0625, 0.15625, -1, -0.0625, 0.15625, 1, 0.0625, 0.15625, -1, -0.0625, 0.15625, -1, -0.0625, 0.78125, 1, -0.0625, 0.78125, -1, 0.0625, 0.78125, -1, -0.0625, 0.78125, 1, 0.0625, 0.78125, -1, 0.0625, 0.78125, 1, 0.0625, 0.78125, 1, 0.0625, 0.78125, -1, 0.0625, 0.15625, -1, 0.0625, 0.78125, 1, 0.0625, 0.15625, -1, 0.0625, 0.15625, 1, 0.0625, 0.15625, 1, -0.0625, 0.15625, 1, -0.0625, 0.78125, 1, 0.0625, 0.15625, 1, -0.0625, 0.78125, 1, 0.0625, 0.78125, 1, 0.03125, 0.15625, -1, -0.03125, 0.15625, -1, -0.03125, -0.78125, -1, 0.03125, 0.15625, -1, -0.03125, -0.78125, -1, 0.03125, -0.78125, -1, -0.03125, -0.78125, 1, -0.03125, -0.78125, -1, -0.03125, 0.15625, -1, -0.03125, -0.78125, 1, -0.03125, 0.15625, -1, -0.03125, 0.15625, 1, -0.03125, -0.78125, 1, 0.03125, -0.78125, 1, 0.03125, -0.78125, -1, -0.03125, -0.78125, 1, 0.03125, -0.78125, -1, -0.03125, -0.78125, -1, -0.03125, 0.15625, 1, -0.03125, 0.15625, -1, 0.03125, 0.15625, -1, -0.03125, 0.15625, 1, 0.03125, 0.15625, -1, 0.03125, 0.15625, 1, 0.03125, 0.15625, 1, 0.03125, 0.15625, -1, 0.03125, -0.78125, -1, 0.03125, 0.15625, 1, 0.03125, -0.78125, -1, 0.03125, -0.78125, 1, 0.0625, -0.78125, -1, -0.0625, -0.78125, -1, -0.0625, -1.28125, -1, 0.0625, -0.78125, -1, -0.0625, -1.28125, -1, 0.0625, -1.28125, -1, -0.0625, -1.28125, 1, -0.0625, -1.28125, -1, -0.0625, -0.78125, -1, -0.0625, -1.28125, 1, -0.0625, -0.78125, -1, -0.0625, -0.78125, 1, -0.0625, -1.28125, 1, 0.0625, -1.28125, 1, 0.0625, -1.28125, -1, -0.0625, -1.28125, 1, 0.0625, -1.28125, -1, -0.0625, -1.28125, -1, -0.0625, -0.78125, 1, -0.0625, -0.78125, -1, 0.0625, -0.78125, -1, -0.0625, -0.78125, 1, 0.0625, -0.78125, -1, 0.0625, -0.78125, 1, 0.0625, -0.78125, 1, 0.0625, -0.78125, -1, 0.0625, -1.28125, -1, 0.0625, -0.78125, 1, 0.0625, -1.28125, -1, 0.0625, -1.28125, 1, 0.0625, -1.28125, 1, -0.0625, -1.28125, 1, -0.0625, -0.78125, 1, 0.0625, -1.28125, 1, -0.0625, -0.78125, 1, 0.0625, -0.78125, 1, 0.03125, 0.78125, 1, -0.03125, 0.78125, 1, -0.03125, 1.28125, 1, 0.03125, 0.78125, 1, -0.03125, 1.28125, 1, 0.03125, 1.28125, 1, 0.03125, -0.78125, 1, -0.03125, -0.78125, 1, -0.03125, 0.15625, 1, 0.03125, -0.78125, 1, -0.03125, 0.15625, 1, 0.03125, 0.15625, 1)
 
+[sub_resource type="ArrayMesh" id="ArrayMesh_4ycl0"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_cqv3u"]
+data = PackedVector3Array(1, 1.375, -0.25, -1, 1.375, -0.25, -1, -1.375, -0.25, 1, 1.375, -0.25, -1, -1.375, -0.25, 1, -1.375, -0.25, -1, -1.375, 0.25, -1, -1.375, -0.25, -1, 1.375, -0.25, -1, -1.375, 0.25, -1, 1.375, -0.25, -1, 1.375, 0.25, -1, -1.375, 0.25, 1, -1.375, 0.25, 1, -1.375, -0.25, -1, -1.375, 0.25, 1, -1.375, -0.25, -1, -1.375, -0.25, -1, 1.375, 0.25, -1, 1.375, -0.25, 1, 1.375, -0.25, -1, 1.375, 0.25, 1, 1.375, -0.25, 1, 1.375, 0.25, 1, 1.375, 0.25, 1, 1.375, -0.25, 1, -1.375, -0.25, 1, 1.375, 0.25, 1, -1.375, -0.25, 1, -1.375, 0.25, 1, -1.375, 0.25, -1, -1.375, 0.25, -1, 1.375, 0.25, 1, -1.375, 0.25, -1, 1.375, 0.25, 1, 1.375, 0.25)
+
 [sub_resource type="Environment" id="Environment_0w2em"]
 background_mode = 1
 ambient_light_source = 2
@@ -3451,6 +3456,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "angle": "270",
 "classname": "ButtonPad",
 "origin": "-40 176 40",
+"repeatable": true,
 "signal_ID": "bridge_door",
 "signal_parameter": "move_switch"
 })
@@ -3461,6 +3467,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "angle": "270",
 "classname": "ButtonPad",
 "origin": "83 96 24",
+"repeatable": true,
 "signal_ID": "bridge_lift",
 "signal_parameter": "move_start"
 })
@@ -3471,6 +3478,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "angle": "90",
 "classname": "ButtonPad",
 "origin": "44 200 -64",
+"repeatable": true,
 "signal_ID": "bridge_lift",
 "signal_parameter": "move_end"
 })
@@ -3481,6 +3489,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "angle": "90",
 "classname": "ButtonPad",
 "origin": "64 664 40",
+"repeatable": true,
 "signal_ID": "lab_door",
 "signal_parameter": "move_switch"
 })
@@ -3491,6 +3500,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "angle": "0",
 "classname": "ButtonPad",
 "origin": "72 632 40",
+"repeatable": true,
 "signal_ID": "lab_door",
 "signal_parameter": "move_switch"
 })
@@ -3567,6 +3577,7 @@ shape = SubResource("ConcavePolygonShape3D_ahhxw")
 [node name="entity_10_point_light" parent="FuncGodotMap" instance=ExtResource("53_4cm40")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.25, 2.5, -0.125)
 func_godot_properties = Dictionary[String, Variant]({
+"autoflicker": true,
 "classname": "point_light",
 "colour": Color(1, 1, 1, 1),
 "energy": 1.0,
@@ -3581,6 +3592,7 @@ func_godot_properties = Dictionary[String, Variant]({
 [node name="entity_11_point_light" parent="FuncGodotMap" instance=ExtResource("53_4cm40")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.625, -1.5, -0.5)
 func_godot_properties = Dictionary[String, Variant]({
+"autoflicker": true,
 "classname": "point_light",
 "colour": Color(1, 0, 0, 1),
 "energy": 2.0,
@@ -3595,6 +3607,7 @@ func_godot_properties = Dictionary[String, Variant]({
 [node name="entity_12_point_light" parent="FuncGodotMap" instance=ExtResource("53_4cm40")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 15.5, -1.5, -6.25)
 func_godot_properties = Dictionary[String, Variant]({
+"autoflicker": false,
 "classname": "point_light",
 "colour": Color(1, 1, 1, 1),
 "energy": 0.5,
@@ -3602,7 +3615,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "fog_energy": 2.0,
 "origin": "-200 496 -48",
 "shadows": true,
-"signal_ID": "",
+"signal_ID": "broken_corridor_door",
 "size": 8.0
 })
 
@@ -3615,8 +3628,9 @@ func_godot_properties = Dictionary[String, Variant]({
 "_phong_angle": 89.0,
 "_vertex_merge_distance": 0.03125,
 "classname": "func_trigger",
+"repeatable": true,
 "signal_ID": "bridge_light",
-"signal_parameter": "toggle"
+"signal_parameter": "light_toggle"
 })
 
 [node name="entity_13_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_13_func_trigger"]
@@ -3631,6 +3645,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "angle": "0",
 "classname": "ButtonPad",
 "origin": "-24 200 24",
+"repeatable": true,
 "signal_ID": "bridge_door",
 "signal_parameter": "move_switch"
 })
@@ -3801,6 +3816,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "_phong_angle": 89.0,
 "_vertex_merge_distance": 0.03125,
 "classname": "func_trigger",
+"repeatable": true,
 "signal_ID": "bridge_lift",
 "signal_parameter": "move_end"
 })
@@ -3820,6 +3836,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "_phong_angle": 89.0,
 "_vertex_merge_distance": 0.03125,
 "classname": "func_trigger",
+"repeatable": true,
 "signal_ID": "bridge_lift",
 "signal_parameter": "move_start"
 })
@@ -3840,6 +3857,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "pitch_level": 1.0,
 "range": 8.0,
 "sfx_file_path": "res://audio/ambience/corridor_ambience.wav",
+"signal_ID": "",
 "volume_db": 0.0
 })
 
@@ -3853,6 +3871,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "pitch_level": 1.0,
 "range": 4.0,
 "sfx_file_path": "res://audio/ambience/mechanical_ambience.wav",
+"signal_ID": "",
 "volume_db": 0.0
 })
 
@@ -3869,8 +3888,8 @@ func_godot_properties = Dictionary[String, Variant]({
 "classname": "func_moveable",
 "continuous": true,
 "move_offset": Vector3(0.34, 0, 0),
-"move_rate": 2.0,
-"signal_ID": "",
+"move_rate": 3.0,
+"signal_ID": "broken_corridor_door",
 "sound_path": "",
 "volume_db": 0.0
 })
@@ -3881,17 +3900,7 @@ mesh = SubResource("ArrayMesh_iirgg")
 [node name="entity_28_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_28_func_moveable"]
 shape = SubResource("ConcavePolygonShape3D_fyb32")
 
-[node name="entity_29_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
-transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 15, 0.75, -10.75)
-func_godot_properties = Dictionary[String, Variant]({
-"angle": "90",
-"classname": "ButtonPad",
-"origin": "-344 480 24",
-"signal_ID": "",
-"signal_parameter": ""
-})
-
-[node name="entity_30_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
+[node name="entity_29_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.25, 1.28125, 3.125)
 collision_mask = 0
 script = ExtResource("47_3qoln")
@@ -3910,11 +3919,57 @@ func_godot_properties = Dictionary[String, Variant]({
 "volume_db": 0.0
 })
 
-[node name="entity_30_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_30_func_moveable"]
+[node name="entity_29_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_29_func_moveable"]
 mesh = SubResource("ArrayMesh_cgwix")
 
-[node name="entity_30_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_30_func_moveable"]
+[node name="entity_29_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_29_func_moveable"]
 shape = SubResource("ConcavePolygonShape3D_sculh")
+
+[node name="entity_30_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.75, 1.375, -9.25)
+script = ExtResource("54_g7cg2")
+func_godot_properties = Dictionary[String, Variant]({
+"_cull_interior_faces": false,
+"_phong": 0,
+"_phong_angle": 89.0,
+"_vertex_merge_distance": 0.03125,
+"classname": "func_trigger",
+"repeatable": true,
+"signal_ID": "corridor_light",
+"signal_parameter": "start_flicker"
+})
+
+[node name="entity_30_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_30_func_trigger"]
+mesh = SubResource("ArrayMesh_4ycl0")
+
+[node name="entity_30_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_30_func_trigger"]
+shape = SubResource("ConcavePolygonShape3D_cqv3u")
+
+[node name="entity_31_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12.875, 0.125, -10.125)
+func_godot_properties = Dictionary[String, Variant]({
+"autoplay": false,
+"classname": "3d_sfx",
+"origin": "-324 412 4",
+"pan_strength": 1.0,
+"pitch_level": 1.0,
+"range": 12.0,
+"sfx_file_path": "res://audio/sfx/sparks.wav",
+"signal_ID": "broken_corridor_door",
+"volume_db": 0.0
+})
+
+[node name="entity_32_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 15, 0.75, -10.625)
+func_godot_properties = Dictionary[String, Variant]({
+"angle": "90",
+"classname": "ButtonPad",
+"origin": "-340 480 24",
+"repeatable": false,
+"signal_ID": "broken_corridor_door",
+"signal_parameter": "light_start_flicker, sfx_play, move_stop",
+"target": ""
+})
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_0w2em")

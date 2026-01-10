@@ -16,8 +16,10 @@ func _ready() -> void:
 	point_light.light_energy = start_light_energy
 	point_light.omni_range = func_godot_properties.get("size", 10.0)
 	point_light.shadow_enabled = func_godot_properties.get("shadows", false)
-	flicker_amount = func_godot_properties.get("flicker_amount", 0.0)
 	point_light.light_volumetric_fog_energy = func_godot_properties.get("fog_energy", 0.0)
+
+	if func_godot_properties.get("autoflicker", false):
+		flicker_amount = func_godot_properties.get("flicker_amount", 0.0)
 	
 	if(!Engine.is_editor_hint()):
 		connect_senders(signal_ID, signal_recieved)
@@ -30,14 +32,20 @@ func _process(delta: float) -> void:
 	
 	point_light.light_energy = start_light_energy + sin(Time.get_ticks_usec()) * flicker_amount
 
-func signal_recieved(parameter: String) -> void:
-	match parameter:
-		"off":
-			point_light.hide()
-		"on":
-			point_light.show()
-		"toggle":
-			if point_light.is_visible_in_tree():
+func signal_recieved(parameters: String) -> void:
+	var param_list : PackedStringArray = parameters.split(', ', false)
+	for parameter in param_list:
+		match parameter:
+			"light_off":
 				point_light.hide()
-			else:
+			"light_on":
 				point_light.show()
+			"light_toggle":
+				if point_light.is_visible_in_tree():
+					point_light.hide()
+				else:
+					point_light.show()
+			"light_start_flicker":
+				flicker_amount = func_godot_properties.get("flicker_amount", 0.0)
+			"light_end_flicker":
+				flicker_amount = 0

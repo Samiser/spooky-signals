@@ -16,6 +16,7 @@ class_properties = Dictionary[String, Variant]({
 "pitch_level": 1.0,
 "range": 12.0,
 "sfx_file_path": "",
+"signal_ID": "",
 "volume_db": 0.0
 })
 meta_properties = Dictionary[String, Variant]({

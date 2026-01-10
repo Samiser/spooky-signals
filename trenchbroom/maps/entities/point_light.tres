@@ -11,6 +11,7 @@ apply_scale_on_map_build = false
 classname = "point_light"
 description = "a spherical point light"
 class_properties = Dictionary[String, Variant]({
+"autoflicker": true,
 "colour": Color(1, 1, 1, 1),
 "energy": 1.0,
 "flicker_amount": 0.0,

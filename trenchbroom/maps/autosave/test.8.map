@@ -4178,14 +4178,14 @@
 "shadows" "1"
 "flicker_amount" "2"
 "fog_energy" "2"
-"signal_ID" "broken_corridor_door"
+"signal_ID" "corridor_light"
 "autoflicker" "0"
 }
 // entity 16
 {
 "classname" "func_trigger"
 "signal_ID" "bridge_light"
-"signal_parameter" "light_toggle"
+"signal_parameter" "toggle"
 // brush 0
 {
 ( -120 -64 0 ) ( -120 -63 0 ) ( -120 -64 1 ) Grating/Grating_14-128x128_T [ 0 -1 0 0 ] [ 0 0 -1 0 ] 270 1 1
@@ -4410,10 +4410,9 @@
 {
 "classname" "func_moveable"
 "move_offset" "0.34 0.0 0.0"
-"move_rate" "3"
-"signal_ID" "broken_corridor_door"
+"move_rate" "2"
+"signal_ID" ""
 "continuous" "1"
-"_cull_interior_faces" "0"
 "_tb_group" "6"
 // brush 0
 {
@@ -4454,6 +4453,13 @@
 }
 // entity 34
 {
+"classname" "ButtonPad"
+"origin" "-344 480 24"
+"angle" "90"
+"signal_ID" "broken_corridor_door"
+}
+// entity 35
+{
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "func_door"
@@ -4461,7 +4467,7 @@
 "_tb_linked_group_id" "{14a36ae6-e16c-487c-86d8-21529f94933c}"
 "_tb_transformation" "1 0 0 100 0 1 0 460 0 0 1 0 0 0 0 1"
 }
-// entity 35
+// entity 36
 {
 "classname" "func_moveable"
 "move_offset" "0.0 0.0 -1.9"
@@ -4505,7 +4511,7 @@
 ( 132 652 8 ) ( 132 652 9 ) ( 132 653 8 ) Grating/Grating_16-128x128 [ 0 -1.0000000000000002 0 -1.3431396 ] [ 0 0 -1.0000000000000002 -20.90168 ] 90 0.93131626 0.7414113
 }
 }
-// entity 36
+// entity 37
 {
 "classname" "func_trigger"
 "signal_ID" "corridor_light"
@@ -4520,20 +4526,8 @@
 ( -288 532 4 ) ( -288 532 5 ) ( -288 533 4 ) clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
-// entity 37
-{
-"classname" "3d_sfx"
-"origin" "-324 412 4"
-"signal_ID" "broken_corridor_door"
-"sfx_file_path" "res://audio/sfx/sparks.wav"
-}
 // entity 38
 {
-"classname" "ButtonPad"
-"origin" "-340 480 24"
-"angle" "90"
-"signal_ID" "broken_corridor_door"
-"signal_parameter" "light_start_flicker, sfx_play, move_stop"
-"target" ""
-"repeatable" "0"
+"classname" "3d_sfx"
+"origin" "-372 480 40"
 }
