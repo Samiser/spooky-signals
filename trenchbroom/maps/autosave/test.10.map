@@ -4541,7 +4541,7 @@
 {
 "classname" "func_trigger"
 "signal_ID" "steam_scare"
-"signal_parameter" "spawn_obj, sfx_play"
+"signal_parameter" "spawn_obj"
 "repeatable" "0"
 // brush 0
 {
@@ -4556,15 +4556,14 @@
 // entity 40
 {
 "classname" "spawner"
-"origin" "-32 460 28"
+"origin" "-32 456 28"
 "angle" "90"
 "signal_ID" "steam_scare"
-"scene_path" "res://entities/particles/steam.tscn"
+"scene_path" "res://entities/player/player.tscn"
 }
 // entity 41
 {
 "classname" "3d_sfx"
 "origin" "-40 456 28"
 "signal_ID" "steam_scare"
-"sfx_file_path" "res://audio/sfx/steam_burst.wav"
 }

@@ -7,5 +7,5 @@ visibility_range_end = 6.0
 visibility_range_end_margin = 1.0
 visibility_range_fade_mode = 1
 billboard = 1
-text = "debug text"
+text = "n/a"
 script = ExtResource("1_sjote")
