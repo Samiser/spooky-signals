@@ -15,9 +15,11 @@ classname = "func_rotator"
 description = "Dynamic collidable geometry. Builds a AnimatableBody3D with a MeshInstance3D and a single concave CollisionShape3D. Does not occlude other VisualInstance3D nodes."
 base_classes = Array[Resource]([ExtResource("1_ehebr"), ExtResource("2_cs8ux"), ExtResource("3_28ttc")])
 class_properties = Dictionary[String, Variant]({
+"autostart": true,
 "rotate_dir": Vector3i(0, 0, 0),
 "rotate_speed": 0.0,
-"signal_ID": ""
+"signal_ID": "",
+"sound_path": ""
 })
 meta_properties = Dictionary[String, Variant]({
 "color": Color(0.8, 0.8, 0.8, 1)
