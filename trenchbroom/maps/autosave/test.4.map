@@ -4137,7 +4137,6 @@
 "rotate_dir" "0, 0, 1"
 "rotate_speed" "10"
 "sound_dist" "6"
-"signal_ID" "break_fan"
 "_tb_group" "3"
 // brush 0
 {
@@ -4853,63 +4852,4 @@
 "pitch_variation" ".2"
 "volume_db" "0.000000"
 "range" "5"
-}
-// entity 57
-{
-"classname" "counter"
-"origin" "20 412 76"
-"recieve_signal_ID" "corridor_fan"
-"emit_signal_ID" "break_fan"
-"count" "10"
-"finish_signal_parameter" "timer_start, rotate_stop"
-}
-// entity 58
-{
-"classname" "func_trigger"
-"signal_ID" "corridor_fan"
-"signal_parameter" "counter_add"
-"repeatable" "1"
-// brush 0
-{
-( -32 408 0 ) ( -32 409 0 ) ( -32 408 1 ) clip [ 0 -1 0 -24 ] [ 0 0 -1 0 ] 0 1 1
-( -16 424 0 ) ( -16 424 1 ) ( -15 424 0 ) clip [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( -16 408 0 ) ( -15 408 0 ) ( -16 409 0 ) clip [ -1 0 0 0 ] [ 0 -1 0 -24 ] 90 1 1
-( 16 440 80 ) ( 16 441 80 ) ( 17 440 80 ) clip [ 1 0 0 0 ] [ 0 -1 0 -24 ] 270 1 1
-( 16 440 16 ) ( 17 440 16 ) ( 16 440 17 ) clip [ -1 0 0 0 ] [ 0 0 -1 0 ] 90 1 1
-( 24 440 16 ) ( 24 440 17 ) ( 24 441 16 ) clip [ 0 1 0 24 ] [ 0 0 -1 0 ] 0 1 1
-}
-}
-// entity 59
-{
-"classname" "timer"
-"origin" "20 404 76"
-"time" "60"
-"emit_signal_ID" "break_fan"
-"recieve_signal_ID" "break_fan"
-"signal_parameter" "rotate_start"
-}
-// entity 60
-{
-"classname" "func_trigger"
-"signal_parameter" "counter_add"
-"signal_ID" "spooky_lift"
-"repeatable" "1"
-// brush 0
-{
-( 80 264 -104 ) ( 80 265 -104 ) ( 80 264 -103 ) clip [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 80 264 -104 ) ( 80 264 -103 ) ( 81 264 -104 ) clip [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 80 264 -104 ) ( 81 264 -104 ) ( 80 265 -104 ) clip [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
-( 136 280 -24 ) ( 136 281 -24 ) ( 137 280 -24 ) clip [ 1 0 0 0 ] [ 0 -1 0 0 ] 180 1 1
-( 136 280 -96 ) ( 137 280 -96 ) ( 136 280 -95 ) clip [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 136 280 -96 ) ( 136 280 -95 ) ( 136 281 -96 ) clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
-}
-}
-// entity 61
-{
-"classname" "counter"
-"origin" "84 260 -100"
-"recieve_signal_ID" "spooky_lift"
-"count" "30"
-"emit_signal_ID" "bridge_lift"
-"finish_signal_parameter" "move_start"
 }

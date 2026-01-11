@@ -1,4 +1,4 @@
-[gd_scene load_steps=529 format=4 uid="uid://bbkkxfiknq0dd"]
+[gd_scene load_steps=533 format=4 uid="uid://bbkkxfiknq0dd"]
 
 [ext_resource type="Script" uid="uid://cwu5cf7a0awcd" path="res://addons/func_godot/src/map/func_godot_map.gd" id="1_fuxfd"]
 [ext_resource type="Resource" uid="uid://gg6etwqjsbcb" path="res://trenchbroom/spooky-signals_map_settings.tres" id="2_hd67a"]
@@ -2186,7 +2186,7 @@ data = PackedVector3Array(1, 1.375, -0.25, -1, 1.375, -0.25, -1, -1.375, -0.25, 
 [sub_resource type="ArrayMesh" id="ArrayMesh_w105d"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_h5hod"]
-data = PackedVector3Array(0.5, 1.25, -0.5, -0.5, 1.25, -0.5, -0.5, -1.25, -0.5, 0.5, 1.25, -0.5, -0.5, -1.25, -0.5, 0.5, -1.25, -0.5, -0.5, -1.25, 0.5, -0.5, -1.25, -0.5, -0.5, 1.25, -0.5, -0.5, -1.25, 0.5, -0.5, 1.25, -0.5, -0.5, 1.25, 0.5, -0.5, -1.25, 0.5, 0.5, -1.25, 0.5, 0.5, -1.25, -0.5, -0.5, -1.25, 0.5, 0.5, -1.25, -0.5, -0.5, -1.25, -0.5, -0.5, 1.25, 0.5, -0.5, 1.25, -0.5, 0.5, 1.25, -0.5, -0.5, 1.25, 0.5, 0.5, 1.25, -0.5, 0.5, 1.25, 0.5, 0.5, 1.25, 0.5, 0.5, 1.25, -0.5, 0.5, -1.25, -0.5, 0.5, 1.25, 0.5, 0.5, -1.25, -0.5, 0.5, -1.25, 0.5, 0.5, -1.25, 0.5, -0.5, -1.25, 0.5, -0.5, 1.25, 0.5, 0.5, -1.25, 0.5, -0.5, 1.25, 0.5, 0.5, 1.25, 0.5)
+data = PackedVector3Array(0.25, 1.25, -0.5, -0.25, 1.25, -0.5, -0.25, -1.25, -0.5, 0.25, 1.25, -0.5, -0.25, -1.25, -0.5, 0.25, -1.25, -0.5, -0.25, -1.25, 0.5, -0.25, -1.25, -0.5, -0.25, 1.25, -0.5, -0.25, -1.25, 0.5, -0.25, 1.25, -0.5, -0.25, 1.25, 0.5, -0.25, -1.25, 0.5, 0.25, -1.25, 0.5, 0.25, -1.25, -0.5, -0.25, -1.25, 0.5, 0.25, -1.25, -0.5, -0.25, -1.25, -0.5, -0.25, 1.25, 0.5, -0.25, 1.25, -0.5, 0.25, 1.25, -0.5, -0.25, 1.25, 0.5, 0.25, 1.25, -0.5, 0.25, 1.25, 0.5, 0.25, 1.25, 0.5, 0.25, 1.25, -0.5, 0.25, -1.25, -0.5, 0.25, 1.25, 0.5, 0.25, -1.25, -0.5, 0.25, -1.25, 0.5, 0.25, -1.25, 0.5, -0.25, -1.25, 0.5, -0.25, 1.25, 0.5, 0.25, -1.25, 0.5, -0.25, 1.25, 0.5, 0.25, 1.25, 0.5)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_p3e1n"]
 _surfaces = [{
@@ -2205,6 +2205,16 @@ _surfaces = [{
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_vb5rb"]
 data = PackedVector3Array(-1.875, 0.25, 0.09375, -1.875, 0.125, 0.0625, 1.875, 0.125, 0.0625, -1.875, 0.25, 0.09375, 1.875, 0.125, 0.0625, 1.875, 0.25, 0.09375, -1.875, 0.0625, 0.125, 1.875, 0.0625, 0.125, 1.875, 0.125, 0.0625, -1.875, 0.0625, 0.125, 1.875, 0.125, 0.0625, -1.875, 0.125, 0.0625, -1.875, 0.09375, 0.25, -1.875, 0.0625, 0.125, -1.875, 0.125, 0.0625, -1.875, 0.09375, 0.25, -1.875, 0.125, 0.0625, -1.875, 0.25, 0.09375, 1.875, 0.25, 0.09375, 1.875, 0.125, 0.0625, 1.875, 0.0625, 0.125, 1.875, 0.25, 0.09375, 1.875, 0.0625, 0.125, 1.875, 0.09375, 0.25, -1.875, 0.09375, 0.25, 1.875, 0.09375, 0.25, 1.875, 0.0625, 0.125, -1.875, 0.09375, 0.25, 1.875, 0.0625, 0.125, -1.875, 0.0625, 0.125, -1.875, 0.09375, 0.25, -1.875, 0.25, 0.09375, 1.875, 0.25, 0.09375, -1.875, 0.09375, 0.25, 1.875, 0.25, 0.09375, 1.875, 0.09375, 0.25, -1.875, -0.25, 0.09375, 1.875, -0.25, 0.09375, 1.875, -0.125, 0.0625, -1.875, -0.25, 0.09375, 1.875, -0.125, 0.0625, -1.875, -0.125, 0.0625, -1.875, -0.0625, 0.125, -1.875, -0.125, 0.0625, 1.875, -0.125, 0.0625, -1.875, -0.0625, 0.125, 1.875, -0.125, 0.0625, 1.875, -0.0625, 0.125, -1.875, -0.25, 0.09375, -1.875, -0.125, 0.0625, -1.875, -0.0625, 0.125, -1.875, -0.25, 0.09375, -1.875, -0.0625, 0.125, -1.875, -0.09375, 0.25, 1.875, -0.09375, 0.25, 1.875, -0.0625, 0.125, 1.875, -0.125, 0.0625, 1.875, -0.09375, 0.25, 1.875, -0.125, 0.0625, 1.875, -0.25, 0.09375, -1.875, -0.09375, 0.25, -1.875, -0.0625, 0.125, 1.875, -0.0625, 0.125, -1.875, -0.09375, 0.25, 1.875, -0.0625, 0.125, 1.875, -0.09375, 0.25, -1.875, -0.09375, 0.25, 1.875, -0.09375, 0.25, 1.875, -0.25, 0.09375, -1.875, -0.09375, 0.25, 1.875, -0.25, 0.09375, -1.875, -0.25, 0.09375, -1.875, -0.25, -0.09375, 1.875, -0.25, -0.09375, 1.875, -0.09375, -0.25, -1.875, -0.25, -0.09375, 1.875, -0.09375, -0.25, -1.875, -0.09375, -0.25, -1.875, -0.0625, -0.125, -1.875, -0.09375, -0.25, 1.875, -0.09375, -0.25, -1.875, -0.0625, -0.125, 1.875, -0.09375, -0.25, 1.875, -0.0625, -0.125, -1.875, -0.0625, -0.125, -1.875, -0.125, -0.0625, -1.875, -0.25, -0.09375, -1.875, -0.0625, -0.125, -1.875, -0.25, -0.09375, -1.875, -0.09375, -0.25, 1.875, -0.125, -0.0625, 1.875, -0.0625, -0.125, 1.875, -0.09375, -0.25, 1.875, -0.125, -0.0625, 1.875, -0.09375, -0.25, 1.875, -0.25, -0.09375, -1.875, -0.125, -0.0625, -1.875, -0.0625, -0.125, 1.875, -0.0625, -0.125, -1.875, -0.125, -0.0625, 1.875, -0.0625, -0.125, 1.875, -0.125, -0.0625, -1.875, -0.125, -0.0625, 1.875, -0.125, -0.0625, 1.875, -0.25, -0.09375, -1.875, -0.125, -0.0625, 1.875, -0.25, -0.09375, -1.875, -0.25, -0.09375, -1.875, 0.25, -0.09375, -1.875, 0.09375, -0.25, 1.875, 0.09375, -0.25, -1.875, 0.25, -0.09375, 1.875, 0.09375, -0.25, 1.875, 0.25, -0.09375, -1.875, 0.0625, -0.125, 1.875, 0.0625, -0.125, 1.875, 0.09375, -0.25, -1.875, 0.0625, -0.125, 1.875, 0.09375, -0.25, -1.875, 0.09375, -0.25, -1.875, 0.125, -0.0625, -1.875, 0.0625, -0.125, -1.875, 0.09375, -0.25, -1.875, 0.125, -0.0625, -1.875, 0.09375, -0.25, -1.875, 0.25, -0.09375, 1.875, 0.25, -0.09375, 1.875, 0.09375, -0.25, 1.875, 0.0625, -0.125, 1.875, 0.25, -0.09375, 1.875, 0.0625, -0.125, 1.875, 0.125, -0.0625, -1.875, 0.125, -0.0625, 1.875, 0.125, -0.0625, 1.875, 0.0625, -0.125, -1.875, 0.125, -0.0625, 1.875, 0.0625, -0.125, -1.875, 0.0625, -0.125, -1.875, 0.125, -0.0625, -1.875, 0.25, -0.09375, 1.875, 0.25, -0.09375, -1.875, 0.125, -0.0625, 1.875, 0.25, -0.09375, 1.875, 0.125, -0.0625)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_o4rw3"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_bhtfn"]
+data = PackedVector3Array(0.25, 1.25, -0.875, -0.25, 1.25, -0.875, -0.25, -1.25, -0.875, 0.25, 1.25, -0.875, -0.25, -1.25, -0.875, 0.25, -1.25, -0.875, -0.25, -1.25, 0.875, -0.25, -1.25, -0.875, -0.25, 1.25, -0.875, -0.25, -1.25, 0.875, -0.25, 1.25, -0.875, -0.25, 1.25, 0.875, -0.25, -1.25, 0.875, 0.25, -1.25, 0.875, 0.25, -1.25, -0.875, -0.25, -1.25, 0.875, 0.25, -1.25, -0.875, -0.25, -1.25, -0.875, -0.25, 1.25, 0.875, -0.25, 1.25, -0.875, 0.25, 1.25, -0.875, -0.25, 1.25, 0.875, 0.25, 1.25, -0.875, 0.25, 1.25, 0.875, 0.25, 1.25, 0.875, 0.25, 1.25, -0.875, 0.25, -1.25, -0.875, 0.25, 1.25, 0.875, 0.25, -1.25, -0.875, 0.25, -1.25, 0.875, 0.25, -1.25, 0.875, -0.25, -1.25, 0.875, -0.25, 1.25, 0.875, 0.25, -1.25, 0.875, -0.25, 1.25, 0.875, 0.25, 1.25, 0.875)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4uc1y"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ujsjn"]
+data = PackedVector3Array(0.25, 1.25, -0.875, -0.25, 1.25, -0.875, -0.25, -1.25, -0.875, 0.25, 1.25, -0.875, -0.25, -1.25, -0.875, 0.25, -1.25, -0.875, -0.25, -1.25, 0.875, -0.25, -1.25, -0.875, -0.25, 1.25, -0.875, -0.25, -1.25, 0.875, -0.25, 1.25, -0.875, -0.25, 1.25, 0.875, -0.25, -1.25, 0.875, 0.25, -1.25, 0.875, 0.25, -1.25, -0.875, -0.25, -1.25, 0.875, 0.25, -1.25, -0.875, -0.25, -1.25, -0.875, -0.25, 1.25, 0.875, -0.25, 1.25, -0.875, 0.25, 1.25, -0.875, -0.25, 1.25, 0.875, 0.25, 1.25, -0.875, 0.25, 1.25, 0.875, 0.25, 1.25, 0.875, 0.25, 1.25, -0.875, 0.25, -1.25, -0.875, 0.25, 1.25, 0.875, 0.25, -1.25, -0.875, 0.25, -1.25, 0.875, 0.25, -1.25, 0.875, -0.25, -1.25, 0.875, -0.25, 1.25, 0.875, 0.25, -1.25, 0.875, -0.25, 1.25, 0.875, 0.25, 1.25, 0.875)
 
 [sub_resource type="Environment" id="Environment_0w2em"]
 background_mode = 1
@@ -3667,7 +3677,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "classname": "func_rotator",
 "rotate_dir": Vector3i(0, 0, 1),
 "rotate_speed": 10.0,
-"signal_ID": "",
+"signal_ID": "break_fan",
 "sound_dist": 6.0,
 "sound_path": ""
 })
@@ -4106,7 +4116,7 @@ func_godot_properties = Dictionary[String, Variant]({
 })
 
 [node name="entity_34_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 1.25, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.25, 1.25, 0)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
 "_cull_interior_faces": false,
@@ -4332,6 +4342,87 @@ func_godot_properties = Dictionary[String, Variant]({
 "sfx_file_path": "res://audio/sfx/spark_1.wav",
 "signal_ID": "broken_corridor_door",
 "volume_db": 0.0
+})
+
+[node name="entity_50_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12.875, 2.375, 0.625)
+func_godot_properties = Dictionary[String, Variant]({
+"classname": "counter",
+"count": 10,
+"emit_signal_ID": "break_fan",
+"finish_signal_parameter": "timer_start, rotate_stop",
+"origin": "20 412 76",
+"recieve_signal_ID": "corridor_fan",
+"repeatable": false,
+"reset_on_finish": false,
+"reset_signal_parameter": ""
+})
+
+[node name="entity_51_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 1.25, -0.125)
+script = ExtResource("54_g7cg2")
+func_godot_properties = Dictionary[String, Variant]({
+"_cull_interior_faces": false,
+"_phong": 0,
+"_phong_angle": 89.0,
+"_vertex_merge_distance": 0.03125,
+"classname": "func_trigger",
+"repeatable": true,
+"signal_ID": "corridor_fan",
+"signal_parameter": "counter_add"
+})
+
+[node name="entity_51_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_51_func_trigger"]
+mesh = SubResource("ArrayMesh_o4rw3")
+
+[node name="entity_51_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_51_func_trigger"]
+shape = SubResource("ConcavePolygonShape3D_bhtfn")
+
+[node name="entity_52_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12.625, 2.375, 0.625)
+func_godot_properties = Dictionary[String, Variant]({
+"autostart": false,
+"classname": "timer",
+"emit_signal_ID": "break_fan",
+"origin": "20 404 76",
+"recieve_signal_ID": "break_fan",
+"repeatable": false,
+"signal_parameter": "rotate_start",
+"time": 60.0
+})
+
+[node name="entity_53_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, -2, 3.375)
+script = ExtResource("54_g7cg2")
+func_godot_properties = Dictionary[String, Variant]({
+"_cull_interior_faces": false,
+"_phong": 0,
+"_phong_angle": 89.0,
+"_vertex_merge_distance": 0.03125,
+"classname": "func_trigger",
+"repeatable": true,
+"signal_ID": "spooky_lift",
+"signal_parameter": "counter_add"
+})
+
+[node name="entity_53_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_53_func_trigger"]
+mesh = SubResource("ArrayMesh_4uc1y")
+
+[node name="entity_53_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_53_func_trigger"]
+shape = SubResource("ConcavePolygonShape3D_ujsjn")
+
+[node name="entity_54_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.125, -3.125, 2.625)
+func_godot_properties = Dictionary[String, Variant]({
+"classname": "counter",
+"count": 30,
+"emit_signal_ID": "bridge_lift",
+"finish_signal_parameter": "move_start",
+"origin": "84 260 -100",
+"recieve_signal_ID": "spooky_lift",
+"repeatable": false,
+"reset_on_finish": false,
+"reset_signal_parameter": ""
 })
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
