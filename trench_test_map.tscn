@@ -3912,7 +3912,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "rotate_dir": Vector3i(0, 0, 1),
 "rotate_speed": 10.0,
 "signal_ID": "break_fan",
-"sound_dist": 5.0,
+"sound_dist": 2.0,
 "sound_path": ""
 })
 
@@ -3937,7 +3937,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "rotate_dir": Vector3i(0, 0, 1),
 "rotate_speed": 10.0,
 "signal_ID": "",
-"sound_dist": 6.0,
+"sound_dist": 2.0,
 "sound_path": ""
 })
 
@@ -4223,30 +4223,30 @@ mesh = SubResource("ArrayMesh_qqcig")
 shape = SubResource("ConcavePolygonShape3D_ok6st")
 
 [node name="entity_27_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14.125, 4.125, -0.125)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14.125, 4.375, -0.125)
 func_godot_properties = Dictionary[String, Variant]({
 "autoplay": true,
 "classname": "3d_sfx",
-"origin": "-4 452 132",
+"origin": "-4 452 140",
 "pan_strength": 0.0,
 "pitch_level": 1.0,
 "pitch_variation": 0.0,
-"range": 8.0,
+"range": 6.0,
 "sfx_file_path": "res://audio/ambience/corridor_ambience.wav",
 "signal_ID": "",
 "volume_db": 0.0
 })
 
 [node name="entity_28_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.625, -4.625, 2.625)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.625, -5, 2.625)
 func_godot_properties = Dictionary[String, Variant]({
 "autoplay": true,
 "classname": "3d_sfx",
-"origin": "84 308 -148",
+"origin": "84 308 -160",
 "pan_strength": 0.0,
 "pitch_level": 1.0,
 "pitch_variation": 0.0,
-"range": 4.0,
+"range": 3.0,
 "sfx_file_path": "res://audio/ambience/mechanical_ambience.wav",
 "signal_ID": "",
 "volume_db": 0.0
@@ -4700,7 +4700,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "pan_strength": 1.0,
 "pitch_level": 0.3,
 "pitch_variation": 0.0,
-"range": 0.6,
+"range": 0.4,
 "sfx_file_path": "res://audio/sfx/button.wav",
 "signal_ID": "flashing_corridor_light",
 "volume_db": 0.0

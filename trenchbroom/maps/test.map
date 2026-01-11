@@ -4477,7 +4477,7 @@
 "classname" "func_rotator"
 "rotate_dir" "0, 0, 1"
 "rotate_speed" "10"
-"sound_dist" "5"
+"sound_dist" "2"
 "signal_ID" "break_fan"
 "_tb_group" "3"
 // brush 0
@@ -4549,7 +4549,7 @@
 "classname" "func_rotator"
 "rotate_dir" "0, 0, 1"
 "rotate_speed" "10"
-"sound_dist" "6"
+"sound_dist" "2"
 "_tb_group" "4"
 // brush 0
 {
@@ -4843,20 +4843,20 @@
 // entity 31
 {
 "classname" "3d_sfx"
-"origin" "-4 452 132"
+"origin" "-4 452 140"
 "sfx_file_path" "res://audio/ambience/corridor_ambience.wav"
 "autoplay" "1"
 "pan_strength" "0"
-"range" "8"
+"range" "6"
 }
 // entity 32
 {
 "classname" "3d_sfx"
-"origin" "84 308 -148"
+"origin" "84 308 -160"
 "pan_strength" "0"
 "autoplay" "1"
 "sfx_file_path" "res://audio/ambience/mechanical_ambience.wav"
-"range" "4"
+"range" "3"
 }
 // entity 33
 {
@@ -5281,7 +5281,7 @@
 "classname" "3d_sfx"
 "origin" "-84 340 116"
 "sfx_file_path" "res://audio/sfx/button.wav"
-"range" "0.6"
+"range" "0.4"
 "pitch_variation" "0"
 "pitch_level" "0.3"
 "signal_ID" "flashing_corridor_light"
