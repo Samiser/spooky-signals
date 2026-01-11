@@ -3986,6 +3986,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "origin": "-4 452 132",
 "pan_strength": 0.0,
 "pitch_level": 1.0,
+"pitch_variation": 0.0,
 "range": 8.0,
 "sfx_file_path": "res://audio/ambience/corridor_ambience.wav",
 "signal_ID": "",
@@ -4000,6 +4001,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "origin": "84 308 -148",
 "pan_strength": 0.0,
 "pitch_level": 1.0,
+"pitch_variation": 0.0,
 "range": 4.0,
 "sfx_file_path": "res://audio/ambience/mechanical_ambience.wav",
 "signal_ID": "",
@@ -4084,6 +4086,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "origin": "-324 412 4",
 "pan_strength": 1.0,
 "pitch_level": 0.5,
+"pitch_variation": 0.0,
 "range": 12.0,
 "sfx_file_path": "res://audio/sfx/sparks.wav",
 "signal_ID": "break_door",
@@ -4098,7 +4101,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "origin": "-340 480 24",
 "repeatable": true,
 "signal_ID": "broken_corridor_door",
-"signal_parameter": "counter_add",
+"signal_parameter": "counter_add, sfx_play",
 "target": ""
 })
 
@@ -4141,6 +4144,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "origin": "-40 456 28",
 "pan_strength": 1.0,
 "pitch_level": 1.0,
+"pitch_variation": 0.0,
 "range": 12.0,
 "sfx_file_path": "res://audio/sfx/steam_burst.wav",
 "signal_ID": "steam_scare",
@@ -4217,6 +4221,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "origin": "-4 32 80",
 "pan_strength": 1.0,
 "pitch_level": 1.0,
+"pitch_variation": 0.0,
 "range": 12.0,
 "sfx_file_path": "res://audio/sfx/button.wav",
 "signal_ID": "bridge_light",
@@ -4307,9 +4312,25 @@ func_godot_properties = Dictionary[String, Variant]({
 "origin": "4 252 -40",
 "pan_strength": 1.0,
 "pitch_level": 1.0,
+"pitch_variation": 0.3,
 "range": 12.0,
 "sfx_file_path": "res://audio/sfx/spark_1.wav",
 "signal_ID": "underground_light_flicker",
+"volume_db": 0.0
+})
+
+[node name="entity_49_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 13.125, 0.625, -12.125)
+func_godot_properties = Dictionary[String, Variant]({
+"autoplay": false,
+"classname": "3d_sfx",
+"origin": "-388 420 20",
+"pan_strength": 1.0,
+"pitch_level": 0.8,
+"pitch_variation": 0.2,
+"range": 5.0,
+"sfx_file_path": "res://audio/sfx/spark_1.wav",
+"signal_ID": "broken_corridor_door",
 "volume_db": 0.0
 })
 

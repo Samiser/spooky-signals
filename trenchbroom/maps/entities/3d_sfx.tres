@@ -18,6 +18,7 @@ class_properties = Dictionary[String, Variant]({
 "autoplay": false,
 "pan_strength": 1.0,
 "pitch_level": 1.0,
+"pitch_variation": 0.0,
 "range": 12.0,
 "sfx_file_path": "",
 "signal_ID": "",

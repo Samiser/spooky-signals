@@ -4654,7 +4654,7 @@
 "origin" "-340 480 24"
 "angle" "90"
 "signal_ID" "broken_corridor_door"
-"signal_parameter" "counter_add"
+"signal_parameter" "counter_add, sfx_play"
 "target" ""
 "repeatable" "1"
 }
@@ -4840,4 +4840,16 @@
 "origin" "4 252 -40"
 "sfx_file_path" "res://audio/sfx/spark_1.wav"
 "signal_ID" "underground_light_flicker"
+"pitch_variation" ".3"
+}
+// entity 56
+{
+"classname" "3d_sfx"
+"origin" "-388 420 20"
+"signal_ID" "broken_corridor_door"
+"sfx_file_path" "res://audio/sfx/spark_1.wav"
+"pitch_level" ".8"
+"pitch_variation" ".2"
+"volume_db" "0.000000"
+"range" "5"
 }
