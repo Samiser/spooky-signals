@@ -4195,7 +4195,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "origin": "8 316 -64",
 "repeatable": true,
 "signal_ID": "spinny_machine",
-"signal_parameter": "rotate_flip, counter_add"
+"signal_parameter": "rotate_flip, counter_add, timer_start"
 })
 
 [node name="entity_40_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
@@ -4251,7 +4251,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "classname": "counter",
 "count": 6,
 "emit_signal_ID": "underground_light_flicker",
-"finish_signal_parameter": "light_start_flicker, timer_start",
+"finish_signal_parameter": "light_start_flicker, timer_start, sfx_play",
 "origin": "28 300 -68",
 "recieve_signal_ID": "spinny_machine",
 "repeatable": true,
@@ -4276,13 +4276,41 @@ func_godot_properties = Dictionary[String, Variant]({
 [node name="entity_46_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.375, -2.125, 1.125)
 func_godot_properties = Dictionary[String, Variant]({
+"autostart": false,
 "classname": "timer",
 "emit_signal_ID": "spinny_machine",
 "origin": "36 300 -68",
 "recieve_signal_ID": "underground_light_flicker",
 "repeatable": true,
-"signal_parameter": "counter_reset",
+"signal_parameter": "counter_reset, rotate_stop, light_off",
 "time": 1.0
+})
+
+[node name="entity_47_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.375, -1.875, 1.125)
+func_godot_properties = Dictionary[String, Variant]({
+"autostart": false,
+"classname": "timer",
+"emit_signal_ID": "spinny_machine",
+"origin": "36 300 -60",
+"recieve_signal_ID": "spinny_machine",
+"repeatable": true,
+"signal_parameter": "counter_reset",
+"time": 2.0
+})
+
+[node name="entity_48_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.875, -1.25, 0.125)
+func_godot_properties = Dictionary[String, Variant]({
+"autoplay": false,
+"classname": "3d_sfx",
+"origin": "4 252 -40",
+"pan_strength": 1.0,
+"pitch_level": 1.0,
+"range": 12.0,
+"sfx_file_path": "res://audio/sfx/spark_1.wav",
+"signal_ID": "underground_light_flicker",
+"volume_db": 0.0
 })
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]

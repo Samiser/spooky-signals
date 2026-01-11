@@ -15,6 +15,8 @@ func _ready() -> void:
 	signal_parameter = func_godot_properties.get("signal_parameter", "0")
 	time = func_godot_properties.get("time", 1.0)	
 	
+	is_stopped = !func_godot_properties.get("autostart", false)
+	
 	var recieve_signal_ID : String = func_godot_properties.get("recieve_signal_ID", "0")
 	connect_senders(recieve_signal_ID, signal_recieved)
 
