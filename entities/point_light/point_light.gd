@@ -40,6 +40,7 @@ func signal_recieved(parameters: String) -> void:
 				point_light.hide()
 			"light_on":
 				point_light.show()
+				point_light.light_energy = start_light_energy
 			"light_toggle":
 				if point_light.is_visible_in_tree():
 					point_light.hide()
@@ -49,3 +50,4 @@ func signal_recieved(parameters: String) -> void:
 				flicker_amount = func_godot_properties.get("flicker_amount", 0.0)
 			"light_end_flicker":
 				flicker_amount = 0
+				point_light.light_energy = start_light_energy
