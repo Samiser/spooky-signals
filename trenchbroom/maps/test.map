@@ -4799,7 +4799,7 @@
 "origin" "28 300 -68"
 "recieve_signal_ID" "spinny_machine"
 "emit_signal_ID" "underground_light_flicker"
-"finish_signal_parameter" "light_start_flicker"
+"finish_signal_parameter" "light_start_flicker, timer_start"
 "reset_signal_parameter" "light_end_flicker"
 "count" "6"
 "repeatable" "1"
@@ -4813,4 +4813,14 @@
 "count" "5"
 "recieve_signal_ID" "broken_corridor_door"
 "finish_signal_parameter" "light_start_flicker, sfx_play, move_stop"
+}
+// entity 53
+{
+"classname" "timer"
+"origin" "36 300 -68"
+"recieve_signal_ID" "underground_light_flicker"
+"emit_signal_ID" "spinny_machine"
+"signal_parameter" "counter_reset"
+"repeatable" "1"
+"time" "1.0"
 }

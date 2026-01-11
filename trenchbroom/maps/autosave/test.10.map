@@ -4295,7 +4295,7 @@
 "shadows" "1"
 "flicker_amount" "2"
 "fog_energy" "2"
-"signal_ID" "broken_corridor_door"
+"signal_ID" "break_door"
 "autoflicker" "0"
 }
 // entity 17
@@ -4530,7 +4530,7 @@
 "classname" "func_moveable"
 "move_offset" "0.34 0.0 0.0"
 "move_rate" "1"
-"signal_ID" "broken_corridor_door"
+"signal_ID" "break_door"
 "continuous" "1"
 "_cull_interior_faces" "0"
 "_tb_group" "6"
@@ -4644,7 +4644,7 @@
 {
 "classname" "3d_sfx"
 "origin" "-324 412 4"
-"signal_ID" "broken_corridor_door"
+"signal_ID" "break_door"
 "sfx_file_path" "res://audio/sfx/sparks.wav"
 "pitch_level" ".5"
 }
@@ -4654,9 +4654,9 @@
 "origin" "-340 480 24"
 "angle" "90"
 "signal_ID" "broken_corridor_door"
-"signal_parameter" "light_start_flicker, sfx_play, move_stop"
+"signal_parameter" "counter_add"
 "target" ""
-"repeatable" "0"
+"repeatable" "1"
 }
 // entity 40
 {
@@ -4750,6 +4750,8 @@
 "autoflicker" "0"
 "colour" "255 200 200"
 "energy" ".5"
+"flicker_amount" "1"
+"signal_ID" "underground_light_flicker"
 }
 // entity 46
 {
@@ -4757,7 +4759,7 @@
 "origin" "8 316 -64"
 "angle" "90"
 "signal_ID" "spinny_machine"
-"signal_parameter" "rotate_flip"
+"signal_parameter" "rotate_flip, counter_add"
 }
 // entity 47
 {
@@ -4765,7 +4767,7 @@
 "origin" "36 248 -72"
 "angle" "0"
 "signal_ID" "spinny_machine"
-"signal_parameter" "rotate_toggle, light_toggle"
+"signal_parameter" "rotate_toggle, light_toggle, counter_reset"
 }
 // entity 48
 {
@@ -4780,4 +4782,43 @@
 "origin" "-56 -128 40"
 "killtarget" ""
 "signal_ID" "logo_video"
+"targetname" ""
+"video_file_path" "res://videos/logo_vid_short.ogv"
+}
+// entity 50
+{
+"classname" "ButtonPad"
+"origin" "-40 -184 32"
+"angle" "90"
+"signal_ID" "logo_video"
+"signal_parameter" "video_play"
+}
+// entity 51
+{
+"classname" "counter"
+"origin" "28 300 -68"
+"recieve_signal_ID" "spinny_machine"
+"emit_signal_ID" "underground_light_flicker"
+"finish_signal_parameter" "light_start_flicker"
+"reset_signal_parameter" "light_end_flicker"
+"count" "6"
+"repeatable" "1"
+"reset_on_finish" "0"
+}
+// entity 52
+{
+"classname" "counter"
+"origin" "-316 476 28"
+"emit_signal_ID" "break_door"
+"count" "5"
+"recieve_signal_ID" "broken_corridor_door"
+"finish_signal_parameter" "light_start_flicker, sfx_play, move_stop"
+}
+// entity 53
+{
+"classname" "timer"
+"origin" "36 300 -68"
+"recieve_signal_ID" "underground_light_flicker"
+"emit_signal_ID" "spinny_machine"
+"signal_parameter" "reset_counter"
 }
