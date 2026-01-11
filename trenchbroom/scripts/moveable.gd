@@ -86,6 +86,12 @@ func signal_recieved(parameters: String) -> void:
 				is_moving = false
 				audio_source.stop()
 				restarted = false
+			"move_speed_up":
+				move_time *= 1.2
+			"move_speed_down":
+				move_time /= 1.2
+				if move_time < 0.1:
+					move_time = 0.1
 
 func _set_move(to_end: bool) -> void:
 	if is_moving:

@@ -9,6 +9,7 @@ var time := 0.0
 var current_time := 0.0
 var triggered := false
 var is_stopped := false
+var loop := false
 
 func _ready() -> void:
 	signal_ID = func_godot_properties.get("emit_signal_ID", "0")
@@ -16,6 +17,7 @@ func _ready() -> void:
 	time = func_godot_properties.get("time", 1.0)	
 	
 	is_stopped = !func_godot_properties.get("autostart", false)
+	loop = func_godot_properties.get("is_looping", false)
 	
 	var recieve_signal_ID : String = func_godot_properties.get("recieve_signal_ID", "0")
 	connect_senders(recieve_signal_ID, signal_recieved)
@@ -28,7 +30,7 @@ func _process(delta: float) -> void:
 	if current_time >= time:
 		send_signal.emit(signal_parameter)
 		current_time = 0.0
-		is_stopped = true
+		is_stopped = !loop
 
 func signal_recieved(parameters: String) -> void:
 	if triggered && !func_godot_properties.get("repeatable", false):

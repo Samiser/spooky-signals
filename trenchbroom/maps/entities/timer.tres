@@ -18,6 +18,7 @@ timer_reset"
 class_properties = Dictionary[String, Variant]({
 "autostart": false,
 "emit_signal_ID": "",
+"is_looping": false,
 "recieve_signal_ID": "",
 "repeatable": false,
 "signal_parameter": "",

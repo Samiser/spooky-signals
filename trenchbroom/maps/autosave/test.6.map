@@ -4136,7 +4136,7 @@
 "classname" "func_rotator"
 "rotate_dir" "0, 0, 1"
 "rotate_speed" "10"
-"sound_dist" "5"
+"sound_dist" "6"
 "signal_ID" "break_fan"
 "_tb_group" "3"
 // brush 0
@@ -4529,7 +4529,7 @@
 // entity 34
 {
 "classname" "func_moveable"
-"move_offset" "0.4 0.0 0.0"
+"move_offset" "0.34 0.0 0.0"
 "move_rate" "1"
 "signal_ID" "break_door"
 "continuous" "1"
@@ -4705,7 +4705,7 @@
 "rotate_speed" "4"
 "signal_ID" "spinny_machine"
 "sound_path" "res://audio/sfx/scifi_loop_2.wav"
-"sound_dist" "5.4"
+"sound_dist" "6"
 "_tb_group" "8"
 // brush 0
 {
@@ -4811,7 +4811,7 @@
 "classname" "counter"
 "origin" "-316 476 28"
 "emit_signal_ID" "break_door"
-"count" "10"
+"count" "5"
 "recieve_signal_ID" "broken_corridor_door"
 "finish_signal_parameter" "light_start_flicker, sfx_play, move_stop, timer_start"
 }
@@ -4848,11 +4848,11 @@
 "classname" "3d_sfx"
 "origin" "-324 476 28"
 "signal_ID" "broken_corridor_door"
-"sfx_file_path" "res://audio/sfx/error.wav"
-"pitch_level" "0.8"
-"pitch_variation" "0.0"
+"sfx_file_path" "res://audio/sfx/spark_1.wav"
+"pitch_level" ".8"
+"pitch_variation" ".2"
 "volume_db" "0.000000"
-"range" "2"
+"range" "5"
 }
 // entity 57
 {
@@ -4956,12 +4956,12 @@
 }
 // entity 66
 {
-"classname" "counter"
+"classname" "timer"
 "origin" "-324 476 36"
-"emit_signal_ID" "break_door"
-"count" "1"
 "recieve_signal_ID" "broken_corridor_door"
-"finish_signal_parameter" "move_speed_down"
-"reset_on_finish" "1"
+"emit_signal_ID" "break_door"
+"signal_parameter" "move_speed_up"
+"time" "1"
+"is_looping" "1"
 "repeatable" "1"
 }

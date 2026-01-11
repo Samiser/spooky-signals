@@ -51,3 +51,9 @@ func signal_recieved(parameters: String) -> void:
 			"light_end_flicker":
 				flicker_amount = 0
 				point_light.light_energy = start_light_energy
+			"light_toggle_flicker":
+				if flicker_amount == 0:
+					flicker_amount = func_godot_properties.get("flicker_amount", 0.0)
+				else:
+					flicker_amount = 0
+					point_light.light_energy = start_light_energy

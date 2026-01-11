@@ -3678,7 +3678,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "rotate_dir": Vector3i(0, 0, 1),
 "rotate_speed": 10.0,
 "signal_ID": "break_fan",
-"sound_dist": 6.0,
+"sound_dist": 5.0,
 "sound_path": ""
 })
 
@@ -4030,7 +4030,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "_vertex_merge_distance": 0.03125,
 "classname": "func_moveable",
 "continuous": true,
-"move_offset": Vector3(0.34, 0, 0),
+"move_offset": Vector3(0.4, 0, 0),
 "move_rate": 1.0,
 "signal_ID": "break_door",
 "sound_path": "",
@@ -4089,11 +4089,11 @@ mesh = SubResource("ArrayMesh_i3b2c")
 shape = SubResource("ConcavePolygonShape3D_sq2ha")
 
 [node name="entity_32_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16.625, 2.375, -10.875)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 15.75, -1.5, -6.25)
 func_godot_properties = Dictionary[String, Variant]({
 "autoplay": false,
 "classname": "3d_sfx",
-"origin": "-348 532 76",
+"origin": "-200 504 -48",
 "pan_strength": 1.0,
 "pitch_level": 0.5,
 "pitch_variation": 0.0,
@@ -4176,7 +4176,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "rotate_dir": Vector3i(1, 0, 0),
 "rotate_speed": 4.0,
 "signal_ID": "spinny_machine",
-"sound_dist": 9.0,
+"sound_dist": 5.4,
 "sound_path": "res://audio/sfx/scifi_loop_2.wav"
 })
 
@@ -4278,9 +4278,9 @@ func_godot_properties = Dictionary[String, Variant]({
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14.875, 0.875, -9.875)
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "counter",
-"count": 5,
+"count": 10,
 "emit_signal_ID": "break_door",
-"finish_signal_parameter": "light_start_flicker, sfx_play, move_stop",
+"finish_signal_parameter": "light_start_flicker, sfx_play, move_stop, timer_start",
 "origin": "-316 476 28",
 "recieve_signal_ID": "broken_corridor_door",
 "repeatable": false,
@@ -4294,6 +4294,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "autostart": false,
 "classname": "timer",
 "emit_signal_ID": "spinny_machine",
+"is_looping": false,
 "origin": "44 300 -68",
 "recieve_signal_ID": "underground_light_flicker",
 "repeatable": true,
@@ -4307,6 +4308,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "autostart": false,
 "classname": "timer",
 "emit_signal_ID": "spinny_machine",
+"is_looping": false,
 "origin": "44 300 -60",
 "recieve_signal_ID": "spinny_machine",
 "repeatable": true,
@@ -4337,9 +4339,9 @@ func_godot_properties = Dictionary[String, Variant]({
 "origin": "-324 476 28",
 "pan_strength": 1.0,
 "pitch_level": 0.8,
-"pitch_variation": 0.2,
-"range": 5.0,
-"sfx_file_path": "res://audio/sfx/spark_1.wav",
+"pitch_variation": 0.0,
+"range": 2.0,
+"sfx_file_path": "res://audio/sfx/error.wav",
 "signal_ID": "broken_corridor_door",
 "volume_db": 0.0
 })
@@ -4384,6 +4386,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "autostart": false,
 "classname": "timer",
 "emit_signal_ID": "break_fan",
+"is_looping": false,
 "origin": "20 404 76",
 "recieve_signal_ID": "break_fan",
 "repeatable": false,
@@ -4422,6 +4425,78 @@ func_godot_properties = Dictionary[String, Variant]({
 "recieve_signal_ID": "spooky_lift",
 "repeatable": false,
 "reset_on_finish": false,
+"reset_signal_parameter": ""
+})
+
+[node name="entity_55_point_light" parent="FuncGodotMap" instance=ExtResource("53_4cm40")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.625, 3.625, -2.375)
+func_godot_properties = Dictionary[String, Variant]({
+"autoflicker": false,
+"classname": "point_light",
+"colour": Color(0, 1, 1, 1),
+"energy": 0.2,
+"flicker_amount": 1.0,
+"fog_energy": 0.0,
+"origin": "-76 340 116",
+"shadows": false,
+"signal_ID": "flashing_corridor_light",
+"size": 2.0
+})
+
+[node name="entity_56_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.375, 3.625, -2.375)
+func_godot_properties = Dictionary[String, Variant]({
+"autostart": true,
+"classname": "timer",
+"emit_signal_ID": "flashing_corridor_light",
+"is_looping": true,
+"origin": "-76 332 116",
+"recieve_signal_ID": "",
+"repeatable": true,
+"signal_parameter": "light_toggle_flicker, sfx_play",
+"time": 1.6
+})
+
+[node name="entity_57_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.625, 3.625, -2.625)
+func_godot_properties = Dictionary[String, Variant]({
+"autoplay": false,
+"classname": "3d_sfx",
+"origin": "-84 340 116",
+"pan_strength": 1.0,
+"pitch_level": 0.3,
+"pitch_variation": 0.0,
+"range": 0.6,
+"sfx_file_path": "res://audio/sfx/button.wav",
+"signal_ID": "flashing_corridor_light",
+"volume_db": 0.0
+})
+
+[node name="entity_58_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14.875, 0.875, -9.625)
+func_godot_properties = Dictionary[String, Variant]({
+"autostart": false,
+"classname": "timer",
+"emit_signal_ID": "break_door",
+"is_looping": false,
+"origin": "-308 476 28",
+"recieve_signal_ID": "break_door",
+"repeatable": false,
+"signal_parameter": "light_off",
+"time": 8.0
+})
+
+[node name="entity_59_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14.875, 1.125, -10.125)
+func_godot_properties = Dictionary[String, Variant]({
+"classname": "counter",
+"count": 1,
+"emit_signal_ID": "break_door",
+"finish_signal_parameter": "move_speed_down",
+"origin": "-324 476 36",
+"recieve_signal_ID": "broken_corridor_door",
+"repeatable": true,
+"reset_on_finish": true,
 "reset_signal_parameter": ""
 })
 
