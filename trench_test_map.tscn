@@ -3719,7 +3719,7 @@ func_godot_properties = Dictionary[String, Variant]({
 })
 
 [node name="entity_12_point_light" parent="FuncGodotMap" instance=ExtResource("53_4cm40")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.75, -2, 0.25)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.75, -1.875, 0.25)
 func_godot_properties = Dictionary[String, Variant]({
 "autoflicker": true,
 "classname": "point_light",
@@ -3727,7 +3727,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "energy": 2.0,
 "flicker_amount": 0.6,
 "fog_energy": 4.0,
-"origin": "8 248 -64",
+"origin": "8 248 -60",
 "shadows": true,
 "signal_ID": "spinny_machine",
 "size": 8.0
@@ -4079,11 +4079,11 @@ mesh = SubResource("ArrayMesh_i3b2c")
 shape = SubResource("ConcavePolygonShape3D_sq2ha")
 
 [node name="entity_32_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12.875, 0.125, -10.125)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16.625, 2.375, -10.875)
 func_godot_properties = Dictionary[String, Variant]({
 "autoplay": false,
 "classname": "3d_sfx",
-"origin": "-324 412 4",
+"origin": "-348 532 76",
 "pan_strength": 1.0,
 "pitch_level": 0.5,
 "pitch_variation": 0.0,
@@ -4229,11 +4229,11 @@ func_godot_properties = Dictionary[String, Variant]({
 })
 
 [node name="entity_42_video_player" parent="FuncGodotMap" instance=ExtResource("61_vo26k")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4, 1.25, -1.75)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5.75, 2, -1.25)
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "video_player",
 "killtarget": "",
-"origin": "-56 -128 40",
+"origin": "-40 -184 64",
 "signal_ID": "logo_video",
 "targetname": "",
 "video_file_path": "res://videos/logo_vid_short.ogv"
@@ -4279,12 +4279,12 @@ func_godot_properties = Dictionary[String, Variant]({
 })
 
 [node name="entity_46_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.375, -2.125, 1.125)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.375, -2.125, 1.375)
 func_godot_properties = Dictionary[String, Variant]({
 "autostart": false,
 "classname": "timer",
 "emit_signal_ID": "spinny_machine",
-"origin": "36 300 -68",
+"origin": "44 300 -68",
 "recieve_signal_ID": "underground_light_flicker",
 "repeatable": true,
 "signal_parameter": "counter_reset, rotate_stop, light_off",
@@ -4292,12 +4292,12 @@ func_godot_properties = Dictionary[String, Variant]({
 })
 
 [node name="entity_47_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.375, -1.875, 1.125)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.375, -1.875, 1.375)
 func_godot_properties = Dictionary[String, Variant]({
 "autostart": false,
 "classname": "timer",
 "emit_signal_ID": "spinny_machine",
-"origin": "36 300 -60",
+"origin": "44 300 -60",
 "recieve_signal_ID": "spinny_machine",
 "repeatable": true,
 "signal_parameter": "counter_reset",
@@ -4305,11 +4305,11 @@ func_godot_properties = Dictionary[String, Variant]({
 })
 
 [node name="entity_48_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.875, -1.25, 0.125)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.875, -1.5, 0.25)
 func_godot_properties = Dictionary[String, Variant]({
 "autoplay": false,
 "classname": "3d_sfx",
-"origin": "4 252 -40",
+"origin": "8 252 -48",
 "pan_strength": 1.0,
 "pitch_level": 1.0,
 "pitch_variation": 0.3,
@@ -4320,11 +4320,11 @@ func_godot_properties = Dictionary[String, Variant]({
 })
 
 [node name="entity_49_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 13.125, 0.625, -12.125)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14.875, 0.875, -10.125)
 func_godot_properties = Dictionary[String, Variant]({
 "autoplay": false,
 "classname": "3d_sfx",
-"origin": "-388 420 20",
+"origin": "-324 476 28",
 "pan_strength": 1.0,
 "pitch_level": 0.8,
 "pitch_variation": 0.2,

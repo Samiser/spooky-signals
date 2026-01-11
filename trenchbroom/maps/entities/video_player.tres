@@ -19,7 +19,7 @@ class_properties = Dictionary[String, Variant]({
 "video_file_path": ""
 })
 meta_properties = Dictionary[String, Variant]({
-"color": Color(0.8, 0.8, 0.8, 1),
+"color": Color(0, 0, 0, 1),
 "size": AABB(-4, -4, -4, 4, 4, 4)
 })
 metadata/_custom_type_script = "uid://cxsqwtsqd8w33"

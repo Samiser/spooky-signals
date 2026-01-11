@@ -4276,7 +4276,7 @@
 // entity 15
 {
 "classname" "point_light"
-"origin" "8 248 -64"
+"origin" "8 248 -60"
 "energy" "2.0"
 "size" "8"
 "colour" "255 0 0"
@@ -4643,7 +4643,7 @@
 // entity 38
 {
 "classname" "3d_sfx"
-"origin" "-324 412 4"
+"origin" "-348 532 76"
 "signal_ID" "break_door"
 "sfx_file_path" "res://audio/sfx/sparks.wav"
 "pitch_level" ".5"
@@ -4779,7 +4779,7 @@
 // entity 49
 {
 "classname" "video_player"
-"origin" "-56 -128 40"
+"origin" "-40 -184 64"
 "killtarget" ""
 "signal_ID" "logo_video"
 "targetname" ""
@@ -4817,7 +4817,7 @@
 // entity 53
 {
 "classname" "timer"
-"origin" "36 300 -68"
+"origin" "44 300 -68"
 "recieve_signal_ID" "underground_light_flicker"
 "emit_signal_ID" "spinny_machine"
 "signal_parameter" "counter_reset, rotate_stop, light_off"
@@ -4827,7 +4827,7 @@
 // entity 54
 {
 "classname" "timer"
-"origin" "36 300 -60"
+"origin" "44 300 -60"
 "recieve_signal_ID" "spinny_machine"
 "emit_signal_ID" "spinny_machine"
 "signal_parameter" "counter_reset"
@@ -4837,7 +4837,7 @@
 // entity 55
 {
 "classname" "3d_sfx"
-"origin" "4 252 -40"
+"origin" "8 252 -48"
 "sfx_file_path" "res://audio/sfx/spark_1.wav"
 "signal_ID" "underground_light_flicker"
 "pitch_variation" ".3"
@@ -4845,7 +4845,7 @@
 // entity 56
 {
 "classname" "3d_sfx"
-"origin" "-388 420 20"
+"origin" "-324 476 28"
 "signal_ID" "broken_corridor_door"
 "sfx_file_path" "res://audio/sfx/spark_1.wav"
 "pitch_level" ".8"
