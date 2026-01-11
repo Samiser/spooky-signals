@@ -12,7 +12,13 @@ collision_shape_type = 2
 collision_mask = 0
 script_class = ExtResource("5_sb7rt")
 classname = "func_moveable"
-description = "Dynamic collidable geometry. Builds a AnimatableBody3D with a MeshInstance3D and a single concave CollisionShape3D. Does not occlude other VisualInstance3D nodes."
+description = "Dynamic collidable geometry. Builds a AnimatableBody3D with a MeshInstance3D and a single concave CollisionShape3D. Does not occlude other VisualInstance3D nodes.
+
+Funcs:
+move_switch
+move_end
+move_start
+move_stop"
 base_classes = Array[Resource]([ExtResource("1_lnax8"), ExtResource("2_sb7rt"), ExtResource("3_qyjnx")])
 class_properties = Dictionary[String, Variant]({
 "continuous": false,

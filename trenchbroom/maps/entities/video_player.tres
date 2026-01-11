@@ -9,7 +9,11 @@ script = ExtResource("3_8op8v")
 scene_file = ExtResource("2_c817b")
 apply_scale_on_map_build = false
 classname = "video_player"
-description = "plays a video file"
+description = "Plays the video_file_path in fullscreen.
+
+Funcs:
+video_play
+video_stop"
 class_properties = Dictionary[String, Variant]({
 "signal_ID": "",
 "video_file_path": ""

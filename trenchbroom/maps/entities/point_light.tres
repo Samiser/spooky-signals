@@ -9,7 +9,14 @@ script = ExtResource("3_2e8cv")
 scene_file = ExtResource("2_og8go")
 apply_scale_on_map_build = false
 classname = "point_light"
-description = "a spherical point light"
+description = "A spherical point light.
+
+Funcs:
+light_off
+light_on
+light_toggle
+light_start_flicker
+light_end_flicker"
 class_properties = Dictionary[String, Variant]({
 "autoflicker": true,
 "colour": Color(1, 1, 1, 1),

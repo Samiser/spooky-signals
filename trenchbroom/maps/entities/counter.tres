@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDPointClass" load_steps=4 format=3 uid="uid://cjyg306o0gsrr"]
+
+[ext_resource type="Script" uid="uid://d1nwwgcrner8b" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class_display_descriptor.gd" id="1_k0mrq"]
+[ext_resource type="PackedScene" uid="uid://c7vrw6ktocevo" path="res://entities/counter/counter.tscn" id="2_k0mrq"]
+[ext_resource type="Script" uid="uid://cxsqwtsqd8w33" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class.gd" id="3_tvdx5"]
+
+[resource]
+script = ExtResource("3_tvdx5")
+scene_file = ExtResource("2_k0mrq")
+apply_scale_on_map_build = false
+classname = "counter"
+description = "Triggers the emit_signal_ID once it's recieved the recieve_signal_ID X amount of times.
+
+Funcs:
+counter_add
+counter_sub
+counter_reset"
+class_properties = Dictionary[String, Variant]({
+"count": 1,
+"emit_signal_ID": "",
+"finish_signal_parameter": "",
+"recieve_signal_ID": "",
+"repeatable": false,
+"reset_on_finish": false,
+"reset_signal_parameter": ""
+})
+meta_properties = Dictionary[String, Variant]({
+"color": Color(0.99215686, 0.47058824, 0, 1),
+"size": AABB(-4, -4, -4, 4, 4, 4)
+})
+metadata/_custom_type_script = "uid://cxsqwtsqd8w33"

@@ -4750,8 +4750,6 @@
 "autoflicker" "0"
 "colour" "255 200 200"
 "energy" ".5"
-"flicker_amount" "1"
-"signal_ID" "underground_light_flicker"
 }
 // entity 46
 {
@@ -4759,7 +4757,7 @@
 "origin" "8 316 -64"
 "angle" "90"
 "signal_ID" "spinny_machine"
-"signal_parameter" "rotate_flip, counter_add"
+"signal_parameter" "rotate_flip"
 }
 // entity 47
 {
@@ -4767,7 +4765,7 @@
 "origin" "36 248 -72"
 "angle" "0"
 "signal_ID" "spinny_machine"
-"signal_parameter" "rotate_toggle, light_toggle, counter_reset"
+"signal_parameter" "rotate_toggle, light_toggle"
 }
 // entity 48
 {
@@ -4796,21 +4794,16 @@
 // entity 51
 {
 "classname" "counter"
-"origin" "28 300 -68"
-"recieve_signal_ID" "spinny_machine"
-"emit_signal_ID" "underground_light_flicker"
-"finish_signal_parameter" "light_start_flicker"
-"reset_signal_parameter" "light_end_flicker"
-"count" "6"
-"repeatable" "1"
+"origin" "-316 476 28"
+"recieve_signal_ID" "broken_corridor_door"
+"signal_parameter" "light_start_flicker, sfx_play, move_stop"
+"count" "5"
+"emit_signal_ID" "break_door"
+"repeatable" "0"
 "reset_on_finish" "0"
 }
 // entity 52
 {
 "classname" "counter"
-"origin" "-316 476 28"
-"emit_signal_ID" "break_door"
-"count" "5"
-"recieve_signal_ID" "broken_corridor_door"
-"finish_signal_parameter" "light_start_flicker, sfx_play, move_stop"
+"origin" "28 300 -68"
 }

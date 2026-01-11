@@ -12,7 +12,13 @@ collision_shape_type = 2
 collision_mask = 0
 script_class = ExtResource("5_ehebr")
 classname = "func_rotator"
-description = "Dynamic collidable geometry. Builds a AnimatableBody3D with a MeshInstance3D and a single concave CollisionShape3D. Does not occlude other VisualInstance3D nodes."
+description = "Dynamic collidable geometry. Builds a AnimatableBody3D with a MeshInstance3D and a single concave CollisionShape3D. Does not occlude other VisualInstance3D nodes.
+
+Funcs:
+rotate_start
+rotate_stop
+rotate_toggle
+rotate_flip"
 base_classes = Array[Resource]([ExtResource("1_ehebr"), ExtResource("2_cs8ux"), ExtResource("3_28ttc")])
 class_properties = Dictionary[String, Variant]({
 "autostart": true,

@@ -9,7 +9,7 @@ script = ExtResource("3_5yxum")
 scene_file = ExtResource("2_geofd")
 apply_scale_on_map_build = false
 classname = "3d_label"
-description = "used to add debug labels to the map"
+description = "Used to add debug labels to the map."
 class_properties = Dictionary[String, Variant]({
 "colour": Color(1, 1, 1, 1),
 "text": ""

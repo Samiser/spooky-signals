@@ -9,7 +9,11 @@ script = ExtResource("3_fn00u")
 scene_file = ExtResource("2_s63kx")
 apply_scale_on_map_build = false
 classname = "3d_sfx"
-description = "a 3D sound effect source"
+description = "A 3D sound effect source.
+
+Funcs:
+sfx_play
+sfx_stop"
 class_properties = Dictionary[String, Variant]({
 "autoplay": false,
 "pan_strength": 1.0,

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7vrw6ktocevo"]
+
+[ext_resource type="Script" uid="uid://gt517qb64hk2" path="res://entities/counter/counter.gd" id="1_at061"]
+
+[node name="Counter" type="Node3D" groups=["sender"]]
+script = ExtResource("1_at061")

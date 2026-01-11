@@ -9,7 +9,10 @@ script = ExtResource("3_k4cwc")
 scene_file = ExtResource("2_lj84u")
 apply_scale_on_map_build = false
 classname = "spawner"
-description = "spawns a scene"
+description = "Spawns the scene_path at this point.
+
+Funcs:
+spawn_obj"
 class_properties = Dictionary[String, Variant]({
 "scene_path": "",
 "signal_ID": "",

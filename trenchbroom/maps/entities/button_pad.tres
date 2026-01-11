@@ -9,7 +9,8 @@ script = ExtResource("2_y3fuf")
 scene_file = ExtResource("2_wuc36")
 apply_scale_on_map_build = false
 classname = "ButtonPad"
-description = "Interactable button pad."
+description = "Interactable button pad, emits signal_ID when pressed
+."
 class_properties = Dictionary[String, Variant]({
 "repeatable": true,
 "signal_ID": "",
