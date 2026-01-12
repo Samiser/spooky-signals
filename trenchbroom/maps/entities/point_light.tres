@@ -17,7 +17,9 @@ light_on
 light_toggle
 light_start_flicker
 light_end_flicker
-light_toggle_flicker"
+light_toggle_flicker
+light_set_energy:
+light_set_flicker:"
 class_properties = Dictionary[String, Variant]({
 "autoflicker": true,
 "colour": Color(1, 1, 1, 1),

@@ -49,3 +49,8 @@ func signal_recieved(parameters: String) -> void:
 			"timer_reset":
 				current_time = 0.0
 				pass
+			_:
+				var param_additional : PackedStringArray = parameter.split(': ', false)
+
+				if parameter.contains("timer_set"):
+					time = param_additional[1].to_float()

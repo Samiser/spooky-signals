@@ -37,6 +37,11 @@ func signal_recieved(parameters: String) -> void:
 			"counter_reset":
 				count = 0
 				send_signal.emit(reset_signal_parameter)
+			_:
+				var param_additional : PackedStringArray = parameter.split(': ', false)
+
+				if parameter.contains("counter_set"):
+					count = param_additional[1].to_int()
 	
 	if count >= total:
 		send_signal.emit(finish_signal_parameter)

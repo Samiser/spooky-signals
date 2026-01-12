@@ -14,7 +14,8 @@ description = "Triggers the emit_signal_ID once it's recieved the recieve_signal
 Funcs:
 counter_add
 counter_sub
-counter_reset"
+counter_reset
+counter_set:"
 class_properties = Dictionary[String, Variant]({
 "count": 1,
 "emit_signal_ID": "",

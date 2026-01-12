@@ -14,7 +14,8 @@ description = "Triggers the emit_signal_ID once it's recieved the recieve_signal
 Funcs:
 timer_start
 timer_stop
-timer_reset"
+timer_reset
+timer_set:"
 class_properties = Dictionary[String, Variant]({
 "autostart": false,
 "emit_signal_ID": "",

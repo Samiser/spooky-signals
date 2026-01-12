@@ -57,3 +57,12 @@ func signal_recieved(parameters: String) -> void:
 				else:
 					flicker_amount = 0
 					point_light.light_energy = start_light_energy
+			_:
+				var param_additional : PackedStringArray = parameter.split(': ', false)
+
+				if parameter.contains("light_set_energy"):
+					point_light.light_energy = param_additional[1].to_float()
+					start_light_energy = point_light.light_energy 
+				
+				if parameter.contains("light_set_flicker"):
+					flicker_amount = param_additional[1].to_float()

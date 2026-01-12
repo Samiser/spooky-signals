@@ -9,7 +9,15 @@ script = ExtResource("2_xbc31")
 scene_file = ExtResource("2_p4rq3")
 apply_scale_on_map_build = false
 classname = "player"
-description = "The player spawn point."
+description = "The player spawn point.
+
+Funcs:
+player_gravity_on
+player_gravity_off
+player_gravity_set:
+player_shake_time:
+player_shake_magnitude:
+"
 meta_properties = Dictionary[String, Variant]({
 "color": Color(0.8, 0.8, 0, 1),
 "size": AABB(-8, -8, -8, 8, 8, 32)

@@ -133,14 +133,22 @@ func signal_recieved(parameters: String) -> void:
 				gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 			"player_gravity_off":
 				gravity = 0.0
-			"player_gravity_half":
-				gravity = ProjectSettings.get_setting("physics/3d/default_gravity") / 2.0
-			"player_shake_mini":
-				shake_time = 1.0
-				shake_magnitude = 86
-			"player_shake_mid":
-				shake_time = 2.0
-				shake_magnitude = 132
-			"player_shake_big":
-				shake_time = 2.2
-				shake_magnitude = 256
+			_:
+				var param_additional : PackedStringArray = parameter.split(': ', false)
+
+				if parameter.contains("player_update_location_ui"):
+					if $UI/locationLabel.text == param_additional[1]:
+						return
+					
+					$UI/locationLabel.text = param_additional[1]
+					var tween := get_tree().create_tween()
+					tween.tween_property($UI/locationLabel, "visible_ratio", 1, 0.4).from(0.0) 
+				
+				if parameter.contains("player_gravity_set"):
+					gravity = param_additional[1].to_float()
+				
+				if parameter.contains("player_shake_time"):
+					shake_time = param_additional[1].to_float()
+				
+				if parameter.contains("player_shake_magnitude"):
+					shake_magnitude = param_additional[1].to_float()

@@ -4320,6 +4320,15 @@
 ( 104 348 -128 ) ( 144 348 -128 ) ( 144 308 -104 ) clip [ -1.0000000000000002 0 0 0 ] [ 0 -1.0000000000000002 0 28 ] 270 1 1
 ( 144 308 -104 ) ( 144 348 -128 ) ( 144 308 -128 ) clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
 }
+// brush 466
+{
+( 32 112 40 ) ( 32 113 40 ) ( 32 112 41 ) clip [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 32 104 40 ) ( 32 104 41 ) ( 33 104 40 ) clip [ 1 0 0 0 ] [ 0 0 -1 0 ] 270 1 1
+( 32 112 40 ) ( 33 112 40 ) ( 32 113 40 ) clip [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 128 184 48 ) ( 128 185 48 ) ( 129 184 48 ) clip [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 128 184 48 ) ( 129 184 48 ) ( 128 184 49 ) clip [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 128 184 48 ) ( 128 184 49 ) ( 128 185 48 ) clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
 }
 // entity 1
 {
@@ -5312,13 +5321,13 @@
 "origin" "-32 460 44"
 "recieve_signal_ID" "steam_scare"
 "emit_signal_ID" "player"
-"finish_signal_parameter" "player_shake_time: 1.0, player_shake_magnitude: 64"
+"finish_signal_parameter" "player_shake_mini"
 }
 // entity 68
 {
 "classname" "func_trigger"
 "signal_ID" "player"
-"signal_parameter" "player_gravity_set: -15.0"
+"signal_parameter" "player_gravity_half"
 // brush 0
 {
 ( -36 -132 8 ) ( -36 -131 8 ) ( -36 -132 9 ) Grating/Grating_14-128x128_T [ 0 -1 0 -68 ] [ 0 0 -1 8 ] 270 1 1
@@ -5350,99 +5359,9 @@
 "origin" "28 300 -60"
 "recieve_signal_ID" "underground_light_flicker"
 "emit_signal_ID" "player"
-"finish_signal_parameter" "player_shake_time: 2.0, player_shake_magnitude: 100"
+"finish_signal_parameter" "player_shake_mini"
 "reset_signal_parameter" ""
 "count" "1"
 "repeatable" "1"
 "reset_on_finish" "1"
-}
-// entity 71
-{
-"classname" "func_trigger"
-"signal_ID" "player"
-"signal_parameter" "player_update_location_ui: Bridge"
-// brush 0
-{
-( 32 112 40 ) ( 32 113 40 ) ( 32 112 41 ) clip [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 32 104 40 ) ( 32 104 41 ) ( 33 104 40 ) clip [ 1 0 0 0 ] [ 0 0 -1 0 ] 270 1 1
-( 32 112 40 ) ( 33 112 40 ) ( 32 113 40 ) clip [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
-( 128 184 48 ) ( 128 185 48 ) ( 129 184 48 ) clip [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
-( 128 184 48 ) ( 129 184 48 ) ( 128 184 49 ) clip [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 128 184 48 ) ( 128 184 49 ) ( 128 185 48 ) clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
-}
-}
-// entity 72
-{
-"classname" "func_trigger"
-"signal_ID" "player"
-"signal_parameter" "player_update_location_ui: Bridge"
-// brush 0
-{
-( -32 112 40 ) ( -32 113 40 ) ( -32 112 41 ) clip [ 0 -1 0 0 ] [ 0 0 -1 0 ] 180 1 1
-( -32 176 40 ) ( -32 176 41 ) ( -31 176 40 ) clip [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( -32 112 0 ) ( -31 112 0 ) ( -32 113 0 ) clip [ -1 0 0 0 ] [ 0 -1 0 0 ] 90 1 1
-( 64 184 80 ) ( 64 185 80 ) ( 65 184 80 ) clip [ 1 0 0 0 ] [ 0 -1 0 0 ] 90 1 1
-( 64 184 48 ) ( 65 184 48 ) ( 64 184 49 ) clip [ -1 0 0 0 ] [ 0 0 -1 0 ] 180 1 1
-( 32 184 48 ) ( 32 184 49 ) ( 32 185 48 ) clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 90 1 1
-}
-}
-// entity 73
-{
-"classname" "func_trigger"
-"signal_ID" "player"
-"signal_parameter" "player_update_location_ui: Access Corridor"
-// brush 0
-{
-( -32 136 40 ) ( -32 137 40 ) ( -32 136 41 ) clip [ 0 -1 0 24 ] [ 0 0 -1 0 ] 270 1 1
-( -32 200 40 ) ( -32 200 41 ) ( -31 200 40 ) clip [ 1 0 0 0 ] [ 0 0 -1 0 ] 90 1 1
-( -32 136 0 ) ( -31 136 0 ) ( -32 137 0 ) clip [ -1 0 0 0 ] [ 0 -1 0 24 ] 180 1 1
-( 64 208 80 ) ( 64 209 80 ) ( 65 208 80 ) clip [ 1 0 0 0 ] [ 0 -1 0 24 ] 180 1 1
-( 64 208 48 ) ( 65 208 48 ) ( 64 208 49 ) clip [ -1 0 0 0 ] [ 0 0 -1 0 ] 270 1 1
-( 32 208 48 ) ( 32 208 49 ) ( 32 209 48 ) clip [ 0 1 0 -24 ] [ 0 0 -1 0 ] 180 1 1
-}
-}
-// entity 74
-{
-"classname" "func_trigger"
-"signal_ID" "player"
-"signal_parameter" "player_update_location_ui: Access Corridor"
-// brush 0
-{
-( 64 560 40 ) ( 64 561 40 ) ( 64 560 41 ) clip [ 0 -1 0 0 ] [ 0 0 -1 0 ] 90 1 1
-( 64 624 40 ) ( 64 624 41 ) ( 65 624 40 ) clip [ 1 0 0 -32 ] [ 0 0 -1 0 ] 270 1 1
-( 64 560 0 ) ( 65 560 0 ) ( 64 561 0 ) clip [ -1 0 0 32 ] [ 0 -1 0 0 ] 0 1 1
-( 160 632 80 ) ( 160 633 80 ) ( 161 632 80 ) clip [ 1 0 0 -32 ] [ 0 -1 0 0 ] 0 1 1
-( 160 632 48 ) ( 161 632 48 ) ( 160 632 49 ) clip [ -1 0 0 32 ] [ 0 0 -1 0 ] 90 1 1
-( 136 632 48 ) ( 136 632 49 ) ( 136 633 48 ) clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 270 1 1
-}
-}
-// entity 75
-{
-"classname" "func_trigger"
-"signal_ID" "player"
-"signal_parameter" "player_update_location_ui: Labs"
-// brush 0
-{
-( 64 592 40 ) ( 64 593 40 ) ( 64 592 41 ) clip [ 0 -1 0 32 ] [ 0 0 -1 0 ] 90 1 1
-( 64 656 40 ) ( 64 656 41 ) ( 65 656 40 ) clip [ 1 0 0 -32 ] [ 0 0 -1 0 ] 270 1 1
-( 64 592 0 ) ( 65 592 0 ) ( 64 593 0 ) clip [ -1 0 0 32 ] [ 0 -1 0 32 ] 0 1 1
-( 160 664 80 ) ( 160 665 80 ) ( 161 664 80 ) clip [ 1 0 0 -32 ] [ 0 -1 0 32 ] 0 1 1
-( 160 664 48 ) ( 161 664 48 ) ( 160 664 49 ) clip [ -1 0 0 32 ] [ 0 0 -1 0 ] 90 1 1
-( 128 664 48 ) ( 128 664 49 ) ( 128 665 48 ) clip [ 0 1 0 -32 ] [ 0 0 -1 0 ] 180 1 1
-}
-}
-// entity 76
-{
-"classname" "func_trigger"
-"signal_ID" "player"
-"signal_parameter" "player_update_location_ui: Engineering"
-// brush 0
-{
-( 48 128 -72 ) ( 48 129 -72 ) ( 48 128 -71 ) clip [ 0 -1 0 16 ] [ 0 0 -1 -48 ] 270 1 1
-( 32 192 -72 ) ( 32 192 -71 ) ( 33 192 -72 ) clip [ 1 0 0 0 ] [ 0 0 -1 -48 ] 180 1 1
-( 32 128 -104 ) ( 33 128 -104 ) ( 32 129 -104 ) clip [ -1 0 0 0 ] [ 0 -1 0 16 ] 270 1 1
-( 128 200 -24 ) ( 128 201 -24 ) ( 129 200 -24 ) clip [ 1 0 0 0 ] [ 0 -1 0 16 ] 270 1 1
-( 128 200 -64 ) ( 129 200 -64 ) ( 128 200 -63 ) clip [ -1 0 0 0 ] [ 0 0 -1 -48 ] 0 1 1
-( 120 200 -64 ) ( 120 200 -63 ) ( 120 201 -64 ) clip [ 0 1 0 -16 ] [ 0 0 -1 -48 ] 270 1 1
-}
 }

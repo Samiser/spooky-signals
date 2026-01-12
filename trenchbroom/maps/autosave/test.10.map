@@ -5312,13 +5312,13 @@
 "origin" "-32 460 44"
 "recieve_signal_ID" "steam_scare"
 "emit_signal_ID" "player"
-"finish_signal_parameter" "player_shake_time: 1.0, player_shake_magnitude: 64"
+"finish_signal_parameter" "player_shake_mini"
 }
 // entity 68
 {
 "classname" "func_trigger"
 "signal_ID" "player"
-"signal_parameter" "player_gravity_set: -15.0"
+"signal_parameter" "player_gravity_set -5.0"
 // brush 0
 {
 ( -36 -132 8 ) ( -36 -131 8 ) ( -36 -132 9 ) Grating/Grating_14-128x128_T [ 0 -1 0 -68 ] [ 0 0 -1 8 ] 270 1 1
@@ -5350,7 +5350,7 @@
 "origin" "28 300 -60"
 "recieve_signal_ID" "underground_light_flicker"
 "emit_signal_ID" "player"
-"finish_signal_parameter" "player_shake_time: 2.0, player_shake_magnitude: 100"
+"finish_signal_parameter" "player_shake_time: "
 "reset_signal_parameter" ""
 "count" "1"
 "repeatable" "1"
