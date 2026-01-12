@@ -7,8 +7,13 @@ class_name Player
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 var speed: int = 4
 var jump_speed: int = 4
+var crouch_time : float = 0.1
+var crouch_height := 1.1
+var default_height : float
 var mouse_sensitivity: float = 0.002
 var is_zoomed : bool = false
+var is_crouched : bool = false
+var crouch_tween : Tween
 var shake_time := 0.0
 var shake_magnitude := 128.0
 
@@ -23,14 +28,20 @@ var current_interactable: Node3D
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	connect_senders("player", signal_recieved)
-
+	default_height = $CollisionShape3D.shape.height
+		
 func _physics_process(delta):
 	character_body.velocity.y += -gravity * delta
 	if !interacting:
 		var input = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 		var movement_dir = character_body.transform.basis * Vector3(input.x, 0, input.y)
-		character_body.velocity.x = movement_dir.x * speed
-		character_body.velocity.z = movement_dir.z * speed
+		
+		var current_speed := speed
+		if is_crouched:
+			current_speed = speed / 2.0
+		
+		character_body.velocity.x = movement_dir.x * current_speed
+		character_body.velocity.z = movement_dir.z * current_speed
 		
 		if character_body.is_on_floor() and Input.is_action_just_pressed("jump"):
 			character_body.velocity.y = jump_speed
@@ -90,6 +101,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		if not interacting:
 			toggle_zoom()
 	
+	if event.is_action_pressed("crouch"):
+		if not interacting:
+			_set_crouch(!is_crouched)
+	
 	if event.is_action_released("click"):
 		if interacting and current_interactable.has_method("on_release"):
 			current_interactable.on_release()
@@ -124,6 +139,44 @@ func _try_interact():
 	if interactable:
 		interactable.interact(self)
 		current_interactable = interactable
+
+func _set_crouch(crouch : bool) -> void:
+	if !crouch: # standing up
+		var checks := -1
+		var body_radius : float = $CollisionShape3D.shape.radius
+
+		while(checks < 4): # checks surrounding area of player if there's space to stand up
+			var check_point :Vector3= Vector3.FORWARD.rotated(Vector3.UP, checks * (PI / 2))
+			check_point = check_point * body_radius
+			
+			if checks == -1: # check center
+				check_point = Vector3.ZERO
+				
+			check_point.y += crouch_height
+			
+			$StandRayCheck.position = check_point
+			$StandRayCheck.force_raycast_update()
+			
+			if $StandRayCheck.is_colliding():
+				print("No room to stand, check failed at: (" + str(checks) + ")")
+				return
+			else:
+				checks += 1
+	
+	if crouch_tween != null && crouch_tween.is_running():
+		crouch_tween.stop()
+	
+	is_crouched = crouch
+	var body_height := 1.8
+	var cam_height := body_height - 0.1
+	
+	if is_crouched:
+		body_height = crouch_height
+		cam_height = body_height - 0.1
+	
+	crouch_tween = get_tree().create_tween()
+	crouch_tween.tween_property($CollisionShape3D.shape, "height", body_height, crouch_time)
+	crouch_tween.tween_property($Camera3D, "position:y", cam_height, crouch_time)
 
 func signal_recieved(parameters: String) -> void:
 	var param_list : PackedStringArray = parameters.split(', ', false)
