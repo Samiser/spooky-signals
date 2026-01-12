@@ -5154,7 +5154,7 @@
 "emit_signal_ID" "break_door"
 "count" "10"
 "recieve_signal_ID" "broken_corridor_door"
-"finish_signal_parameter" "light_start_flicker, sfx_play, move_stop, timer_start"
+"finish_signal_parameter" "light_start_flicker, sfx_play, move_stop, timer_start, counter_add"
 }
 // entity 53
 {
@@ -5454,4 +5454,13 @@
 "autostart" "1"
 "time" "0.5"
 "signal_parameter" "player_update_location_ui: Bridge"
+}
+// entity 78
+{
+"classname" "counter"
+"origin" "-316 476 36"
+"emit_signal_ID" "player"
+"count" "1"
+"recieve_signal_ID" "break_door"
+"finish_signal_parameter" "player_shake_time: 1, player_shake_magnitude: 32"
 }
