@@ -5004,7 +5004,7 @@
 {
 "classname" "func_trigger"
 "signal_ID" "steam_scare"
-"signal_parameter" "spawn_obj, sfx_play, counter_add"
+"signal_parameter" "spawn_obj, sfx_play"
 "repeatable" "0"
 // brush 0
 {
@@ -5309,8 +5309,7 @@
 // entity 67
 {
 "classname" "counter"
-"origin" "-32 460 44"
+"origin" "4 476 52"
 "recieve_signal_ID" "steam_scare"
 "emit_signal_ID" "player"
-"finish_signal_parameter" "player_shake_mini"
 }
