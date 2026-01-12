@@ -62,3 +62,8 @@ func signal_recieved(parameters: String) -> void:
 				is_moving = !is_moving
 			"rotate_flip":
 				target_power_level = target_power_level * -1
+			_:
+				var param_additional : PackedStringArray = parameter.split(': ', false)
+
+				if parameter.contains("rotate_speed_set"):
+					rotate_speed = param_additional[1].to_float() 

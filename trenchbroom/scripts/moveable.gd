@@ -92,6 +92,11 @@ func signal_recieved(parameters: String) -> void:
 				move_time /= 1.2
 				if move_time < 0.1:
 					move_time = 0.1
+			_:
+				var param_additional : PackedStringArray = parameter.split(': ', false)
+
+				if parameter.contains("move_speed_set"):
+					move_time = param_additional[1].to_float() 
 
 func _set_move(to_end: bool) -> void:
 	if is_moving:
