@@ -5302,7 +5302,7 @@
 "emit_signal_ID" "break_door"
 "count" "1"
 "recieve_signal_ID" "broken_corridor_door"
-"finish_signal_parameter" "move_speed_down"
+"finish_signal_parameter" "move_speed_up"
 "reset_on_finish" "1"
 "repeatable" "1"
 }
@@ -5438,11 +5438,20 @@
 "signal_parameter" "player_update_location_ui: Engineering"
 // brush 0
 {
-( 48 128 -72 ) ( 48 129 -72 ) ( 48 128 -71 ) clip [ 0 -1 0 16 ] [ 0 0 -1 -48 ] 270 1 1
-( 32 192 -72 ) ( 32 192 -71 ) ( 33 192 -72 ) clip [ 1 0 0 0 ] [ 0 0 -1 -48 ] 180 1 1
-( 32 128 -104 ) ( 33 128 -104 ) ( 32 129 -104 ) clip [ -1 0 0 0 ] [ 0 -1 0 16 ] 270 1 1
-( 128 200 -24 ) ( 128 201 -24 ) ( 129 200 -24 ) clip [ 1 0 0 0 ] [ 0 -1 0 16 ] 270 1 1
-( 128 200 -64 ) ( 129 200 -64 ) ( 128 200 -63 ) clip [ -1 0 0 0 ] [ 0 0 -1 -48 ] 0 1 1
-( 120 200 -64 ) ( 120 200 -63 ) ( 120 201 -64 ) clip [ 0 1 0 -16 ] [ 0 0 -1 -48 ] 270 1 1
+( 48 112 -72 ) ( 48 113 -72 ) ( 48 112 -71 ) clip [ 0 -1 0 0 ] [ 0 0 -1 -48 ] 90 1 1
+( 32 104 -72 ) ( 32 104 -71 ) ( 33 104 -72 ) clip [ 1 0 0 0 ] [ 0 0 -1 -48 ] 270 1 1
+( 32 112 -64 ) ( 33 112 -64 ) ( 32 113 -64 ) clip [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 128 184 -56 ) ( 128 185 -56 ) ( 129 184 -56 ) clip [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 128 184 -64 ) ( 129 184 -64 ) ( 128 184 -63 ) clip [ -1 0 0 0 ] [ 0 0 -1 -48 ] 180 1 1
+( 120 184 -64 ) ( 120 184 -63 ) ( 120 185 -64 ) clip [ 0 1 0 0 ] [ 0 0 -1 -48 ] 90 1 1
 }
+}
+// entity 77
+{
+"classname" "timer"
+"origin" "-44 180 60"
+"emit_signal_ID" "player"
+"autostart" "1"
+"time" "0.5"
+"signal_parameter" "player_update_location_ui: Bridge"
 }

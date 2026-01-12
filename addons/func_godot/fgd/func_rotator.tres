@@ -19,7 +19,7 @@ rotate_start
 rotate_stop
 rotate_toggle
 rotate_flip
-rotate_speed_set"
+rotate_speed_set:"
 base_classes = Array[Resource]([ExtResource("1_ehebr"), ExtResource("2_cs8ux"), ExtResource("3_28ttc")])
 class_properties = Dictionary[String, Variant]({
 "autostart": true,

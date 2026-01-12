@@ -2423,7 +2423,7 @@ data = PackedVector3Array(0.125, 1.25, -1, -0.125, 1.25, -1, -0.125, -1.25, -1, 
 [sub_resource type="ArrayMesh" id="ArrayMesh_lywob"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_f68xc"]
-data = PackedVector3Array(0.125, 1.25, -1.125, -0.125, 1.25, -1.125, -0.125, -1.25, -1.125, 0.125, 1.25, -1.125, -0.125, -1.25, -1.125, 0.125, -1.25, -1.125, -0.125, -1.25, 1.125, -0.125, -1.25, -1.125, -0.125, 1.25, -1.125, -0.125, -1.25, 1.125, -0.125, 1.25, -1.125, -0.125, 1.25, 1.125, -0.125, -1.25, 1.125, 0.125, -1.25, 1.125, 0.125, -1.25, -1.125, -0.125, -1.25, 1.125, 0.125, -1.25, -1.125, -0.125, -1.25, -1.125, -0.125, 1.25, 1.125, -0.125, 1.25, -1.125, 0.125, 1.25, -1.125, -0.125, 1.25, 1.125, 0.125, 1.25, -1.125, 0.125, 1.25, 1.125, 0.125, 1.25, 1.125, 0.125, 1.25, -1.125, 0.125, -1.25, -1.125, 0.125, 1.25, 1.125, 0.125, -1.25, -1.125, 0.125, -1.25, 1.125, 0.125, -1.25, 1.125, -0.125, -1.25, 1.125, -0.125, 1.25, 1.125, 0.125, -1.25, 1.125, -0.125, 1.25, 1.125, 0.125, 1.25, 1.125)
+data = PackedVector3Array(1.25, 0.125, -1.125, -1.25, 0.125, -1.125, -1.25, -0.125, -1.125, 1.25, 0.125, -1.125, -1.25, -0.125, -1.125, 1.25, -0.125, -1.125, -1.25, -0.125, 1.125, -1.25, -0.125, -1.125, -1.25, 0.125, -1.125, -1.25, -0.125, 1.125, -1.25, 0.125, -1.125, -1.25, 0.125, 1.125, -1.25, -0.125, 1.125, 1.25, -0.125, 1.125, 1.25, -0.125, -1.125, -1.25, -0.125, 1.125, 1.25, -0.125, -1.125, -1.25, -0.125, -1.125, -1.25, 0.125, 1.125, -1.25, 0.125, -1.125, 1.25, 0.125, -1.125, -1.25, 0.125, 1.125, 1.25, 0.125, -1.125, 1.25, 0.125, 1.125, 1.25, 0.125, 1.125, 1.25, 0.125, -1.125, 1.25, -0.125, -1.125, 1.25, 0.125, 1.125, 1.25, -0.125, -1.125, 1.25, -0.125, 1.125, 1.25, -0.125, 1.125, -1.25, -0.125, 1.125, -1.25, 0.125, 1.125, 1.25, -0.125, 1.125, -1.25, 0.125, 1.125, 1.25, 0.125, 1.125)
 
 [sub_resource type="Environment" id="Environment_0w2em"]
 background_mode = 1
@@ -4818,7 +4818,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "classname": "counter",
 "count": 1,
 "emit_signal_ID": "break_door",
-"finish_signal_parameter": "move_speed_down",
+"finish_signal_parameter": "move_speed_up",
 "origin": "-324 476 36",
 "recieve_signal_ID": "broken_corridor_door",
 "repeatable": true,
@@ -4995,7 +4995,7 @@ mesh = SubResource("ArrayMesh_pskq3")
 shape = SubResource("ConcavePolygonShape3D_wvu71")
 
 [node name="entity_69_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.125, -2, 2.625)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, -1.875, 2.625)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
 "_cull_interior_faces": false,
@@ -5013,6 +5013,20 @@ mesh = SubResource("ArrayMesh_lywob")
 
 [node name="entity_69_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_69_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_f68xc")
+
+[node name="entity_70_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.625, 1.875, -1.375)
+func_godot_properties = Dictionary[String, Variant]({
+"autostart": true,
+"classname": "timer",
+"emit_signal_ID": "player",
+"is_looping": false,
+"origin": "-44 180 60",
+"recieve_signal_ID": "",
+"repeatable": false,
+"signal_parameter": "player_update_location_ui: Bridge",
+"time": 0.5
+})
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_0w2em")
