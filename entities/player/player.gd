@@ -37,7 +37,7 @@ func _physics_process(delta):
 		var movement_dir = character_body.transform.basis * Vector3(input.x, 0, input.y)
 		
 		var current_speed := speed
-		if is_crouched:
+		if is_crouched && character_body.is_on_floor():
 			current_speed = speed / 2.0
 		
 		character_body.velocity.x = movement_dir.x * current_speed
