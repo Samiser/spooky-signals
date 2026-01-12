@@ -11,14 +11,19 @@ var crouch_time : float = 0.1
 var crouch_height := 1.1
 var default_height : float
 var mouse_sensitivity: float = 0.002
+
+var default_fov : float
+var zoom_fov := 40.0
 var is_zoomed : bool = false
+var zoom_tween : Tween
+
 var is_crouched : bool = false
 var crouch_tween : Tween
+
 var shake_time := 0.0
 var shake_magnitude := 128.0
 
 var interact_distance: float = 4.0
-
 var interacting: bool = false
 var current_interactable: Node3D 
 
@@ -29,6 +34,7 @@ func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	connect_senders("player", signal_recieved)
 	default_height = $CollisionShape3D.shape.height
+	default_fov = $Camera3D.fov
 		
 func _physics_process(delta):
 	character_body.velocity.y += -gravity * delta
@@ -75,12 +81,17 @@ func _set_crosshair_visibility() -> void:
 		$UI/interactLabel.text = ""
 
 func toggle_zoom() -> void:
+	
+	if zoom_tween != null && zoom_tween.is_running():
+		zoom_tween.stop()
+	
+	var zoom_level : float = default_fov
 	is_zoomed = !is_zoomed
 	if is_zoomed:
-		camera.fov /= 2.4
-		$UI/interactLabel.text = ""
-	else:
-		camera.fov *= 2.4
+		zoom_level = zoom_fov
+		
+	zoom_tween = get_tree().create_tween()
+	zoom_tween.tween_property($Camera3D, "fov", zoom_level, 0.14)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
