@@ -1,4 +1,4 @@
-[gd_scene load_steps=572 format=4 uid="uid://bbkkxfiknq0dd"]
+[gd_scene load_steps=576 format=4 uid="uid://bbkkxfiknq0dd"]
 
 [ext_resource type="Script" uid="uid://cwu5cf7a0awcd" path="res://addons/func_godot/src/map/func_godot_map.gd" id="1_fuxfd"]
 [ext_resource type="Resource" uid="uid://gg6etwqjsbcb" path="res://trenchbroom/spooky-signals_map_settings.tres" id="2_hd67a"]
@@ -2333,6 +2333,42 @@ data = PackedVector3Array(0.25, 1.25, -0.875, -0.25, 1.25, -0.875, -0.25, -1.25,
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8us3e"]
 data = PackedVector3Array(0.25, 1.25, -0.875, -0.25, 1.25, -0.875, -0.25, -1.25, -0.875, 0.25, 1.25, -0.875, -0.25, -1.25, -0.875, 0.25, -1.25, -0.875, -0.25, -1.25, 0.875, -0.25, -1.25, -0.875, -0.25, 1.25, -0.875, -0.25, -1.25, 0.875, -0.25, 1.25, -0.875, -0.25, 1.25, 0.875, -0.25, -1.25, 0.875, 0.25, -1.25, 0.875, 0.25, -1.25, -0.875, -0.25, -1.25, 0.875, 0.25, -1.25, -0.875, -0.25, -1.25, -0.875, -0.25, 1.25, 0.875, -0.25, 1.25, -0.875, 0.25, 1.25, -0.875, -0.25, 1.25, 0.875, 0.25, 1.25, -0.875, 0.25, 1.25, 0.875, 0.25, 1.25, 0.875, 0.25, 1.25, -0.875, 0.25, -1.25, -0.875, 0.25, 1.25, 0.875, 0.25, -1.25, -0.875, 0.25, -1.25, 0.875, 0.25, -1.25, 0.875, -0.25, -1.25, 0.875, -0.25, 1.25, 0.875, 0.25, -1.25, 0.875, -0.25, 1.25, 0.875, 0.25, 1.25, 0.875)
 
+[sub_resource type="ArrayMesh" id="ArrayMesh_gob4c"]
+_surfaces = [{
+"aabb": AABB(-0.75, -1.25, -0.75, 1.5, 2.5, 1.5),
+"attribute_data": PackedByteArray("AAAAPgAAIL8AAAA/AAAgvwAAAD8AAAAAAAAAPgAAAAAAAIC+AAAAAAAAIL8AAAAAAAAgvwAAIL8AAIC+AAAgvwAAgD4AAAA/AACAPgAAAD4AACA/AAAAPgAAID8AAAA/AACAvgAAAD8AACC/AAAAPwAAIL8AAAA+AACAvgAAAD4AAIA+AAAgvwAAID8AACC/AAAgPwAAAAAAAIA+AAAAAAAAAL4AAAAAAAAAvwAAAAAAAAC/AAAgvwAAAL4AACC/"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAAFAAYABAAGAAcACAAJAAoACAAKAAsADAANAA4ADAAOAA8AEAARABIAEAASABMAFAAVABYAFAAWABcA"),
+"material": ExtResource("26_diqfb"),
+"name": "Grating/Grating_14-128x128_T",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AABAPwAAoD8AAEC/AABAvwAAoD8AAEC/AABAvwAAoL8AAEC/AABAPwAAoL8AAEC/AABAvwAAoL8AAEA/AABAvwAAoL8AAEC/AABAvwAAoD8AAEC/AABAvwAAoD8AAEA/AABAvwAAoL8AAEA/AABAPwAAoL8AAEA/AABAPwAAoL8AAEC/AABAvwAAoL8AAEC/AABAvwAAoD8AAEA/AABAvwAAoD8AAEC/AABAPwAAoD8AAEC/AABAPwAAoD8AAEA/AABAPwAAoD8AAEA/AABAPwAAoD8AAEC/AABAPwAAoL8AAEC/AABAPwAAoL8AAEA/AABAPwAAoL8AAEA/AABAvwAAoL8AAEA/AABAvwAAoD8AAEA/AABAPwAAoD8AAEA//////wAA/7//////AAD/v/////8AAP+//////wAA/78AAP9//3//vwAA/3//f/+/AAD/f/9//78AAP9//3//v/9/AAD//////38AAP//////fwAA//////9/AAD//////3////9//7//f////3//v/9/////f/+//3////9//7////9//////////3//////////f/////////9///////9//3////+//3//f////7//f/9/////v/9//3////+/")
+}]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_idagc"]
+data = PackedVector3Array(0.75, 1.25, -0.75, -0.75, 1.25, -0.75, -0.75, -1.25, -0.75, 0.75, 1.25, -0.75, -0.75, -1.25, -0.75, 0.75, -1.25, -0.75, -0.75, -1.25, 0.75, -0.75, -1.25, -0.75, -0.75, 1.25, -0.75, -0.75, -1.25, 0.75, -0.75, 1.25, -0.75, -0.75, 1.25, 0.75, -0.75, -1.25, 0.75, 0.75, -1.25, 0.75, 0.75, -1.25, -0.75, -0.75, -1.25, 0.75, 0.75, -1.25, -0.75, -0.75, -1.25, -0.75, -0.75, 1.25, 0.75, -0.75, 1.25, -0.75, 0.75, 1.25, -0.75, -0.75, 1.25, 0.75, 0.75, 1.25, -0.75, 0.75, 1.25, 0.75, 0.75, 1.25, 0.75, 0.75, 1.25, -0.75, 0.75, -1.25, -0.75, 0.75, 1.25, 0.75, 0.75, -1.25, -0.75, 0.75, -1.25, 0.75, 0.75, -1.25, 0.75, -0.75, -1.25, 0.75, -0.75, 1.25, 0.75, 0.75, -1.25, 0.75, -0.75, 1.25, 0.75, 0.75, 1.25, 0.75)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_cru2y"]
+_surfaces = [{
+"aabb": AABB(-0.75, -1.25, -0.75, 1.5, 2.5, 1.5),
+"attribute_data": PackedByteArray("AAAAPgAAIL8AAAA/AAAgvwAAAD8AAAAAAAAAPgAAAAAAAIC+AAAAAAAAIL8AAAAAAAAgvwAAIL8AAIC+AAAgvwAAgD4AAAA/AACAPgAAAD4AACA/AAAAPgAAID8AAAA/AACAvgAAAD8AACC/AAAAPwAAIL8AAAA+AACAvgAAAD4AAIA+AAAgvwAAID8AACC/AAAgPwAAAAAAAIA+AAAAAAAAAL4AAAAAAAAAvwAAAAAAAAC/AAAgvwAAAL4AACC/"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAAFAAYABAAGAAcACAAJAAoACAAKAAsADAANAA4ADAAOAA8AEAARABIAEAASABMAFAAVABYAFAAWABcA"),
+"material": ExtResource("26_diqfb"),
+"name": "Grating/Grating_14-128x128_T",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AABAPwAAoD8AAEC/AABAvwAAoD8AAEC/AABAvwAAoL8AAEC/AABAPwAAoL8AAEC/AABAvwAAoL8AAEA/AABAvwAAoL8AAEC/AABAvwAAoD8AAEC/AABAvwAAoD8AAEA/AABAvwAAoL8AAEA/AABAPwAAoL8AAEA/AABAPwAAoL8AAEC/AABAvwAAoL8AAEC/AABAvwAAoD8AAEA/AABAvwAAoD8AAEC/AABAPwAAoD8AAEC/AABAPwAAoD8AAEA/AABAPwAAoD8AAEA/AABAPwAAoD8AAEC/AABAPwAAoL8AAEC/AABAPwAAoL8AAEA/AABAPwAAoL8AAEA/AABAvwAAoL8AAEA/AABAvwAAoD8AAEA/AABAPwAAoD8AAEA//////wAA/7//////AAD/v/////8AAP+//////wAA/78AAP9//3//vwAA/3//f/+/AAD/f/9//78AAP9//3//v/9/AAD//////38AAP//////fwAA//////9/AAD//////3////9//7//f////3//v/9/////f/+//3////9//7////9//////////3//////////f/////////9///////9//3////+//3//f////7//f/9/////v/9//3////+/")
+}]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_f5vd6"]
+data = PackedVector3Array(0.75, 1.25, -0.75, -0.75, 1.25, -0.75, -0.75, -1.25, -0.75, 0.75, 1.25, -0.75, -0.75, -1.25, -0.75, 0.75, -1.25, -0.75, -0.75, -1.25, 0.75, -0.75, -1.25, -0.75, -0.75, 1.25, -0.75, -0.75, -1.25, 0.75, -0.75, 1.25, -0.75, -0.75, 1.25, 0.75, -0.75, -1.25, 0.75, 0.75, -1.25, 0.75, 0.75, -1.25, -0.75, -0.75, -1.25, 0.75, 0.75, -1.25, -0.75, -0.75, -1.25, -0.75, -0.75, 1.25, 0.75, -0.75, 1.25, -0.75, 0.75, 1.25, -0.75, -0.75, 1.25, 0.75, 0.75, 1.25, -0.75, 0.75, 1.25, 0.75, 0.75, 1.25, 0.75, 0.75, 1.25, -0.75, 0.75, -1.25, -0.75, 0.75, 1.25, 0.75, 0.75, -1.25, -0.75, 0.75, -1.25, 0.75, 0.75, -1.25, 0.75, -0.75, -1.25, 0.75, -0.75, 1.25, 0.75, 0.75, -1.25, 0.75, -0.75, 1.25, 0.75, 0.75, 1.25, 0.75)
+
 [sub_resource type="Environment" id="Environment_0w2em"]
 background_mode = 1
 ambient_light_source = 2
@@ -4500,7 +4536,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "classname": "counter",
 "count": 6,
 "emit_signal_ID": "underground_light_flicker",
-"finish_signal_parameter": "light_start_flicker, timer_start, sfx_play",
+"finish_signal_parameter": "light_start_flicker, timer_start, sfx_play, counter_add",
 "origin": "28 300 -68",
 "recieve_signal_ID": "spinny_machine",
 "repeatable": true,
@@ -4533,7 +4569,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "recieve_signal_ID": "underground_light_flicker",
 "repeatable": true,
 "signal_parameter": "counter_reset, rotate_stop, light_off",
-"time": 1.0
+"time": 0.5
 })
 
 [node name="entity_47_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
@@ -4745,6 +4781,60 @@ func_godot_properties = Dictionary[String, Variant]({
 "recieve_signal_ID": "steam_scare",
 "repeatable": false,
 "reset_on_finish": false,
+"reset_signal_parameter": ""
+})
+
+[node name="entity_61_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.375, 1.5, -0.375)
+script = ExtResource("54_g7cg2")
+func_godot_properties = Dictionary[String, Variant]({
+"_cull_interior_faces": false,
+"_phong": 0,
+"_phong_angle": 89.0,
+"_vertex_merge_distance": 0.03125,
+"classname": "func_trigger",
+"repeatable": true,
+"signal_ID": "player",
+"signal_parameter": "player_gravity_half"
+})
+
+[node name="entity_61_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_61_func_trigger"]
+mesh = SubResource("ArrayMesh_gob4c")
+
+[node name="entity_61_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_61_func_trigger"]
+shape = SubResource("ConcavePolygonShape3D_idagc")
+
+[node name="entity_62_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 1.5, 1.75)
+script = ExtResource("54_g7cg2")
+func_godot_properties = Dictionary[String, Variant]({
+"_cull_interior_faces": false,
+"_phong": 0,
+"_phong_angle": 89.0,
+"_vertex_merge_distance": 0.03125,
+"classname": "func_trigger",
+"repeatable": true,
+"signal_ID": "player",
+"signal_parameter": "player_gravity_on"
+})
+
+[node name="entity_62_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_62_func_trigger"]
+mesh = SubResource("ArrayMesh_cru2y")
+
+[node name="entity_62_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_62_func_trigger"]
+shape = SubResource("ConcavePolygonShape3D_f5vd6")
+
+[node name="entity_63_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.375, -1.875, 0.875)
+func_godot_properties = Dictionary[String, Variant]({
+"classname": "counter",
+"count": 1,
+"emit_signal_ID": "player",
+"finish_signal_parameter": "player_shake_mini",
+"origin": "28 300 -60",
+"recieve_signal_ID": "underground_light_flicker",
+"repeatable": true,
+"reset_on_finish": true,
 "reset_signal_parameter": ""
 })
 

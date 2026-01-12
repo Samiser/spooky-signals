@@ -5141,7 +5141,7 @@
 "origin" "28 300 -68"
 "recieve_signal_ID" "spinny_machine"
 "emit_signal_ID" "underground_light_flicker"
-"finish_signal_parameter" "light_start_flicker, timer_start, sfx_play, counter_add"
+"finish_signal_parameter" "light_start_flicker, timer_start, sfx_play"
 "reset_signal_parameter" "light_end_flicker"
 "count" "6"
 "repeatable" "1"
@@ -5164,7 +5164,7 @@
 "emit_signal_ID" "spinny_machine"
 "signal_parameter" "counter_reset, rotate_stop, light_off"
 "repeatable" "1"
-"time" "0.5"
+"time" "1.0"
 }
 // entity 54
 {
@@ -5350,9 +5350,9 @@
 "origin" "28 300 -60"
 "recieve_signal_ID" "underground_light_flicker"
 "emit_signal_ID" "player"
-"finish_signal_parameter" "player_shake_mini"
-"reset_signal_parameter" ""
+"finish_signal_parameter" "player_mini_shake"
+"reset_signal_parameter" "light_end_flicker"
 "count" "1"
 "repeatable" "1"
-"reset_on_finish" "1"
+"reset_on_finish" "0"
 }
