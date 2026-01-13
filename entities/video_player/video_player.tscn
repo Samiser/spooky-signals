@@ -16,6 +16,7 @@ mouse_filter = 2
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Control"]
 visible = false
+modulate = Color(1, 1, 1, 0.50980395)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

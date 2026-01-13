@@ -21,6 +21,8 @@ var is_crouched : bool = false
 var released_crouch : bool = false
 var crouch_tween : Tween
 
+var allow_control : bool = true
+
 var shake_time := 0.0
 var shake_magnitude := 128.0
 
@@ -41,6 +43,10 @@ func _physics_process(delta):
 	character_body.velocity.y += -gravity * delta
 	if !interacting:
 		var input = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
+		
+		if !allow_control:
+			input = Vector2.ZERO
+		
 		var movement_dir = character_body.transform.basis * Vector3(input.x, 0, input.y)
 		
 		var current_speed := speed
@@ -82,7 +88,6 @@ func _set_crosshair_visibility() -> void:
 		$UI/interactLabel.text = ""
 
 func toggle_zoom() -> void:
-	
 	if zoom_tween != null && zoom_tween.is_running():
 		zoom_tween.stop()
 	
@@ -95,6 +100,9 @@ func toggle_zoom() -> void:
 	zoom_tween.tween_property($Camera3D, "fov", zoom_level, 0.14)
 
 func _unhandled_input(event: InputEvent) -> void:
+	if !allow_control:
+		return
+	
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		character_body.rotate_y(-event.relative.x * mouse_sensitivity)
 		$Camera3D.rotate_x(-event.relative.y * mouse_sensitivity)
@@ -206,6 +214,12 @@ func signal_recieved(parameters: String) -> void:
 				gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 			"player_gravity_off":
 				gravity = 0.0
+			"player_control_off":
+				allow_control = false
+			"player_control_on":
+				allow_control = true
+			"player_control_toggle":
+				allow_control = !allow_control
 			_:
 				var param_additional : PackedStringArray = parameter.split(': ', false)
 
@@ -225,3 +239,12 @@ func signal_recieved(parameters: String) -> void:
 				
 				if parameter.contains("player_shake_magnitude"):
 					shake_magnitude = param_additional[1].to_float()
+				
+				if parameter.contains("player_teleport"):
+					var teleport_string : PackedStringArray = parameter.split(' ', false)
+					character_body.global_position.x = teleport_string[1].to_float()
+					character_body.global_position.y = teleport_string[2].to_float()
+					character_body.global_position.z = teleport_string[3].to_float()
+				
+				if parameter.contains("player_angle"):
+					character_body.global_rotation_degrees.y = param_additional[1].to_float()

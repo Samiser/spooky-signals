@@ -17,7 +17,11 @@ player_gravity_off
 player_gravity_set:
 player_shake_time:
 player_shake_magnitude:
-"
+player_control_off
+player_control_on
+player_control_toggle
+player_teleport:
+player_angle:"
 meta_properties = Dictionary[String, Variant]({
 "color": Color(0.8, 0.8, 0, 1),
 "size": AABB(-8, -8, -8, 8, 8, 32)

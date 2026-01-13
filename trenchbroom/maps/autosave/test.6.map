@@ -6086,7 +6086,7 @@
 "time" "10.0"
 "repeatable" "1"
 "emit_signal_ID" "player"
-"signal_parameter" "player_control_on, player_teleport: 1.25 0.25 -0.25, player_angle: 270.0"
+"signal_parameter" "player_control_on, player_teleport: "
 }
 // entity 83
 {
