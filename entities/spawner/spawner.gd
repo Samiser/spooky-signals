@@ -25,4 +25,4 @@ func signal_recieved(parameters: String) -> void:
 				get_tree().root.add_child(spawn_obj)
 				spawn_obj.global_position = $".".global_position
 				spawn_obj.global_rotation = $".".global_rotation
-				print("spawned obj")
+				print("spawned obj: " + scene_path)
