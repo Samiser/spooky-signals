@@ -23,6 +23,8 @@ var crouch_tween : Tween
 
 var allow_control : bool = true
 
+var camera_attached : bool = true
+
 var shake_time := 0.0
 var shake_magnitude := 128.0
 
@@ -105,8 +107,8 @@ func _unhandled_input(event: InputEvent) -> void:
 	
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		character_body.rotate_y(-event.relative.x * mouse_sensitivity)
-		$Camera3D.rotate_x(-event.relative.y * mouse_sensitivity)
-		$Camera3D.rotation.x = clampf($Camera3D.rotation.x, -deg_to_rad(80), deg_to_rad(80))
+		camera.rotate_x(-event.relative.y * mouse_sensitivity)
+		camera.rotation.x = clampf(camera.rotation.x, -deg_to_rad(80), deg_to_rad(80))
 	
 	if event.is_action_pressed("ui_cancel"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -141,9 +143,8 @@ func stop_interacting() -> void:
 	current_interactable = null
 
 func _looking_at_interactable() -> Node3D:
-	var cam: Camera3D = $Camera3D
-	var from := cam.global_transform.origin
-	var to := from + (-cam.global_transform.basis.z) * interact_distance
+	var from := camera.global_transform.origin
+	var to := from + (-camera.global_transform.basis.z) * interact_distance
 
 	var space_state := character_body.get_world_3d().direct_space_state
 	var query := PhysicsRayQueryParameters3D.create(from, to)
@@ -204,7 +205,7 @@ func _set_crouch(crouch : bool) -> void:
 	
 	crouch_tween = get_tree().create_tween()
 	crouch_tween.tween_property($CollisionShape3D.shape, "height", body_height, crouch_time)
-	crouch_tween.tween_property($Camera3D, "position:y", cam_height, crouch_time)
+	crouch_tween.tween_property(camera, "position:y", cam_height, crouch_time)
 
 func signal_recieved(parameters: String) -> void:
 	var param_list : PackedStringArray = parameters.split(', ', false)
@@ -226,6 +227,19 @@ func signal_recieved(parameters: String) -> void:
 			"player_fade_out":
 				var tween := get_tree().create_tween()
 				tween.tween_property($UI/fadePanel, "modulate:a", 1.0, 2.0).from(0.0)
+			"player_camera_reset":
+				camera.top_level = false
+				character_body.add_child(camera)
+				
+				var body_height := 1.8
+				var cam_height := body_height - 0.1
+				if is_crouched:
+					cam_height = body_height - 0.1
+					
+				camera.position = Vector3.ZERO
+				camera.position.y = cam_height
+				
+				camera.rotation = Vector3.ZERO
 			_:
 				var param_additional : PackedStringArray = parameter.split(': ', false)
 
@@ -254,3 +268,19 @@ func signal_recieved(parameters: String) -> void:
 				
 				if parameter.contains("player_angle"):
 					character_body.global_rotation_degrees.y = param_additional[1].to_float()
+				
+				if parameter.contains("player_camera_pos"):
+					var cam_string : PackedStringArray = parameter.split(' ', false)
+					camera.global_position.x = cam_string[1].to_float()
+					camera.global_position.y = cam_string[2].to_float()
+					camera.global_position.z = cam_string[3].to_float()
+					
+					camera.top_level = true
+					camera_attached = false
+				
+				if parameter.contains("player_camera_rot"):
+					var cam_string : PackedStringArray = parameter.split(' ', false)
+					camera.global_rotation_degrees.x = cam_string[1].to_float()
+					camera.global_rotation_degrees.y = cam_string[2].to_float()
+					camera.global_rotation_degrees.z = cam_string[3].to_float()
+					

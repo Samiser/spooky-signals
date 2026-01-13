@@ -6137,18 +6137,8 @@
 "classname" "timer"
 "origin" "124 52 60"
 "recieve_signal_ID" "cctv_bridge"
-"time" "3.0"
+"time" "2.0"
 "repeatable" "1"
-"emit_signal_ID" "player"
-"signal_parameter" "player_camera_reset, player_control_on"
-}
-// entity 88
-{
-"classname" "counter"
-"origin" "124 44 60"
-"recieve_signal_ID" "cctv_bridge"
-"repeatable" "1"
-"reset_on_finish" "1"
-"emit_signal_ID" "player"
-"finish_signal_parameter" "player_control_off, player_camera_pos: 5.5 3.0 -3.5, player_camera_rot: -45.0 120.0 0.0"
+"emit_signal_ID" "test_video"
+"signal_parameter" "video_play, timer_start"
 }
