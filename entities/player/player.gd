@@ -18,6 +18,7 @@ var is_zoomed : bool = false
 var zoom_tween : Tween
 
 var is_crouched : bool = false
+var released_crouch : bool = false
 var crouch_tween : Tween
 
 var shake_time := 0.0
@@ -114,7 +115,14 @@ func _unhandled_input(event: InputEvent) -> void:
 	
 	if event.is_action_pressed("crouch"):
 		if not interacting:
-			_set_crouch(!is_crouched)
+			_set_crouch(true)
+			released_crouch = false
+	if event.is_action_released("crouch"):
+		released_crouch = true
+	
+	if is_crouched && released_crouch:
+		if not interacting:
+			_set_crouch(false)
 	
 	if event.is_action_released("click"):
 		if interacting and current_interactable.has_method("on_release"):
@@ -173,7 +181,9 @@ func _set_crouch(crouch : bool) -> void:
 				return
 			else:
 				checks += 1
-	
+			
+		released_crouch = false
+
 	if crouch_tween != null && crouch_tween.is_running():
 		crouch_tween.stop()
 	
