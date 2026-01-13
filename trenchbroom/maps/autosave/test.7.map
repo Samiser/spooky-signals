@@ -6068,8 +6068,8 @@
 "classname" "ButtonPad"
 "origin" "120 18 46"
 "angle" "180"
-"signal_ID" "test_video_setup"
-"signal_parameter" "timer_start, counter_add"
+"signal_ID" "test_video"
+"signal_parameter" "video_play, counter_add, timer_start"
 }
 // entity 81
 {
@@ -6090,21 +6090,21 @@
 }
 // entity 83
 {
-"classname" "timer"
-"origin" "124 20 60"
-"recieve_signal_ID" "test_video_setup"
-"time" "2.0"
-"repeatable" "1"
-"emit_signal_ID" "test_video"
-"signal_parameter" "video_play, counter_add, timer_start"
-}
-// entity 84
-{
 "classname" "counter"
 "origin" "124 12 60"
-"recieve_signal_ID" "test_video_setup"
+"recieve_signal_ID" "test_video"
 "repeatable" "1"
 "reset_on_finish" "1"
 "emit_signal_ID" "player"
-"finish_signal_parameter" "player_fade_out, player_control_off"
+"finish_signal_parameter" "player_control_off"
+}
+// entity 84
+{
+"classname" "timer"
+"origin" "124 20 60"
+"recieve_signal_ID" "test_video_setuo"
+"time" "2.0"
+"repeatable" "1"
+"emit_signal_ID" "player"
+"signal_parameter" "player_control_on, player_teleport: 1.25 0.25 -0.25, player_angle: 270.0, player_fade_in"
 }

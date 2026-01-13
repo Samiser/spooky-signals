@@ -5379,8 +5379,8 @@ func_godot_properties = Dictionary[String, Variant]({
 "classname": "ButtonPad",
 "origin": "120 18 46",
 "repeatable": true,
-"signal_ID": "test_video",
-"signal_parameter": "video_play, counter_add, timer_start"
+"signal_ID": "test_video_setup",
+"signal_parameter": "timer_start, counter_add"
 })
 
 [node name="entity_72_video_player" parent="FuncGodotMap" instance=ExtResource("63_6kxq4")]
@@ -5402,19 +5402,33 @@ func_godot_properties = Dictionary[String, Variant]({
 "origin": "124 12 68",
 "recieve_signal_ID": "test_video",
 "repeatable": true,
-"signal_parameter": "player_control_on, player_teleport: 1.25 0.25 -0.25, player_angle: 270.0",
+"signal_parameter": "player_control_on, player_teleport: 1.25 0.25 -0.25, player_angle: 270.0, player_fade_in",
 "time": 10.0
 })
 
-[node name="entity_74_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+[node name="entity_74_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.625, 1.875, 3.875)
+func_godot_properties = Dictionary[String, Variant]({
+"autostart": false,
+"classname": "timer",
+"emit_signal_ID": "test_video",
+"is_looping": false,
+"origin": "124 20 60",
+"recieve_signal_ID": "test_video_setup",
+"repeatable": true,
+"signal_parameter": "video_play, counter_add, timer_start",
+"time": 2.0
+})
+
+[node name="entity_75_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.375, 1.875, 3.875)
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "counter",
 "count": 1,
 "emit_signal_ID": "player",
-"finish_signal_parameter": "player_control_off",
+"finish_signal_parameter": "player_fade_out, player_control_off",
 "origin": "124 12 60",
-"recieve_signal_ID": "test_video",
+"recieve_signal_ID": "test_video_setup",
 "repeatable": true,
 "reset_on_finish": true,
 "reset_signal_parameter": ""

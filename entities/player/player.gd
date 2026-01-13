@@ -220,6 +220,12 @@ func signal_recieved(parameters: String) -> void:
 				allow_control = true
 			"player_control_toggle":
 				allow_control = !allow_control
+			"player_fade_in":
+				var tween := get_tree().create_tween()
+				tween.tween_property($UI/fadePanel, "modulate:a", 0.0, 2.0).from(1.0)
+			"player_fade_out":
+				var tween := get_tree().create_tween()
+				tween.tween_property($UI/fadePanel, "modulate:a", 1.0, 2.0).from(0.0)
 			_:
 				var param_additional : PackedStringArray = parameter.split(': ', false)
 
