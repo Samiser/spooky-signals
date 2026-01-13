@@ -57,7 +57,7 @@ func _physics_process(delta):
 		character_body.velocity.z = 0
 	
 	if shake_time > 0.0:
-		character_body.velocity += Vector3(randf_range(-1.0, 1.0), 0.0, randf_range(-1.0, 1.0)) * shake_time * shake_magnitude * delta
+		character_body.velocity += Vector3(randf_range(-1.0, 1.0), 0.0, randf_range(-1.0, 1.0)) * clampf(shake_time, 0.0, 1.0) * shake_magnitude * delta
 		shake_time -= delta
 	
 	character_body.move_and_slide()
