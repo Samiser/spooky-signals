@@ -177,7 +177,6 @@ func _set_crouch(crouch : bool) -> void:
 			$StandRayCheck.force_raycast_update()
 			
 			if $StandRayCheck.is_colliding():
-				print("No room to stand, check failed at: (" + str(checks) + ")")
 				return
 			else:
 				checks += 1
