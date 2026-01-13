@@ -1,9 +1,10 @@
-[gd_scene load_steps=45 format=3 uid="uid://chxlkaq0opjy7"]
+[gd_scene load_steps=46 format=3 uid="uid://chxlkaq0opjy7"]
 
 [ext_resource type="PackedScene" uid="uid://vfatuya14sn3" path="res://entities/player/player.tscn" id="1_68bq3"]
-[ext_resource type="Script" uid="uid://c2fo4s362iuqd" path="res://main.gd" id="1_facbu"]
 [ext_resource type="PackedScene" uid="uid://bnj1bulcj4wq6" path="res://meshes/map/map_mesh.obj" id="2_0xm2m"]
 [ext_resource type="AudioStream" uid="uid://boqy33enm8fe5" path="res://audio/ambience/old_ambience/lab_ambience.wav" id="3_074og"]
+[ext_resource type="ArrayMesh" uid="uid://g6dpoeuebhvj" path="res://meshes/map/blast_covers_mesh.obj" id="3_jq2sk"]
+[ext_resource type="Script" uid="uid://1cnhfxgfo4ti" path="res://blast_covers.gd" id="4_4k2k6"]
 [ext_resource type="AudioStream" uid="uid://ch5feu6k1yumm" path="res://audio/ambience/old_ambience/hall_ambience.wav" id="4_82xsv"]
 [ext_resource type="AudioStream" uid="uid://j63wite4u2oq" path="res://audio/ambience/old_ambience/bridge_ambience.wav" id="5_getpj"]
 [ext_resource type="PackedScene" uid="uid://bwp2sp8rqpv5n" path="res://entities/radar/radar.tscn" id="5_lquwl"]
@@ -84,7 +85,6 @@ normal_texture = ExtResource("23_lswn8")
 texture_filter = 0
 
 [node name="Main" type="Node3D"]
-script = ExtResource("1_facbu")
 
 [node name="Player" parent="." instance=ExtResource("1_68bq3")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.5640042, -0.7882614, 0.14757097)
@@ -98,6 +98,12 @@ environment = SubResource("Environment_0xm2m")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MapParent"]
 shape = SubResource("ConcavePolygonShape3D_htxhm")
+
+[node name="BlastCoversMesh" type="MeshInstance3D" parent="MapParent"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.857695, 0)
+mesh = ExtResource("3_jq2sk")
+skeleton = NodePath("../..")
+script = ExtResource("4_4k2k6")
 
 [node name="lab_ambience" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.54724, 15.701377, 0.27599382)
