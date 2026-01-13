@@ -74,8 +74,9 @@ func _process(delta: float) -> void:
 	_set_crosshair_visibility()
 
 func _set_crosshair_visibility() -> void:
-	if interacting:
+	if interacting || !camera_attached:
 		crosshair.hide()
+		$UI/interactLabel.text = ""
 		return
 	
 	crosshair.show()
@@ -229,7 +230,6 @@ func signal_recieved(parameters: String) -> void:
 				tween.tween_property($UI/fadePanel, "modulate:a", 1.0, 2.0).from(0.0)
 			"player_camera_reset":
 				camera.top_level = false
-				character_body.add_child(camera)
 				
 				var body_height := 1.8
 				var cam_height := body_height - 0.1
@@ -240,6 +240,8 @@ func signal_recieved(parameters: String) -> void:
 				camera.position.y = cam_height
 				
 				camera.rotation = Vector3.ZERO
+				camera_attached = true
+				_set_crosshair_visibility()
 			_:
 				var param_additional : PackedStringArray = parameter.split(': ', false)
 
@@ -277,6 +279,7 @@ func signal_recieved(parameters: String) -> void:
 					
 					camera.top_level = true
 					camera_attached = false
+					_set_crosshair_visibility()
 				
 				if parameter.contains("player_camera_rot"):
 					var cam_string : PackedStringArray = parameter.split(' ', false)

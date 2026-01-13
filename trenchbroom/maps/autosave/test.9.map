@@ -6137,10 +6137,10 @@
 "classname" "timer"
 "origin" "124 52 60"
 "recieve_signal_ID" "cctv_bridge"
-"time" "4.0"
+"time" "3.0"
 "repeatable" "1"
-"emit_signal_ID" "cctv_engineering"
-"signal_parameter" "timer_start, counter_add"
+"emit_signal_ID" "player"
+"signal_parameter" "player_camera_reset, player_control_on"
 }
 // entity 88
 {
@@ -6150,85 +6150,25 @@
 "repeatable" "1"
 "reset_on_finish" "1"
 "emit_signal_ID" "player"
-"finish_signal_parameter" "player_control_off, player_camera_pos: 5.5 3.0 -3.5, player_camera_rot: -20.0 120.0 0.0, player_update_location_ui: CCTV_FEED_BRIDGE"
+"finish_signal_parameter" "player_control_off, player_camera_pos: 5.5 3.0 -3.5, player_camera_rot: -20.0 120.0 0.0"
 }
 // entity 89
 {
 "classname" "timer"
 "origin" "124 52 92"
 "recieve_signal_ID" "cctv_end"
-"time" "2.0"
+"time" "3.0"
 "repeatable" "1"
 "emit_signal_ID" "player"
-"signal_parameter" "player_camera_reset, player_control_on, player_update_location_ui: Bridge, player_fade_in"
+"signal_parameter" "player_camera_reset, player_control_on"
 }
 // entity 90
 {
 "classname" "timer"
 "origin" "124 52 68"
 "recieve_signal_ID" "cctv_engineering"
-"time" "4.0"
+"time" "3.0"
 "repeatable" "1"
-"emit_signal_ID" "cctv_corridor"
-"signal_parameter" "timer_start, counter_add"
-}
-// entity 91
-{
-"classname" "counter"
-"origin" "124 44 68"
-"recieve_signal_ID" "cctv_engineering"
-"repeatable" "1"
-"reset_on_finish" "1"
 "emit_signal_ID" "player"
-"finish_signal_parameter" "player_camera_pos: 3.5 -1.0 -0.5, player_camera_rot: -20.0 230.0 0.0, player_update_location_ui: CCTV_FEED_ENGINEERING"
-}
-// entity 92
-{
-"classname" "timer"
-"origin" "124 52 76"
-"recieve_signal_ID" "cctv_corridor"
-"time" "4.0"
-"repeatable" "1"
-"emit_signal_ID" "cctv_labs"
-"signal_parameter" "timer_start, counter_add"
-}
-// entity 93
-{
-"classname" "counter"
-"origin" "124 44 76"
-"recieve_signal_ID" "cctv_corridor"
-"repeatable" "1"
-"reset_on_finish" "1"
-"emit_signal_ID" "player"
-"finish_signal_parameter" "player_camera_pos: 16.0 2.3 -1.5, player_camera_rot: -20.0 10.0 0.0, player_update_location_ui: CCTV_FEED_ACCESS_CORRIDOR"
-}
-// entity 94
-{
-"classname" "timer"
-"origin" "124 52 84"
-"recieve_signal_ID" "cctv_labs"
-"time" "4.0"
-"repeatable" "1"
-"emit_signal_ID" "cctv_end"
-"signal_parameter" "timer_start, counter_add"
-}
-// entity 95
-{
-"classname" "counter"
-"origin" "124 44 84"
-"recieve_signal_ID" "cctv_labs"
-"repeatable" "1"
-"reset_on_finish" "1"
-"emit_signal_ID" "player"
-"finish_signal_parameter" "player_camera_pos: 25.0 2.3 2.0, player_camera_rot: -20.0 120.0 0.0, player_update_location_ui: CCTV_FEED_LABS"
-}
-// entity 96
-{
-"classname" "counter"
-"origin" "124 44 92"
-"recieve_signal_ID" "cctv_end"
-"repeatable" "1"
-"reset_on_finish" "1"
-"emit_signal_ID" "player"
-"finish_signal_parameter" "player_fade_out"
+"signal_parameter" "player_camera_pos: 5.5 3.0 -3.5, player_camera_rot: -20.0 120.0 0.0"
 }

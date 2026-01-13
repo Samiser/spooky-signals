@@ -2015,7 +2015,7 @@ points = PackedVector3Array(3.5, -0.25000003, 4.0625, 3.5, -0.5, 4.0625, 2.99999
 points = PackedVector3Array(3.5000002, -0.24999994, 2.6875, 3.5, -0.5, 2.6875, 3.2499998, 3.3717478e-07, 2.6875, 3.25, -0.5, 2.6875, 3.5000002, -0.24999994, 1.25, 3.5, -0.5, 1.25, 3.2499998, 3.3717478e-07, 1.25, 3.25, -0.5, 1.25)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vb5rb"]
-points = PackedVector3Array(-2, 0, 4.25, -2.5, 0.25, 4, -2.5, 0, 4, -2, 0, -3.4999998, -2.5, 0.25, -3.75, -2.5, 0, -3.7499998)
+points = PackedVector3Array(-2, 0, 4.25, -2.5, 0.25, 4, -2.5, 0, 4, -2, 0, -4.0000005, -2.5, 0.25, -3.7500002, -2.5, 0, -3.7500002)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_o4rw3"]
 points = PackedVector3Array(9.5, -3.5, 3.25, 9.5, -4.25, 3.25, 9.25, -3.5, 3.25, 9.25, -4.25, 3.25, 9.5, -3.5, 1.25, 9.5, -4.25, 1.25, 9.25, -3.5, 1.25, 9.25, -4.25, 1.25)
@@ -5493,13 +5493,13 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.62
 func_godot_properties = Dictionary[String, Variant]({
 "autostart": false,
 "classname": "timer",
-"emit_signal_ID": "player",
+"emit_signal_ID": "cctv_engineering",
 "is_looping": false,
 "origin": "124 52 60",
 "recieve_signal_ID": "cctv_bridge",
 "repeatable": true,
-"signal_parameter": "player_camera_reset, player_control_on",
-"time": 3.0
+"signal_parameter": "timer_start, counter_add",
+"time": 4.0
 })
 
 [node name="entity_79_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
@@ -5508,9 +5508,121 @@ func_godot_properties = Dictionary[String, Variant]({
 "classname": "counter",
 "count": 1,
 "emit_signal_ID": "player",
-"finish_signal_parameter": "player_control_off, player_camera_pos: 5.5 3.0 -3.5, player_camera_rot: -45.0 120.0 0.0",
+"finish_signal_parameter": "player_control_off, player_camera_pos: 5.5 3.0 -3.5, player_camera_rot: -20.0 120.0 0.0, player_update_location_ui: CCTV_FEED_BRIDGE",
 "origin": "124 44 60",
 "recieve_signal_ID": "cctv_bridge",
+"repeatable": true,
+"reset_on_finish": true,
+"reset_signal_parameter": ""
+})
+
+[node name="entity_80_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.625, 2.875, 3.875)
+func_godot_properties = Dictionary[String, Variant]({
+"autostart": false,
+"classname": "timer",
+"emit_signal_ID": "player",
+"is_looping": false,
+"origin": "124 52 92",
+"recieve_signal_ID": "cctv_end",
+"repeatable": true,
+"signal_parameter": "player_camera_reset, player_control_on, player_update_location_ui: Bridge, player_fade_in",
+"time": 2.0
+})
+
+[node name="entity_81_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.625, 2.125, 3.875)
+func_godot_properties = Dictionary[String, Variant]({
+"autostart": false,
+"classname": "timer",
+"emit_signal_ID": "cctv_corridor",
+"is_looping": false,
+"origin": "124 52 68",
+"recieve_signal_ID": "cctv_engineering",
+"repeatable": true,
+"signal_parameter": "timer_start, counter_add",
+"time": 4.0
+})
+
+[node name="entity_82_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.375, 2.125, 3.875)
+func_godot_properties = Dictionary[String, Variant]({
+"classname": "counter",
+"count": 1,
+"emit_signal_ID": "player",
+"finish_signal_parameter": "player_camera_pos: 3.5 -1.0 -0.5, player_camera_rot: -20.0 230.0 0.0, player_update_location_ui: CCTV_FEED_ENGINEERING",
+"origin": "124 44 68",
+"recieve_signal_ID": "cctv_engineering",
+"repeatable": true,
+"reset_on_finish": true,
+"reset_signal_parameter": ""
+})
+
+[node name="entity_83_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.625, 2.375, 3.875)
+func_godot_properties = Dictionary[String, Variant]({
+"autostart": false,
+"classname": "timer",
+"emit_signal_ID": "cctv_labs",
+"is_looping": false,
+"origin": "124 52 76",
+"recieve_signal_ID": "cctv_corridor",
+"repeatable": true,
+"signal_parameter": "timer_start, counter_add",
+"time": 4.0
+})
+
+[node name="entity_84_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.375, 2.375, 3.875)
+func_godot_properties = Dictionary[String, Variant]({
+"classname": "counter",
+"count": 1,
+"emit_signal_ID": "player",
+"finish_signal_parameter": "player_camera_pos: 16.0 2.3 -1.5, player_camera_rot: -20.0 10.0 0.0, player_update_location_ui: CCTV_FEED_ACCESS_CORRIDOR",
+"origin": "124 44 76",
+"recieve_signal_ID": "cctv_corridor",
+"repeatable": true,
+"reset_on_finish": true,
+"reset_signal_parameter": ""
+})
+
+[node name="entity_85_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.625, 2.625, 3.875)
+func_godot_properties = Dictionary[String, Variant]({
+"autostart": false,
+"classname": "timer",
+"emit_signal_ID": "cctv_end",
+"is_looping": false,
+"origin": "124 52 84",
+"recieve_signal_ID": "cctv_labs",
+"repeatable": true,
+"signal_parameter": "timer_start, counter_add",
+"time": 4.0
+})
+
+[node name="entity_86_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.375, 2.625, 3.875)
+func_godot_properties = Dictionary[String, Variant]({
+"classname": "counter",
+"count": 1,
+"emit_signal_ID": "player",
+"finish_signal_parameter": "player_camera_pos: 25.0 2.3 2.0, player_camera_rot: -20.0 120.0 0.0, player_update_location_ui: CCTV_FEED_LABS",
+"origin": "124 44 84",
+"recieve_signal_ID": "cctv_labs",
+"repeatable": true,
+"reset_on_finish": true,
+"reset_signal_parameter": ""
+})
+
+[node name="entity_87_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.375, 2.875, 3.875)
+func_godot_properties = Dictionary[String, Variant]({
+"classname": "counter",
+"count": 1,
+"emit_signal_ID": "player",
+"finish_signal_parameter": "player_fade_out",
+"origin": "124 44 92",
+"recieve_signal_ID": "cctv_end",
 "repeatable": true,
 "reset_on_finish": true,
 "reset_signal_parameter": ""
