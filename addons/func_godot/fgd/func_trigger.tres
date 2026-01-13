@@ -11,9 +11,18 @@ script = ExtResource("4_aeot3")
 collision_shape_type = 2
 script_class = ExtResource("5_u6umc")
 classname = "func_trigger"
-description = "Static collidable geometry. Builds a Area3D and a single concave CollisionShape3D. Does not occlude other VisualInstance3D nodes."
+description = "Static collidable geometry. Builds a Area3D and a single concave CollisionShape3D. Does not occlude other VisualInstance3D nodes.
+
+Funcs:
+trigger_copy_params
+trigger_on
+trigger_off
+trigger_toggle
+trigger_reset_triggered"
 base_classes = Array[Resource]([ExtResource("1_u6umc"), ExtResource("2_dr03x"), ExtResource("3_g2em5")])
 class_properties = Dictionary[String, Variant]({
+"autoallow": true,
+"recieve_signal_ID": "",
 "repeatable": true,
 "signal_ID": "",
 "signal_parameter": ""

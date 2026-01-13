@@ -4192,7 +4192,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "classname": "func_rotator",
 "rotate_dir": Vector3i(0, 0, 1),
 "rotate_speed": 10.0,
-"signal_ID": "",
+"signal_ID": "spinny_machine",
 "sound_dist": 4.0,
 "sound_path": ""
 })
@@ -4292,7 +4292,9 @@ func_godot_properties = Dictionary[String, Variant]({
 "_phong": 0,
 "_phong_angle": 89.0,
 "_vertex_merge_distance": 0.03125,
+"autoallow": true,
 "classname": "func_trigger",
+"recieve_signal_ID": "",
 "repeatable": true,
 "signal_ID": "bridge_lift",
 "signal_parameter": "move_end"
@@ -4312,7 +4314,9 @@ func_godot_properties = Dictionary[String, Variant]({
 "_phong": 0,
 "_phong_angle": 89.0,
 "_vertex_merge_distance": 0.03125,
+"autoallow": true,
 "classname": "func_trigger",
+"recieve_signal_ID": "",
 "repeatable": true,
 "signal_ID": "bridge_lift",
 "signal_parameter": "move_start"
@@ -4412,7 +4416,9 @@ func_godot_properties = Dictionary[String, Variant]({
 "_phong": 0,
 "_phong_angle": 89.0,
 "_vertex_merge_distance": 0.03125,
+"autoallow": true,
 "classname": "func_trigger",
+"recieve_signal_ID": "",
 "repeatable": false,
 "signal_ID": "corridor_light",
 "signal_parameter": "start_flicker"
@@ -4459,7 +4465,9 @@ func_godot_properties = Dictionary[String, Variant]({
 "_phong": 0,
 "_phong_angle": 89.0,
 "_vertex_merge_distance": 0.03125,
+"autoallow": true,
 "classname": "func_trigger",
+"recieve_signal_ID": "",
 "repeatable": false,
 "signal_ID": "steam_scare",
 "signal_parameter": "spawn_obj, sfx_play, counter_add"
@@ -4557,7 +4565,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "origin": "36 248 -72",
 "repeatable": true,
 "signal_ID": "spinny_machine",
-"signal_parameter": "rotate_toggle, light_toggle, counter_reset"
+"signal_parameter": "rotate_toggle, light_toggle, counter_reset, trigger_toggle"
 })
 
 [node name="entity_32_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
@@ -4624,7 +4632,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "origin": "44 300 -68",
 "recieve_signal_ID": "underground_light_flicker",
 "repeatable": true,
-"signal_parameter": "counter_reset, rotate_stop, light_off",
+"signal_parameter": "counter_reset, rotate_stop, light_off, trigger_off",
 "time": 0.5
 })
 
@@ -4694,7 +4702,9 @@ func_godot_properties = Dictionary[String, Variant]({
 "_phong": 0,
 "_phong_angle": 89.0,
 "_vertex_merge_distance": 0.03125,
+"autoallow": true,
 "classname": "func_trigger",
+"recieve_signal_ID": "",
 "repeatable": true,
 "signal_ID": "corridor_fan",
 "signal_parameter": "counter_add"
@@ -4728,7 +4738,9 @@ func_godot_properties = Dictionary[String, Variant]({
 "_phong": 0,
 "_phong_angle": 89.0,
 "_vertex_merge_distance": 0.03125,
+"autoallow": true,
 "classname": "func_trigger",
+"recieve_signal_ID": "",
 "repeatable": true,
 "signal_ID": "spooky_lift",
 "signal_parameter": "counter_add"
@@ -4862,7 +4874,9 @@ func_godot_properties = Dictionary[String, Variant]({
 "_phong": 0,
 "_phong_angle": 89.0,
 "_vertex_merge_distance": 0.03125,
+"autoallow": true,
 "classname": "func_trigger",
+"recieve_signal_ID": "",
 "repeatable": true,
 "signal_ID": "player",
 "signal_parameter": "player_update_location_ui: Bridge"
@@ -4882,7 +4896,9 @@ func_godot_properties = Dictionary[String, Variant]({
 "_phong": 0,
 "_phong_angle": 89.0,
 "_vertex_merge_distance": 0.03125,
+"autoallow": true,
 "classname": "func_trigger",
+"recieve_signal_ID": "",
 "repeatable": true,
 "signal_ID": "player",
 "signal_parameter": "player_update_location_ui: Bridge"
@@ -4902,7 +4918,9 @@ func_godot_properties = Dictionary[String, Variant]({
 "_phong": 0,
 "_phong_angle": 89.0,
 "_vertex_merge_distance": 0.03125,
+"autoallow": true,
 "classname": "func_trigger",
+"recieve_signal_ID": "",
 "repeatable": true,
 "signal_ID": "player",
 "signal_parameter": "player_update_location_ui: Access Corridor"
@@ -4922,7 +4940,9 @@ func_godot_properties = Dictionary[String, Variant]({
 "_phong": 0,
 "_phong_angle": 89.0,
 "_vertex_merge_distance": 0.03125,
+"autoallow": true,
 "classname": "func_trigger",
+"recieve_signal_ID": "",
 "repeatable": true,
 "signal_ID": "player",
 "signal_parameter": "player_update_location_ui: Access Corridor"
@@ -4942,7 +4962,9 @@ func_godot_properties = Dictionary[String, Variant]({
 "_phong": 0,
 "_phong_angle": 89.0,
 "_vertex_merge_distance": 0.03125,
+"autoallow": true,
 "classname": "func_trigger",
+"recieve_signal_ID": "",
 "repeatable": true,
 "signal_ID": "player",
 "signal_parameter": "player_update_location_ui: Labs"
@@ -4962,7 +4984,9 @@ func_godot_properties = Dictionary[String, Variant]({
 "_phong": 0,
 "_phong_angle": 89.0,
 "_vertex_merge_distance": 0.03125,
+"autoallow": true,
 "classname": "func_trigger",
+"recieve_signal_ID": "",
 "repeatable": true,
 "signal_ID": "player",
 "signal_parameter": "player_update_location_ui: Engineering"
@@ -5010,7 +5034,9 @@ func_godot_properties = Dictionary[String, Variant]({
 "_phong": 0,
 "_phong_angle": 89.0,
 "_vertex_merge_distance": 0.03125,
+"autoallow": true,
 "classname": "func_trigger",
+"recieve_signal_ID": "",
 "repeatable": true,
 "signal_ID": "player",
 "signal_parameter": "player_update_location_ui: Lower Ventilation"
@@ -5030,7 +5056,9 @@ func_godot_properties = Dictionary[String, Variant]({
 "_phong": 0,
 "_phong_angle": 89.0,
 "_vertex_merge_distance": 0.03125,
+"autoallow": true,
 "classname": "func_trigger",
+"recieve_signal_ID": "",
 "repeatable": true,
 "signal_ID": "player",
 "signal_parameter": "player_update_location_ui: Engineering"
@@ -5056,7 +5084,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "classname": "func_rotator",
 "rotate_dir": Vector3i(0, 1, 0),
 "rotate_speed": 12.0,
-"signal_ID": "",
+"signal_ID": "spinny_machine",
 "sound_dist": 7.0,
 "sound_path": ""
 })
@@ -5081,7 +5109,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "classname": "func_rotator",
 "rotate_dir": Vector3i(0, 1, 0),
 "rotate_speed": -10.0,
-"signal_ID": "",
+"signal_ID": "spinny_machine",
 "sound_dist": 6.0,
 "sound_path": ""
 })
@@ -5100,7 +5128,9 @@ func_godot_properties = Dictionary[String, Variant]({
 "_phong": 0,
 "_phong_angle": 89.0,
 "_vertex_merge_distance": 0.03125,
+"autoallow": true,
 "classname": "func_trigger",
+"recieve_signal_ID": "",
 "repeatable": true,
 "signal_ID": "player",
 "signal_parameter": "player_gravity_on, player_shake_time: 0.0, player_update_location_ui: Lower Ventilation"
@@ -5120,7 +5150,9 @@ func_godot_properties = Dictionary[String, Variant]({
 "_phong": 0,
 "_phong_angle": 89.0,
 "_vertex_merge_distance": 0.03125,
+"autoallow": true,
 "classname": "func_trigger",
+"recieve_signal_ID": "spinny_machine",
 "repeatable": true,
 "signal_ID": "player",
 "signal_parameter": "player_gravity_set: -1, player_shake_time: 99999, player_shake_magnitude: 18"
@@ -5155,7 +5187,9 @@ func_godot_properties = Dictionary[String, Variant]({
 "_phong": 0,
 "_phong_angle": 89.0,
 "_vertex_merge_distance": 0.03125,
+"autoallow": true,
 "classname": "func_trigger",
+"recieve_signal_ID": "",
 "repeatable": true,
 "signal_ID": "player",
 "signal_parameter": "player_gravity_on, player_shake_time: 0.0, player_update_location_ui: Upper Ventilation"
@@ -5175,7 +5209,9 @@ func_godot_properties = Dictionary[String, Variant]({
 "_phong": 0,
 "_phong_angle": 89.0,
 "_vertex_merge_distance": 0.03125,
+"autoallow": true,
 "classname": "func_trigger",
+"recieve_signal_ID": "spinny_machine",
 "repeatable": true,
 "signal_ID": "player",
 "signal_parameter": "player_gravity_set: 1, player_shake_time: 0.0"

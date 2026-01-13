@@ -4892,7 +4892,7 @@
 "rotate_dir" "0, 0, 1"
 "rotate_speed" "10"
 "sound_dist" "4"
-"signal_ID" ""
+"signal_ID" "spinny_machine"
 "_tb_group" "4"
 // brush 0
 {
@@ -5342,7 +5342,7 @@
 "origin" "36 248 -72"
 "angle" "0"
 "signal_ID" "spinny_machine"
-"signal_parameter" "rotate_toggle, light_toggle, counter_reset"
+"signal_parameter" "rotate_toggle, light_toggle, counter_reset, trigger_toggle"
 }
 // entity 39
 {
@@ -5386,7 +5386,7 @@
 "origin" "44 300 -68"
 "recieve_signal_ID" "underground_light_flicker"
 "emit_signal_ID" "spinny_machine"
-"signal_parameter" "counter_reset, rotate_stop, light_off"
+"signal_parameter" "counter_reset, rotate_stop, light_off, trigger_off"
 "repeatable" "1"
 "time" "0.5"
 }
@@ -5703,6 +5703,7 @@
 "rotate_dir" "0, 1, 0"
 "rotate_speed" "12"
 "sound_dist" "7"
+"signal_ID" "spinny_machine"
 "_tb_group" "9"
 // brush 0
 {
@@ -5774,6 +5775,7 @@
 "rotate_dir" "0, 1, 0"
 "rotate_speed" "-10"
 "sound_dist" "6"
+"signal_ID" "spinny_machine"
 "_tb_group" "10"
 // brush 0
 {
@@ -5850,6 +5852,7 @@
 "classname" "func_trigger"
 "signal_ID" "player"
 "signal_parameter" "player_gravity_set: -1, player_shake_time: 99999, player_shake_magnitude: 18"
+"recieve_signal_ID" "spinny_machine"
 // brush 0
 {
 ( -264 216 -128 ) ( -264 217 -128 ) ( -264 216 -127 ) clip [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
@@ -5888,6 +5891,7 @@
 "classname" "func_trigger"
 "signal_ID" "player"
 "signal_parameter" "player_gravity_set: 1, player_shake_time: 0.0"
+"recieve_signal_ID" "spinny_machine"
 // brush 0
 {
 ( -264 244 148 ) ( -264 245 148 ) ( -264 244 149 ) clip [ 0 -1 0 -12 ] [ 0 0 -1 20 ] 180 1 1
