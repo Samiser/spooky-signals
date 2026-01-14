@@ -92,6 +92,12 @@ func signal_recieved(parameters: String) -> void:
 				move_time /= 1.2
 				if move_time < 0.1:
 					move_time = 0.1
+			"move_continuous_on":
+				continuous = true
+			"move_continuous_off":
+				continuous = false
+			"move_continuous_toggle":
+				continuous = !continuous
 			_:
 				var param_additional : PackedStringArray = parameter.split(': ', false)
 
@@ -99,8 +105,8 @@ func signal_recieved(parameters: String) -> void:
 					move_time = param_additional[1].to_float() 
 
 func _set_move(to_end: bool) -> void:
-	if is_moving:
-		return
+	#if is_moving:
+		#return
 	
 	moving_to_end = to_end
 	is_moving = true

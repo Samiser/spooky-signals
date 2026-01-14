@@ -21,7 +21,10 @@ move_start
 move_stop
 move_speed_up
 move_speed_down
-move_speed_set:"
+move_speed_set:
+move_continuous_on
+move_continuous_off
+move_continuous_toggle"
 base_classes = Array[Resource]([ExtResource("1_lnax8"), ExtResource("2_sb7rt"), ExtResource("3_qyjnx")])
 class_properties = Dictionary[String, Variant]({
 "continuous": false,
