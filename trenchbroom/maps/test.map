@@ -6467,6 +6467,7 @@
 "move_rate" "2.0"
 "continuous" "0"
 "sound_path" "res://audio/sfx/scifi_loop.wav"
+"allow_ignore_move" "1"
 "_tb_group" "12"
 // brush 0
 {

@@ -5917,7 +5917,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "_phong_angle": 89.0,
 "_tb_group": "12",
 "_vertex_merge_distance": 0.03125,
-"allow_ignore_move": false,
+"allow_ignore_move": true,
 "classname": "func_moveable",
 "continuous": false,
 "move_offset": Vector3(-4.4, 0, 0),
