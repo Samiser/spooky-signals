@@ -10,6 +10,7 @@ var moving_to_end := false
 var is_moving := false
 var restarted := false
 var continuous := false
+var ignore_if_moving := false
 var origin : Vector3
 var dest := Vector3.ZERO
 var move_time := 1.0
@@ -21,6 +22,7 @@ func _ready() -> void:
 	dest = origin + func_godot_properties.get("move_offset", Vector3.ZERO);
 	move_time = func_godot_properties.get("move_rate", 0.0);
 	continuous = func_godot_properties.get("continuous", false)
+	ignore_if_moving = func_godot_properties.get("allow_ignore_move", false)
 	
 	is_moving = continuous
 	moving_to_end = continuous
@@ -98,6 +100,12 @@ func signal_recieved(parameters: String) -> void:
 				continuous = false
 			"move_continuous_toggle":
 				continuous = !continuous
+			"move_ignore_on":
+				ignore_if_moving = true
+			"move_ignore_off":
+				ignore_if_moving = false
+			"move_ignore_toggle":
+				ignore_if_moving = !ignore_if_moving
 			_:
 				var param_additional : PackedStringArray = parameter.split(': ', false)
 
@@ -105,8 +113,8 @@ func signal_recieved(parameters: String) -> void:
 					move_time = param_additional[1].to_float() 
 
 func _set_move(to_end: bool) -> void:
-	#if is_moving:
-		#return
+	if is_moving && !ignore_if_moving:
+		return
 	
 	moving_to_end = to_end
 	is_moving = true
