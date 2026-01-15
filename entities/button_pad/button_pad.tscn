@@ -45,4 +45,4 @@ shape = SubResource("ConcavePolygonShape3D_jewq6")
 [node name="Sound" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.22713232)
 stream = ExtResource("8_8sj52")
-volume_db = -30.0
+volume_db = -20.0

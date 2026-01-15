@@ -5139,6 +5139,38 @@
 }
 // entity 2
 {
+"classname" "ButtonPad"
+"origin" "-40 176 40"
+"angle" "270"
+"signal_ID" "bridge_door"
+"signal_parameter" "move_switch"
+}
+// entity 3
+{
+"classname" "ButtonPad"
+"origin" "83 96 24"
+"angle" "270"
+"signal_ID" "bridge_lift"
+"signal_parameter" "move_start"
+}
+// entity 4
+{
+"classname" "ButtonPad"
+"origin" "44 200 -64"
+"angle" "90"
+"signal_ID" "bridge_lift"
+"signal_parameter" "move_end"
+}
+// entity 5
+{
+"classname" "ButtonPad"
+"origin" "72 632 40"
+"angle" "0"
+"signal_ID" "lab_door"
+"signal_parameter" "move_end, trigger_on"
+}
+// entity 6
+{
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "lift_0"
@@ -5146,7 +5178,7 @@
 "_tb_linked_group_id" "{943b45b1-ce83-46f0-8149-dc24f6c52e55}"
 "_tb_transformation" "1 0 0 0 0 1 0 0 0 0 1 8.881784197001252e-16 0 0 0 1"
 }
-// entity 3
+// entity 7
 {
 "classname" "func_moveable"
 "move_offset" "0.0 -3 0.0"
@@ -5217,7 +5249,7 @@
 ( 120 128 -8 ) ( 120 152 120 ) ( 120 152 -8 ) Metal2/Metal_21-128x128 [ 0 0 1.0000000000000002 5 ] [ 0 -1.0000000000000002 0 -13 ] 270 0.5 0.5
 }
 }
-// entity 4
+// entity 8
 {
 "classname" "func_moveable"
 "move_offset" "0.0 -3 0.0"
@@ -5234,7 +5266,7 @@
 ( 128 128 -16 ) ( 128 152 112 ) ( 128 152 -16 ) clip [ 0 0 1.0000000000000002 21 ] [ 0 -1.0000000000000002 0 -13 ] 180 0.5 0.5
 }
 }
-// entity 5
+// entity 9
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -5243,7 +5275,7 @@
 "_tb_linked_group_id" "{c8b1ea1f-2dac-48d8-a286-1803064e8088}"
 "_tb_transformation" "0.9848077530122071 0.17364817766693563 0 -77.3082316911778 -0.17364817766693563 0.9848077530122071 0 12.362868335873145 0 0 1 0 0 0 0 1"
 }
-// entity 6
+// entity 10
 {
 "classname" "func_rotator"
 "rotate_dir" "0, 0, 1"
@@ -5306,7 +5338,7 @@
 ( 31.795967328357463 442.6678958916539 36 ) ( 31.79596732835749 450.6678958916539 36 ) ( 31.79596732835749 450.6678958916539 28 ) Metal2/Metal_22-128x128 [ -1.0297318553398327e-14 -0.9999999999999997 0 -1.3320923 ] [ 0 0 -1 2 ] 180 1 1
 }
 }
-// entity 7
+// entity 11
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -5315,7 +5347,7 @@
 "_tb_linked_group_id" "{647d6152-ab0e-4efe-94dc-eb864132c64e}"
 "_tb_transformation" "0.9848077530126375 0.17364817766700522 0 58.69176830877561 -0.20673926765197798 1.1724766500357482 0 -152.40003157415805 0 0 1.1428571428571428 -144.57142857142858 0 0 0 1"
 }
-// entity 8
+// entity 12
 {
 "classname" "func_rotator"
 "rotate_dir" "0, 0, 1"
@@ -5378,7 +5410,7 @@
 ( 167.7959673283558 359.90563992261025 -103.42857142857142 ) ( 167.79596732835577 369.43015186069795 -103.42857142857142 ) ( 167.79596732835577 369.43015186069795 -112.57142857142856 ) Metal2/Metal_22-128x128 [ -4.135580766726905e-15 -0.8399380516295838 0 -13.701569 ] [ 0 0 -0.8750000000000001 3.5 ] 270 1 1
 }
 }
-// entity 9
+// entity 13
 {
 "classname" "point_light"
 "origin" "-4 -16 80"
@@ -5387,7 +5419,7 @@
 "colour" "255 255 255"
 "signal_ID" "bridge_light"
 }
-// entity 10
+// entity 14
 {
 "classname" "point_light"
 "origin" "8 248 -60"
@@ -5399,7 +5431,7 @@
 "fog_energy" "4"
 "signal_ID" "spinny_machine"
 }
-// entity 11
+// entity 15
 {
 "classname" "point_light"
 "origin" "-200 496 -48"
@@ -5412,7 +5444,15 @@
 "signal_ID" "break_door"
 "autoflicker" "0"
 }
-// entity 12
+// entity 16
+{
+"classname" "ButtonPad"
+"origin" "-24 200 24"
+"angle" "0"
+"signal_ID" "bridge_door"
+"signal_parameter" "move_switch"
+}
+// entity 17
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -5420,7 +5460,7 @@
 "_tb_id" "5"
 "_tb_linked_group_id" "{82a29af2-4296-472e-baa9-92e674f42329}"
 }
-// entity 13
+// entity 18
 {
 "classname" "func_moveable"
 "move_offset" "0.0 0.0 -1.9"
@@ -5464,7 +5504,7 @@
 ( 32 192 8 ) ( 32 192 9 ) ( 32 193 8 ) Grating/Grating_16-128x128 [ 0 -1.0000000000000002 0 16.732285 ] [ 0 0 -1.0000000000000002 -20.90168 ] 270 0.93131626 0.7414113
 }
 }
-// entity 14
+// entity 19
 {
 "classname" "func_trigger"
 "signal_ID" "bridge_lift"
@@ -5479,7 +5519,7 @@
 ( 128 160 16 ) ( 128 160 17 ) ( 128 161 16 ) clip [ 0 1 0 0 ] [ 0 0 -1 24 ] 180 1 1
 }
 }
-// entity 15
+// entity 20
 {
 "classname" "func_trigger"
 "signal_ID" "bridge_lift"
@@ -5494,7 +5534,7 @@
 ( 128 144 -88 ) ( 128 144 -87 ) ( 128 145 -88 ) clip [ 0 1 0 16 ] [ 0 0 -1 -16 ] 270 1 1
 }
 }
-// entity 16
+// entity 21
 {
 "classname" "3d_sfx"
 "origin" "-212 420 140"
@@ -5503,7 +5543,7 @@
 "pan_strength" "0"
 "range" "3.0"
 }
-// entity 17
+// entity 22
 {
 "classname" "3d_sfx"
 "origin" "84 284 -160"
@@ -5512,7 +5552,7 @@
 "sfx_file_path" "res://audio/ambience/mechanical_ambience.wav"
 "range" "2.6"
 }
-// entity 18
+// entity 23
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -5521,7 +5561,7 @@
 "_tb_linked_group_id" "{8f6a5185-1b46-48ab-a3f9-3f16a30113ab}"
 "_tb_transformation" "-1.8369701987210297e-16 1 0 -540 -1 -1.8369701987210297e-16 0 502 0 0 1 0 0 0 0 1"
 }
-// entity 19
+// entity 24
 {
 "classname" "func_moveable"
 "move_offset" "0.4 0.0 0.0"
@@ -5568,7 +5608,7 @@
 ( -350 470 60 ) ( -350 470 54 ) ( -350 342 54 ) Grating/Grating_16-128x128 [ -1.8369701987210297e-16 -1 0 -0.60565186 ] [ 0 0 -1 -18.987 ] 180 0.8351654 0.7192162
 }
 }
-// entity 20
+// entity 25
 {
 "classname" "func_trigger"
 "signal_ID" "corridor_light"
@@ -5584,7 +5624,7 @@
 ( -288 532 4 ) ( -288 532 5 ) ( -288 533 4 ) clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
-// entity 21
+// entity 26
 {
 "classname" "3d_sfx"
 "origin" "-200 504 -48"
@@ -5594,7 +5634,17 @@
 "subtitle" "[Electronics sparking]"
 "subtitle_priority" "1"
 }
-// entity 22
+// entity 27
+{
+"classname" "ButtonPad"
+"origin" "-340 480 24"
+"angle" "90"
+"signal_ID" "broken_corridor_door"
+"signal_parameter" "counter_add, sfx_play"
+"target" ""
+"repeatable" "1"
+}
+// entity 28
 {
 "classname" "func_trigger"
 "signal_ID" "steam_scare"
@@ -5610,7 +5660,7 @@
 ( 16 464 16 ) ( 16 464 17 ) ( 16 465 16 ) clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
-// entity 23
+// entity 29
 {
 "classname" "spawner"
 "origin" "-32 460 28"
@@ -5618,7 +5668,7 @@
 "signal_ID" "steam_scare"
 "scene_path" "res://entities/particles/steam.tscn"
 }
-// entity 24
+// entity 30
 {
 "classname" "3d_sfx"
 "origin" "-40 456 28"
@@ -5627,7 +5677,7 @@
 "subtitle" "[Steam pipe bursting]"
 "subtitle_priority" "1"
 }
-// entity 25
+// entity 31
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -5635,7 +5685,7 @@
 "_tb_id" "8"
 "_tb_linked_group_id" "{d90a9526-c886-4f14-aed9-78747f3520e5}"
 }
-// entity 26
+// entity 32
 {
 "classname" "func_rotator"
 "rotate_dir" "1 0 0"
@@ -5681,7 +5731,7 @@
 ( 6.343145750507617 200 -56 ) ( 4.686291501015235 184 -52 ) ( 4.686291501015235 200 -52 ) Metal2/Metal_03-128x128 [ 0 1 0 0 ] [ 0.38268343236508945 0 -0.9238795325112868 -3.6955185 ] 270 1 1
 }
 }
-// entity 27
+// entity 33
 {
 "classname" "point_light"
 "origin" "108 372 -60"
@@ -5691,7 +5741,23 @@
 "flicker_amount" "1"
 "signal_ID" "underground_light_flicker"
 }
-// entity 28
+// entity 34
+{
+"classname" "ButtonPad"
+"origin" "8 316 -64"
+"angle" "90"
+"signal_ID" "spinny_machine"
+"signal_parameter" "rotate_flip, counter_add, timer_start"
+}
+// entity 35
+{
+"classname" "ButtonPad"
+"origin" "36 248 -72"
+"angle" "0"
+"signal_ID" "spinny_machine"
+"signal_parameter" "rotate_toggle, light_toggle, counter_reset, trigger_toggle"
+}
+// entity 36
 {
 "classname" "3d_sfx"
 "origin" "-4 -24 80"
@@ -5699,7 +5765,15 @@
 "signal_ID" "bridge_light"
 "subtitle" "[light switch]"
 }
-// entity 29
+// entity 37
+{
+"classname" "ButtonPad"
+"origin" "120 18 46"
+"angle" "180"
+"signal_ID" "bridge_light"
+"signal_parameter" "sfx_play, light_toggle"
+}
+// entity 38
 {
 "classname" "counter"
 "origin" "28 300 -68"
@@ -5711,16 +5785,16 @@
 "repeatable" "1"
 "reset_on_finish" "0"
 }
-// entity 30
+// entity 39
 {
 "classname" "counter"
 "origin" "-316 476 28"
 "emit_signal_ID" "break_door"
 "count" "10"
 "recieve_signal_ID" "broken_corridor_door"
-"finish_signal_parameter" "light_start_flicker, sfx_play, move_stop, timer_start, counter_add, button_off"
+"finish_signal_parameter" "light_start_flicker, sfx_play, move_stop, timer_start, counter_add"
 }
-// entity 31
+// entity 40
 {
 "classname" "timer"
 "origin" "44 300 -68"
@@ -5730,7 +5804,7 @@
 "repeatable" "1"
 "time" "0.5"
 }
-// entity 32
+// entity 41
 {
 "classname" "timer"
 "origin" "44 300 -60"
@@ -5740,7 +5814,7 @@
 "repeatable" "1"
 "time" "2.0"
 }
-// entity 33
+// entity 42
 {
 "classname" "3d_sfx"
 "origin" "8 252 -48"
@@ -5750,7 +5824,20 @@
 "subtitle_priority" "1"
 "subtitle" "[Machine breaking]"
 }
-// entity 34
+// entity 43
+{
+"classname" "3d_sfx"
+"origin" "-324 476 28"
+"signal_ID" "broken_corridor_door"
+"sfx_file_path" "res://audio/sfx/error.wav"
+"pitch_level" "0.8"
+"pitch_variation" "0.0"
+"volume_db" "0.000000"
+"range" "2"
+"subtitle_priority" "1"
+"subtitle" "[Error]"
+}
+// entity 44
 {
 "classname" "counter"
 "origin" "20 412 76"
@@ -5759,7 +5846,7 @@
 "count" "10"
 "finish_signal_parameter" "timer_start, rotate_stop"
 }
-// entity 35
+// entity 45
 {
 "classname" "func_trigger"
 "signal_ID" "corridor_fan"
@@ -5775,7 +5862,7 @@
 ( 24 440 16 ) ( 24 440 17 ) ( 24 441 16 ) clip [ 0 1 0 24 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
-// entity 36
+// entity 46
 {
 "classname" "timer"
 "origin" "20 404 76"
@@ -5784,7 +5871,7 @@
 "recieve_signal_ID" "break_fan"
 "signal_parameter" "rotate_start"
 }
-// entity 37
+// entity 47
 {
 "classname" "func_trigger"
 "signal_parameter" "counter_add"
@@ -5800,7 +5887,7 @@
 ( 136 280 -96 ) ( 136 280 -95 ) ( 136 281 -96 ) clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
-// entity 38
+// entity 48
 {
 "classname" "counter"
 "origin" "84 260 -100"
@@ -5809,7 +5896,7 @@
 "emit_signal_ID" "bridge_lift"
 "finish_signal_parameter" "move_start"
 }
-// entity 39
+// entity 49
 {
 "classname" "point_light"
 "origin" "-76 340 116"
@@ -5820,7 +5907,7 @@
 "signal_ID" "flashing_corridor_light"
 "flicker_amount" "1"
 }
-// entity 40
+// entity 50
 {
 "classname" "timer"
 "origin" "-76 332 116"
@@ -5831,7 +5918,7 @@
 "is_looping" "1"
 "time" "1.6"
 }
-// entity 41
+// entity 51
 {
 "classname" "3d_sfx"
 "origin" "-84 340 116"
@@ -5841,7 +5928,7 @@
 "pitch_level" "0.5"
 "signal_ID" "flashing_corridor_light"
 }
-// entity 42
+// entity 52
 {
 "classname" "timer"
 "origin" "-308 476 28"
@@ -5850,7 +5937,7 @@
 "signal_parameter" "light_off"
 "time" "8.0"
 }
-// entity 43
+// entity 53
 {
 "classname" "counter"
 "origin" "-32 460 44"
@@ -5858,7 +5945,7 @@
 "emit_signal_ID" "player"
 "finish_signal_parameter" "player_shake_time: 1.0, player_shake_magnitude: 64"
 }
-// entity 44
+// entity 54
 {
 "classname" "counter"
 "origin" "28 300 -60"
@@ -5870,7 +5957,7 @@
 "repeatable" "1"
 "reset_on_finish" "1"
 }
-// entity 45
+// entity 55
 {
 "classname" "func_trigger"
 "signal_ID" "player"
@@ -5885,7 +5972,7 @@
 ( 128 184 48 ) ( 128 184 49 ) ( 128 185 48 ) clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
-// entity 46
+// entity 56
 {
 "classname" "func_trigger"
 "signal_ID" "player"
@@ -5900,7 +5987,7 @@
 ( 32 184 48 ) ( 32 184 49 ) ( 32 185 48 ) clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 90 1 1
 }
 }
-// entity 47
+// entity 57
 {
 "classname" "func_trigger"
 "signal_ID" "player"
@@ -5915,7 +6002,7 @@
 ( 32 208 48 ) ( 32 208 49 ) ( 32 209 48 ) clip [ 0 1 0 -24 ] [ 0 0 -1 0 ] 180 1 1
 }
 }
-// entity 48
+// entity 58
 {
 "classname" "func_trigger"
 "signal_ID" "player"
@@ -5930,7 +6017,7 @@
 ( 136 632 48 ) ( 136 632 49 ) ( 136 633 48 ) clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 270 1 1
 }
 }
-// entity 49
+// entity 59
 {
 "classname" "func_trigger"
 "signal_ID" "player"
@@ -5945,7 +6032,7 @@
 ( 128 664 48 ) ( 128 664 49 ) ( 128 665 48 ) clip [ 0 1 0 32 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
-// entity 50
+// entity 60
 {
 "classname" "func_trigger"
 "signal_ID" "player"
@@ -5960,7 +6047,7 @@
 ( 120 184 -64 ) ( 120 184 -63 ) ( 120 185 -64 ) clip [ 0 1 0 0 ] [ 0 0 -1 -48 ] 90 1 1
 }
 }
-// entity 51
+// entity 61
 {
 "classname" "timer"
 "origin" "-44 180 60"
@@ -5969,7 +6056,7 @@
 "time" "0.5"
 "signal_parameter" "player_update_location_ui: Bridge"
 }
-// entity 52
+// entity 62
 {
 "classname" "counter"
 "origin" "-316 476 36"
@@ -5978,7 +6065,7 @@
 "recieve_signal_ID" "break_door"
 "finish_signal_parameter" "player_shake_time: 1, player_shake_magnitude: 32"
 }
-// entity 53
+// entity 63
 {
 "classname" "func_trigger"
 "signal_ID" "player"
@@ -5993,7 +6080,7 @@
 ( -64 360 -120 ) ( -64 360 -119 ) ( -64 361 -120 ) clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 180 1 1
 }
 }
-// entity 54
+// entity 64
 {
 "classname" "func_trigger"
 "signal_ID" "player"
@@ -6008,7 +6095,7 @@
 ( -24 360 -120 ) ( -24 360 -119 ) ( -24 361 -120 ) clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 90 1 1
 }
 }
-// entity 55
+// entity 65
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -6017,7 +6104,7 @@
 "_tb_linked_group_id" "{64812218-0931-427f-beb5-0d8ea028d562}"
 "_tb_transformation" "5.579466631398402e-16 9.838105050781054e-17 2.285714285714285 -313.1428571428573 -0.41343279544420153 2.3446938964364397 0 -799.3535607703318 -0.9848077530126375 -0.17364817766700522 3.237450798655988e-16 -42.69176830877569 0 0 0 1"
 }
-// entity 56
+// entity 66
 {
 "classname" "func_rotator"
 "rotate_dir" "0, 1, 0"
@@ -6080,7 +6167,7 @@
 ( -235.42857142857144 239.4296250499882 -149.7959673283549 ) ( -230.85714285714283 244.19135420832407 -151.7959673283558 ) ( -230.85714285714283 225.14443757498225 -151.7959673283558 ) Metal/Metal_10-128x128 [ 1.4163847244113774e-16 -1.7253502055749817e-15 -0.9999999999995639 -115.79597 ] [ -5.8575734245640345e-31 -0.4200154888060051 4.135580766726905e-15 -93.43585 ] 270 1 1
 }
 }
-// entity 57
+// entity 67
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -6089,7 +6176,7 @@
 "_tb_linked_group_id" "{3abb8e12-cd30-47a6-9a72-52dffae8f014}"
 "_tb_transformation" "0.292373476188509 -1.658132380046328 1.6162440712835373 438.58011798099545 -0.29234113322350536 1.657948953976915 1.616065278986387 -548.6009780088018 -0.9848077530126375 -0.17364817766700522 3.237450798655988e-16 -58.69176830877569 0 0 0 1"
 }
-// entity 58
+// entity 68
 {
 "classname" "func_rotator"
 "rotate_dir" "0, 1, 0"
@@ -6152,7 +6239,7 @@
 ( -241.07948277511986 240.8758763528491 -165.7959673283549 ) ( -241.21441812201027 247.47505788885485 -167.7959673283558 ) ( -227.7447241641819 234.00685397672396 -167.7959673283558 ) Metal/Metal_11-128x128 [ 1.3200253949182992e-15 -1.1198422255257161e-15 -0.9999999999995639 -3.7959595 ] [ 0.2969629460419476 -0.29699580033810863 4.135580766726905e-15 -50.8692 ] 154.77429 1 1
 }
 }
-// entity 59
+// entity 69
 {
 "classname" "func_trigger"
 "signal_ID" "player"
@@ -6167,7 +6254,7 @@
 ( -216 276 8 ) ( -216 276 9 ) ( -216 277 8 ) clip [ 0 1 0 -12 ] [ 0 0 -1 0 ] 180 1 1
 }
 }
-// entity 60
+// entity 70
 {
 "classname" "func_trigger"
 "signal_ID" "player"
@@ -6183,7 +6270,7 @@
 ( -216 256 -124 ) ( -216 256 -123 ) ( -216 257 -124 ) clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
-// entity 61
+// entity 71
 {
 "classname" "point_light"
 "origin" "-240 236 -40"
@@ -6191,7 +6278,7 @@
 "energy" ".2"
 "size" "6"
 }
-// entity 62
+// entity 72
 {
 "classname" "func_trigger"
 "signal_ID" "player"
@@ -6206,7 +6293,7 @@
 ( -216 276 144 ) ( -216 276 145 ) ( -216 277 144 ) clip [ 0 1 0 -12 ] [ 0 0 -1 8 ] 90 1 1
 }
 }
-// entity 63
+// entity 73
 {
 "classname" "func_trigger"
 "signal_ID" "player"
@@ -6222,7 +6309,7 @@
 ( -216 252 156 ) ( -216 252 157 ) ( -216 253 156 ) clip [ 0 1 0 12 ] [ 0 0 -1 20 ] 180 1 1
 }
 }
-// entity 64
+// entity 74
 {
 "classname" "spawner"
 "origin" "-252 244 -136"
@@ -6230,7 +6317,7 @@
 "scene_path" "res://entities/particles/steam.tscn"
 "autostart" "1"
 }
-// entity 65
+// entity 75
 {
 "classname" "point_light"
 "origin" "196 748 68"
@@ -6238,14 +6325,22 @@
 "autoflicker" "1"
 "energy" ".7"
 }
-// entity 66
+// entity 76
+{
+"classname" "ButtonPad"
+"origin" "120 50 46"
+"angle" "180"
+"signal_ID" "test_video_setup"
+"signal_parameter" "timer_start, counter_add"
+}
+// entity 77
 {
 "classname" "video_player"
 "origin" "124 52 68"
 "video_file_path" "res://videos/logo_vid_short.ogv"
 "signal_ID" "test_video"
 }
-// entity 67
+// entity 78
 {
 "classname" "timer"
 "origin" "124 44 68"
@@ -6255,7 +6350,7 @@
 "emit_signal_ID" "player"
 "signal_parameter" "player_control_on, player_teleport: 1.25 0.25 -0.25, player_angle: 270.0, player_fade_in"
 }
-// entity 68
+// entity 79
 {
 "classname" "timer"
 "origin" "124 52 60"
@@ -6265,7 +6360,7 @@
 "emit_signal_ID" "test_video"
 "signal_parameter" "video_play, timer_start"
 }
-// entity 69
+// entity 80
 {
 "classname" "counter"
 "origin" "124 44 60"
@@ -6275,7 +6370,7 @@
 "emit_signal_ID" "player"
 "finish_signal_parameter" "player_fade_out, player_control_off"
 }
-// entity 70
+// entity 81
 {
 "classname" "func_moveable"
 "move_offset" "5.0 0.0 0.0"
@@ -6291,7 +6386,15 @@
 ( -64 16 24 ) ( -64 16 25 ) ( -64 17 24 ) Animal/Animal_14-128x128 [ 0 1 0 0 ] [ 0 0 -1 16 ] 180 1 1
 }
 }
-// entity 71
+// entity 82
+{
+"classname" "ButtonPad"
+"origin" "120 82 46"
+"angle" "180"
+"signal_ID" "cctv_bridge"
+"signal_parameter" "timer_start, counter_add"
+}
+// entity 83
 {
 "classname" "timer"
 "origin" "124 84 60"
@@ -6301,7 +6404,7 @@
 "emit_signal_ID" "cctv_engineering"
 "signal_parameter" "timer_start, counter_add"
 }
-// entity 72
+// entity 84
 {
 "classname" "counter"
 "origin" "124 76 60"
@@ -6311,7 +6414,7 @@
 "emit_signal_ID" "player"
 "finish_signal_parameter" "player_control_off, player_camera_pos: 5.5 3.0 -3.5, player_camera_rot: -20.0 120.0 0.0, player_update_location_ui: CCTV_FEED_BRIDGE"
 }
-// entity 73
+// entity 85
 {
 "classname" "timer"
 "origin" "124 84 92"
@@ -6321,7 +6424,7 @@
 "emit_signal_ID" "player"
 "signal_parameter" "player_camera_reset, player_control_on, player_update_location_ui: Bridge, player_fade_in"
 }
-// entity 74
+// entity 86
 {
 "classname" "timer"
 "origin" "124 84 68"
@@ -6331,7 +6434,7 @@
 "emit_signal_ID" "cctv_corridor"
 "signal_parameter" "timer_start, counter_add"
 }
-// entity 75
+// entity 87
 {
 "classname" "counter"
 "origin" "124 76 68"
@@ -6341,7 +6444,7 @@
 "emit_signal_ID" "player"
 "finish_signal_parameter" "player_camera_pos: 3.5 -1.0 -0.5, player_camera_rot: -20.0 230.0 0.0, player_update_location_ui: CCTV_FEED_ENGINEERING"
 }
-// entity 76
+// entity 88
 {
 "classname" "timer"
 "origin" "124 84 76"
@@ -6351,7 +6454,7 @@
 "emit_signal_ID" "cctv_labs"
 "signal_parameter" "timer_start, counter_add"
 }
-// entity 77
+// entity 89
 {
 "classname" "counter"
 "origin" "124 76 76"
@@ -6361,7 +6464,7 @@
 "emit_signal_ID" "player"
 "finish_signal_parameter" "player_camera_pos: 16.0 2.3 -1.5, player_camera_rot: -20.0 10.0 0.0, player_update_location_ui: CCTV_FEED_ACCESS_CORRIDOR"
 }
-// entity 78
+// entity 90
 {
 "classname" "timer"
 "origin" "124 84 84"
@@ -6371,7 +6474,7 @@
 "emit_signal_ID" "cctv_end"
 "signal_parameter" "timer_start, counter_add"
 }
-// entity 79
+// entity 91
 {
 "classname" "counter"
 "origin" "124 76 84"
@@ -6381,7 +6484,7 @@
 "emit_signal_ID" "player"
 "finish_signal_parameter" "player_camera_pos: 25.0 2.3 2.0, player_camera_rot: -20.0 120.0 0.0, player_update_location_ui: CCTV_FEED_LABS"
 }
-// entity 80
+// entity 92
 {
 "classname" "counter"
 "origin" "124 76 92"
@@ -6391,7 +6494,7 @@
 "emit_signal_ID" "player"
 "finish_signal_parameter" "player_fade_out"
 }
-// entity 81
+// entity 93
 {
 "classname" "3d_sfx"
 "origin" "236 772 140"
@@ -6401,7 +6504,7 @@
 "range" "4"
 "volume_db" "-10.0"
 }
-// entity 82
+// entity 94
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -6410,7 +6513,7 @@
 "_tb_linked_group_id" "{de526051-8bfe-4211-a233-4798cdd166fa}"
 "_tb_transformation" "1 0 0 0 0 1 0 30 0 0 1 8 0 0 0 1"
 }
-// entity 83
+// entity 95
 {
 "classname" "func_moveable"
 "signal_ID" "scan_bar"
@@ -6448,7 +6551,7 @@
 ( 112 804 88 ) ( 112 806 88 ) ( 112 806 82 ) Metal/Metal_06-128x128 [ 0 1 0 -30 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
-// entity 84
+// entity 96
 {
 "classname" "func_trigger"
 "signal_ID" "scan_bar_enter"
@@ -6465,7 +6568,7 @@
 ( 128 728 8 ) ( 128 728 9 ) ( 128 729 8 ) clip [ 0 1 0 -40 ] [ 0 0 -1 0 ] 90 1 1
 }
 }
-// entity 85
+// entity 97
 {
 "classname" "counter"
 "origin" "60 676 36"
@@ -6475,7 +6578,7 @@
 "repeatable" "1"
 "reset_on_finish" "1"
 }
-// entity 86
+// entity 98
 {
 "classname" "counter"
 "origin" "60 684 36"
@@ -6485,7 +6588,7 @@
 "repeatable" "1"
 "reset_on_finish" "1"
 }
-// entity 87
+// entity 99
 {
 "classname" "timer"
 "origin" "60 692 36"
@@ -6495,7 +6598,7 @@
 "emit_signal_ID" "scan_bar"
 "signal_parameter" "move_start, move_continuous_off, light_off, light_end_flicker"
 }
-// entity 88
+// entity 100
 {
 "classname" "timer"
 "origin" "60 700 36"
@@ -6505,7 +6608,7 @@
 "emit_signal_ID" "chamber_door"
 "signal_parameter" "move_end"
 }
-// entity 89
+// entity 101
 {
 "classname" "point_light"
 "origin" "96 732 48"
@@ -6515,7 +6618,7 @@
 "autoflicker" "0"
 "flicker_amount" "1.0"
 }
-// entity 90
+// entity 102
 {
 "classname" "func_moveable"
 "signal_ID" "lab_door"
@@ -6532,7 +6635,7 @@
 ( 124 652 4 ) ( 124 652 5 ) ( 124 653 4 ) Metal2/Metal_08-128x128 [ 0 1 0 0 ] [ 0 0 -1 0 ] 270 0.8 0.8
 }
 }
-// entity 91
+// entity 103
 {
 "classname" "func_moveable"
 "signal_ID" "chamber_door"
@@ -6549,7 +6652,15 @@
 ( 142 760 4 ) ( 142 759 4 ) ( 142 760 5 ) Metal2/Metal_08-128x128 [ 1.0718754395722282e-15 1 0 -76 ] [ 0 0 -1 0 ] 180 0.8 0.8
 }
 }
-// entity 92
+// entity 104
+{
+"classname" "ButtonPad"
+"origin" "160 800 40"
+"angle" "270"
+"signal_ID" "chamber_door"
+"signal_parameter" "move_end, trigger_on"
+}
+// entity 105
 {
 "classname" "func_trigger"
 "signal_ID" "scan_bar_exit"
@@ -6566,7 +6677,7 @@
 ( 128 744 8 ) ( 128 744 9 ) ( 128 745 8 ) clip [ 0 1 0 -56 ] [ 0 0 -1 0 ] 270 1 1
 }
 }
-// entity 93
+// entity 106
 {
 "classname" "counter"
 "origin" "68 764 36"
@@ -6576,7 +6687,7 @@
 "repeatable" "1"
 "reset_on_finish" "1"
 }
-// entity 94
+// entity 107
 {
 "classname" "counter"
 "origin" "68 772 36"
@@ -6586,7 +6697,7 @@
 "repeatable" "1"
 "reset_on_finish" "1"
 }
-// entity 95
+// entity 108
 {
 "classname" "timer"
 "origin" "68 780 36"
@@ -6596,7 +6707,7 @@
 "emit_signal_ID" "scan_bar"
 "signal_parameter" "move_start, move_continuous_off, light_off, light_end_flicker"
 }
-// entity 96
+// entity 109
 {
 "classname" "timer"
 "origin" "68 788 36"
@@ -6606,7 +6717,7 @@
 "emit_signal_ID" "lab_door"
 "signal_parameter" "move_end"
 }
-// entity 97
+// entity 110
 {
 "classname" "func_trigger"
 "recieve_signal_ID" ""
@@ -6623,7 +6734,7 @@
 ( 232 778.475208614067 8 ) ( 232 778.475208614067 9 ) ( 232.50000000000128 779.3412340178514 8 ) clip [ 0.49999999999999895 0.8660254037844394 0 17.820679 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
-// entity 98
+// entity 111
 {
 "classname" "func_trigger"
 "recieve_signal_ID" ""
@@ -6640,7 +6751,7 @@
 ( 52.68629150101526 566.6274169979696 8 ) ( 52.68629150101526 566.6274169979696 9 ) ( 51.979184719828766 567.3345237791561 8 ) clip [ -0.7071067811865474 0.7071067811865477 0 -3.411255 ] [ 0 0 -1 0 ] 90 1 1
 }
 }
-// entity 99
+// entity 112
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -6648,7 +6759,7 @@
 "_tb_id" "13"
 "_tb_linked_group_id" "{305b362b-6ee6-4631-bba5-5da29b5ce9f3}"
 }
-// entity 100
+// entity 113
 {
 "classname" "func_moveable"
 "signal_ID" "chamber_door"
@@ -6677,7 +6788,7 @@
 ( 144 760 4 ) ( 144 759 4 ) ( 144 760 5 ) Metal/Metal_06-128x128 [ 1.0718754395722282e-15 1 0 -76 ] [ 0 0 -1 0 ] 90 0.8 0.8
 }
 }
-// entity 101
+// entity 114
 {
 "classname" "func_moveable"
 "signal_ID" "chamber_door"
@@ -6706,7 +6817,7 @@
 ( 144 760 -36 ) ( 144 759 -36 ) ( 144 760 -35 ) Metal/Metal_06-128x128 [ 1.0718754395722282e-15 1 0 -76 ] [ 0 0 -1 -50 ] 90 0.8 0.8
 }
 }
-// entity 102
+// entity 115
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
@@ -6715,7 +6826,7 @@
 "_tb_linked_group_id" "{34c681c0-6d36-4b0b-a5bd-543b10fcc1c5}"
 "_tb_transformation" "7.273661547324616e-16 -1 0 879.9999999999999 1 7.273661547324616e-16 0 505.99999999999943 0 0 1 0 0 0 0 1"
 }
-// entity 103
+// entity 116
 {
 "classname" "func_moveable"
 "signal_ID" "lab_door"
@@ -6744,7 +6855,7 @@
 ( 124 654 4 ) ( 124 654 5 ) ( 124 655 4 ) Metal/Metal_06-128x128 [ 1.79924159430469e-15 1 0 -2.5 ] [ 0 0 -1 0 ] 0 0.8 0.8
 }
 }
-// entity 104
+// entity 117
 {
 "classname" "func_moveable"
 "signal_ID" "lab_door"
@@ -6773,20 +6884,37 @@
 ( 124 654 -36 ) ( 124 654 -35 ) ( 124 655 -36 ) Metal/Metal_06-128x128 [ 1.79924159430469e-15 1 0 -2.5 ] [ 0 0 -1 -50 ] 0 0.8 0.8
 }
 }
-// entity 105
+// entity 118
 {
 "classname" "music"
 "origin" "0 -244 132"
 "autoplay" "0"
 "music_file_path" "res://audio/music/main_menu.ogg"
 }
-// entity 106
+// entity 119
+{
+"classname" "ButtonPad"
+"origin" "120 -14 46"
+"angle" "180"
+"signal_ID" "music"
+"signal_parameter" "music_fade_time: 5.0, music_set: res://audio/music/intro_music.ogg"
+}
+// entity 120
 {
 "classname" "3d_label"
 "origin" "222 706 34"
 "text" "ts aint done yet ong"
 }
-// entity 107
+// entity 121
+{
+"classname" "ButtonPad"
+"origin" "120 -46 46"
+"angle" "180"
+"" ""
+"signal_parameter" "timer_start, sfx_play"
+"emit_signal_ID" "line_read"
+}
+// entity 122
 {
 "classname" "timer"
 "origin" "124 -42 64"
@@ -6794,9 +6922,9 @@
 "time" "2.84"
 "repeatable" "1"
 "emit_signal_ID" "line_read_end"
-"signal_parameter" "sfx_play, timer_start"
+"signal_parameter" "sfx_play"
 }
-// entity 108
+// entity 123
 {
 "classname" "3d_sfx"
 "origin" "124 -50 64"
@@ -6804,7 +6932,7 @@
 "signal_ID" "line_read"
 "subtitle" "The right man in the wrong place/"
 }
-// entity 109
+// entity 124
 {
 "classname" "3d_sfx"
 "origin" "124 -50 76"
@@ -6812,124 +6940,8 @@
 "signal_ID" "line_read_end"
 "subtitle" "can make all the difference in the world."
 }
-// entity 110
+// entity 125
 {
 "classname" "ButtonPad"
-"origin" "120 -44 48"
-"angle" "180"
-"emit_signal_ID" "line_read"
-"signal_parameter" "timer_start, sfx_play, button_off"
-"recieve_signal_ID" "line_read"
-}
-// entity 111
-{
-"classname" "ButtonPad"
-"origin" "120 -16 48"
-"angle" "180"
-"emit_signal_ID" "music"
-"signal_parameter" "music_fade_time: 5.0, music_set: res://audio/music/intro_music.ogg"
-}
-// entity 112
-{
-"classname" "ButtonPad"
-"origin" "120 8 48"
-"emit_signal_ID" "bridge_light"
-"signal_parameter" "sfx_play, light_toggle"
-"angle" "180"
-}
-// entity 113
-{
-"classname" "ButtonPad"
-"origin" "120 48 48"
-"signal_parameter" "timer_start, counter_add"
-"emit_signal_ID" "test_video_setup"
-"angle" "180"
-}
-// entity 114
-{
-"classname" "ButtonPad"
-"origin" "120 80 48"
-"signal_parameter" "timer_start, counter_add"
-"emit_signal_ID" "cctv_bridge"
-"angle" "180"
-}
-// entity 115
-{
-"classname" "ButtonPad"
-"origin" "82 96 24"
-"angle" "270"
-"emit_signal_ID" "bridge_lift"
-"recieve_signal_ID" "move_start"
-}
-// entity 116
-{
-"classname" "ButtonPad"
-"origin" "-40 176 40"
-"angle" "270"
-"emit_signal_ID" "bridge_door"
-"signal_parameter" "move_switch"
-}
-// entity 117
-{
-"classname" "ButtonPad"
-"origin" "-24 200 24"
-"signal_parameter" "move_switch"
-"emit_signal_ID" "bridge_door"
-}
-// entity 118
-{
-"classname" "ButtonPad"
-"origin" "-338 480 24"
-"signal_parameter" "counter_add"
-"emit_signal_ID" "broken_corridor_door"
-"recieve_signal_ID" "break_door"
-"angle" "90"
-}
-// entity 119
-{
-"classname" "ButtonPad"
-"origin" "72 632 40"
-"signal_parameter" "move_end, trigger_on"
-"emit_signal_ID" "lab_door"
-}
-// entity 120
-{
-"classname" "ButtonPad"
-"origin" "160 800 40"
-"angle" "270"
-"signal_parameter" "move_end, trigger_on"
-"emit_signal_ID" "chamber_door"
-}
-// entity 121
-{
-"classname" "ButtonPad"
-"origin" "44 200 -64"
-"angle" "90"
-"emit_signal_ID" "bridge_lift"
-"recieve_signal_ID" "move_end"
-}
-// entity 122
-{
-"classname" "ButtonPad"
-"origin" "36 248 -72"
-"signal_parameter" "rotate_toggle, light_toggle, counter_reset, trigger_toggle"
-"emit_signal_ID" "spinny_machine"
-}
-// entity 123
-{
-"classname" "ButtonPad"
-"origin" "8 316 -64"
-"angle" "90"
-"signal_parameter" "rotate_flip, counter_add, timer_start"
-"emit_signal_ID" "spinny_machine"
-}
-// entity 124
-{
-"classname" "timer"
-"origin" "124 -42 76"
-"recieve_signal_ID" "line_read_end"
-"time" "3.62"
-"repeatable" "1"
-"emit_signal_ID" "line_read"
-"signal_parameter" "button_on"
+"origin" "120 -44 28"
 }

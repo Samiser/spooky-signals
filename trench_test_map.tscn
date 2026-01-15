@@ -4602,51 +4602,7 @@ shape = SubResource("ConvexPolygonShape3D_m1xnl")
 [node name="entity_1_player" parent="FuncGodotMap" instance=ExtResource("7_hd67a")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 1.25, 0.25, -0.25)
 
-[node name="entity_2_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
-transform = Transform3D(1.3907092e-07, 0, 1, 0, 1, 0, -1, 0, 1.3907092e-07, 5.5, 1.25, -1.25)
-func_godot_properties = Dictionary[String, Variant]({
-"angle": "270",
-"classname": "ButtonPad",
-"origin": "-40 176 40",
-"repeatable": true,
-"signal_ID": "bridge_door",
-"signal_parameter": "move_switch"
-})
-
-[node name="entity_3_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
-transform = Transform3D(1.3907092e-07, 0, 1, 0, 1, 0, -1, 0, 1.3907092e-07, 3, 0.75, 2.59375)
-func_godot_properties = Dictionary[String, Variant]({
-"angle": "270",
-"classname": "ButtonPad",
-"origin": "83 96 24",
-"repeatable": true,
-"signal_ID": "bridge_lift",
-"signal_parameter": "move_start"
-})
-
-[node name="entity_4_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
-transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 6.25, -2, 1.375)
-func_godot_properties = Dictionary[String, Variant]({
-"angle": "90",
-"classname": "ButtonPad",
-"origin": "44 200 -64",
-"repeatable": true,
-"signal_ID": "bridge_lift",
-"signal_parameter": "move_end"
-})
-
-[node name="entity_5_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 19.75, 1.25, 2.25)
-func_godot_properties = Dictionary[String, Variant]({
-"angle": "0",
-"classname": "ButtonPad",
-"origin": "72 632 40",
-"repeatable": true,
-"signal_ID": "lab_door",
-"signal_parameter": "move_end, trigger_on"
-})
-
-[node name="entity_6_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
+[node name="entity_2_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.625, -0.40625, 2.625)
 collision_mask = 0
 script = ExtResource("47_3qoln")
@@ -4666,13 +4622,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "volume_db": 0.0
 })
 
-[node name="entity_6_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_6_func_moveable"]
+[node name="entity_2_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_2_func_moveable"]
 mesh = SubResource("ArrayMesh_ggx46")
 
-[node name="entity_6_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_6_func_moveable"]
+[node name="entity_2_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_2_func_moveable"]
 shape = SubResource("ConcavePolygonShape3D_uee67")
 
-[node name="entity_7_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
+[node name="entity_3_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.625, -1.90625, 2.625)
 collision_mask = 0
 script = ExtResource("47_3qoln")
@@ -4692,13 +4648,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "volume_db": 0.0
 })
 
-[node name="entity_7_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_7_func_moveable"]
+[node name="entity_3_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_3_func_moveable"]
 mesh = SubResource("ArrayMesh_feiwa")
 
-[node name="entity_7_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_7_func_moveable"]
+[node name="entity_3_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_3_func_moveable"]
 shape = SubResource("ConcavePolygonShape3D_52p5k")
 
-[node name="entity_8_func_rotator" type="AnimatableBody3D" parent="FuncGodotMap"]
+[node name="entity_4_func_rotator" type="AnimatableBody3D" parent="FuncGodotMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.96875, 1, 1.03125)
 collision_mask = 0
 script = ExtResource("50_j3oi3")
@@ -4717,13 +4673,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "sound_path": ""
 })
 
-[node name="entity_8_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_8_func_rotator"]
+[node name="entity_4_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_4_func_rotator"]
 mesh = SubResource("ArrayMesh_8cy4r")
 
-[node name="entity_8_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_8_func_rotator"]
+[node name="entity_4_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_4_func_rotator"]
 shape = SubResource("ConcavePolygonShape3D_nx7hn")
 
-[node name="entity_9_func_rotator" type="AnimatableBody3D" parent="FuncGodotMap"]
+[node name="entity_5_func_rotator" type="AnimatableBody3D" parent="FuncGodotMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.390625, -3.375, 5.28125)
 collision_mask = 0
 script = ExtResource("50_j3oi3")
@@ -4742,13 +4698,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "sound_path": ""
 })
 
-[node name="entity_9_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_9_func_rotator"]
+[node name="entity_5_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_5_func_rotator"]
 mesh = SubResource("ArrayMesh_4irlw")
 
-[node name="entity_9_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_9_func_rotator"]
+[node name="entity_5_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_5_func_rotator"]
 shape = SubResource("ConcavePolygonShape3D_ws3qe")
 
-[node name="entity_10_point_light" parent="FuncGodotMap" instance=ExtResource("53_4cm40")]
+[node name="entity_6_point_light" parent="FuncGodotMap" instance=ExtResource("53_4cm40")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.5, 2.5, -0.125)
 func_godot_properties = Dictionary[String, Variant]({
 "autoflicker": true,
@@ -4763,7 +4719,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "size": 8.0
 })
 
-[node name="entity_11_point_light" parent="FuncGodotMap" instance=ExtResource("53_4cm40")]
+[node name="entity_7_point_light" parent="FuncGodotMap" instance=ExtResource("53_4cm40")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.75, -1.875, 0.25)
 func_godot_properties = Dictionary[String, Variant]({
 "autoflicker": true,
@@ -4778,7 +4734,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "size": 8.0
 })
 
-[node name="entity_12_point_light" parent="FuncGodotMap" instance=ExtResource("53_4cm40")]
+[node name="entity_8_point_light" parent="FuncGodotMap" instance=ExtResource("53_4cm40")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 15.5, -1.5, -6.25)
 func_godot_properties = Dictionary[String, Variant]({
 "autoflicker": false,
@@ -4793,18 +4749,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "size": 8.0
 })
 
-[node name="entity_13_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6.25, 0.75, -0.75)
-func_godot_properties = Dictionary[String, Variant]({
-"angle": "0",
-"classname": "ButtonPad",
-"origin": "-24 200 24",
-"repeatable": true,
-"signal_ID": "bridge_door",
-"signal_parameter": "move_switch"
-})
-
-[node name="entity_14_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
+[node name="entity_9_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.875, 1.28125, 0)
 collision_mask = 0
 script = ExtResource("47_3qoln")
@@ -4824,13 +4769,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "volume_db": 0.0
 })
 
-[node name="entity_14_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_14_func_moveable"]
+[node name="entity_9_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_9_func_moveable"]
 mesh = SubResource("ArrayMesh_vecjj")
 
-[node name="entity_14_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_14_func_moveable"]
+[node name="entity_9_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_9_func_moveable"]
 shape = SubResource("ConcavePolygonShape3D_e1cr8")
 
-[node name="entity_15_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+[node name="entity_10_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.875, 0.25, 2.625)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
@@ -4846,13 +4791,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "signal_parameter": "move_end"
 })
 
-[node name="entity_15_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_15_func_trigger"]
+[node name="entity_10_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_10_func_trigger"]
 mesh = SubResource("ArrayMesh_iyxmh")
 
-[node name="entity_15_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_15_func_trigger"]
+[node name="entity_10_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_10_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_cq5rj")
 
-[node name="entity_16_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+[node name="entity_11_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.375, -3, 2.625)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
@@ -4868,13 +4813,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "signal_parameter": "move_start"
 })
 
-[node name="entity_16_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_16_func_trigger"]
+[node name="entity_11_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_11_func_trigger"]
 mesh = SubResource("ArrayMesh_vmk7c")
 
-[node name="entity_16_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_16_func_trigger"]
+[node name="entity_11_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_11_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_x533l")
 
-[node name="entity_17_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
+[node name="entity_12_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 13.125, 4.375, -6.625)
 func_godot_properties = Dictionary[String, Variant]({
 "autoplay": true,
@@ -4891,7 +4836,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "volume_db": 0.0
 })
 
-[node name="entity_18_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
+[node name="entity_13_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.875, -5, 2.625)
 func_godot_properties = Dictionary[String, Variant]({
 "autoplay": true,
@@ -4908,7 +4853,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "volume_db": 0.0
 })
 
-[node name="entity_19_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
+[node name="entity_14_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6875, 1.28125, -11)
 collision_mask = 0
 script = ExtResource("47_3qoln")
@@ -4928,13 +4873,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "volume_db": 0.0
 })
 
-[node name="entity_19_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_19_func_moveable"]
+[node name="entity_14_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_14_func_moveable"]
 mesh = SubResource("ArrayMesh_vknol")
 
-[node name="entity_19_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_19_func_moveable"]
+[node name="entity_14_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_14_func_moveable"]
 shape = SubResource("ConcavePolygonShape3D_ljc8o")
 
-[node name="entity_20_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+[node name="entity_15_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.75, 1.375, -9.25)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
@@ -4950,13 +4895,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "signal_parameter": "start_flicker"
 })
 
-[node name="entity_20_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_20_func_trigger"]
+[node name="entity_15_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_15_func_trigger"]
 mesh = SubResource("ArrayMesh_ms7j8")
 
-[node name="entity_20_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_20_func_trigger"]
+[node name="entity_15_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_15_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_38qvw")
 
-[node name="entity_21_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
+[node name="entity_16_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 15.75, -1.5, -6.25)
 func_godot_properties = Dictionary[String, Variant]({
 "autoplay": false,
@@ -4973,19 +4918,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "volume_db": 0.0
 })
 
-[node name="entity_22_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
-transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 15, 0.75, -10.625)
-func_godot_properties = Dictionary[String, Variant]({
-"angle": "90",
-"classname": "ButtonPad",
-"origin": "-340 480 24",
-"repeatable": true,
-"signal_ID": "broken_corridor_door",
-"signal_parameter": "counter_add, sfx_play",
-"target": ""
-})
-
-[node name="entity_23_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+[node name="entity_17_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.25, 1.25, 0)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
@@ -5001,13 +4934,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "signal_parameter": "spawn_obj, sfx_play, counter_add"
 })
 
-[node name="entity_23_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_23_func_trigger"]
+[node name="entity_17_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_17_func_trigger"]
 mesh = SubResource("ArrayMesh_i8hif")
 
-[node name="entity_23_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_23_func_trigger"]
+[node name="entity_17_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_17_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_qyvtk")
 
-[node name="entity_24_spawner" parent="FuncGodotMap" instance=ExtResource("60_555ha")]
+[node name="entity_18_spawner" parent="FuncGodotMap" instance=ExtResource("60_555ha")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 14.375, 0.875, -1)
 func_godot_properties = Dictionary[String, Variant]({
 "angle": "90",
@@ -5019,7 +4952,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "spawn_delay": 0.0
 })
 
-[node name="entity_25_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
+[node name="entity_19_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14.25, 0.875, -1.25)
 func_godot_properties = Dictionary[String, Variant]({
 "autoplay": false,
@@ -5036,7 +4969,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "volume_db": 0.0
 })
 
-[node name="entity_26_func_rotator" type="AnimatableBody3D" parent="FuncGodotMap"]
+[node name="entity_20_func_rotator" type="AnimatableBody3D" parent="FuncGodotMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.625, -1.875, 0.25)
 collision_mask = 0
 script = ExtResource("50_j3oi3")
@@ -5055,13 +4988,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "sound_path": "res://audio/sfx/scifi_loop_2.wav"
 })
 
-[node name="entity_26_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_26_func_rotator"]
+[node name="entity_20_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_20_func_rotator"]
 mesh = SubResource("ArrayMesh_w7k3l")
 
-[node name="entity_26_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_26_func_rotator"]
+[node name="entity_20_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_20_func_rotator"]
 shape = SubResource("ConcavePolygonShape3D_ampmw")
 
-[node name="entity_27_point_light" parent="FuncGodotMap" instance=ExtResource("53_4cm40")]
+[node name="entity_21_point_light" parent="FuncGodotMap" instance=ExtResource("53_4cm40")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.625, -1.875, 3.375)
 func_godot_properties = Dictionary[String, Variant]({
 "autoflicker": false,
@@ -5076,29 +5009,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "size": 12.0
 })
 
-[node name="entity_28_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
-transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 9.875, -2, 0.25)
-func_godot_properties = Dictionary[String, Variant]({
-"angle": "90",
-"classname": "ButtonPad",
-"origin": "8 316 -64",
-"repeatable": true,
-"signal_ID": "spinny_machine",
-"signal_parameter": "rotate_flip, counter_add, timer_start"
-})
-
-[node name="entity_29_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.75, -2.25, 1.125)
-func_godot_properties = Dictionary[String, Variant]({
-"angle": "0",
-"classname": "ButtonPad",
-"origin": "36 248 -72",
-"repeatable": true,
-"signal_ID": "spinny_machine",
-"signal_parameter": "rotate_toggle, light_toggle, counter_reset, trigger_toggle"
-})
-
-[node name="entity_30_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
+[node name="entity_22_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.75, 2.5, -0.125)
 func_godot_properties = Dictionary[String, Variant]({
 "autoplay": false,
@@ -5115,18 +5026,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "volume_db": 0.0
 })
 
-[node name="entity_31_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 0.5625, 1.4375, 3.75)
-func_godot_properties = Dictionary[String, Variant]({
-"angle": "180",
-"classname": "ButtonPad",
-"origin": "120 18 46",
-"repeatable": true,
-"signal_ID": "bridge_light",
-"signal_parameter": "sfx_play, light_toggle"
-})
-
-[node name="entity_32_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+[node name="entity_23_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.375, -2.125, 0.875)
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "counter",
@@ -5140,13 +5040,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "reset_signal_parameter": "light_end_flicker"
 })
 
-[node name="entity_33_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+[node name="entity_24_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14.875, 0.875, -9.875)
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "counter",
 "count": 10,
 "emit_signal_ID": "break_door",
-"finish_signal_parameter": "light_start_flicker, sfx_play, move_stop, timer_start, counter_add",
+"finish_signal_parameter": "light_start_flicker, sfx_play, move_stop, timer_start, counter_add, button_off",
 "origin": "-316 476 28",
 "recieve_signal_ID": "broken_corridor_door",
 "repeatable": false,
@@ -5154,7 +5054,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "reset_signal_parameter": ""
 })
 
-[node name="entity_34_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+[node name="entity_25_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.375, -2.125, 1.375)
 func_godot_properties = Dictionary[String, Variant]({
 "autostart": false,
@@ -5168,7 +5068,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "time": 0.5
 })
 
-[node name="entity_35_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+[node name="entity_26_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.375, -1.875, 1.375)
 func_godot_properties = Dictionary[String, Variant]({
 "autostart": false,
@@ -5182,7 +5082,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "time": 2.0
 })
 
-[node name="entity_36_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
+[node name="entity_27_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.875, -1.5, 0.25)
 func_godot_properties = Dictionary[String, Variant]({
 "autoplay": false,
@@ -5199,24 +5099,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "volume_db": 0.0
 })
 
-[node name="entity_37_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14.875, 0.875, -10.125)
-func_godot_properties = Dictionary[String, Variant]({
-"autoplay": false,
-"classname": "3d_sfx",
-"origin": "-324 476 28",
-"pan_strength": 1.0,
-"pitch_level": 0.8,
-"pitch_variation": 0.0,
-"range": 2.0,
-"sfx_file_path": "res://audio/sfx/error.wav",
-"signal_ID": "broken_corridor_door",
-"subtitle": "[Error]",
-"subtitle_priority": 1,
-"volume_db": 0.0
-})
-
-[node name="entity_38_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+[node name="entity_28_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12.875, 2.375, 0.625)
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "counter",
@@ -5230,7 +5113,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "reset_signal_parameter": ""
 })
 
-[node name="entity_39_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+[node name="entity_29_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 1.25, -0.125)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
@@ -5246,13 +5129,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "signal_parameter": "counter_add"
 })
 
-[node name="entity_39_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_39_func_trigger"]
+[node name="entity_29_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_29_func_trigger"]
 mesh = SubResource("ArrayMesh_q35ro")
 
-[node name="entity_39_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_39_func_trigger"]
+[node name="entity_29_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_29_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_tqls1")
 
-[node name="entity_40_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+[node name="entity_30_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12.625, 2.375, 0.625)
 func_godot_properties = Dictionary[String, Variant]({
 "autostart": false,
@@ -5266,7 +5149,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "time": 60.0
 })
 
-[node name="entity_41_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+[node name="entity_31_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, -2, 3.375)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
@@ -5282,13 +5165,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "signal_parameter": "counter_add"
 })
 
-[node name="entity_41_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_41_func_trigger"]
+[node name="entity_31_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_31_func_trigger"]
 mesh = SubResource("ArrayMesh_gi7kc")
 
-[node name="entity_41_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_41_func_trigger"]
+[node name="entity_31_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_31_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_dei6a")
 
-[node name="entity_42_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+[node name="entity_32_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.125, -3.125, 2.625)
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "counter",
@@ -5302,7 +5185,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "reset_signal_parameter": ""
 })
 
-[node name="entity_43_point_light" parent="FuncGodotMap" instance=ExtResource("53_4cm40")]
+[node name="entity_33_point_light" parent="FuncGodotMap" instance=ExtResource("53_4cm40")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.625, 3.625, -2.375)
 func_godot_properties = Dictionary[String, Variant]({
 "autoflicker": false,
@@ -5317,7 +5200,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "size": 2.0
 })
 
-[node name="entity_44_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+[node name="entity_34_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.375, 3.625, -2.375)
 func_godot_properties = Dictionary[String, Variant]({
 "autostart": true,
@@ -5331,7 +5214,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "time": 1.6
 })
 
-[node name="entity_45_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
+[node name="entity_35_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.625, 3.625, -2.625)
 func_godot_properties = Dictionary[String, Variant]({
 "autoplay": false,
@@ -5348,7 +5231,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "volume_db": 0.0
 })
 
-[node name="entity_46_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+[node name="entity_36_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14.875, 0.875, -9.625)
 func_godot_properties = Dictionary[String, Variant]({
 "autostart": false,
@@ -5362,7 +5245,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "time": 8.0
 })
 
-[node name="entity_47_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+[node name="entity_37_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14.375, 1.375, -1)
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "counter",
@@ -5376,7 +5259,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "reset_signal_parameter": ""
 })
 
-[node name="entity_48_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+[node name="entity_38_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.375, -1.875, 0.875)
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "counter",
@@ -5390,7 +5273,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "reset_signal_parameter": ""
 })
 
-[node name="entity_49_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+[node name="entity_39_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 1.375, 2.5)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
@@ -5406,13 +5289,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "signal_parameter": "player_update_location_ui: Bridge"
 })
 
-[node name="entity_49_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_49_func_trigger"]
+[node name="entity_39_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_39_func_trigger"]
 mesh = SubResource("ArrayMesh_b1sff")
 
-[node name="entity_49_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_49_func_trigger"]
+[node name="entity_39_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_39_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_lex8b")
 
-[node name="entity_50_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+[node name="entity_40_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.625, 1.25, 0)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
@@ -5428,13 +5311,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "signal_parameter": "player_update_location_ui: Bridge"
 })
 
-[node name="entity_50_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_50_func_trigger"]
+[node name="entity_40_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_40_func_trigger"]
 mesh = SubResource("ArrayMesh_fprvm")
 
-[node name="entity_50_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_50_func_trigger"]
+[node name="entity_40_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_40_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_mkl1r")
 
-[node name="entity_51_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+[node name="entity_41_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.375, 1.25, 0)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
@@ -5450,13 +5333,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "signal_parameter": "player_update_location_ui: Access Corridor"
 })
 
-[node name="entity_51_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_51_func_trigger"]
+[node name="entity_41_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_41_func_trigger"]
 mesh = SubResource("ArrayMesh_u10rl")
 
-[node name="entity_51_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_51_func_trigger"]
+[node name="entity_41_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_41_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_avyfx")
 
-[node name="entity_52_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+[node name="entity_42_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.625, 1.25, 3.125)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
@@ -5472,13 +5355,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "signal_parameter": "player_update_location_ui: Access Corridor"
 })
 
-[node name="entity_52_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_52_func_trigger"]
+[node name="entity_42_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_42_func_trigger"]
 mesh = SubResource("ArrayMesh_l5dn6")
 
-[node name="entity_52_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_52_func_trigger"]
+[node name="entity_42_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_42_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_ejs2o")
 
-[node name="entity_53_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+[node name="entity_43_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.625, 1.25, 3)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
@@ -5494,13 +5377,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "signal_parameter": "player_update_location_ui: Labs"
 })
 
-[node name="entity_53_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_53_func_trigger"]
+[node name="entity_43_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_43_func_trigger"]
 mesh = SubResource("ArrayMesh_n08g7")
 
-[node name="entity_53_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_53_func_trigger"]
+[node name="entity_43_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_43_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_vbltm")
 
-[node name="entity_54_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+[node name="entity_44_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, -1.875, 2.625)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
@@ -5516,13 +5399,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "signal_parameter": "player_update_location_ui: Engineering"
 })
 
-[node name="entity_54_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_54_func_trigger"]
+[node name="entity_44_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_44_func_trigger"]
 mesh = SubResource("ArrayMesh_kql17")
 
-[node name="entity_54_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_54_func_trigger"]
+[node name="entity_44_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_44_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_qwd8o")
 
-[node name="entity_55_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+[node name="entity_45_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.625, 1.875, -1.375)
 func_godot_properties = Dictionary[String, Variant]({
 "autostart": true,
@@ -5536,7 +5419,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "time": 0.5
 })
 
-[node name="entity_56_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+[node name="entity_46_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14.875, 1.125, -9.875)
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "counter",
@@ -5550,7 +5433,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "reset_signal_parameter": ""
 })
 
-[node name="entity_57_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+[node name="entity_47_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, -3.375, -2.125)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
@@ -5566,13 +5449,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "signal_parameter": "player_update_location_ui: Lower Ventilation"
 })
 
-[node name="entity_57_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_57_func_trigger"]
+[node name="entity_47_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_47_func_trigger"]
 mesh = SubResource("ArrayMesh_es8ch")
 
-[node name="entity_57_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_57_func_trigger"]
+[node name="entity_47_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_47_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_30f6k")
 
-[node name="entity_58_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+[node name="entity_48_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, -3.375, -0.875)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
@@ -5588,13 +5471,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "signal_parameter": "player_update_location_ui: Engineering"
 })
 
-[node name="entity_58_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_58_func_trigger"]
+[node name="entity_48_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_48_func_trigger"]
 mesh = SubResource("ArrayMesh_fbk15")
 
-[node name="entity_58_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_58_func_trigger"]
+[node name="entity_48_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_48_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_x3r3y")
 
-[node name="entity_59_func_rotator" type="AnimatableBody3D" parent="FuncGodotMap"]
+[node name="entity_49_func_rotator" type="AnimatableBody3D" parent="FuncGodotMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.328125, -4.78125, -7.5)
 collision_mask = 0
 script = ExtResource("50_j3oi3")
@@ -5613,13 +5496,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "sound_path": ""
 })
 
-[node name="entity_59_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_59_func_rotator"]
+[node name="entity_49_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_49_func_rotator"]
 mesh = SubResource("ArrayMesh_wg7yq")
 
-[node name="entity_59_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_59_func_rotator"]
+[node name="entity_49_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_49_func_rotator"]
 shape = SubResource("ConcavePolygonShape3D_t206o")
 
-[node name="entity_60_func_rotator" type="AnimatableBody3D" parent="FuncGodotMap"]
+[node name="entity_50_func_rotator" type="AnimatableBody3D" parent="FuncGodotMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3125, -5.28125, -7.53125)
 collision_mask = 0
 script = ExtResource("50_j3oi3")
@@ -5638,13 +5521,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "sound_path": ""
 })
 
-[node name="entity_60_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_60_func_rotator"]
+[node name="entity_50_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_50_func_rotator"]
 mesh = SubResource("ArrayMesh_3wc7i")
 
-[node name="entity_60_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_60_func_rotator"]
+[node name="entity_50_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_50_func_rotator"]
 shape = SubResource("ConcavePolygonShape3D_imm4g")
 
-[node name="entity_61_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+[node name="entity_51_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5625, -3.4375, -7.5)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
@@ -5660,13 +5543,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "signal_parameter": "player_gravity_on, player_shake_time: 0.0, player_update_location_ui: Lower Ventilation"
 })
 
-[node name="entity_61_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_61_func_trigger"]
+[node name="entity_51_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_51_func_trigger"]
 mesh = SubResource("ArrayMesh_05jef")
 
-[node name="entity_61_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_61_func_trigger"]
+[node name="entity_51_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_51_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_jt5hl")
 
-[node name="entity_62_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+[node name="entity_52_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.125, -2.5, -7.5)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
@@ -5682,13 +5565,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "signal_parameter": "player_gravity_set: -1, player_shake_time: 99999, player_shake_magnitude: 18"
 })
 
-[node name="entity_62_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_62_func_trigger"]
+[node name="entity_52_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_52_func_trigger"]
 mesh = SubResource("ArrayMesh_668oa")
 
-[node name="entity_62_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_62_func_trigger"]
+[node name="entity_52_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_52_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_aapvp")
 
-[node name="entity_63_point_light" parent="FuncGodotMap" instance=ExtResource("53_4cm40")]
+[node name="entity_53_point_light" parent="FuncGodotMap" instance=ExtResource("53_4cm40")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.375, -1.25, -7.5)
 func_godot_properties = Dictionary[String, Variant]({
 "autoflicker": false,
@@ -5703,7 +5586,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "size": 6.0
 })
 
-[node name="entity_64_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+[node name="entity_54_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0.75, -7.5)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
@@ -5719,13 +5602,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "signal_parameter": "player_gravity_on, player_shake_time: 0.0, player_update_location_ui: Upper Ventilation"
 })
 
-[node name="entity_64_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_64_func_trigger"]
+[node name="entity_54_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_54_func_trigger"]
 mesh = SubResource("ArrayMesh_t4vil")
 
-[node name="entity_64_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_64_func_trigger"]
+[node name="entity_54_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_54_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_7ydj7")
 
-[node name="entity_65_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+[node name="entity_55_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.375, 1.6875, -7.5)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
@@ -5741,13 +5624,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "signal_parameter": "player_gravity_set: 1, player_shake_time: 0.0"
 })
 
-[node name="entity_65_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_65_func_trigger"]
+[node name="entity_55_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_55_func_trigger"]
 mesh = SubResource("ArrayMesh_mp3k0")
 
-[node name="entity_65_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_65_func_trigger"]
+[node name="entity_55_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_55_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_fgcod")
 
-[node name="entity_66_spawner" parent="FuncGodotMap" instance=ExtResource("60_555ha")]
+[node name="entity_56_spawner" parent="FuncGodotMap" instance=ExtResource("60_555ha")]
 transform = Transform3D(-1, -8.742278e-08, 3.821371e-15, 0, -4.371139e-08, -1, 8.742278e-08, -1, 4.371139e-08, 7.625, -4.25, -7.875)
 func_godot_properties = Dictionary[String, Variant]({
 "angle": "-1",
@@ -5759,7 +5642,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "spawn_delay": 0.0
 })
 
-[node name="entity_67_point_light" parent="FuncGodotMap" instance=ExtResource("53_4cm40")]
+[node name="entity_57_point_light" parent="FuncGodotMap" instance=ExtResource("53_4cm40")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 23.375, 2.125, 6.125)
 func_godot_properties = Dictionary[String, Variant]({
 "autoflicker": true,
@@ -5774,18 +5657,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "size": 8.0
 })
 
-[node name="entity_68_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 1.5625, 1.4375, 3.75)
-func_godot_properties = Dictionary[String, Variant]({
-"angle": "180",
-"classname": "ButtonPad",
-"origin": "120 50 46",
-"repeatable": true,
-"signal_ID": "test_video_setup",
-"signal_parameter": "timer_start, counter_add"
-})
-
-[node name="entity_69_video_player" parent="FuncGodotMap" instance=ExtResource("63_6kxq4")]
+[node name="entity_58_video_player" parent="FuncGodotMap" instance=ExtResource("63_6kxq4")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.625, 2.125, 3.875)
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "video_player",
@@ -5794,7 +5666,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "video_file_path": "res://videos/logo_vid_short.ogv"
 })
 
-[node name="entity_70_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+[node name="entity_59_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.375, 2.125, 3.875)
 func_godot_properties = Dictionary[String, Variant]({
 "autostart": false,
@@ -5808,7 +5680,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "time": 10.0
 })
 
-[node name="entity_71_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+[node name="entity_60_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.625, 1.875, 3.875)
 func_godot_properties = Dictionary[String, Variant]({
 "autostart": false,
@@ -5822,7 +5694,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "time": 2.0
 })
 
-[node name="entity_72_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+[node name="entity_61_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.375, 1.875, 3.875)
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "counter",
@@ -5836,7 +5708,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "reset_signal_parameter": ""
 })
 
-[node name="entity_73_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
+[node name="entity_62_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.625, -2.75)
 collision_mask = 0
 script = ExtResource("47_3qoln")
@@ -5855,24 +5727,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "volume_db": 0.0
 })
 
-[node name="entity_73_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_73_func_moveable"]
+[node name="entity_62_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_62_func_moveable"]
 mesh = SubResource("ArrayMesh_tke5s")
 
-[node name="entity_73_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_73_func_moveable"]
+[node name="entity_62_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_62_func_moveable"]
 shape = SubResource("ConcavePolygonShape3D_lxrik")
 
-[node name="entity_74_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 2.5625, 1.4375, 3.75)
-func_godot_properties = Dictionary[String, Variant]({
-"angle": "180",
-"classname": "ButtonPad",
-"origin": "120 82 46",
-"repeatable": true,
-"signal_ID": "cctv_bridge",
-"signal_parameter": "timer_start, counter_add"
-})
-
-[node name="entity_75_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+[node name="entity_63_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.625, 1.875, 3.875)
 func_godot_properties = Dictionary[String, Variant]({
 "autostart": false,
@@ -5886,7 +5747,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "time": 4.0
 })
 
-[node name="entity_76_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+[node name="entity_64_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.375, 1.875, 3.875)
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "counter",
@@ -5900,7 +5761,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "reset_signal_parameter": ""
 })
 
-[node name="entity_77_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+[node name="entity_65_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.625, 2.875, 3.875)
 func_godot_properties = Dictionary[String, Variant]({
 "autostart": false,
@@ -5914,7 +5775,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "time": 2.0
 })
 
-[node name="entity_78_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+[node name="entity_66_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.625, 2.125, 3.875)
 func_godot_properties = Dictionary[String, Variant]({
 "autostart": false,
@@ -5928,7 +5789,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "time": 4.0
 })
 
-[node name="entity_79_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+[node name="entity_67_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.375, 2.125, 3.875)
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "counter",
@@ -5942,7 +5803,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "reset_signal_parameter": ""
 })
 
-[node name="entity_80_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+[node name="entity_68_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.625, 2.375, 3.875)
 func_godot_properties = Dictionary[String, Variant]({
 "autostart": false,
@@ -5956,7 +5817,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "time": 4.0
 })
 
-[node name="entity_81_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+[node name="entity_69_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.375, 2.375, 3.875)
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "counter",
@@ -5970,7 +5831,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "reset_signal_parameter": ""
 })
 
-[node name="entity_82_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+[node name="entity_70_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.625, 2.625, 3.875)
 func_godot_properties = Dictionary[String, Variant]({
 "autostart": false,
@@ -5984,7 +5845,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "time": 4.0
 })
 
-[node name="entity_83_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+[node name="entity_71_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.375, 2.625, 3.875)
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "counter",
@@ -5998,7 +5859,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "reset_signal_parameter": ""
 })
 
-[node name="entity_84_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+[node name="entity_72_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.375, 2.875, 3.875)
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "counter",
@@ -6012,7 +5873,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "reset_signal_parameter": ""
 })
 
-[node name="entity_85_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
+[node name="entity_73_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 24.125, 4.375, 7.375)
 func_godot_properties = Dictionary[String, Variant]({
 "autoplay": true,
@@ -6029,7 +5890,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "volume_db": -10.0
 })
 
-[node name="entity_86_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
+[node name="entity_74_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.0625, 2.625, 3)
 collision_mask = 0
 script = ExtResource("47_3qoln")
@@ -6049,13 +5910,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "volume_db": 0.0
 })
 
-[node name="entity_86_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_86_func_moveable"]
+[node name="entity_74_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_74_func_moveable"]
 mesh = SubResource("ArrayMesh_5isuj")
 
-[node name="entity_86_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_86_func_moveable"]
+[node name="entity_74_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_74_func_moveable"]
 shape = SubResource("ConcavePolygonShape3D_rgc1v")
 
-[node name="entity_87_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+[node name="entity_75_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.375, 1.25, 3)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
@@ -6071,13 +5932,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "signal_parameter": "counter_add, timer_start"
 })
 
-[node name="entity_87_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_87_func_trigger"]
+[node name="entity_75_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_75_func_trigger"]
 mesh = SubResource("ArrayMesh_8uymo")
 
-[node name="entity_87_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_87_func_trigger"]
+[node name="entity_75_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_75_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_lu2fn")
 
-[node name="entity_88_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+[node name="entity_76_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 21.125, 1.125, 1.875)
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "counter",
@@ -6091,7 +5952,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "reset_signal_parameter": ""
 })
 
-[node name="entity_89_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+[node name="entity_77_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 21.375, 1.125, 1.875)
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "counter",
@@ -6105,7 +5966,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "reset_signal_parameter": ""
 })
 
-[node name="entity_90_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+[node name="entity_78_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 21.625, 1.125, 1.875)
 func_godot_properties = Dictionary[String, Variant]({
 "autostart": false,
@@ -6119,7 +5980,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "time": 7.4
 })
 
-[node name="entity_91_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+[node name="entity_79_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 21.875, 1.125, 1.875)
 func_godot_properties = Dictionary[String, Variant]({
 "autostart": false,
@@ -6133,7 +5994,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "time": 10.0
 })
 
-[node name="entity_92_point_light" parent="FuncGodotMap" instance=ExtResource("53_4cm40")]
+[node name="entity_80_point_light" parent="FuncGodotMap" instance=ExtResource("53_4cm40")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 22.875, 1.5, 3)
 func_godot_properties = Dictionary[String, Variant]({
 "autoflicker": false,
@@ -6148,7 +6009,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "size": 12.0
 })
 
-[node name="entity_93_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
+[node name="entity_81_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.25, 1.25, 3)
 collision_mask = 0
 script = ExtResource("47_3qoln")
@@ -6167,13 +6028,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "volume_db": 0.0
 })
 
-[node name="entity_93_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_93_func_moveable"]
+[node name="entity_81_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_81_func_moveable"]
 mesh = SubResource("ArrayMesh_2pqq6")
 
-[node name="entity_93_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_93_func_moveable"]
+[node name="entity_81_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_81_func_moveable"]
 shape = SubResource("ConcavePolygonShape3D_a5i46")
 
-[node name="entity_94_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
+[node name="entity_82_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.5, 1.25, 4.375)
 collision_mask = 0
 script = ExtResource("47_3qoln")
@@ -6192,24 +6053,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "volume_db": 0.0
 })
 
-[node name="entity_94_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_94_func_moveable"]
+[node name="entity_82_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_82_func_moveable"]
 mesh = SubResource("ArrayMesh_due2l")
 
-[node name="entity_94_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_94_func_moveable"]
+[node name="entity_82_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_82_func_moveable"]
 shape = SubResource("ConcavePolygonShape3D_gqjl2")
 
-[node name="entity_95_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
-transform = Transform3D(1.3907092e-07, 0, 1, 0, 1, 0, -1, 0, 1.3907092e-07, 25, 1.25, 5)
-func_godot_properties = Dictionary[String, Variant]({
-"angle": "270",
-"classname": "ButtonPad",
-"origin": "160 800 40",
-"repeatable": true,
-"signal_ID": "chamber_door",
-"signal_parameter": "move_end, trigger_on"
-})
-
-[node name="entity_96_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+[node name="entity_83_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.125, 1.25, 3)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
@@ -6225,13 +6075,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "signal_parameter": "counter_add, timer_start"
 })
 
-[node name="entity_96_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_96_func_trigger"]
+[node name="entity_83_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_83_func_trigger"]
 mesh = SubResource("ArrayMesh_ddbum")
 
-[node name="entity_96_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_96_func_trigger"]
+[node name="entity_83_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_83_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_yj78c")
 
-[node name="entity_97_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+[node name="entity_84_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 23.875, 1.125, 2.125)
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "counter",
@@ -6245,7 +6095,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "reset_signal_parameter": ""
 })
 
-[node name="entity_98_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+[node name="entity_85_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 24.125, 1.125, 2.125)
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "counter",
@@ -6259,7 +6109,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "reset_signal_parameter": ""
 })
 
-[node name="entity_99_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+[node name="entity_86_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 24.375, 1.125, 2.125)
 func_godot_properties = Dictionary[String, Variant]({
 "autostart": false,
@@ -6273,7 +6123,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "time": 7.4
 })
 
-[node name="entity_100_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+[node name="entity_87_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 24.625, 1.125, 2.125)
 func_godot_properties = Dictionary[String, Variant]({
 "autostart": false,
@@ -6287,7 +6137,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "time": 10.0
 })
 
-[node name="entity_101_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+[node name="entity_88_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.953125, 1.25, 6.25)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
@@ -6303,13 +6153,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "signal_parameter": "trigger_on, move_start"
 })
 
-[node name="entity_101_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_101_func_trigger"]
+[node name="entity_88_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_88_func_trigger"]
 mesh = SubResource("ArrayMesh_fixbo")
 
-[node name="entity_101_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_101_func_trigger"]
+[node name="entity_88_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_88_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_k82t0")
 
-[node name="entity_102_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+[node name="entity_89_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 1.25, 2)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
@@ -6325,13 +6175,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "signal_parameter": "trigger_on, move_start"
 })
 
-[node name="entity_102_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_102_func_trigger"]
+[node name="entity_89_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_89_func_trigger"]
 mesh = SubResource("ArrayMesh_wh687")
 
-[node name="entity_102_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_102_func_trigger"]
+[node name="entity_89_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_89_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_bjfu1")
 
-[node name="entity_103_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
+[node name="entity_90_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.5, 1.875, 4.375)
 collision_mask = 0
 script = ExtResource("47_3qoln")
@@ -6351,13 +6201,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "volume_db": -10.0
 })
 
-[node name="entity_103_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_103_func_moveable"]
+[node name="entity_90_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_90_func_moveable"]
 mesh = SubResource("ArrayMesh_t0krw")
 
-[node name="entity_103_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_103_func_moveable"]
+[node name="entity_90_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_90_func_moveable"]
 shape = SubResource("ConcavePolygonShape3D_nn5k5")
 
-[node name="entity_104_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
+[node name="entity_91_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.5, 0.625, 4.375)
 collision_mask = 0
 script = ExtResource("47_3qoln")
@@ -6377,13 +6227,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "volume_db": -10.0
 })
 
-[node name="entity_104_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_104_func_moveable"]
+[node name="entity_91_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_91_func_moveable"]
 mesh = SubResource("ArrayMesh_f3i5a")
 
-[node name="entity_104_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_104_func_moveable"]
+[node name="entity_91_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_91_func_moveable"]
 shape = SubResource("ConcavePolygonShape3D_pscam")
 
-[node name="entity_105_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
+[node name="entity_92_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.25, 1.875, 3)
 collision_mask = 0
 script = ExtResource("47_3qoln")
@@ -6403,13 +6253,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "volume_db": -10.0
 })
 
-[node name="entity_105_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_105_func_moveable"]
+[node name="entity_92_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_92_func_moveable"]
 mesh = SubResource("ArrayMesh_3lmkl")
 
-[node name="entity_105_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_105_func_moveable"]
+[node name="entity_92_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_92_func_moveable"]
 shape = SubResource("ConcavePolygonShape3D_yhaqo")
 
-[node name="entity_106_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
+[node name="entity_93_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.25, 0.625, 3)
 collision_mask = 0
 script = ExtResource("47_3qoln")
@@ -6429,13 +6279,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "volume_db": -10.0
 })
 
-[node name="entity_106_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_106_func_moveable"]
+[node name="entity_93_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_93_func_moveable"]
 mesh = SubResource("ArrayMesh_60cl5")
 
-[node name="entity_106_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_106_func_moveable"]
+[node name="entity_93_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_93_func_moveable"]
 shape = SubResource("ConcavePolygonShape3D_fchh0")
 
-[node name="entity_107_music" parent="FuncGodotMap" instance=ExtResource("72_cwuf5")]
+[node name="entity_94_music" parent="FuncGodotMap" instance=ExtResource("72_cwuf5")]
 func_godot_properties = Dictionary[String, Variant]({
 "autoplay": false,
 "classname": "music",
@@ -6444,18 +6294,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "volume_db": 0.0
 })
 
-[node name="entity_108_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -0.4375, 1.4375, 3.75)
-func_godot_properties = Dictionary[String, Variant]({
-"angle": "180",
-"classname": "ButtonPad",
-"origin": "120 -14 46",
-"repeatable": true,
-"signal_ID": "music",
-"signal_parameter": "music_fade_time: 5.0, music_set: res://audio/music/intro_music.ogg"
-})
-
-[node name="entity_109_3d_label" parent="FuncGodotMap" instance=ExtResource("73_hauxb")]
+[node name="entity_95_3d_label" parent="FuncGodotMap" instance=ExtResource("73_hauxb")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 22.0625, 1.0625, 6.9375)
 func_godot_properties = Dictionary[String, Variant]({
 "classname": "3d_label",
@@ -6464,18 +6303,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "text": "ts aint done yet ong"
 })
 
-[node name="entity_110_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -1.4375, 1.4375, 3.75)
-func_godot_properties = Dictionary[String, Variant]({
-"angle": "180",
-"classname": "ButtonPad",
-"origin": "120 -46 46",
-"repeatable": true,
-"signal_ID": "line_read",
-"signal_parameter": "timer_start, sfx_play"
-})
-
-[node name="entity_111_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+[node name="entity_96_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.3125, 2, 3.875)
 func_godot_properties = Dictionary[String, Variant]({
 "autostart": false,
@@ -6485,11 +6313,11 @@ func_godot_properties = Dictionary[String, Variant]({
 "origin": "124 -42 64",
 "recieve_signal_ID": "line_read",
 "repeatable": true,
-"signal_parameter": "sfx_play",
+"signal_parameter": "sfx_play, timer_start",
 "time": 2.84
 })
 
-[node name="entity_112_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
+[node name="entity_97_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.5625, 2, 3.875)
 func_godot_properties = Dictionary[String, Variant]({
 "autoplay": false,
@@ -6506,7 +6334,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "volume_db": 0.0
 })
 
-[node name="entity_113_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
+[node name="entity_98_3d_sfx" parent="FuncGodotMap" instance=ExtResource("59_0i3ae")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.5625, 2.375, 3.875)
 func_godot_properties = Dictionary[String, Variant]({
 "autoplay": false,
@@ -6521,6 +6349,199 @@ func_godot_properties = Dictionary[String, Variant]({
 "subtitle": "can make all the difference in the world.",
 "subtitle_priority": 0,
 "volume_db": 0.0
+})
+
+[node name="entity_99_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -1.375, 1.5, 3.75)
+func_godot_properties = Dictionary[String, Variant]({
+"angle": "180",
+"autoallow": true,
+"classname": "ButtonPad",
+"emit_signal_ID": "line_read",
+"origin": "120 -44 48",
+"recieve_signal_ID": "line_read",
+"repeatable": true,
+"signal_parameter": "timer_start, sfx_play, button_off"
+})
+
+[node name="entity_100_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -0.5, 1.5, 3.75)
+func_godot_properties = Dictionary[String, Variant]({
+"angle": "180",
+"autoallow": true,
+"classname": "ButtonPad",
+"emit_signal_ID": "music",
+"origin": "120 -16 48",
+"recieve_signal_ID": "",
+"repeatable": true,
+"signal_parameter": "music_fade_time: 5.0, music_set: res://audio/music/intro_music.ogg"
+})
+
+[node name="entity_101_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 0.25, 1.5, 3.75)
+func_godot_properties = Dictionary[String, Variant]({
+"angle": "180",
+"autoallow": true,
+"classname": "ButtonPad",
+"emit_signal_ID": "bridge_light",
+"origin": "120 8 48",
+"recieve_signal_ID": "",
+"repeatable": true,
+"signal_parameter": "sfx_play, light_toggle"
+})
+
+[node name="entity_102_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 1.5, 1.5, 3.75)
+func_godot_properties = Dictionary[String, Variant]({
+"angle": "180",
+"autoallow": true,
+"classname": "ButtonPad",
+"emit_signal_ID": "test_video_setup",
+"origin": "120 48 48",
+"recieve_signal_ID": "",
+"repeatable": true,
+"signal_parameter": "timer_start, counter_add"
+})
+
+[node name="entity_103_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 2.5, 1.5, 3.75)
+func_godot_properties = Dictionary[String, Variant]({
+"angle": "180",
+"autoallow": true,
+"classname": "ButtonPad",
+"emit_signal_ID": "cctv_bridge",
+"origin": "120 80 48",
+"recieve_signal_ID": "",
+"repeatable": true,
+"signal_parameter": "timer_start, counter_add"
+})
+
+[node name="entity_104_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
+transform = Transform3D(1.3907092e-07, 0, 1, 0, 1, 0, -1, 0, 1.3907092e-07, 3, 0.75, 2.5625)
+func_godot_properties = Dictionary[String, Variant]({
+"angle": "270",
+"autoallow": true,
+"classname": "ButtonPad",
+"emit_signal_ID": "bridge_lift",
+"origin": "82 96 24",
+"recieve_signal_ID": "move_start",
+"repeatable": true,
+"signal_parameter": ""
+})
+
+[node name="entity_105_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
+transform = Transform3D(1.3907092e-07, 0, 1, 0, 1, 0, -1, 0, 1.3907092e-07, 5.5, 1.25, -1.25)
+func_godot_properties = Dictionary[String, Variant]({
+"angle": "270",
+"autoallow": true,
+"classname": "ButtonPad",
+"emit_signal_ID": "bridge_door",
+"origin": "-40 176 40",
+"recieve_signal_ID": "",
+"repeatable": true,
+"signal_parameter": "move_switch"
+})
+
+[node name="entity_106_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6.25, 0.75, -0.75)
+func_godot_properties = Dictionary[String, Variant]({
+"autoallow": true,
+"classname": "ButtonPad",
+"emit_signal_ID": "bridge_door",
+"origin": "-24 200 24",
+"recieve_signal_ID": "",
+"repeatable": true,
+"signal_parameter": "move_switch"
+})
+
+[node name="entity_107_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 15, 0.75, -10.5625)
+func_godot_properties = Dictionary[String, Variant]({
+"angle": "90",
+"autoallow": true,
+"classname": "ButtonPad",
+"emit_signal_ID": "broken_corridor_door",
+"origin": "-338 480 24",
+"recieve_signal_ID": "break_door",
+"repeatable": true,
+"signal_parameter": "counter_add"
+})
+
+[node name="entity_108_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 19.75, 1.25, 2.25)
+func_godot_properties = Dictionary[String, Variant]({
+"autoallow": true,
+"classname": "ButtonPad",
+"emit_signal_ID": "lab_door",
+"origin": "72 632 40",
+"recieve_signal_ID": "",
+"repeatable": true,
+"signal_parameter": "move_end, trigger_on"
+})
+
+[node name="entity_109_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
+transform = Transform3D(1.3907092e-07, 0, 1, 0, 1, 0, -1, 0, 1.3907092e-07, 25, 1.25, 5)
+func_godot_properties = Dictionary[String, Variant]({
+"angle": "270",
+"autoallow": true,
+"classname": "ButtonPad",
+"emit_signal_ID": "chamber_door",
+"origin": "160 800 40",
+"recieve_signal_ID": "",
+"repeatable": true,
+"signal_parameter": "move_end, trigger_on"
+})
+
+[node name="entity_110_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 6.25, -2, 1.375)
+func_godot_properties = Dictionary[String, Variant]({
+"angle": "90",
+"autoallow": true,
+"classname": "ButtonPad",
+"emit_signal_ID": "bridge_lift",
+"origin": "44 200 -64",
+"recieve_signal_ID": "move_end",
+"repeatable": true,
+"signal_parameter": ""
+})
+
+[node name="entity_111_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.75, -2.25, 1.125)
+func_godot_properties = Dictionary[String, Variant]({
+"autoallow": true,
+"classname": "ButtonPad",
+"emit_signal_ID": "spinny_machine",
+"origin": "36 248 -72",
+"recieve_signal_ID": "",
+"repeatable": true,
+"signal_parameter": "rotate_toggle, light_toggle, counter_reset, trigger_toggle"
+})
+
+[node name="entity_112_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 9.875, -2, 0.25)
+func_godot_properties = Dictionary[String, Variant]({
+"angle": "90",
+"autoallow": true,
+"classname": "ButtonPad",
+"emit_signal_ID": "spinny_machine",
+"origin": "8 316 -64",
+"recieve_signal_ID": "",
+"repeatable": true,
+"signal_parameter": "rotate_flip, counter_add, timer_start"
+})
+
+[node name="entity_113_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.3125, 2.375, 3.875)
+func_godot_properties = Dictionary[String, Variant]({
+"autostart": false,
+"classname": "timer",
+"emit_signal_ID": "line_read",
+"is_looping": false,
+"origin": "124 -42 76",
+"recieve_signal_ID": "line_read_end",
+"repeatable": true,
+"signal_parameter": "button_on",
+"time": 3.62
 })
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
