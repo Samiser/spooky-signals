@@ -5726,7 +5726,7 @@
 "origin" "44 300 -68"
 "recieve_signal_ID" "underground_light_flicker"
 "emit_signal_ID" "spinny_machine"
-"signal_parameter" "counter_reset, rotate_stop, light_off, trigger_off"
+"signal_parameter" "counter_reset, rotate_stop, light_off, trigger_off, button_off"
 "repeatable" "1"
 "time" "0.5"
 }
@@ -5748,7 +5748,7 @@
 "signal_ID" "underground_light_flicker"
 "pitch_variation" ".3"
 "subtitle_priority" "1"
-"subtitle" "[Machine breaking]"
+"subtitle" "[Machine sparks]"
 }
 // entity 34
 {
@@ -6912,7 +6912,7 @@
 {
 "classname" "ButtonPad"
 "origin" "36 248 -72"
-"signal_parameter" "rotate_toggle, light_toggle, counter_reset, trigger_toggle"
+"signal_parameter" "rotate_toggle, light_toggle, counter_reset, trigger_toggle, button_on"
 "emit_signal_ID" "spinny_machine"
 }
 // entity 123
@@ -6922,6 +6922,7 @@
 "angle" "90"
 "signal_parameter" "rotate_flip, counter_add, timer_start"
 "emit_signal_ID" "spinny_machine"
+"recieve_signal_ID" "spinny_machine"
 }
 // entity 124
 {

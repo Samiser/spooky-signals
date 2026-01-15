@@ -5064,7 +5064,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "origin": "44 300 -68",
 "recieve_signal_ID": "underground_light_flicker",
 "repeatable": true,
-"signal_parameter": "counter_reset, rotate_stop, light_off, trigger_off",
+"signal_parameter": "counter_reset, rotate_stop, light_off, trigger_off, button_off",
 "time": 0.5
 })
 
@@ -5094,7 +5094,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "range": 12.0,
 "sfx_file_path": "res://audio/sfx/spark_1.wav",
 "signal_ID": "underground_light_flicker",
-"subtitle": "[Machine breaking]",
+"subtitle": "[Machine sparks]",
 "subtitle_priority": 1,
 "volume_db": 0.0
 })
@@ -6514,7 +6514,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "origin": "36 248 -72",
 "recieve_signal_ID": "",
 "repeatable": true,
-"signal_parameter": "rotate_toggle, light_toggle, counter_reset, trigger_toggle"
+"signal_parameter": "rotate_toggle, light_toggle, counter_reset, trigger_toggle, button_on"
 })
 
 [node name="entity_112_ButtonPad" parent="FuncGodotMap" instance=ExtResource("46_diqfb")]
@@ -6525,7 +6525,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "classname": "ButtonPad",
 "emit_signal_ID": "spinny_machine",
 "origin": "8 316 -64",
-"recieve_signal_ID": "",
+"recieve_signal_ID": "spinny_machine",
 "repeatable": true,
 "signal_parameter": "rotate_flip, counter_add, timer_start"
 })
