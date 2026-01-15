@@ -294,6 +294,7 @@ func signal_recieved(parameters: String) -> void:
 					camera.global_rotation_degrees.z = cam_string[3].to_float()
 				
 				if parameter.contains("player_set_subtitle"):
+					param_additional[1] = param_additional[1].replace('/', ',')
 					print(param_additional[1] + " (" + str(next_subtitle_priority) + ", " + str(next_subtitle_time) + "s)")
 					
 					var subtitle_label :RichTextLabel= $UI/SubtitleContainer/Subtitle.duplicate()

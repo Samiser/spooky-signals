@@ -6929,7 +6929,7 @@
 "origin" "124 -50 64"
 "sfx_file_path" "res://audio/sfx/test_line_1.wav"
 "signal_ID" "line_read"
-"subtitle" "The right man in the wrong place..."
+"subtitle" "The right man in the wrong place/"
 }
 // entity 124
 {

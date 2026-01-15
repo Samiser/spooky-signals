@@ -6501,7 +6501,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "range": 12.0,
 "sfx_file_path": "res://audio/sfx/test_line_1.wav",
 "signal_ID": "line_read",
-"subtitle": "The right man in the wrong place...",
+"subtitle": "The right man in the wrong place/",
 "subtitle_priority": 0,
 "volume_db": 0.0
 })
