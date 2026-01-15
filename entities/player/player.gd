@@ -239,6 +239,8 @@ func signal_recieved(parameters: String) -> void:
 				camera.position = Vector3.ZERO
 				camera.position.y = cam_height
 				
+				camera.fov = default_fov
+				
 				camera.rotation = Vector3.ZERO
 				camera_attached = true
 				_set_crosshair_visibility()
@@ -279,6 +281,7 @@ func signal_recieved(parameters: String) -> void:
 					
 					camera.top_level = true
 					camera_attached = false
+					camera.fov = default_fov
 					_set_crosshair_visibility()
 				
 				if parameter.contains("player_camera_rot"):

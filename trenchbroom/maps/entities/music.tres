@@ -15,7 +15,9 @@ description = "Plays music.
 Funcs:
 music_play
 music_stop
-music_set:"
+music_set:
+music_fade_out
+music_fade_time:"
 class_properties = Dictionary[String, Variant]({
 "autoplay": false,
 "music_file_path": "",

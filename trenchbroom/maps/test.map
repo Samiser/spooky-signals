@@ -5033,7 +5033,7 @@
 }
 // brush 545
 {
-( 138 772 0 ) ( 138 766 128 ) ( 138 766 0 ) Stone2/Stone_06-128x128 [ 0 0 -1.0000000000000002 -95.33331 ] [ 0 -1.0000000000000002 0 0 ] 90 0.6 0.6
+( 140 772 0 ) ( 140 766 128 ) ( 140 766 0 ) Stone2/Stone_06-128x128 [ 0 0 -1.0000000000000002 -95.33331 ] [ 0 -1.0000000000000002 0 0 ] 180 0.6 0.6
 ( 184 656 0 ) ( 184 656 1 ) ( 185 656 0 ) Metal/Metal_05-128x128 [ -1 0 0 0 ] [ 0 0 -1 0 ] 180 1 1
 ( 120 640 -16 ) ( 121 640 -16 ) ( 120 641 -16 ) Metal/Metal_05-128x128 [ -1 0 0 0 ] [ 0 -1 0 0 ] 90 1 1
 ( 184 696 0 ) ( 184 697 0 ) ( 185 696 0 ) Tile/Tile_02-128x128 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.6 0.6
@@ -6836,4 +6836,18 @@
 "origin" "0 -244 132"
 "autoplay" "0"
 "music_file_path" "res://audio/music/main_menu.ogg"
+}
+// entity 119
+{
+"classname" "ButtonPad"
+"origin" "120 -46 46"
+"angle" "180"
+"signal_ID" "music"
+"signal_parameter" "music_fade_time: 5.0, music_set: res://audio/music/intro_music.ogg"
+}
+// entity 120
+{
+"classname" "3d_label"
+"origin" "222 706 34"
+"text" "ts aint done yet ong"
 }
