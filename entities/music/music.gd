@@ -2,6 +2,7 @@ extends Reciever
 @onready var music: AudioStreamPlayer = $"."
 @export var func_godot_properties : Dictionary
 var fade_time := 1.0
+var fade_tween : Tween
 
 func _ready() -> void:
 	music.stream = load(func_godot_properties.get("music_file_path", "res://audio/music/intro_music.ogg"))
@@ -27,8 +28,10 @@ func signal_recieved(parameters: String) -> void:
 
 				if parameter.contains("music_set"):
 					print("playing music: " + param_additional[1])
-
-					var fade_tween : Tween
+					
+					if fade_tween != null && fade_tween.is_running():
+						fade_tween.stop()
+					
 					if music.playing: # fade current music out
 						fade_tween = get_tree().create_tween()
 						fade_tween.tween_property(music, "volume_linear", 0.0, fade_time)

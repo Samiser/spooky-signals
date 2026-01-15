@@ -22,6 +22,8 @@ class_properties = Dictionary[String, Variant]({
 "range": 12.0,
 "sfx_file_path": "",
 "signal_ID": "",
+"subtitle": "",
+"subtitle_priority": 0,
 "volume_db": 0.0
 })
 meta_properties = Dictionary[String, Variant]({

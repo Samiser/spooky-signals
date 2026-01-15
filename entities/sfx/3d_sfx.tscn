@@ -2,6 +2,6 @@
 
 [ext_resource type="Script" uid="uid://uyds7qklc07p" path="res://entities/sfx/3d_sfx.gd" id="1_el0hw"]
 
-[node name="Sfx" type="AudioStreamPlayer3D"]
+[node name="Sfx" type="AudioStreamPlayer3D" groups=["connect_to_player"]]
 unit_size = 0.1
 script = ExtResource("1_el0hw")

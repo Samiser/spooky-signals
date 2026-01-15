@@ -32,6 +32,7 @@ enabled=PackedStringArray("res://addons/func_godot/plugin.cfg")
 [global_group]
 
 sender=""
+connect_to_player=""
 
 [input]
 

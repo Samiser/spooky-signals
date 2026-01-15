@@ -26,6 +26,8 @@ player_fade_in
 player_fade_out
 player_camera_reset
 player_camera_pos:
+player_set_subtitle:
+player_subtitle_priority:
 player_camera_rot:"
 meta_properties = Dictionary[String, Variant]({
 "color": Color(0.8, 0.8, 0, 1),

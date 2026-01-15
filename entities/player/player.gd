@@ -32,6 +32,9 @@ var interact_distance: float = 4.0
 var interacting: bool = false
 var current_interactable: Node3D 
 
+var next_subtitle_priority := 1
+var next_subtitle_time := 1.0
+
 @onready var camera: Camera3D = $Camera3D
 @onready var crosshair: ColorRect = $UI/CenterContainer/Crosshair
 
@@ -289,4 +292,26 @@ func signal_recieved(parameters: String) -> void:
 					camera.global_rotation_degrees.x = cam_string[1].to_float()
 					camera.global_rotation_degrees.y = cam_string[2].to_float()
 					camera.global_rotation_degrees.z = cam_string[3].to_float()
+				
+				if parameter.contains("player_set_subtitle"):
+					print(param_additional[1] + " (" + str(next_subtitle_priority) + ", " + str(next_subtitle_time) + "s)")
 					
+					var subtitle_label :RichTextLabel= $UI/SubtitleContainer/Subtitle.duplicate()
+					$UI/SubtitleContainer.add_child(subtitle_label)
+					subtitle_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+					subtitle_label.text = param_additional[1]
+					subtitle_label.visible = true
+					
+					var delete_timer := get_tree().create_timer(next_subtitle_time)
+					await delete_timer.timeout
+
+					var display_tween := get_tree().create_tween()
+					display_tween.tween_property(subtitle_label, "modulate:a", 0.0, 3.0)
+					await display_tween.finished
+					subtitle_label.queue_free()
+					
+				if parameter.contains("player_subtitle_priority"):
+					next_subtitle_priority = param_additional[1].to_int()
+				
+				if parameter.contains("player_subtitle_time"):
+					next_subtitle_time = param_additional[1].to_float()

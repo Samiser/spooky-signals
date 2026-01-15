@@ -5631,8 +5631,6 @@
 "signal_ID" "break_door"
 "sfx_file_path" "res://audio/sfx/sparks.wav"
 "pitch_level" ".5"
-"subtitle" "[Electronics sparking]"
-"subtitle_priority" "1"
 }
 // entity 27
 {
@@ -5675,7 +5673,6 @@
 "signal_ID" "steam_scare"
 "sfx_file_path" "res://audio/sfx/steam_burst.wav"
 "subtitle" "[Steam pipe bursting]"
-"subtitle_priority" "1"
 }
 // entity 31
 {
@@ -5768,7 +5765,7 @@
 // entity 37
 {
 "classname" "ButtonPad"
-"origin" "120 18 46"
+"origin" "120 -14 46"
 "angle" "180"
 "signal_ID" "bridge_light"
 "signal_parameter" "sfx_play, light_toggle"
@@ -5822,7 +5819,7 @@
 "signal_ID" "underground_light_flicker"
 "pitch_variation" ".3"
 "subtitle_priority" "1"
-"subtitle" "[Machine breaking]"
+"subtitle" "[machine_break]"
 }
 // entity 43
 {
@@ -5834,8 +5831,6 @@
 "pitch_variation" "0.0"
 "volume_db" "0.000000"
 "range" "2"
-"subtitle_priority" "1"
-"subtitle" "[Error]"
 }
 // entity 44
 {
@@ -6328,7 +6323,7 @@
 // entity 76
 {
 "classname" "ButtonPad"
-"origin" "120 50 46"
+"origin" "120 18 46"
 "angle" "180"
 "signal_ID" "test_video_setup"
 "signal_parameter" "timer_start, counter_add"
@@ -6336,14 +6331,14 @@
 // entity 77
 {
 "classname" "video_player"
-"origin" "124 52 68"
+"origin" "124 20 68"
 "video_file_path" "res://videos/logo_vid_short.ogv"
 "signal_ID" "test_video"
 }
 // entity 78
 {
 "classname" "timer"
-"origin" "124 44 68"
+"origin" "124 12 68"
 "recieve_signal_ID" "test_video"
 "time" "10.0"
 "repeatable" "1"
@@ -6353,7 +6348,7 @@
 // entity 79
 {
 "classname" "timer"
-"origin" "124 52 60"
+"origin" "124 20 60"
 "recieve_signal_ID" "test_video_setup"
 "time" "2.0"
 "repeatable" "1"
@@ -6363,7 +6358,7 @@
 // entity 80
 {
 "classname" "counter"
-"origin" "124 44 60"
+"origin" "124 12 60"
 "recieve_signal_ID" "test_video_setup"
 "repeatable" "1"
 "reset_on_finish" "1"
@@ -6389,7 +6384,7 @@
 // entity 82
 {
 "classname" "ButtonPad"
-"origin" "120 82 46"
+"origin" "120 50 46"
 "angle" "180"
 "signal_ID" "cctv_bridge"
 "signal_parameter" "timer_start, counter_add"
@@ -6397,7 +6392,7 @@
 // entity 83
 {
 "classname" "timer"
-"origin" "124 84 60"
+"origin" "124 52 60"
 "recieve_signal_ID" "cctv_bridge"
 "time" "4.0"
 "repeatable" "1"
@@ -6407,7 +6402,7 @@
 // entity 84
 {
 "classname" "counter"
-"origin" "124 76 60"
+"origin" "124 44 60"
 "recieve_signal_ID" "cctv_bridge"
 "repeatable" "1"
 "reset_on_finish" "1"
@@ -6417,7 +6412,7 @@
 // entity 85
 {
 "classname" "timer"
-"origin" "124 84 92"
+"origin" "124 52 92"
 "recieve_signal_ID" "cctv_end"
 "time" "2.0"
 "repeatable" "1"
@@ -6427,7 +6422,7 @@
 // entity 86
 {
 "classname" "timer"
-"origin" "124 84 68"
+"origin" "124 52 68"
 "recieve_signal_ID" "cctv_engineering"
 "time" "4.0"
 "repeatable" "1"
@@ -6437,7 +6432,7 @@
 // entity 87
 {
 "classname" "counter"
-"origin" "124 76 68"
+"origin" "124 44 68"
 "recieve_signal_ID" "cctv_engineering"
 "repeatable" "1"
 "reset_on_finish" "1"
@@ -6447,7 +6442,7 @@
 // entity 88
 {
 "classname" "timer"
-"origin" "124 84 76"
+"origin" "124 52 76"
 "recieve_signal_ID" "cctv_corridor"
 "time" "4.0"
 "repeatable" "1"
@@ -6457,7 +6452,7 @@
 // entity 89
 {
 "classname" "counter"
-"origin" "124 76 76"
+"origin" "124 44 76"
 "recieve_signal_ID" "cctv_corridor"
 "repeatable" "1"
 "reset_on_finish" "1"
@@ -6467,7 +6462,7 @@
 // entity 90
 {
 "classname" "timer"
-"origin" "124 84 84"
+"origin" "124 52 84"
 "recieve_signal_ID" "cctv_labs"
 "time" "4.0"
 "repeatable" "1"
@@ -6477,7 +6472,7 @@
 // entity 91
 {
 "classname" "counter"
-"origin" "124 76 84"
+"origin" "124 44 84"
 "recieve_signal_ID" "cctv_labs"
 "repeatable" "1"
 "reset_on_finish" "1"
@@ -6487,7 +6482,7 @@
 // entity 92
 {
 "classname" "counter"
-"origin" "124 76 92"
+"origin" "124 44 92"
 "recieve_signal_ID" "cctv_end"
 "repeatable" "1"
 "reset_on_finish" "1"
@@ -6894,7 +6889,7 @@
 // entity 119
 {
 "classname" "ButtonPad"
-"origin" "120 -14 46"
+"origin" "120 -46 46"
 "angle" "180"
 "signal_ID" "music"
 "signal_parameter" "music_fade_time: 5.0, music_set: res://audio/music/intro_music.ogg"
@@ -6904,38 +6899,4 @@
 "classname" "3d_label"
 "origin" "222 706 34"
 "text" "ts aint done yet ong"
-}
-// entity 121
-{
-"classname" "ButtonPad"
-"origin" "120 -46 46"
-"angle" "180"
-"signal_ID" "line_read"
-"signal_parameter" "timer_start, sfx_play"
-}
-// entity 122
-{
-"classname" "timer"
-"origin" "124 -42 64"
-"recieve_signal_ID" "line_read"
-"time" "2.84"
-"repeatable" "1"
-"emit_signal_ID" "line_read_end"
-"signal_parameter" "sfx_play"
-}
-// entity 123
-{
-"classname" "3d_sfx"
-"origin" "124 -50 64"
-"sfx_file_path" "res://audio/sfx/test_line_1.wav"
-"signal_ID" "line_read"
-"subtitle" "The right man in the wrong place..."
-}
-// entity 124
-{
-"classname" "3d_sfx"
-"origin" "124 -50 76"
-"sfx_file_path" "res://audio/sfx/test_line_2.wav"
-"signal_ID" "line_read_end"
-"subtitle" "can make all the difference in the world."
 }
