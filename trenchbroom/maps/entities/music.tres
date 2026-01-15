@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDPointClass" load_steps=4 format=3 uid="uid://db7u1hrcvjxu2"]
+
+[ext_resource type="Script" uid="uid://d1nwwgcrner8b" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class_display_descriptor.gd" id="1_2qylh"]
+[ext_resource type="PackedScene" uid="uid://bt00acvpd0cya" path="res://entities/music/music.tscn" id="2_2qylh"]
+[ext_resource type="Script" uid="uid://cxsqwtsqd8w33" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class.gd" id="3_cvheu"]
+
+[resource]
+script = ExtResource("3_cvheu")
+scene_file = ExtResource("2_2qylh")
+apply_scale_on_map_build = false
+classname = "music"
+description = "Plays music.
+(signal_ID: music)
+
+Funcs:
+music_play
+music_stop
+music_set:"
+class_properties = Dictionary[String, Variant]({
+"autoplay": false,
+"music_file_path": "",
+"volume_db": 0.0
+})
+meta_properties = Dictionary[String, Variant]({
+"color": Color(0.4392157, 1, 0.8, 1),
+"size": AABB(-4, -4, -4, 4, 4, 4)
+})
+metadata/_custom_type_script = "uid://cxsqwtsqd8w33"
