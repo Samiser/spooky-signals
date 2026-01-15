@@ -6934,3 +6934,13 @@
 "emit_signal_ID" "line_read"
 "signal_parameter" "button_on"
 }
+// entity 125
+{
+"classname" "counter"
+"origin" "124 36 60"
+"recieve_signal_ID" "test_video_setup"
+"repeatable" "1"
+"reset_on_finish" "1"
+"emit_signal_ID" "music"
+"finish_signal_parameter" "music_fade_time: 1.0, music_fade_out"
+}

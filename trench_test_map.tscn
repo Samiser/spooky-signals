@@ -6544,6 +6544,20 @@ func_godot_properties = Dictionary[String, Variant]({
 "time": 3.62
 })
 
+[node name="entity_114_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.125, 1.875, 3.875)
+func_godot_properties = Dictionary[String, Variant]({
+"classname": "counter",
+"count": 1,
+"emit_signal_ID": "music",
+"finish_signal_parameter": "music_fade_time: 1.0, music_fade_out",
+"origin": "124 36 60",
+"recieve_signal_ID": "test_video_setup",
+"repeatable": true,
+"reset_on_finish": true,
+"reset_signal_parameter": ""
+})
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_0w2em")
 camera_attributes = SubResource("CameraAttributesPractical_0w2em")

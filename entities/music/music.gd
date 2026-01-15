@@ -21,7 +21,9 @@ func signal_recieved(parameters: String) -> void:
 				music.stop()
 			"music_fade_out":
 				if music.playing:
-					var fade_tween := get_tree().create_tween()
+					if fade_tween != null && fade_tween.is_running():
+						fade_tween.stop()
+					fade_tween = get_tree().create_tween()
 					fade_tween.tween_property(music, "volume_linear", 0.0, fade_time)
 			_:
 				var param_additional : PackedStringArray = parameter.split(': ', false)
