@@ -7092,7 +7092,7 @@
 "move_offset" "0.0 0.0 -1.2"
 "move_rate" "2.0"
 "signal_ID" "bridge_lift_barrier"
-"allow_ignore_move" "1"
+"allow_ignore_move" "0"
 "sound_path" "res://audio/sfx/gears.wav"
 "volume_db" "-8.0"
 // brush 0
@@ -7107,21 +7107,11 @@
 }
 // entity 127
 {
-"classname" "counter"
-"origin" "60 100 28"
-"emit_signal_ID" "bridge_lift_barrier"
-"reset_on_finish" "1"
-"finish_signal_parameter" "move_end"
-"recieve_signal_ID" "bridge_lift"
-"repeatable" "1"
-}
-// entity 128
-{
 "classname" "func_moveable"
 "move_offset" "0.0 0.0 -1.2"
 "move_rate" "2.0"
 "signal_ID" "bridge_lift_barrier"
-"allow_ignore_move" "1"
+"allow_ignore_move" "0"
 "sound_path" "res://audio/sfx/gears.wav"
 "volume_db" "-8.0"
 // brush 0
@@ -7134,7 +7124,7 @@
 ( 128 192 -68 ) ( 128 191 -68 ) ( 128 192 -67 ) Metal/Metal_18-128x128 [ -1.2246467991473532e-16 -1 0 52 ] [ 0 0 -1 -100 ] 0 1 1
 }
 }
-// entity 129
+// entity 128
 {
 "classname" "func_trigger"
 "signal_ID" "bridge_lift_barrier"
@@ -7142,14 +7132,14 @@
 // brush 0
 {
 ( 86 116 20 ) ( 86 117 20 ) ( 86 116 21 ) clip [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 86 116 20 ) ( 86 116 21 ) ( 87 116 20 ) clip [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 86 96 20 ) ( 86 96 21 ) ( 87 96 20 ) clip [ 1 0 0 0 ] [ 0 0 -1 0 ] 180 1 1
 ( 86 116 20 ) ( 87 116 20 ) ( 86 117 20 ) clip [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
 ( 88 120 36 ) ( 88 121 36 ) ( 89 120 36 ) clip [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
-( 88 124 36 ) ( 89 124 36 ) ( 88 124 37 ) clip [ -1 0 0 0 ] [ 0 0 -1 0 ] 180 1 1
+( 88 128 36 ) ( 89 128 36 ) ( 88 128 37 ) clip [ -1 0 0 0 ] [ 0 0 -1 0 ] 90 1 1
 ( 128 120 36 ) ( 128 120 37 ) ( 128 121 36 ) clip [ 0 1 0 0 ] [ 0 0 -1 0 ] 270 1 1
 }
 }
-// entity 130
+// entity 129
 {
 "classname" "func_trigger"
 "signal_ID" "bridge_lift_barrier"
@@ -7157,14 +7147,14 @@
 // brush 0
 {
 ( 80 182 -80 ) ( 80 183 -80 ) ( 80 182 -79 ) clip [ 0 -1 0 2 ] [ 0 0 -1 -36 ] 90 1 1
-( 80 180 -80 ) ( 80 180 -79 ) ( 81 180 -80 ) clip [ 1 0 0 6 ] [ 0 0 -1 -36 ] 0 1 1
+( 80 176 -80 ) ( 80 176 -79 ) ( 81 176 -80 ) clip [ 1 0 0 6 ] [ 0 0 -1 -36 ] 270 1 1
 ( 80 182 -80 ) ( 81 182 -80 ) ( 80 183 -80 ) clip [ -1 0 0 -6 ] [ 0 -1 0 2 ] 90 1 1
 ( 82 186 -64 ) ( 82 187 -64 ) ( 83 186 -64 ) clip [ 1 0 0 6 ] [ 0 -1 0 2 ] 90 1 1
-( 82 188 -64 ) ( 83 188 -64 ) ( 82 188 -63 ) clip [ -1 0 0 -6 ] [ 0 0 -1 -36 ] 0 1 1
+( 82 208 -64 ) ( 83 208 -64 ) ( 82 208 -63 ) clip [ -1 0 0 -6 ] [ 0 0 -1 -36 ] 270 1 1
 ( 122 186 -64 ) ( 122 186 -63 ) ( 122 187 -64 ) clip [ 0 1 0 -2 ] [ 0 0 -1 -36 ] 0 1 1
 }
 }
-// entity 131
+// entity 130
 {
 "classname" "func_trigger"
 "signal_ID" "bridge_lift_barrier"
@@ -7179,7 +7169,7 @@
 ( 128 126 -14 ) ( 128 126 -13 ) ( 128 127 -14 ) clip [ 0 1 0 -6 ] [ 0 0 -1 -50 ] 90 1 1
 }
 }
-// entity 132
+// entity 131
 {
 "classname" "timer"
 "origin" "68 100 28"
@@ -7188,4 +7178,14 @@
 "signal_parameter" "button_on"
 "repeatable" "1"
 "recieve_signal_ID" "bridge_lift"
+}
+// entity 132
+{
+"classname" "counter"
+"origin" "60 100 28"
+"emit_signal_ID" "bridge_lift_barrier"
+"reset_on_finish" "1"
+"finish_signal_parameter" "move_end"
+"recieve_signal_ID" "bridge_lift"
+"repeatable" "1"
 }

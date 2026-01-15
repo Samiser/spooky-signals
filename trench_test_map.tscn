@@ -2941,12 +2941,12 @@ data = PackedVector3Array(0.0625, 0.125, -0.75, -0.0625, 0.125, -0.75, -0.0625, 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ieqah"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_gxy18"]
-data = PackedVector3Array(0.125, 0.25, -0.65625, -0.125, 0.25, -0.65625, -0.125, -0.25, -0.65625, 0.125, 0.25, -0.65625, -0.125, -0.25, -0.65625, 0.125, -0.25, -0.65625, -0.125, -0.25, 0.65625, -0.125, -0.25, -0.65625, -0.125, 0.25, -0.65625, -0.125, -0.25, 0.65625, -0.125, 0.25, -0.65625, -0.125, 0.25, 0.65625, -0.125, -0.25, 0.65625, 0.125, -0.25, 0.65625, 0.125, -0.25, -0.65625, -0.125, -0.25, 0.65625, 0.125, -0.25, -0.65625, -0.125, -0.25, -0.65625, -0.125, 0.25, 0.65625, -0.125, 0.25, -0.65625, 0.125, 0.25, -0.65625, -0.125, 0.25, 0.65625, 0.125, 0.25, -0.65625, 0.125, 0.25, 0.65625, 0.125, 0.25, 0.65625, 0.125, 0.25, -0.65625, 0.125, -0.25, -0.65625, 0.125, 0.25, 0.65625, 0.125, -0.25, -0.65625, 0.125, -0.25, 0.65625, 0.125, -0.25, 0.65625, -0.125, -0.25, 0.65625, -0.125, 0.25, 0.65625, 0.125, -0.25, 0.65625, -0.125, 0.25, 0.65625, 0.125, 0.25, 0.65625)
+data = PackedVector3Array(0.5, 0.25, -0.65625, -0.5, 0.25, -0.65625, -0.5, -0.25, -0.65625, 0.5, 0.25, -0.65625, -0.5, -0.25, -0.65625, 0.5, -0.25, -0.65625, -0.5, -0.25, 0.65625, -0.5, -0.25, -0.65625, -0.5, 0.25, -0.65625, -0.5, -0.25, 0.65625, -0.5, 0.25, -0.65625, -0.5, 0.25, 0.65625, -0.5, -0.25, 0.65625, 0.5, -0.25, 0.65625, 0.5, -0.25, -0.65625, -0.5, -0.25, 0.65625, 0.5, -0.25, -0.65625, -0.5, -0.25, -0.65625, -0.5, 0.25, 0.65625, -0.5, 0.25, -0.65625, 0.5, 0.25, -0.65625, -0.5, 0.25, 0.65625, 0.5, 0.25, -0.65625, 0.5, 0.25, 0.65625, 0.5, 0.25, 0.65625, 0.5, 0.25, -0.65625, 0.5, -0.25, -0.65625, 0.5, 0.25, 0.65625, 0.5, -0.25, -0.65625, 0.5, -0.25, 0.65625, 0.5, -0.25, 0.65625, -0.5, -0.25, 0.65625, -0.5, 0.25, 0.65625, 0.5, -0.25, 0.65625, -0.5, 0.25, 0.65625, 0.5, 0.25, 0.65625)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_h4yb0"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_elbxd"]
-data = PackedVector3Array(0.125, 0.25, -0.65625, -0.125, 0.25, -0.65625, -0.125, -0.25, -0.65625, 0.125, 0.25, -0.65625, -0.125, -0.25, -0.65625, 0.125, -0.25, -0.65625, -0.125, -0.25, 0.65625, -0.125, -0.25, -0.65625, -0.125, 0.25, -0.65625, -0.125, -0.25, 0.65625, -0.125, 0.25, -0.65625, -0.125, 0.25, 0.65625, -0.125, -0.25, 0.65625, 0.125, -0.25, 0.65625, 0.125, -0.25, -0.65625, -0.125, -0.25, 0.65625, 0.125, -0.25, -0.65625, -0.125, -0.25, -0.65625, -0.125, 0.25, 0.65625, -0.125, 0.25, -0.65625, 0.125, 0.25, -0.65625, -0.125, 0.25, 0.65625, 0.125, 0.25, -0.65625, 0.125, 0.25, 0.65625, 0.125, 0.25, 0.65625, 0.125, 0.25, -0.65625, 0.125, -0.25, -0.65625, 0.125, 0.25, 0.65625, 0.125, -0.25, -0.65625, 0.125, -0.25, 0.65625, 0.125, -0.25, 0.65625, -0.125, -0.25, 0.65625, -0.125, 0.25, 0.65625, 0.125, -0.25, 0.65625, -0.125, 0.25, 0.65625, 0.125, 0.25, 0.65625)
+data = PackedVector3Array(0.5, 0.25, -0.65625, -0.5, 0.25, -0.65625, -0.5, -0.25, -0.65625, 0.5, 0.25, -0.65625, -0.5, -0.25, -0.65625, 0.5, -0.25, -0.65625, -0.5, -0.25, 0.65625, -0.5, -0.25, -0.65625, -0.5, 0.25, -0.65625, -0.5, -0.25, 0.65625, -0.5, 0.25, -0.65625, -0.5, 0.25, 0.65625, -0.5, -0.25, 0.65625, 0.5, -0.25, 0.65625, 0.5, -0.25, -0.65625, -0.5, -0.25, 0.65625, 0.5, -0.25, -0.65625, -0.5, -0.25, -0.65625, -0.5, 0.25, 0.65625, -0.5, 0.25, -0.65625, 0.5, 0.25, -0.65625, -0.5, 0.25, 0.65625, 0.5, 0.25, -0.65625, 0.5, 0.25, 0.65625, 0.5, 0.25, 0.65625, 0.5, 0.25, -0.65625, 0.5, -0.25, -0.65625, 0.5, 0.25, 0.65625, 0.5, -0.25, -0.65625, 0.5, -0.25, 0.65625, 0.5, -0.25, 0.65625, -0.5, -0.25, 0.65625, -0.5, 0.25, 0.65625, 0.5, -0.25, 0.65625, -0.5, 0.25, 0.65625, 0.5, 0.25, 0.65625)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_x7e7j"]
 
@@ -6684,7 +6684,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "_phong": 0,
 "_phong_angle": 89.0,
 "_vertex_merge_distance": 0.03125,
-"allow_ignore_move": true,
+"allow_ignore_move": false,
 "classname": "func_moveable",
 "continuous": false,
 "move_offset": Vector3(0, 0, -1.2),
@@ -6700,21 +6700,7 @@ mesh = SubResource("ArrayMesh_byof1")
 [node name="entity_115_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_115_func_moveable"]
 shape = SubResource("ConcavePolygonShape3D_6ueev")
 
-[node name="entity_116_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.125, 0.875, 1.875)
-func_godot_properties = Dictionary[String, Variant]({
-"classname": "counter",
-"count": 1,
-"emit_signal_ID": "bridge_lift_barrier",
-"finish_signal_parameter": "move_end",
-"origin": "60 100 28",
-"recieve_signal_ID": "bridge_lift",
-"repeatable": true,
-"reset_on_finish": true,
-"reset_signal_parameter": ""
-})
-
-[node name="entity_117_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
+[node name="entity_116_func_moveable" type="AnimatableBody3D" parent="FuncGodotMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0625, -2.25, 3.25)
 collision_mask = 0
 script = ExtResource("47_3qoln")
@@ -6723,7 +6709,7 @@ func_godot_properties = Dictionary[String, Variant]({
 "_phong": 0,
 "_phong_angle": 89.0,
 "_vertex_merge_distance": 0.03125,
-"allow_ignore_move": true,
+"allow_ignore_move": false,
 "classname": "func_moveable",
 "continuous": false,
 "move_offset": Vector3(0, 0, -1.2),
@@ -6733,14 +6719,36 @@ func_godot_properties = Dictionary[String, Variant]({
 "volume_db": -8.0
 })
 
-[node name="entity_117_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_117_func_moveable"]
+[node name="entity_116_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_116_func_moveable"]
 mesh = SubResource("ArrayMesh_7glyi")
 
-[node name="entity_117_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_117_func_moveable"]
+[node name="entity_116_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_116_func_moveable"]
 shape = SubResource("ConcavePolygonShape3D_exrfo")
 
+[node name="entity_117_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0.875, 3.34375)
+script = ExtResource("54_g7cg2")
+func_godot_properties = Dictionary[String, Variant]({
+"_cull_interior_faces": false,
+"_phong": 0,
+"_phong_angle": 89.0,
+"_vertex_merge_distance": 0.03125,
+"autoallow": true,
+"classname": "func_trigger",
+"recieve_signal_ID": "",
+"repeatable": true,
+"signal_ID": "bridge_lift_barrier",
+"signal_parameter": "move_end"
+})
+
+[node name="entity_117_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_117_func_trigger"]
+mesh = SubResource("ArrayMesh_ieqah")
+
+[node name="entity_117_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_117_func_trigger"]
+shape = SubResource("ConcavePolygonShape3D_gxy18")
+
 [node name="entity_118_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.75, 0.875, 3.34375)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2.25, 3.15625)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
 "_cull_interior_faces": false,
@@ -6756,34 +6764,12 @@ func_godot_properties = Dictionary[String, Variant]({
 })
 
 [node name="entity_118_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_118_func_trigger"]
-mesh = SubResource("ArrayMesh_ieqah")
-
-[node name="entity_118_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_118_func_trigger"]
-shape = SubResource("ConcavePolygonShape3D_gxy18")
-
-[node name="entity_119_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.75, -2.25, 3.15625)
-script = ExtResource("54_g7cg2")
-func_godot_properties = Dictionary[String, Variant]({
-"_cull_interior_faces": false,
-"_phong": 0,
-"_phong_angle": 89.0,
-"_vertex_merge_distance": 0.03125,
-"autoallow": true,
-"classname": "func_trigger",
-"recieve_signal_ID": "",
-"repeatable": true,
-"signal_ID": "bridge_lift_barrier",
-"signal_parameter": "move_end"
-})
-
-[node name="entity_119_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_119_func_trigger"]
 mesh = SubResource("ArrayMesh_h4yb0")
 
-[node name="entity_119_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_119_func_trigger"]
+[node name="entity_118_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_118_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_elbxd")
 
-[node name="entity_120_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
+[node name="entity_119_func_trigger" type="Area3D" parent="FuncGodotMap" groups=["sender"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.78125, -0.71875, 2.625)
 script = ExtResource("54_g7cg2")
 func_godot_properties = Dictionary[String, Variant]({
@@ -6799,13 +6785,13 @@ func_godot_properties = Dictionary[String, Variant]({
 "signal_parameter": "move_start"
 })
 
-[node name="entity_120_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_120_func_trigger"]
+[node name="entity_119_mesh_instance" type="MeshInstance3D" parent="FuncGodotMap/entity_119_func_trigger"]
 mesh = SubResource("ArrayMesh_x7e7j")
 
-[node name="entity_120_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_120_func_trigger"]
+[node name="entity_119_collision_shape" type="CollisionShape3D" parent="FuncGodotMap/entity_119_func_trigger"]
 shape = SubResource("ConcavePolygonShape3D_78xso")
 
-[node name="entity_121_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
+[node name="entity_120_timer" parent="FuncGodotMap" instance=ExtResource("63_44e1s")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.125, 0.875, 2.125)
 func_godot_properties = Dictionary[String, Variant]({
 "autostart": false,
@@ -6817,6 +6803,20 @@ func_godot_properties = Dictionary[String, Variant]({
 "repeatable": true,
 "signal_parameter": "button_on",
 "time": 2.0
+})
+
+[node name="entity_121_counter" parent="FuncGodotMap" instance=ExtResource("62_k2rkf")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.125, 0.875, 1.875)
+func_godot_properties = Dictionary[String, Variant]({
+"classname": "counter",
+"count": 1,
+"emit_signal_ID": "bridge_lift_barrier",
+"finish_signal_parameter": "move_end",
+"origin": "60 100 28",
+"recieve_signal_ID": "bridge_lift",
+"repeatable": true,
+"reset_on_finish": true,
+"reset_signal_parameter": ""
 })
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
