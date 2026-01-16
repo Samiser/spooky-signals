@@ -28,6 +28,10 @@ var camera_attached : bool = true
 var shake_time := 0.0
 var shake_magnitude := 128.0
 
+@export var generic_step_sounds : Array[AudioStream]
+var step_timer := 1.0
+var step_rate := 2.2
+
 var interact_distance: float = 4.0
 var interacting: bool = false
 var current_interactable: Node3D 
@@ -61,8 +65,10 @@ func _physics_process(delta):
 		character_body.velocity.x = movement_dir.x * current_speed
 		character_body.velocity.z = movement_dir.z * current_speed
 		
-		if character_body.is_on_floor() and Input.is_action_just_pressed("jump"):
-			character_body.velocity.y = jump_speed
+		if character_body.is_on_floor():
+			_play_footstep_sounds(movement_dir.length(), delta) 
+			if Input.is_action_just_pressed("jump"):
+				character_body.velocity.y = jump_speed
 	else:
 		character_body.velocity.x = 0
 		character_body.velocity.z = 0
@@ -75,6 +81,14 @@ func _physics_process(delta):
 
 func _process(delta: float) -> void:
 	_set_crosshair_visibility()
+
+func _play_footstep_sounds(velocity : float, delta : float) -> void:
+	step_timer -= velocity * step_rate * delta
+	if step_timer <= 0.0:
+		step_timer = 1.0
+		$MovementSoundStream.stream = generic_step_sounds[randi_range(0, generic_step_sounds.size() - 1)]
+		$MovementSoundStream.pitch_scale = randf_range(0.9, 1.1)
+		$MovementSoundStream.play()
 
 func _set_crosshair_visibility() -> void:
 	if interacting || !camera_attached:
