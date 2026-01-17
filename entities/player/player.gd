@@ -31,7 +31,7 @@ var is_zoomed : bool = false
 var zoom_tween : Tween
 
 var is_crouched : bool = false
-var is_spriting : bool = false
+var is_sprinting : bool = false
 var released_crouch : bool = false
 var crouch_tween : Tween
 
@@ -66,7 +66,10 @@ var next_subtitle_time : float = 1.0
 var time_passed : float = 0.0
 
 @onready var camera: Camera3D = $Camera3D
-@onready var crosshair: ColorRect = $UI/CenterContainer/Crosshair
+@onready var crosshair: TextureRect = $UI/Crosshair
+const CROSSHAIR_DEFAULT = preload("uid://ds24f6q1fxdn4")
+const CROSSHAIR_INTERACT = preload("uid://cfdaf0c0ferb1")
+
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -91,8 +94,8 @@ func _physics_process(delta):
 		
 		is_grounded = character_body.is_on_floor()
 		
-		is_spriting = !is_crouched && is_grounded && input != Vector2.ZERO && Input.is_action_pressed("sprint") && stamina_recovered
-		if is_spriting:
+		is_sprinting = !is_crouched && is_grounded && input != Vector2.ZERO && Input.is_action_pressed("sprint") && stamina_recovered
+		if is_sprinting:
 			current_speed *= sprint_multiplier
 			current_stamina -= stamina_loss_rate * delta
 			current_stamina_delay = stamina_recover_delay
@@ -105,15 +108,16 @@ func _physics_process(delta):
 						current_stamina_delay -= delta
 					else:
 						current_stamina += stamina_recover_rate * delta
+				else:
+					stamina_recovered = true
 				
 				if !stamina_recovered:
 					var flash_colour := Color.RED * ((sin(time_passed * 10.0) / 2.0) + 1.0)
 					$UI/VBoxContainer/Stamina/StaminaBar.get("theme_override_styles/background").border_color = flash_colour
 					$UI/VBoxContainer/Stamina/StaminaBar.get("theme_override_styles/fill").border_color = flash_colour
-			else:
-				stamina_recovered = true
-				$UI/VBoxContainer/Stamina/StaminaBar.get("theme_override_styles/background").border_color = stamina_bar_default_border_colour
-				$UI/VBoxContainer/Stamina/StaminaBar.get("theme_override_styles/fill").border_color = stamina_bar_default_border_colour
+				else:
+					$UI/VBoxContainer/Stamina/StaminaBar.get("theme_override_styles/background").border_color = stamina_bar_default_border_colour
+					$UI/VBoxContainer/Stamina/StaminaBar.get("theme_override_styles/fill").border_color = stamina_bar_default_border_colour
 		
 		var display_stamina_bar := current_stamina < 1.0
 		$UI/VBoxContainer/Stamina.visible = display_stamina_bar
@@ -176,13 +180,11 @@ func _set_crosshair_visibility() -> void:
 	
 	crosshair.show()
 	if _looking_at_interactable():
-		crosshair.modulate.a = 1.0
-		crosshair.custom_minimum_size = Vector2(10, 10)
+		crosshair.texture = CROSSHAIR_INTERACT
 		if !is_zoomed:
 			$UI/interactLabel.text = _looking_at_interactable().name
 	else:
-		crosshair.modulate.a = 0.4
-		crosshair.custom_minimum_size = Vector2(7, 7)
+		crosshair.texture = CROSSHAIR_DEFAULT
 		$UI/interactLabel.text = ""
 
 func toggle_zoom() -> void:
@@ -330,7 +332,7 @@ func apply_damage(amount : float) -> void:
 	$AudioStreamPlayer2D.play()
 	
 	shake_time = 1.0
-	shake_magnitude = amount * 2.0
+	shake_magnitude = amount * 4.0
 	
 	if current_health <= 0.0:
 		_die()
