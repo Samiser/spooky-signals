@@ -6,11 +6,14 @@ class_name Player
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 var speed: int = 4
+var sprint_multiplier: float = 1.6
 var jump_speed: int = 4
 var crouch_time : float = 0.1
 var crouch_height := 1.1
 var default_height : float
 var mouse_sensitivity: float = 0.002
+
+var lean_speed : float = 2.0
 
 var default_fov : float
 var zoom_fov := 40.0
@@ -18,6 +21,7 @@ var is_zoomed : bool = false
 var zoom_tween : Tween
 
 var is_crouched : bool = false
+var is_spriting : bool = false
 var released_crouch : bool = false
 var crouch_tween : Tween
 
@@ -25,19 +29,19 @@ var allow_control : bool = true
 
 var camera_attached : bool = true
 
-var shake_time := 0.0
-var shake_magnitude := 128.0
+var shake_time : float = 0.0
+var shake_magnitude : float = 128.0
 
 @export var generic_step_sounds : Array[AudioStream]
-var step_timer := 1.0
-var step_rate := 2.2
+var step_timer : float = 1.0
+var step_rate : float = 0.6
 
 var interact_distance: float = 4.0
 var interacting: bool = false
 var current_interactable: Node3D 
 
-var next_subtitle_priority := 1
-var next_subtitle_time := 1.0
+var next_subtitle_priority : int = 1
+var next_subtitle_time : float = 1.0
 
 @onready var camera: Camera3D = $Camera3D
 @onready var crosshair: ColorRect = $UI/CenterContainer/Crosshair
@@ -52,21 +56,31 @@ func _physics_process(delta):
 	character_body.velocity.y += -gravity * delta
 	if !interacting:
 		var input = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
-		
+		var lean_input = Input.get_axis("lean_left", "lean_right")
+
 		if !allow_control:
 			input = Vector2.ZERO
+			lean_input = Vector2.ZERO
 		
 		var movement_dir = character_body.transform.basis * Vector3(input.x, 0, input.y)
 		
 		var current_speed := speed
+		is_spriting = Input.is_action_pressed("sprint")
+		if is_spriting:
+			current_speed *= sprint_multiplier
+		
 		if is_crouched && character_body.is_on_floor():
 			current_speed = speed / 2.0
 		
 		character_body.velocity.x = movement_dir.x * current_speed
 		character_body.velocity.z = movement_dir.z * current_speed
 		
+		if camera_attached:
+			camera.position.x = move_toward(camera.position.x, lean_input * 0.32, delta * lean_speed)
+			camera.rotation_degrees.z = move_toward(camera.rotation_degrees.z, -lean_input * 14.0, delta * lean_speed * 64.0)
+		
 		if character_body.is_on_floor():
-			_play_footstep_sounds(movement_dir.length(), delta) 
+			_play_footstep_sounds(movement_dir.length() * current_speed, delta) 
 			if Input.is_action_just_pressed("jump"):
 				character_body.velocity.y = jump_speed
 	else:
@@ -86,6 +100,9 @@ func _play_footstep_sounds(velocity : float, delta : float) -> void:
 	step_timer -= velocity * step_rate * delta
 	if step_timer <= 0.0:
 		step_timer = 1.0
+		$MovementSoundStream.volume_db = -24.0
+		if is_crouched:
+			$MovementSoundStream.volume_db = -36.0
 		$MovementSoundStream.stream = generic_step_sounds[randi_range(0, generic_step_sounds.size() - 1)]
 		$MovementSoundStream.pitch_scale = randf_range(0.9, 1.1)
 		$MovementSoundStream.play()
