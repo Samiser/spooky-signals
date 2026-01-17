@@ -6001,7 +6001,7 @@
 "origin" "-32 460 44"
 "recieve_signal_ID" "steam_scare"
 "emit_signal_ID" "player"
-"finish_signal_parameter" "player_shake_time: 1.0, player_shake_magnitude: 64"
+"finish_signal_parameter" "player_damage: 12"
 }
 // entity 44
 {
@@ -7188,4 +7188,19 @@
 "finish_signal_parameter" "move_end"
 "recieve_signal_ID" "bridge_lift"
 "repeatable" "1"
+}
+// entity 133
+{
+"classname" "func_trigger"
+"signal_ID" "player"
+"signal_parameter" "player_damage: 10"
+// brush 0
+{
+( -128 -32 0 ) ( -128 -31 0 ) ( -128 -32 1 ) Animal/Animal_08-128x128 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 180 1 1
+( -128 -32 0 ) ( -128 -32 1 ) ( -127 -32 0 ) Animal/Animal_08-128x128 [ 1 0 0 0 ] [ 0 0 -1 0 ] 180 1 1
+( -128 -32 0 ) ( -127 -32 0 ) ( -128 -31 0 ) Animal/Animal_08-128x128 [ -1 0 0 0 ] [ 0 -1 0 0 ] 180 1 1
+( -80 16 16 ) ( -80 17 16 ) ( -79 16 16 ) Animal/Animal_08-128x128 [ 1 0 0 0 ] [ 0 -1 0 0 ] 180 1 1
+( -80 16 16 ) ( -79 16 16 ) ( -80 16 17 ) Animal/Animal_08-128x128 [ -1 0 0 0 ] [ 0 0 -1 0 ] 180 1 1
+( -80 16 16 ) ( -80 16 17 ) ( -80 17 16 ) Animal/Animal_08-128x128 [ 0 1 0 0 ] [ 0 0 -1 0 ] 180 1 1
+}
 }

@@ -28,7 +28,8 @@ player_camera_reset
 player_camera_pos:
 player_set_subtitle:
 player_subtitle_priority:
-player_camera_rot:"
+player_camera_rot:
+player_damage:"
 meta_properties = Dictionary[String, Variant]({
 "color": Color(0.8, 0.8, 0, 1),
 "size": AABB(-8, -8, -8, 8, 8, 32)

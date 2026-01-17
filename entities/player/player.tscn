@@ -1,15 +1,19 @@
-[gd_scene load_steps=15 format=3 uid="uid://vfatuya14sn3"]
+[gd_scene load_steps=23 format=3 uid="uid://vfatuya14sn3"]
 
 [ext_resource type="Script" uid="uid://blfdaraj2aj0l" path="res://entities/player/player.gd" id="1_symyc"]
-[ext_resource type="AudioStream" uid="uid://dhjit0yaaf4sq" path="res://audio/sfx/footsteps/generic/generic_step_1.wav" id="2_26q78"]
+[ext_resource type="AudioStream" uid="uid://dhjit0yaaf4sq" path="res://audio/sfx/player/footsteps/generic/generic_step_1.wav" id="2_26q78"]
 [ext_resource type="Theme" uid="uid://c0eyo008u7c35" path="res://ui/screens/screen_theme.tres" id="2_abrql"]
-[ext_resource type="AudioStream" uid="uid://fhikc3wqr201" path="res://audio/sfx/footsteps/generic/generic_step_2.wav" id="3_bectd"]
-[ext_resource type="AudioStream" uid="uid://81wopdf7uyke" path="res://audio/sfx/footsteps/generic/generic_step_3.wav" id="4_wvtmh"]
-[ext_resource type="AudioStream" uid="uid://cqc34m087ku3q" path="res://audio/sfx/footsteps/generic/generic_step_4.wav" id="5_7thud"]
-[ext_resource type="AudioStream" uid="uid://4ut5dsejvi30" path="res://audio/sfx/footsteps/generic/generic_step_5.wav" id="6_a1qjk"]
-[ext_resource type="AudioStream" uid="uid://cgv163jg6bnix" path="res://audio/sfx/footsteps/generic/generic_step_6.wav" id="7_j3ovn"]
+[ext_resource type="AudioStream" uid="uid://fhikc3wqr201" path="res://audio/sfx/player/footsteps/generic/generic_step_2.wav" id="3_bectd"]
+[ext_resource type="AudioStream" uid="uid://81wopdf7uyke" path="res://audio/sfx/player/footsteps/generic/generic_step_3.wav" id="4_wvtmh"]
+[ext_resource type="AudioStream" uid="uid://cqc34m087ku3q" path="res://audio/sfx/player/footsteps/generic/generic_step_4.wav" id="5_7thud"]
+[ext_resource type="AudioStream" uid="uid://4ut5dsejvi30" path="res://audio/sfx/player/footsteps/generic/generic_step_5.wav" id="6_a1qjk"]
+[ext_resource type="AudioStream" uid="uid://cgv163jg6bnix" path="res://audio/sfx/player/footsteps/generic/generic_step_6.wav" id="7_j3ovn"]
+[ext_resource type="AudioStream" uid="uid://e0fdyucbjyu6" path="res://audio/sfx/player/death.wav" id="8_a1qjk"]
+[ext_resource type="AudioStream" uid="uid://q7loageadbst" path="res://audio/sfx/player/pain_1.wav" id="8_afbqv"]
 [ext_resource type="FontFile" uid="uid://byl1pw6ncu61a" path="res://fonts/NK57 Monospace Sc Rg.otf" id="9_bectd"]
+[ext_resource type="AudioStream" uid="uid://cgjesjtx0g4tp" path="res://audio/sfx/player/pain_2.wav" id="9_gx6sm"]
 [ext_resource type="Texture2D" uid="uid://br2q52l7aba58" path="res://ui/sprint_icon.png" id="10_wvtmh"]
+[ext_resource type="Texture2D" uid="uid://qs2sr51gjrmg" path="res://ui/health_icon.png" id="11_7thud"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_sfv1e"]
 radius = 0.4
@@ -18,6 +22,26 @@ height = 1.8
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_symyc"]
 radius = 0.4
 height = 1.8
+
+[sub_resource type="Theme" id="Theme_afbqv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_afbqv"]
+bg_color = Color(0, 0, 0, 0.25882354)
+border_width_left = 2
+border_width_top = 2
+border_width_bottom = 2
+border_color = Color(0, 0.6784314, 0.627451, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gx6sm"]
+bg_color = Color(0.12941177, 0.37254903, 0.4, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_bottom = 2
+border_color = Color(0, 0.6784314, 0.627451, 1)
+border_blend = true
+
+[sub_resource type="Theme" id="Theme_a1qjk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bectd"]
 bg_color = Color(0, 0, 0, 0.25882354)
@@ -38,6 +62,8 @@ border_blend = true
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_symyc")
 generic_step_sounds = Array[AudioStream]([ExtResource("2_26q78"), ExtResource("3_bectd"), ExtResource("4_wvtmh"), ExtResource("5_7thud"), ExtResource("6_a1qjk"), ExtResource("7_j3ovn")])
+generic_dmg_sounds = Array[AudioStream]([ExtResource("8_afbqv"), ExtResource("9_gx6sm")])
+die_sounds = Array[AudioStream]([ExtResource("8_a1qjk")])
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
@@ -68,6 +94,17 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 theme = ExtResource("2_abrql")
+
+[node name="fadePanel" type="ColorRect" parent="UI"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="UI"]
 layout_mode = 1
@@ -109,10 +146,10 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 202.0
-offset_top = -34.0
+offset_left = 209.0
+offset_top = -36.0
 offset_right = 486.0
-offset_bottom = -9.0
+offset_bottom = -10.0
 grow_vertical = 0
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 20
@@ -121,17 +158,6 @@ fit_content = true
 scroll_active = false
 autowrap_mode = 0
 vertical_alignment = 1
-
-[node name="fadePanel" type="ColorRect" parent="UI"]
-modulate = Color(1, 1, 1, 0)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
 
 [node name="SubtitleContainer" type="GridContainer" parent="UI"]
 layout_mode = 1
@@ -157,18 +183,84 @@ scroll_active = false
 autowrap_mode = 0
 horizontal_alignment = 1
 
-[node name="StaminaBar" type="ProgressBar" parent="UI"]
-modulate = Color(1, 1, 1, 0.7529412)
+[node name="VBoxContainer" type="VBoxContainer" parent="UI"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 35.0
-offset_top = -35.0
-offset_right = 189.0
-offset_bottom = -9.0
+offset_left = 33.0
+offset_top = -124.0
+offset_right = 200.0
+offset_bottom = -23.0
 grow_vertical = 0
+alignment = 2
+
+[node name="Stamina" type="Control" parent="UI/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StaminaBar" type="ProgressBar" parent="UI/VBoxContainer/Stamina"]
+modulate = Color(1, 1, 1, 0.7529412)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.5
+offset_top = -13.0
+offset_right = 81.5
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
+theme = SubResource("Theme_afbqv")
+theme_override_colors/font_color = Color(0, 0.793338, 0.72610223, 1)
+theme_override_colors/font_outline_color = Color(8.4228816e-07, 0.30783975, 0.34844863, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("9_bectd")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/background = SubResource("StyleBoxFlat_afbqv")
+theme_override_styles/fill = SubResource("StyleBoxFlat_gx6sm")
+max_value = 1.0
+value = 1.0
+
+[node name="StaminaIcon" type="TextureRect" parent="UI/VBoxContainer/Stamina"]
+modulate = Color(0.027146706, 0.72594213, 0.6738642, 1)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = -21.0
+offset_right = 18.0
+offset_bottom = 23.0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("10_wvtmh")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Health" type="Control" parent="UI/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="HealthBar" type="ProgressBar" parent="UI/VBoxContainer/Health"]
+modulate = Color(1, 1, 1, 0.7529412)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.5
+offset_top = -13.0
+offset_right = 81.5
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_a1qjk")
 theme_override_colors/font_color = Color(0, 0.793338, 0.72610223, 1)
 theme_override_colors/font_outline_color = Color(8.4228816e-07, 0.30783975, 0.34844863, 1)
 theme_override_constants/outline_size = 2
@@ -176,23 +268,26 @@ theme_override_fonts/font = ExtResource("9_bectd")
 theme_override_font_sizes/font_size = 18
 theme_override_styles/background = SubResource("StyleBoxFlat_bectd")
 theme_override_styles/fill = SubResource("StyleBoxFlat_wvtmh")
-max_value = 1.0
-value = 1.0
+value = 100.0
+allow_lesser = true
 
-[node name="StaminaIcon" type="TextureRect" parent="UI"]
+[node name="HealthIcon" type="TextureRect" parent="UI/VBoxContainer/Health"]
 modulate = Color(0.027146706, 0.72594213, 0.6738642, 1)
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = -43.0
-offset_right = 55.0
-grow_vertical = 0
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -21.0
+offset_right = 21.0
+offset_bottom = 22.0
+grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("10_wvtmh")
+texture = ExtResource("11_7thud")
 expand_mode = 2
 stretch_mode = 4
 
 [node name="MovementSoundStream" type="AudioStreamPlayer3D" parent="."]
 volume_db = -24.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

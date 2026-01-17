@@ -14,8 +14,8 @@ var stamina_loss_rate : float = 0.22
 var stamina_recover_rate : float = 0.4
 var stamina_recovered : bool = true
 var stamina_recover_delay : float = 2.0
-@onready var stamina_bar_default_colour : Color = $UI/StaminaBar.get("theme_override_styles/fill").bg_color
-@onready var stamina_bar_default_border_colour : Color = $UI/StaminaBar.get("theme_override_styles/fill").border_color
+@onready var stamina_bar_default_colour : Color = $UI/VBoxContainer/Stamina/StaminaBar.get("theme_override_styles/fill").bg_color
+@onready var stamina_bar_default_border_colour : Color = $UI/VBoxContainer/Stamina/StaminaBar.get("theme_override_styles/fill").border_color
 
 var jump_speed: int = 4
 var crouch_time : float = 0.1
@@ -52,6 +52,14 @@ var interact_distance: float = 4.0
 var interacting: bool = false
 var current_interactable: Node3D 
 
+var is_alive : bool = true
+var current_health : float = 100.0
+var health_bar_tween : Tween
+var damage_flash_tween : Tween
+
+@export var generic_dmg_sounds : Array[AudioStream]
+@export var die_sounds : Array[AudioStream]
+
 var next_subtitle_priority : int = 1
 var next_subtitle_time : float = 1.0
 
@@ -71,11 +79,11 @@ func _physics_process(delta):
 	character_body.velocity.y += -gravity * delta
 	if !interacting:
 		var input = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
-		var lean_input = Input.get_axis("lean_left", "lean_right")
+		var lean_input : float = Input.get_axis("lean_left", "lean_right")
 
 		if !allow_control:
 			input = Vector2.ZERO
-			lean_input = Vector2.ZERO
+			lean_input = 0.0
 		
 		var movement_dir = character_body.transform.basis * Vector3(input.x, 0, input.y)
 		
@@ -83,7 +91,7 @@ func _physics_process(delta):
 		
 		is_grounded = character_body.is_on_floor()
 		
-		is_spriting = is_grounded && input != Vector2.ZERO && Input.is_action_pressed("sprint") && stamina_recovered
+		is_spriting = !is_crouched && is_grounded && input != Vector2.ZERO && Input.is_action_pressed("sprint") && stamina_recovered
 		if is_spriting:
 			current_speed *= sprint_multiplier
 			current_stamina -= stamina_loss_rate * delta
@@ -91,24 +99,29 @@ func _physics_process(delta):
 			if current_stamina <= 0.0:
 				stamina_recovered = false
 		else:
-			if current_stamina < 1.0:
-				if current_stamina_delay > 0.0:
-					current_stamina_delay -= delta
-				else:
-					current_stamina += stamina_recover_rate * delta
+			if is_alive:
+				if current_stamina < 1.0:
+					if current_stamina_delay > 0.0:
+						current_stamina_delay -= delta
+					else:
+						current_stamina += stamina_recover_rate * delta
 				
 				if !stamina_recovered:
 					var flash_colour := Color.RED * ((sin(time_passed * 10.0) / 2.0) + 1.0)
-					$UI/StaminaBar.get("theme_override_styles/background").border_color = flash_colour
-					$UI/StaminaBar.get("theme_override_styles/fill").border_color = flash_colour
+					$UI/VBoxContainer/Stamina/StaminaBar.get("theme_override_styles/background").border_color = flash_colour
+					$UI/VBoxContainer/Stamina/StaminaBar.get("theme_override_styles/fill").border_color = flash_colour
 			else:
 				stamina_recovered = true
-				$UI/StaminaBar.get("theme_override_styles/background").border_color = stamina_bar_default_border_colour
-				$UI/StaminaBar.get("theme_override_styles/fill").border_color = stamina_bar_default_border_colour
+				$UI/VBoxContainer/Stamina/StaminaBar.get("theme_override_styles/background").border_color = stamina_bar_default_border_colour
+				$UI/VBoxContainer/Stamina/StaminaBar.get("theme_override_styles/fill").border_color = stamina_bar_default_border_colour
 		
-		var sprint_bar_colour : Color = Color(0.8, 0.3, 0.3, 1.0).lerp(stamina_bar_default_colour, current_stamina / 1.0)
-		$UI/StaminaBar.get("theme_override_styles/fill").bg_color = sprint_bar_colour
-		$UI/StaminaBar.value = current_stamina
+		var display_stamina_bar := current_stamina < 1.0
+		$UI/VBoxContainer/Stamina.visible = display_stamina_bar
+		
+		if display_stamina_bar:
+			var sprint_bar_colour : Color = Color(0.8, 0.3, 0.3, 1.0).lerp(stamina_bar_default_colour, current_stamina / 1.0)
+			$UI/VBoxContainer/Stamina/StaminaBar.get("theme_override_styles/fill").bg_color = sprint_bar_colour
+			$UI/VBoxContainer/Stamina/StaminaBar.value = current_stamina
 		
 		if is_crouched && is_grounded:
 			current_speed = speed / 2.0
@@ -136,6 +149,12 @@ func _physics_process(delta):
 
 func _process(delta: float) -> void:
 	time_passed += delta
+	
+	if !is_alive:
+		var flash_colour := Color.RED * ((sin(time_passed * 10.0) / 2.0) + 1.0)
+		$UI/VBoxContainer/Health/HealthBar.get("theme_override_styles/background").border_color = flash_colour
+		$UI/VBoxContainer/Health/HealthBar.get("theme_override_styles/fill").border_color = flash_colour
+		
 	_set_crosshair_visibility()
 
 func _play_footstep_sounds(velocity : float, delta : float) -> void:
@@ -284,6 +303,82 @@ func _set_crouch(crouch : bool) -> void:
 	crouch_tween.tween_property($CollisionShape3D.shape, "height", body_height, crouch_time)
 	crouch_tween.tween_property(camera, "position:y", cam_height, crouch_time)
 
+func apply_damage(amount : float) -> void:
+	if !is_alive:
+		return
+	
+	if health_bar_tween != null && health_bar_tween.is_running():
+		health_bar_tween.stop()
+		
+	$UI/VBoxContainer/Health/HealthBar.value = current_health
+	current_health -= amount
+	
+	health_bar_tween = get_tree().create_tween()
+	health_bar_tween.tween_property($UI/VBoxContainer/Health/HealthBar, "value", current_health, 0.2)
+	var health_bar_colour : Color = Color(0.8, 0.3, 0.3, 1.0).lerp(stamina_bar_default_colour, current_health / 100.0)
+	$UI/VBoxContainer/Health/HealthBar.get("theme_override_styles/fill").bg_color = health_bar_colour
+	
+	if damage_flash_tween != null && damage_flash_tween.is_running():
+		damage_flash_tween.stop()
+		
+	damage_flash_tween = get_tree().create_tween()
+	$UI/fadePanel.color = Color(0.5, 0.0, 0.0, 1.0)
+	damage_flash_tween.tween_property($UI/fadePanel, "modulate:a", 0.2, 0.1)
+	damage_flash_tween.tween_property($UI/fadePanel, "modulate:a", 0.0, 0.5)
+	
+	$AudioStreamPlayer2D.stream = generic_dmg_sounds[randi_range(0, generic_dmg_sounds.size() - 1)]
+	$AudioStreamPlayer2D.play()
+	
+	shake_time = 1.0
+	shake_magnitude = amount * 2.0
+	
+	if current_health <= 0.0:
+		_die()
+	else:
+		await damage_flash_tween.finished
+		$UI/fadePanel.color = Color.BLACK
+
+func _die() -> void:
+	is_alive = false
+	allow_control = false
+	
+	$AudioStreamPlayer2D.stream = die_sounds[randi_range(0, die_sounds.size() - 1)]
+	$AudioStreamPlayer2D.play()
+	
+	signal_recieved("player_fade_out")
+	
+	var cam_drop_tween := get_tree().create_tween()
+	var dead_cam_height = 0.1
+	if is_crouched:
+		dead_cam_height = 0.6
+	cam_drop_tween.tween_property(camera, "position:y", dead_cam_height, 0.6)
+	cam_drop_tween.parallel().tween_property(camera, "rotation_degrees:z", 20 * randi_range(-1, 1), 0.6)
+	
+	await get_tree().create_timer(4.0).timeout
+	_respawn()
+
+func _respawn() -> void:
+	allow_control = true
+	is_alive = true
+	current_health = 100.0
+	current_stamina = 1.0
+	current_stamina_delay = 0.0
+	
+	if is_crouched:
+		_set_crouch(false)
+	
+	signal_recieved("player_camera_reset, player_teleport: 0 0 0, player_fade_in")
+	
+	$UI/VBoxContainer/Stamina/StaminaBar.value = 1.0
+	$UI/VBoxContainer/Stamina/StaminaBar.get("theme_override_styles/background").border_color = stamina_bar_default_border_colour
+	$UI/VBoxContainer/Stamina/StaminaBar.get("theme_override_styles/fill").border_color = stamina_bar_default_border_colour
+	$UI/VBoxContainer/Stamina/StaminaBar.get("theme_override_styles/fill").bg_color = stamina_bar_default_colour
+	
+	$UI/VBoxContainer/Health/HealthBar.value = 100.0
+	$UI/VBoxContainer/Health/HealthBar.get("theme_override_styles/fill").border_color = stamina_bar_default_border_colour
+	$UI/VBoxContainer/Health/HealthBar.get("theme_override_styles/fill").bg_color = stamina_bar_default_colour
+	$UI/VBoxContainer/Health/HealthBar.get("theme_override_styles/background").border_color = stamina_bar_default_border_colour
+
 func signal_recieved(parameters: String) -> void:
 	var param_list : PackedStringArray = parameters.split(', ', false)
 	for parameter in param_list:
@@ -300,9 +395,11 @@ func signal_recieved(parameters: String) -> void:
 				allow_control = !allow_control
 			"player_fade_in":
 				var tween := get_tree().create_tween()
+				tween.tween_property($UI/fadePanel, "color", Color.BLACK, 2.0)
 				tween.tween_property($UI/fadePanel, "modulate:a", 0.0, 2.0).from(1.0)
 			"player_fade_out":
 				var tween := get_tree().create_tween()
+				tween.tween_property($UI/fadePanel, "color", Color.BLACK, 2.0)
 				tween.tween_property($UI/fadePanel, "modulate:a", 1.0, 2.0).from(0.0)
 			"player_camera_reset":
 				camera.top_level = false
@@ -389,3 +486,6 @@ func signal_recieved(parameters: String) -> void:
 				
 				if parameter.contains("player_subtitle_time"):
 					next_subtitle_time = param_additional[1].to_float()
+				
+				if parameter.contains("player_damage"):
+					apply_damage(param_additional[1].to_float())
