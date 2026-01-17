@@ -5,8 +5,18 @@ class_name Player
 @onready var character_body: CharacterBody3D = $"."
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
+
 var speed: int = 4
 var sprint_multiplier: float = 1.6
+var current_stamina : float = 1.0
+var current_stamina_delay : float = 0.0
+var stamina_loss_rate : float = 0.2
+var stamina_recover_rate : float = 0.4
+var stamina_recovered : bool = true
+var stamina_recover_delay : float = 1.4
+@onready var stamina_bar_default_colour : Color = $UI/StaminaBar.get("theme_override_styles/fill").bg_color
+@onready var stamina_bar_default_border_colour : Color = $UI/StaminaBar.get("theme_override_styles/fill").border_color
+
 var jump_speed: int = 4
 var crouch_time : float = 0.1
 var crouch_height := 1.1
@@ -25,6 +35,8 @@ var is_spriting : bool = false
 var released_crouch : bool = false
 var crouch_tween : Tween
 
+var is_grounded : bool = true
+
 var allow_control : bool = true
 
 var camera_attached : bool = true
@@ -42,6 +54,8 @@ var current_interactable: Node3D
 
 var next_subtitle_priority : int = 1
 var next_subtitle_time : float = 1.0
+
+var time_passed : float = 0.0
 
 @onready var camera: Camera3D = $Camera3D
 @onready var crosshair: ColorRect = $UI/CenterContainer/Crosshair
@@ -65,11 +79,37 @@ func _physics_process(delta):
 		var movement_dir = character_body.transform.basis * Vector3(input.x, 0, input.y)
 		
 		var current_speed := speed
-		is_spriting = Input.is_action_pressed("sprint")
+		
+		is_grounded = character_body.is_on_floor()
+		
+		is_spriting = is_grounded && input != Vector2.ZERO && Input.is_action_pressed("sprint") && stamina_recovered
 		if is_spriting:
 			current_speed *= sprint_multiplier
+			current_stamina -= stamina_loss_rate * delta
+			current_stamina_delay = stamina_recover_delay
+			if current_stamina <= 0.0:
+				stamina_recovered = false
+		else:
+			if current_stamina < 1.0:
+				if current_stamina_delay > 0.0:
+					current_stamina_delay -= delta
+				else:
+					current_stamina += stamina_recover_rate * delta
+				
+				if !stamina_recovered:
+					var flash_colour := Color.RED * ((sin(time_passed * 10.0) / 2.0) + 1.0)
+					$UI/StaminaBar.get("theme_override_styles/background").border_color = flash_colour
+					$UI/StaminaBar.get("theme_override_styles/fill").border_color = flash_colour
+			else:
+				stamina_recovered = true
+				$UI/StaminaBar.get("theme_override_styles/background").border_color = stamina_bar_default_border_colour
+				$UI/StaminaBar.get("theme_override_styles/fill").border_color = stamina_bar_default_border_colour
 		
-		if is_crouched && character_body.is_on_floor():
+		var sprint_bar_colour : Color = Color(0.8, 0.3, 0.3, 1.0).lerp(stamina_bar_default_colour, current_stamina / 1.0)
+		$UI/StaminaBar.get("theme_override_styles/fill").bg_color = sprint_bar_colour
+		$UI/StaminaBar.value = current_stamina
+		
+		if is_crouched && is_grounded:
 			current_speed = speed / 2.0
 		
 		character_body.velocity.x = movement_dir.x * current_speed
@@ -79,7 +119,7 @@ func _physics_process(delta):
 			camera.position.x = move_toward(camera.position.x, lean_input * 0.32, delta * lean_speed)
 			camera.rotation_degrees.z = move_toward(camera.rotation_degrees.z, -lean_input * 14.0, delta * lean_speed * 64.0)
 		
-		if character_body.is_on_floor():
+		if is_grounded:
 			_play_footstep_sounds(movement_dir.length() * current_speed, delta) 
 			if Input.is_action_just_pressed("jump"):
 				character_body.velocity.y = jump_speed
@@ -94,6 +134,7 @@ func _physics_process(delta):
 	character_body.move_and_slide()
 
 func _process(delta: float) -> void:
+	time_passed += delta
 	_set_crosshair_visibility()
 
 func _play_footstep_sounds(velocity : float, delta : float) -> void:
