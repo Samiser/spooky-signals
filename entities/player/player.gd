@@ -10,10 +10,10 @@ var speed: int = 4
 var sprint_multiplier: float = 1.6
 var current_stamina : float = 1.0
 var current_stamina_delay : float = 0.0
-var stamina_loss_rate : float = 0.2
+var stamina_loss_rate : float = 0.22
 var stamina_recover_rate : float = 0.4
 var stamina_recovered : bool = true
-var stamina_recover_delay : float = 1.4
+var stamina_recover_delay : float = 2.0
 @onready var stamina_bar_default_colour : Color = $UI/StaminaBar.get("theme_override_styles/fill").bg_color
 @onready var stamina_bar_default_border_colour : Color = $UI/StaminaBar.get("theme_override_styles/fill").border_color
 
@@ -65,6 +65,7 @@ func _ready():
 	connect_senders("player", signal_recieved)
 	default_height = $CollisionShape3D.shape.height
 	default_fov = $Camera3D.fov
+	$UI/locationLabel.text = ""
 		
 func _physics_process(delta):
 	character_body.velocity.y += -gravity * delta
