@@ -398,11 +398,11 @@ func signal_recieved(parameters: String) -> void:
 			"player_fade_in":
 				var tween := get_tree().create_tween()
 				tween.tween_property($UI/fadePanel, "color", Color.BLACK, 2.0)
-				tween.tween_property($UI/fadePanel, "modulate:a", 0.0, 2.0).from(1.0)
+				tween.parallel().tween_property($UI/fadePanel, "modulate:a", 0.0, 2.0).from(1.0)
 			"player_fade_out":
 				var tween := get_tree().create_tween()
 				tween.tween_property($UI/fadePanel, "color", Color.BLACK, 2.0)
-				tween.tween_property($UI/fadePanel, "modulate:a", 1.0, 2.0).from(0.0)
+				tween.parallel().tween_property($UI/fadePanel, "modulate:a", 1.0, 2.0).from(0.0)
 			"player_camera_reset":
 				camera.top_level = false
 				
